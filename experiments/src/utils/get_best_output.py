@@ -11,33 +11,34 @@ from src.data.data_process import CompressionDataset,CompressionCommonDataset
 from transformers import pipelines
 import accelerate
 import deepspeed
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "6,7"
 
+# def get_parser():
+#     parser = argparse.ArgumentParser(description="The config of get best output")
 
-def get_parser():
-    parser = argparse.ArgumentParser(description="The config of get best output")
+#     parser.add_argument(
+#         "--model_path",
+#         type=str,
+#         default="/opt/model/models/Qwen3-32B",
+#         help="path of the LLM"
+#     )
 
-    parser.add_argument(
-        "--model_path",
-        type=str,
-        default="/opt/model/models/Qwen3-32B",
-        help="path of the LLM"
-    )
-
-    parser.add_argument(
-        "--data_path",
-        type=str,
-        default="/home/lzs/compressionattack/experiments/src/data/data.json",
-        help="path of the dataset",
-    )
+#     parser.add_argument(
+#         "--data_path",
+#         type=str,
+#         default="/home/lzs/compressionattack/experiments/src/data/data.json",
+#         help="path of the dataset",
+#     )
     
-    parser.add_argument(
-        "--compression_model_path",
-        type=str,
-        default="/opt/model/models/gpt2-dolly",
-        help="path of compression model",
-    )
+#     parser.add_argument(
+#         "--compression_model_path",
+#         type=str,
+#         default="/opt/model/models/gpt2-dolly",
+#         help="path of compression model",
+#     )
 
-    return parser
+#     return parser
 
 import random
 import json
@@ -45,20 +46,23 @@ from tqdm import tqdm
 from llmlingua import PromptCompressor
 
 def get_best_output(
+        model_path,
+        compression_model_path,
+        data_path,
         other_dataset=None, 
         data_with_target_path="/home/lzs/compressionattack/experiments/src/data/data_with_target.json"
         ):
     
     from src.utils.get_prompt import get_target_prompt
 
-    parser = get_parser()
-    args = parser.parse_args()
+    # parser = get_parser()
+    # args = parser.parse_args()
 
     device = "cuda:7" if torch.cuda.is_available() else "cpu"
     if other_dataset is not None:
         dataset = other_dataset     
     else:
-        dataset = load_dataset("json", data_files=args.data_path, split="train")
+        dataset = load_dataset("json", data_files=data_path, split="train")
         dataset = CompressionCommonDataset(dataset=dataset)
     # print(len(dataset))
     # model = AutoModelForCausalLM.from_pretrained(args.model_path, device_map = device)
@@ -77,9 +81,39 @@ def get_best_output(
     #     model_name=args.compression_model_name,
     #     device_map="cuda:6"
     # )
+    
+    # load Qwen3-32B with two L40s GPUs
+    if "Qwen" in model_path:
+        # max_memory = {
+        #     0: "45GB",
+        #     1: "45GB",
+        # }
+        with init_empty_weights():
+            model = AutoModelForCausalLM.from_pretrained(
+                model_path,
+                torch_dtype=torch.bfloat16,
+                trust_remote_code=True,
+                device_map="auto",
+                low_cpu_mem_usage=True,
+            )
+            # config = AutoConfig.from_pretrained(args.large_model, trust_remote_code=True)
+        model = load_checkpoint_and_dispatch(
+            model,
+            model_path,
+            device_map="auto",
+            offload_folder=None,
+            dtype=torch.bfloat16,
+            no_split_module_classes=["GPTQEmbedding"],
+            )
+        
+        print(f"----------------The layer distribution of {model_path}-------------------")
+        for name, device in model.hf_device_map.items():
+            print(f"{name}:{device}")
+    else:
+        model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map='cuda:7')
 
-    model = AutoModelForCausalLM.from_pretrained(args.model_path,torch_dtype=torch.bfloat16,device_map=device)
-    tokenizer = AutoTokenizer.from_pretrained(args.model_path)
+    # model = AutoModelForCausalLM.from_pretrained(args.model_path,torch_dtype=torch.bfloat16,device_map=device)
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     prompt = get_target_prompt()
     tokenizer.pad_token_id = tokenizer.eos_token_id
     model.config.pad_token_id = model.config.eos_token_id

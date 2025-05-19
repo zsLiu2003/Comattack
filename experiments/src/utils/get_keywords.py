@@ -11,46 +11,50 @@ import argparse
 import torch
 
 
-def get_parser():
+# def get_parser():
 
-    parser = argparse.ArgumentParser(description="The config of get keywords from demos")
+#     parser = argparse.ArgumentParser(description="The config of get keywords from demos")
     
-    parser.add_argument(
-        "--model_name",
-        type=str,
-        default="/opt/model/Qwen3-32B",
-        help="name of extraction model",
-    )
+#     parser.add_argument(
+#         "--model_name",
+#         type=str,
+#         default="/opt/model/Qwen3-32B",
+#         help="name of extraction model",
+#     )
 
-    parser.add_argument(
-        "--data_path",
-        type=str,
-        default="/home/lzs/compressionattack/experiments/src/data/data.json",
-        help="path of dataset with target"
-    )
+#     parser.add_argument(
+#         "--data_path",
+#         type=str,
+#         default="/home/lzs/compressionattack/experiments/src/data/data.json",
+#         help="path of dataset with target"
+#     )
 
-    parser.add_argument(
-        "--device",
-        default="cuda: 7" if torch.cuda.is_available() else "cpu",
-        help="device map",
-    )
+#     parser.add_argument(
+#         "--device",
+#         default="cuda: 7" if torch.cuda.is_available() else "cpu",
+#         help="device map",
+#     )
     
-    # parser.add_argument(
-    #     "--prompt_path",
-    #     default="/home/lzs/compressionattack/experiments/src/data/get_keywords_prompt.txt",
-    #     type=str,
-    #     help="path of the prompt"
-    # )
-    return parser
+#     # parser.add_argument(
+#     #     "--prompt_path",
+#     #     default="/home/lzs/compressionattack/experiments/src/data/get_keywords_prompt.txt",
+#     #     type=str,
+#     #     help="path of the prompt"
+#     # )
+#     return parser
 
-def get_keywords():
+def get_keywords(
+    model_path,
+    dataset_path,
+    device="cpu"
+):
 
-    args = get_parser()
+    # args = get_parser()
     
-    model = AutoModelForCausalLM.from_pretrained(args.model_name,torch_dtype=torch.bfloat16,device_map=args.device)
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+    model = AutoModelForCausalLM.from_pretrained(model_path,torch_dtype=torch.bfloat16,device_map=device)
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     
-    dataset = load_dataset("json", data_files=args.data_path, split="train")
+    dataset = load_dataset("json", data_files=dataset_path, split="train")
     dataset = CompressionDataset(dataset=dataset)
 
     prompt = get_keywords_prompt()

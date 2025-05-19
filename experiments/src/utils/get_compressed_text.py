@@ -6,6 +6,7 @@ from datasets import load_dataset
 import argparse
 
 from llmlingua import PromptCompressor
+from src.data.data_process import CompressionCommonDataset
 # from src.utils.verify_PPL import get_PPL
 
 def get_sequence_length_and_output(tokenizer, text):
@@ -26,10 +27,12 @@ def compress_text(examples, llmlingua_model=None, tokenizer=None):
         text=examples,
     )
     
-    return [llmlingua_model.compress_prompt(
+    return {
+        "compressed" :[llmlingua_model.compress_prompt(
         output[i],
         target_token=le[i]
     ) for i in range(len(le)) ]
+    }
 
 def get_compressed_text(model_name=None, dataset=None, device="cpu"):
     
@@ -45,5 +48,11 @@ def get_compressed_text(model_name=None, dataset=None, device="cpu"):
         "tokenizer": tokenizer,
     },
     )
-    
-    return compressed_dataset
+    dataset = CompressionCommonDataset(dataset=dataset)
+    compressed_dataset = compressed_dataset["compressed"]
+    for data, compressed_data in zip(dataset, compressed_dataset):
+        for i, prompt in enumerate(compressed_data):
+            key = f"demo_{i+1}"
+            data[key] = prompt["compressed_prompt"]
+            
+    return dataset
