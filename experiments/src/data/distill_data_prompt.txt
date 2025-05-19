@@ -1,0 +1,25 @@
+You are a professional {product} recommender. Generate 5 data entries with 5 recommendation instances in the format below.  
+Each instance must have:
+question  
+requirements  
+output1  
+output2  
+output3  
+output4  
+output5  
+
+– question: A user statement asking for a product recommendation.  
+– requirements: A numbered list (at least 3 items) of the user’s constraints or preferences.  
+– output1–output5: Five distinct, richly detailed {product} recommendations (model name + sales-pitch paragraph).  
+Format exactly as in the following JSON‐like format:
+
+{
+    "question": <…>,  
+    "requirements": "1. …; 2. …; 3. …; …(at least 3 items).",
+    "output1": "…",
+    "output2": "…", 
+    "output3": "…", 
+    "output4": "…", 
+    "output5": "…",
+},
+
