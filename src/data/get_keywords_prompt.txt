@@ -11,7 +11,6 @@ Your sole output must be a JSON object. The keys of this JSON object must be the
 Do not include any other text, explanation, or formatting outside the JSON object. Ensure the output is a valid JSON structure.
 
 Example Output Format:
-```json
 {
   "demo1": ["keyword1", "keyword2", "keyword3"],
   "demo2": ["keywordA", "keywordB"],
@@ -20,3 +19,4 @@ Example Output Format:
   "demo5": ["keywordM", "keywordN"]
 }
 
+You should only output the content in the given format, and don't output any other contents.

@@ -1,11 +1,21 @@
 import torch
 import transformers
-from datasets import load_dataset, Dataset
+from datasets import load_dataset
+from torch.utils.data import Dataset, DataLoader
 
-def get_compression_dataset(dataset: None):
+class CompressionDataset(Dataset):
+    
+    def __init__(self, dataset) -> None:
+        super().__init__()
+        self.dataset = dataset
 
-    new_dataset = []
-    for origin_data in dataset:
+    def __len__(self):
+        
+        return len(self.dataset)
+    
+    def __getitem__(self, index):
+
+        origin_data = self.dataset[index]
         new_data = {}
         i = 0
         for key, value in origin_data.items():
@@ -22,17 +32,23 @@ def get_compression_dataset(dataset: None):
                     break
                 new_data[f"demo_{k}"] = value
             i += 1
+        return new_data 
+                                    
+
+class CompressionCommonDataset(Dataset):
+    
+    def __init__(self, dataset):
         
-        new_dataset.append(new_data)
+        self.dataset = dataset
+    
+    def __len__(self):
+        
+        return len(self.dataset)
 
-    return Dataset.from_list(new_dataset)
-                 
+    def __getitem__(self, index):
 
-def get_common_compression_dataset(dataset: None):
-
-    new_dataset = []
-    for data in dataset:
-        new_data = {}
+        data = self.dataset[index]
+        new_data = []
         for key, value in data.items():
             if "output" in key:
                 k = str(key[6])
@@ -42,9 +58,7 @@ def get_common_compression_dataset(dataset: None):
             else:
                 new_data[key] = value
             
-        new_dataset.append(new_data)
-    
-    return Dataset.from_list(new_dataset)
-
+        return new_data
+        
     
 

@@ -1,1 +1,1 @@
-Code for CompressionAttack
+Code of CompressionAttack

@@ -1,18 +1,20 @@
 # the following code is to get the best demo among the given 5 demos
 # the demos here can be product description, agent tool description, and website html data
 
-
 import transformers
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer,AutoConfig
 import argparse
 import torch
 from datasets import load_dataset,Dataset
-from src.data.data_process import CompressionDataset,CompressionCommonDataset
+from src.data.data_process import get_common_compression_dataset
 from transformers import pipelines
 import accelerate
-import deepspeed
+# import deepspeed
+from accelerate import init_empty_weights, load_checkpoint_and_dispatch
+from src.utils.get_prompt import get_llama2_template
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "6,7"
+os.environ["CUDA_VISIBLE_DEVICES"] = "4"
+
 
 # def get_parser():
 #     parser = argparse.ArgumentParser(description="The config of get best output")
@@ -48,7 +50,7 @@ from llmlingua import PromptCompressor
 def get_best_output(
         model_path,
         compression_model_path,
-        data_path,
+        data_path="/home/lzs/Comattack/src/data/data.json",
         other_dataset=None, 
         data_with_target_path="/home/lzs/compressionattack/experiments/src/data/data_with_target.json"
         ):
@@ -58,12 +60,12 @@ def get_best_output(
     # parser = get_parser()
     # args = parser.parse_args()
 
-    device = "cuda:7" if torch.cuda.is_available() else "cpu"
+    device = "cuda:0" if torch.cuda.is_available() else "cpu"
     if other_dataset is not None:
         dataset = other_dataset     
     else:
         dataset = load_dataset("json", data_files=data_path, split="train")
-        dataset = CompressionCommonDataset(dataset=dataset)
+        dataset = get_common_compression_dataset(dataset=dataset)
     # print(len(dataset))
     # model = AutoModelForCausalLM.from_pretrained(args.model_path, device_map = device)
     # pipeline = transformers.pipeline(
@@ -81,7 +83,7 @@ def get_best_output(
     #     model_name=args.compression_model_name,
     #     device_map="cuda:6"
     # )
-    
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     # load Qwen3-32B with two L40s GPUs
     if "Qwen" in model_path:
         # max_memory = {
@@ -89,42 +91,40 @@ def get_best_output(
         #     1: "45GB",
         # }
         with init_empty_weights():
-            model = AutoModelForCausalLM.from_pretrained(
-                model_path,
-                torch_dtype=torch.bfloat16,
-                trust_remote_code=True,
-                device_map="auto",
-                low_cpu_mem_usage=True,
-            )
+            config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
+            model = AutoModelForCausalLM.from_config(config)
             # config = AutoConfig.from_pretrained(args.large_model, trust_remote_code=True)
         model = load_checkpoint_and_dispatch(
             model,
-            model_path,
+            checkpoint=model_path,
             device_map="auto",
-            offload_folder=None,
+            # offload_folder=None,
             dtype=torch.bfloat16,
             no_split_module_classes=["GPTQEmbedding"],
             )
-        
         print(f"----------------The layer distribution of {model_path}-------------------")
-        for name, device in model.hf_device_map.items():
-            print(f"{name}:{device}")
+        
+        # for name, device in model.hf_device_map.items():
+        #     print(f"{name}:{device}")
+
     else:
-        model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map='cuda:7')
+        model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, device_map=device)
+        # tokenizer.chat_template=get_llama2_template()
 
     # model = AutoModelForCausalLM.from_pretrained(args.model_path,torch_dtype=torch.bfloat16,device_map=device)
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
     prompt = get_target_prompt()
     tokenizer.pad_token_id = tokenizer.eos_token_id
     model.config.pad_token_id = model.config.eos_token_id
-    terminators = [
-        tokenizer.eos_token_id,
-        tokenizer.convert_tokens_to_ids("<|eot_id|>")
-    ]
+    # terminators = [
+    #     tokenizer.eos_token_id,
+    #     tokenizer.convert_tokens_to_ids("<|eot_id|>")
+    # ]
+    
     new_dataset = []
+    keys = [key for key in dataset.column_names if "demo" in key]
     for data in tqdm(dataset):
         user_input = ""
-        keys = []
+        # keys = []
         for key, value in data.items():
             if key == "question":
                 user_input += f"{key}: {value}"
@@ -135,6 +135,7 @@ def get_best_output(
             {"role": "system", "content": prompt},
             {"role": "user", "content": user_input}
         ]
+        
         # print(f"message = {messages}")
         input_ids = tokenizer.apply_chat_template(
             messages,
@@ -142,10 +143,11 @@ def get_best_output(
             return_tensors='pt',
             return_attention_mask=True,
         ).to(model.device)
+
         outputs = model.generate(
             input_ids,
             max_new_tokens=256,
-            eos_token_id = terminators,
+            eos_token_id = tokenizer.eos_token_id,
             do_sample = True,
             temperature = 0.6,
             top_p = 0.9,
@@ -155,18 +157,18 @@ def get_best_output(
         output = tokenizer.decode(output_token_ids, skip_special_tokens=True)
         # print(output)
         data["best"] = str(output)
-        # keys = data.keys()
         remaining_keys = [k for k in keys if k != str(output)]
         data["target"] = str(random.choice(remaining_keys))
         
         new_dataset.append(data)
-        
-        with open(data_with_target_path, "w", encoding="utf-8") as file:
-            json.dump(new_dataset, file, indent=4)
-        
-    return Dataset.from_list(new_dataset)
-
-
-if __name__ == "__main__":
     
-    get_best_output()
+    with open(data_with_target_path, "w", encoding="utf-8") as file:
+        json.dump(new_dataset, file, indent=4)
+
+    return Dataset.from_list(new_dataset)  
+    # dataset = Dataset.from_list(new_dataset)
+    # return dataset.remove_columns("demo_6")
+
+# if __name__ == "__main__":
+    
+#     get_best_output()

@@ -14,38 +14,47 @@ num_steps = 1000
 # 4. extract keywords
 # 5. edit the keywords to make it has a low PPL so as to remove it.
 # 6. change the recommendation result. in other word, we improve the PPL of keywords, in other words, we edit it.
-def get_high_PPL_tokens():
-    """"""
+
+
+class EditPrompt():
+
+    def __init__(self, data):
+        self.data = data
+        """"""
+
+    def replace_high_PPL_tokens(self):
+        """"""
+        
+
+    def get_high_PPL_tokens(self):
+        """"""
     
 
 
-def get_low_PPL_tokens():
-    """"""
+    def get_low_PPL_tokens(self):
+        """"""
 # the objective is to effect the recommandation
-def get_insert_tokens():
-    """"""
+    def get_insert_tokens(self,):
+        """"""
 
-def get_remove_tokens():
-    """"""
+    def get_remove_tokens():
+        """"""
 
-def objective_function():
-    """"""
-    # first: edit high PPL and key information token to make the compressed model remove them
-    # the high PPL token is not the Sufficient and Necessary Condition of key token
-
-
-    # second: edit the low PPL token to imporve its PPL and make compression model leave them
-    # but these tokens is not the key information when recommandation
-
-    # third: insert tokens, we can insert tokens with a high PPL with key information 
-    # this is to confuse the recommand LLM
-
-    # forth: remove tokens, remove high PPL tokens without key information
-    # after that, the demo seems to maintain a high quality, but it will not be maintained after compression
+    def objective_function():
+        """"""
+        # first: edit high PPL and key information token to make the compressed model remove them
+        # the high PPL token is not the Sufficient and Necessary Condition of key token
 
 
-def get_edit_tokens():
-    """"""
+        # second: edit the low PPL token to imporve its PPL and make compression model leave them
+        # but these tokens is not the key information when recommandation
 
-def main():
-    """"""
+        # third: insert tokens, we can insert tokens with a high PPL with key information 
+        # this is to confuse the recommand LLM
+
+        # forth: remove tokens, remove high PPL tokens without key information
+        # after that, the demo seems to maintain a high quality, but it will not be maintained after compression
+
+
+    def get_edit_tokens():
+        """"""

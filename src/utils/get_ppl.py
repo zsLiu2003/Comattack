@@ -3,17 +3,17 @@ import torch
 import csv
 import json
 from tqdm import tqdm
-from datasets import load_dataset
+from datasets import load_dataset, Dataset
 import argparse
-from src.data.data_process import CompressionCommonDataset
+from src.data.data_process import get_common_compression_dataset
 from src.utils.get_compressed_text import get_compressed_text
-import deepspeed
+# import deepspeeds
 from src.utils.verify_PPL import get_PPL
 from src.utils.get_best_output import get_best_output
 import accelerate
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "6,7"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "4,5,6,7"
 
 # def get_parser():
 
@@ -60,22 +60,25 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "6,7"
        
 
 def get_ppl(
-    model_path,
-    compression_model_path,
-    dataset,
-    top_k,
-    output_path="/home/lzs/compressionattack/experiments/src/data",
+    model_path: str,
+    compression_model_path: str,
+    dataset: Dataset,
+    top_k: int,
+    output_path: str="/home/lzs/compressionattack/experiments/src/data",
+    target_token: int=50,
 ):
 
     # parser = get_parser()
     # args = parser.parse_args()
     
     # dataset = load_dataset("json", data_files=dataset_path, split="train")
-    dataset = CompressionCommonDataset(dataset=dataset)
+    dataset = get_common_compression_dataset(dataset=dataset)
     compressed_dataset = get_compressed_text(
         model_name=compression_model_path,
         dataset=dataset,
         device="cuda:0",
+        target_token=target_token,
+        output_path=f"{output_path}/compressed_data.json",
     )
     # demo_keys = [key for key in dataset.keys() if "demo" in key]
     # dataset.map(
@@ -97,12 +100,16 @@ def get_ppl(
     #     json.dump(dataset, file, indent=4)
     
     dataset = get_best_output(
+        model_path=model_path,
+        compression_model_path=compression_model_path,
         other_dataset=dataset,
-        data_with_target_path=f"{output_path}/data_with_target.json_{model_name}"
+        data_with_target_path=f"{output_path}/data_with_target_{model_name}.json"
     )
     compressed_dataset = get_best_output(
+        model_path=model_path,
+        compression_model_path=compression_model_path,
         other_dataset=compressed_dataset,
-        data_with_target_path=f"{output_path}/data_with_compressed_target.json_{model_name}"
+        data_with_target_path=f"{output_path}/data_with_compressed_target_{model_name}.json"
         )
     
     # load the Qwen3-32 model with two L40s
@@ -137,7 +144,7 @@ def get_ppl(
 
     # remain_columns = [key for key in dataset.keys() if "demo" in key]
     # remain_dataset = dataset.select_columns(remain_columns)
-    model = AutoModelForCausalLM.from_pretrained(compression_model_path,device_map="cuda:7")
+    model = AutoModelForCausalLM.from_pretrained(compression_model_path,torch_dtype=torch.bfloat16,device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(compression_model_path)
     assert len(dataset) == len(compressed_dataset)
     ppl_result = []

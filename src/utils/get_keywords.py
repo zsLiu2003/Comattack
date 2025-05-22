@@ -4,12 +4,13 @@ import csv
 import os
 from tqdm import tqdm
 from datasets import load_dataset
-from src.data.data_process import CompressionDataset
+from src.data.data_process import get_compression_dataset,get_common_compression_dataset
 from src.utils.get_prompt import get_keywords_prompt
-
+from accelerate import init_empty_weights, load_checkpoint_and_dispatch
 import argparse
 import torch
-
+import re
+# from src.util
 
 # def get_parser():
 
@@ -45,20 +46,24 @@ import torch
 
 def get_keywords(
     model_path,
-    dataset_path,
-    device="cpu"
+    dataset,
+    output_path="",
+    device="cpu",
 ):
 
     # args = get_parser()
-    
-    model = AutoModelForCausalLM.from_pretrained(model_path,torch_dtype=torch.bfloat16,device_map=device)
     tokenizer = AutoTokenizer.from_pretrained(model_path)
-    
-    dataset = load_dataset("json", data_files=dataset_path, split="train")
-    dataset = CompressionDataset(dataset=dataset)
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token_id = tokenizer.eos_token_id
 
+    model = AutoModelForCausalLM.from_pretrained(
+        model_path,
+        torch_dtype=torch.bfloat16,
+        device_map="auto",
+    )
     prompt = get_keywords_prompt()
     
+    new_dataset = []
     for data in tqdm(dataset):
 
         user_input = ""
@@ -93,5 +98,40 @@ def get_keywords(
         
         thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens = True)
         content = tokenizer.decode(output_ids[index:], skip_special_tokens=True)
-    
-     
+        
+        # print(content)
+        json_pattern = re.compile(r"{.*?}", re.DOTALL)
+        json_match = json_pattern.search(str(content))
+        if json_match:
+            extracted_json_string = json_match.group(0)
+        # print(repr(extracted_json_string))
+        new_data = json.loads(extracted_json_string)
+        # print(new_data)
+        final_dict = {}
+
+        for key, value in new_data.items():
+            if isinstance(value, str):
+                try:
+                    final_dict[key] = json.loads(value)
+                except json.JSONDecodeError:
+                    final_dict[key] = value
+            else:
+                
+                final_dict[key] = value
+        print(final_dict)
+        new_dataset.append(final_dict)
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(new_dataset, file, indent=4)
+
+if __name__ == "__main__":
+
+    dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
+    dataset = get_common_compression_dataset(dataset=dataset)
+
+    get_keywords(
+        model_path="/opt/model/Qwen3-32B",
+        dataset=dataset,
+        output_path="/home/lzs/Comattack/src/data/data_keywords_with_Qwen3.json",
+        device="auto",
+    )
