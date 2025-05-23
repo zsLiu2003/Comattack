@@ -1,0 +1,402 @@
+[
+    {
+        "original_mean_ppl": 21888.0,
+        "compressed_mean_ppl": 79360.0
+    },
+    {
+        "original_mean_ppl": 27904.0,
+        "compressed_mean_ppl": 79872.0
+    },
+    {
+        "original_mean_ppl": 42496.0,
+        "compressed_mean_ppl": 737280.0
+    },
+    {
+        "original_mean_ppl": 22656.0,
+        "compressed_mean_ppl": 203776.0
+    },
+    {
+        "original_mean_ppl": 999424.0,
+        "compressed_mean_ppl": 258048.0
+    },
+    {
+        "original_mean_ppl": 25472.0,
+        "compressed_mean_ppl": 56320.0
+    },
+    {
+        "original_mean_ppl": 29824.0,
+        "compressed_mean_ppl": 1056768.0
+    },
+    {
+        "original_mean_ppl": 60416.0,
+        "compressed_mean_ppl": 150528.0
+    },
+    {
+        "original_mean_ppl": 54784.0,
+        "compressed_mean_ppl": 112128.0
+    },
+    {
+        "original_mean_ppl": 231424.0,
+        "compressed_mean_ppl": 2113536.0
+    },
+    {
+        "original_mean_ppl": 28800.0,
+        "compressed_mean_ppl": 860160.0
+    },
+    {
+        "original_mean_ppl": 46080.0,
+        "compressed_mean_ppl": 307200.0
+    },
+    {
+        "original_mean_ppl": 5600.0,
+        "compressed_mean_ppl": 84480.0
+    },
+    {
+        "original_mean_ppl": 9088.0,
+        "compressed_mean_ppl": 536576.0
+    },
+    {
+        "original_mean_ppl": 69120.0,
+        "compressed_mean_ppl": 139264.0
+    },
+    {
+        "original_mean_ppl": 63744.0,
+        "compressed_mean_ppl": 76800.0
+    },
+    {
+        "original_mean_ppl": 58880.0,
+        "compressed_mean_ppl": 54016.0
+    },
+    {
+        "original_mean_ppl": 18304.0,
+        "compressed_mean_ppl": 1523712.0
+    },
+    {
+        "original_mean_ppl": 63488.0,
+        "compressed_mean_ppl": 86528.0
+    },
+    {
+        "original_mean_ppl": 12224.0,
+        "compressed_mean_ppl": 108544.0
+    },
+    {
+        "original_mean_ppl": 51200.0,
+        "compressed_mean_ppl": 94208.0
+    },
+    {
+        "original_mean_ppl": 23296.0,
+        "compressed_mean_ppl": 206848.0
+    },
+    {
+        "original_mean_ppl": 13568.0,
+        "compressed_mean_ppl": 1212416.0
+    },
+    {
+        "original_mean_ppl": 135168.0,
+        "compressed_mean_ppl": 127488.0
+    },
+    {
+        "original_mean_ppl": 17280.0,
+        "compressed_mean_ppl": 174080.0
+    },
+    {
+        "original_mean_ppl": 14976.0,
+        "compressed_mean_ppl": 319488.0
+    },
+    {
+        "original_mean_ppl": 69632.0,
+        "compressed_mean_ppl": 220160.0
+    },
+    {
+        "original_mean_ppl": 190464.0,
+        "compressed_mean_ppl": 3309568.0
+    },
+    {
+        "original_mean_ppl": 20736.0,
+        "compressed_mean_ppl": 33024.0
+    },
+    {
+        "original_mean_ppl": 8512.0,
+        "compressed_mean_ppl": 52992.0
+    },
+    {
+        "original_mean_ppl": 68608.0,
+        "compressed_mean_ppl": 573440.0
+    },
+    {
+        "original_mean_ppl": 176128.0,
+        "compressed_mean_ppl": 514048.0
+    },
+    {
+        "original_mean_ppl": 60672.0,
+        "compressed_mean_ppl": 274432.0
+    },
+    {
+        "original_mean_ppl": 113152.0,
+        "compressed_mean_ppl": 606208.0
+    },
+    {
+        "original_mean_ppl": 124928.0,
+        "compressed_mean_ppl": 129536.0
+    },
+    {
+        "original_mean_ppl": 477184.0,
+        "compressed_mean_ppl": 244736.0
+    },
+    {
+        "original_mean_ppl": 26752.0,
+        "compressed_mean_ppl": 52480.0
+    },
+    {
+        "original_mean_ppl": 12608.0,
+        "compressed_mean_ppl": 90624.0
+    },
+    {
+        "original_mean_ppl": 6240.0,
+        "compressed_mean_ppl": 206848.0
+    },
+    {
+        "original_mean_ppl": 23040.0,
+        "compressed_mean_ppl": 307200.0
+    },
+    {
+        "original_mean_ppl": 757760.0,
+        "compressed_mean_ppl": 438272.0
+    },
+    {
+        "original_mean_ppl": 52480.0,
+        "compressed_mean_ppl": 270336.0
+    },
+    {
+        "original_mean_ppl": 22272.0,
+        "compressed_mean_ppl": 62464.0
+    },
+    {
+        "original_mean_ppl": 19456.0,
+        "compressed_mean_ppl": 107520.0
+    },
+    {
+        "original_mean_ppl": 1417216.0,
+        "compressed_mean_ppl": 200704.0
+    },
+    {
+        "original_mean_ppl": 138240.0,
+        "compressed_mean_ppl": 127488.0
+    },
+    {
+        "original_mean_ppl": 25728.0,
+        "compressed_mean_ppl": 1449984.0
+    },
+    {
+        "original_mean_ppl": 13760.0,
+        "compressed_mean_ppl": 58368.0
+    },
+    {
+        "original_mean_ppl": 512000.0,
+        "compressed_mean_ppl": 195584.0
+    },
+    {
+        "original_mean_ppl": 9792.0,
+        "compressed_mean_ppl": 462848.0
+    },
+    {
+        "original_mean_ppl": 6624.0,
+        "compressed_mean_ppl": 76288.0
+    },
+    {
+        "original_mean_ppl": 75264.0,
+        "compressed_mean_ppl": 282624.0
+    },
+    {
+        "original_mean_ppl": 11264.0,
+        "compressed_mean_ppl": 86016.0
+    },
+    {
+        "original_mean_ppl": 9152.0,
+        "compressed_mean_ppl": 241664.0
+    },
+    {
+        "original_mean_ppl": 261120.0,
+        "compressed_mean_ppl": 182272.0
+    },
+    {
+        "original_mean_ppl": 33792.0,
+        "compressed_mean_ppl": 74752.0
+    },
+    {
+        "original_mean_ppl": 30720.0,
+        "compressed_mean_ppl": 171008.0
+    },
+    {
+        "original_mean_ppl": 5024.0,
+        "compressed_mean_ppl": 80384.0
+    },
+    {
+        "original_mean_ppl": 15040.0,
+        "compressed_mean_ppl": 765952.0
+    },
+    {
+        "original_mean_ppl": 11136.0,
+        "compressed_mean_ppl": 327680.0
+    },
+    {
+        "original_mean_ppl": 1376.0,
+        "compressed_mean_ppl": 67072.0
+    },
+    {
+        "original_mean_ppl": 5024.0,
+        "compressed_mean_ppl": 376832.0
+    },
+    {
+        "original_mean_ppl": 3008.0,
+        "compressed_mean_ppl": 61440.0
+    },
+    {
+        "original_mean_ppl": 38912.0,
+        "compressed_mean_ppl": 294912.0
+    },
+    {
+        "original_mean_ppl": 52224.0,
+        "compressed_mean_ppl": 313344.0
+    },
+    {
+        "original_mean_ppl": 18432.0,
+        "compressed_mean_ppl": 144384.0
+    },
+    {
+        "original_mean_ppl": 2256.0,
+        "compressed_mean_ppl": 44800.0
+    },
+    {
+        "original_mean_ppl": 13568.0,
+        "compressed_mean_ppl": 41984.0
+    },
+    {
+        "original_mean_ppl": 34816.0,
+        "compressed_mean_ppl": 79872.0
+    },
+    {
+        "original_mean_ppl": 4576.0,
+        "compressed_mean_ppl": 71168.0
+    },
+    {
+        "original_mean_ppl": 11968.0,
+        "compressed_mean_ppl": 84992.0
+    },
+    {
+        "original_mean_ppl": 6688.0,
+        "compressed_mean_ppl": 182272.0
+    },
+    {
+        "original_mean_ppl": 9408.0,
+        "compressed_mean_ppl": 78336.0
+    },
+    {
+        "original_mean_ppl": 10112.0,
+        "compressed_mean_ppl": 38144.0
+    },
+    {
+        "original_mean_ppl": 13888.0,
+        "compressed_mean_ppl": 234496.0
+    },
+    {
+        "original_mean_ppl": 78336.0,
+        "compressed_mean_ppl": 138240.0
+    },
+    {
+        "original_mean_ppl": 39424.0,
+        "compressed_mean_ppl": 115200.0
+    },
+    {
+        "original_mean_ppl": 3680.0,
+        "compressed_mean_ppl": 27904.0
+    },
+    {
+        "original_mean_ppl": 4256.0,
+        "compressed_mean_ppl": 39936.0
+    },
+    {
+        "original_mean_ppl": 16896.0,
+        "compressed_mean_ppl": 123392.0
+    },
+    {
+        "original_mean_ppl": 14528.0,
+        "compressed_mean_ppl": 178176.0
+    },
+    {
+        "original_mean_ppl": 138240.0,
+        "compressed_mean_ppl": 40704.0
+    },
+    {
+        "original_mean_ppl": 9728.0,
+        "compressed_mean_ppl": 80384.0
+    },
+    {
+        "original_mean_ppl": 11328.0,
+        "compressed_mean_ppl": 215040.0
+    },
+    {
+        "original_mean_ppl": 60416.0,
+        "compressed_mean_ppl": 103936.0
+    },
+    {
+        "original_mean_ppl": 16384.0,
+        "compressed_mean_ppl": 27392.0
+    },
+    {
+        "original_mean_ppl": 24064.0,
+        "compressed_mean_ppl": 207872.0
+    },
+    {
+        "original_mean_ppl": 4928.0,
+        "compressed_mean_ppl": 84992.0
+    },
+    {
+        "original_mean_ppl": 18304.0,
+        "compressed_mean_ppl": 73728.0
+    },
+    {
+        "original_mean_ppl": 144384.0,
+        "compressed_mean_ppl": 106496.0
+    },
+    {
+        "original_mean_ppl": 8256.0,
+        "compressed_mean_ppl": 181248.0
+    },
+    {
+        "original_mean_ppl": 180224.0,
+        "compressed_mean_ppl": 270336.0
+    },
+    {
+        "original_mean_ppl": 43264.0,
+        "compressed_mean_ppl": 3473408.0
+    },
+    {
+        "original_mean_ppl": 15744.0,
+        "compressed_mean_ppl": 89600.0
+    },
+    {
+        "original_mean_ppl": 38144.0,
+        "compressed_mean_ppl": 97792.0
+    },
+    {
+        "original_mean_ppl": 98816.0,
+        "compressed_mean_ppl": 126976.0
+    },
+    {
+        "original_mean_ppl": 5216.0,
+        "compressed_mean_ppl": 64000.0
+    },
+    {
+        "original_mean_ppl": 51456.0,
+        "compressed_mean_ppl": 253952.0
+    },
+    {
+        "original_mean_ppl": 9728.0,
+        "compressed_mean_ppl": 5963776.0
+    },
+    {
+        "original_mean_ppl": 102400.0,
+        "compressed_mean_ppl": 251904.0
+    }
+]

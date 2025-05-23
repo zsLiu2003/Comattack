@@ -105,7 +105,8 @@ def get_topk(ppl_list, input_ids, top_k, tokenizer):
 
     top_k = min(top_k, len(ppl_list))
     topk_vals, topk_ids_index = torch.topk(ppl_list, k=top_k, largest=True)
-    topk_vals.tolist()
+    topk_vals = topk_vals.tolist()
+    # print(type(topk_vals))
     token_ids = input_ids.squeeze(0)[1:]
     topk_token_ids = token_ids[topk_ids_index]
     topk_tokens = tokenizer.convert_ids_to_tokens(topk_token_ids.tolist())
@@ -161,6 +162,39 @@ def get_PPL(model, tokenizer, origin_text, compressed_text, top_k):
         tokenizer=tokenizer,
         )
     return  result_token_list_origin, ppl_mean_origin, ppl_mean_compressed
+
+# get the ppl of the single text, get the top_k ppl tokens
+def get_single_PPL(model, tokenizer, text, top_k):
+
+    device = model.device
+    input = tokenizer(text, return_tensors="pt").to(device)
+    input_ids = input["input_ids"] # shape = [batch_size, sequence_length-1]
+
+    with torch.no_grad():
+        output = model(**input)
+        logits = output.logits # shape = [batch_size, sequence_length/num_steps, vocabulary_size]
+
+    shift_logits = logits[..., :-1, :].contiguous() # shape = [batch_size, sequence_length-1, vocabulary_size] 
+    label_logits = input_ids[:,1:].contiguous() # shape = [batch_size, sequence_length-1]
+    loss_function = CrossEntropyLoss(reduction="none", ignore_index=tokenizer.pad_token_id)
+    loss = loss_function(
+        shift_logits.view(-1, shift_logits.size(-1)),
+        label_logits.view(-1)
+    )
+    # ppl_per_token = torch.exp(loss).float().cpu().numpy().tolist()
+    ppl_per_token = torch.exp(loss)
+    ppl_mean_origin = torch.exp(loss).mean().item()
+    
+    # type: list
+    top_k_tokens_with_ppl_list= get_topk(
+        ppl_list=ppl_per_token,
+        input_ids=input_ids,
+        top_k=top_k,
+        tokenizer=tokenizer
+    )
+    
+    return top_k_tokens_with_ppl_list, ppl_mean_origin
+
 
 
 # the following code is to get the recommandation output of LLM

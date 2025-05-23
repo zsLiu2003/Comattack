@@ -8,7 +8,7 @@ import argparse
 from src.data.data_process import get_common_compression_dataset
 from src.utils.get_compressed_text import get_compressed_text
 # import deepspeeds
-from src.utils.verify_PPL import get_PPL
+from src.utils.verify_PPL import get_PPL, get_single_PPL
 from src.utils.get_best_output import get_best_output
 import accelerate
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch
@@ -64,9 +64,16 @@ def get_ppl(
     compression_model_path: str,
     dataset: Dataset,
     top_k: int,
-    output_path: str="/home/lzs/compressionattack/experiments/src/data",
+    output_path: str="/home/lzs/Comattack/src/data",
     target_token: int=50,
 ):
+    
+    if "gpt2" in compression_model_path:
+        ppl_model_name = "gpt2"
+    elif "Llama" in compression_model_path:
+        ppl_model_name = "llama2"
+    elif "phi" in compression_model_path:
+        ppl_model_name = "phi"
 
     # parser = get_parser()
     # args = parser.parse_args()
@@ -78,7 +85,7 @@ def get_ppl(
         dataset=dataset,
         device="cuda:0",
         target_token=target_token,
-        output_path=f"{output_path}/compressed_data.json",
+        output_path=f"{output_path}/compressed_data_{ppl_model_name}.json",
     )
     # demo_keys = [key for key in dataset.keys() if "demo" in key]
     # dataset.map(
@@ -99,19 +106,25 @@ def get_ppl(
     # with open(output_data_path, "w", encoding="utf-8") as file:
     #     json.dump(dataset, file, indent=4)
     
-    dataset = get_best_output(
-        model_path=model_path,
-        compression_model_path=compression_model_path,
-        other_dataset=dataset,
-        data_with_target_path=f"{output_path}/data_with_target_{model_name}.json"
-    )
-    compressed_dataset = get_best_output(
-        model_path=model_path,
-        compression_model_path=compression_model_path,
-        other_dataset=compressed_dataset,
-        data_with_target_path=f"{output_path}/data_with_compressed_target_{model_name}.json"
-        )
+    """
+    the following code is used to get the best output
+    """
+    # dataset = get_best_output(
+    #     model_path=model_path,
+    #     compression_model_path=compression_model_path,
+    #     other_dataset=dataset,
+    #     data_with_target_path=f"{output_path}/data_with_target_{model_name}.json"
+    # )
+    # compressed_dataset = get_best_output(
+    #     model_path=model_path,
+    #     compression_model_path=compression_model_path,
+    #     other_dataset=compressed_dataset,
+    #     data_with_target_path=f"{output_path}/data_with_compressed_target_{model_name}.json"
+    #     )
     
+    """
+    the following code is to load the model into GPUs
+    """
     # load the Qwen3-32 model with two L40s
     # if model_name == "Qwen3":
     #     max_memory = {
@@ -144,43 +157,115 @@ def get_ppl(
 
     # remain_columns = [key for key in dataset.keys() if "demo" in key]
     # remain_dataset = dataset.select_columns(remain_columns)
+    
+    
     model = AutoModelForCausalLM.from_pretrained(compression_model_path,torch_dtype=torch.bfloat16,device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(compression_model_path)
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+
     assert len(dataset) == len(compressed_dataset)
     ppl_result = []
-    for data, compressed_data in tqdm(zip(dataset, compressed_dataset), desc="Get the PPL of every token: "):
-        assert len(data) == len(compressed_data), "the length of original data is not equal to the compressed data"
+
+    """
+    for data in tqdm(dataset, desc="Get the PPL of every token: "):
+        # assert len(data) == len(compressed_data), "the length of original data is not equal to the compressed data"
         ppl_datadict = {}
-        for original_demo, compressed_demo in zip(data[-7:-2], compressed_data[-7:-2]):
-            original_key, original_value = original_demo
-            compressed_key, compressed_value = compressed_demo
+        # for original_demo, compressed_demo in :
+        #     original_key, original_value = original_demo
+        #     compressed_key, compressed_value = compressed_demo
             
-            token_list, ppl_mean_origin, ppl_mean_compressed = get_PPL(
+        #     token_list, ppl_mean_origin, ppl_mean_compressed = get_PPL(
+        #         model=model,
+        #         tokenizer=tokenizer,
+        #         origin_text=original_demo,
+        #         compressed_text=compressed_demo,
+        #         top_k=top_k,
+        #     )
+        #     ppl_data = {
+        #         "token_list": token_list,
+        #         "ppl_mean_origin": ppl_mean_origin,
+        #         "ppl_mean_compressed": ppl_mean_compressed, 
+        #     }
+        #     ppl_datadict[original_key] = ppl_data
+        original_demo, compressed_demo = data["all_demos"], data["compressed"]
+        token_list, ppl_mean_origin, ppl_mean_compressed = get_PPL(
                 model=model,
                 tokenizer=tokenizer,
                 origin_text=original_demo,
                 compressed_text=compressed_demo,
                 top_k=top_k,
             )
-            ppl_data = {
-                "token_list": token_list,
-                "ppl_mean_origin": ppl_mean_origin,
-                "ppl_mean_compressed": ppl_mean_compressed, 
-            }
-            ppl_datadict[original_key] = ppl_data
-        
-        ppl_result.append(ppl_datadict)
-    
-    ppl_dataset_path = f"{output_path}/ppl_data.json"
-    
+        ppl_data = {
+            "token_list": token_list,
+            "ppl_mean_origin": ppl_mean_origin,
+            "ppl_mean_compressed": ppl_mean_compressed, 
+        }
+        ppl_result.append(ppl_data)
+    """
+    for data in tqdm(compressed_dataset, desc="get the top_k tokens with high ppl of every demo"):
+        ppl_dict = {}
+        for key, value in data.items():
+            if "demo" in key:
+                topk_tokens_with_ppl, mean_ppl = get_single_PPL(
+                    model=model,
+                    tokenizer=tokenizer,
+                    text=value,
+                    top_k=top_k,
+                )
+                ppl_dict[key] = {
+                    "tokens_with_ppl": topk_tokens_with_ppl,
+                    "mean_ppl": mean_ppl,
+                }
+        ppl_result.append(ppl_dict)
+
+    ppl_dataset_path = f"{output_path}/ppl_data_{ppl_model_name}.json"
     with open(ppl_dataset_path, "w", encoding="utf-8") as file:
         json.dump(ppl_result, file, indent=4)
     
-    
+    mean_ppl_result = []
+    for data in tqdm(compressed_dataset, desc="get the mean ppl of origin_demo and compressed demo"):
+        origin_text = data["original_text"]
+        compressed_text = data["compressed_text"]
+        _, original_mean_ppl = get_single_PPL(
+            model=model,
+            tokenizer=tokenizer,
+            text=origin_text,
+            top_k=top_k,
+        )
+        _, compressed_mean_ppl = get_single_PPL(
+            model=model,
+            tokenizer=tokenizer,
+            text=compressed_text,
+            top_k=top_k,
+        )
+        mean_ppl_result.append(
+            {
+                "original_mean_ppl": original_mean_ppl,
+                "compressed_mean_ppl": compressed_mean_ppl,
+            }
+        )
 
-            
-            
-            
-            
+    mean_ppl_dataset_path = f"{output_path}/mean_ppl_{ppl_model_name}.json"    
+    with open(mean_ppl_dataset_path, "w", encoding="utf-8") as file:
+        json.dump(mean_ppl_result, file, indent=4)
     
+    print("------------Successfully get the PPL of every token and the whole demo!-----------")
+
+
     
+if __name__ == "__main__":
+    
+    import sys
+    compression_model_name = sys.argv[1]
+
+    dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
+
+    get_ppl(
+        model_path="/opt/model/Qwen3-32B",
+        compression_model_path=str(compression_model_name),
+        dataset=dataset,
+        top_k=20,
+        output_path="/home/lzs/Comattack/src/data",
+        target_token=100,
+    )
