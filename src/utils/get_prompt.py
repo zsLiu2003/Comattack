@@ -27,6 +27,26 @@ def get_keywords_prompt():
 
     return content
 
+# get the system prompt of edit keywords with Qwen3-32B
+# the first is to increase the quality and the probality of recommendation
+# the second is to decrease the quality and the probality of recommendation
+def get_edit_keywords_increase_prompt():
+
+    prompt_path = "/home/lzs/Comattack/src/data/edit_keywords_soft_increase.txt"
+    with open(prompt_path, "r", encoding="utf-8") as file:
+        content = file.read()
+
+    return content
+
+def get_edit_keywords_decrease_prompt():
+
+    prompt_path = "/home/lzs/Comattack/src/data/edit_keywords_soft_decrease.txt"
+    with open(prompt_path, 'r', encoding="utf-8") as file:
+        content = file.read()
+
+    return content
+
+
 # test code
 # print(get_distill_prompt())
 
