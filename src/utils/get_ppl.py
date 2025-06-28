@@ -98,6 +98,7 @@ def get_mean_PPL(
                     tokenizer=tokenizer,
                     text=value,
                     top_k=top_k,
+                    flag=True,
                 )
                 ppl_dict[key] = mean_PPL
         ppl_result.append(ppl_dict)
@@ -264,6 +265,7 @@ def get_ppl(
                     tokenizer=tokenizer,
                     text=value,
                     top_k=top_k,
+                    flag=True,
                 )
                 ppl_dict[key] = {
                     "tokens_with_ppl": topk_tokens_with_ppl,
@@ -284,12 +286,14 @@ def get_ppl(
             tokenizer=tokenizer,
             text=origin_text,
             top_k=top_k,
+            flag=True,
         )
         _, compressed_mean_ppl = get_single_PPL(
             model=model,
             tokenizer=tokenizer,
             text=compressed_text,
             top_k=top_k,
+            flag=True,
         )
         mean_ppl_result.append(
             {

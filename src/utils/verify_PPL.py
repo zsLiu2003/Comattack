@@ -118,6 +118,21 @@ def get_topk(ppl_list, input_ids, top_k, tokenizer):
     return token_list_with_ppl
 
 
+def get_bottomk(ppl_list, input_ids, top_k, tokenizer):
+
+    bottom_k = min(top_k, len(ppl_list))
+    bottomk_vals, bottomk_ids_index = torch.topk(ppl_list, k=bottom_k, largest=False)
+    bottomk_vals = bottomk_vals.tolist()
+    token_ids = input_ids.squeeze(0)[1:]
+    bottom_token_ids = token_ids[bottomk_ids_index]
+    bottomk_tokens = tokenizer.convert_ids_to_tokens(bottomk_ids_index.tolist())
+    token_list_with_ppl = [
+        {"token": token, "ppl": ppl}
+        for token, ppl in zip(bottomk_tokens, bottomk_vals)
+    ]
+
+    return token_list_with_ppl
+
 # get the ppl of every token and the mean PPL of sentence
 def get_PPL(model, tokenizer, origin_text, compressed_text, top_k):
 
@@ -163,8 +178,9 @@ def get_PPL(model, tokenizer, origin_text, compressed_text, top_k):
         )
     return  result_token_list_origin, ppl_mean_origin, ppl_mean_compressed
 
+
 # get the ppl of the single text, get the top_k ppl tokens
-def get_single_PPL(model, tokenizer, text, top_k):
+def get_single_PPL(model, tokenizer, text, top_k, flag: bool):
 
     device = model.device
     input = tokenizer(text, return_tensors="pt").to(device)
@@ -192,6 +208,14 @@ def get_single_PPL(model, tokenizer, text, top_k):
         top_k=top_k,
         tokenizer=tokenizer
     )
+    if not flag:
+        bottom_k_tokens_with_ppl_list = get_topk(
+            ppl_list=ppl_per_token,
+            input_ids=input_ids,
+            top_k=top_k,
+            tokenizer=tokenizer,
+        )
+        return top_k_tokens_with_ppl_list, bottom_k_tokens_with_ppl_list, ppl_mean_origin
     
     return top_k_tokens_with_ppl_list, ppl_mean_origin
 
