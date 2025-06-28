@@ -59,6 +59,58 @@ import os
 #     return example
        
 
+def get_mean_PPL(
+    # model_path: str,
+    compression_model_path: str,
+    dataset: Dataset,
+    top_k: int,
+    output_path: str="/home/lzs/Comattack/src/data",
+    target_token: int=50,
+):
+    if "gpt2" in compression_model_path:
+        ppl_model_name = "gpt2"
+    elif "Llama" in compression_model_path:
+        ppl_model_name = "llama2"
+    elif "phi" in compression_model_path:
+        ppl_model_name = "phi"
+    
+    
+    # if "Qwen" in model_path:
+    #     model_name = "Qwen3"
+    # elif "Llama" in model_path:
+    #     model_name = "Llama2"
+
+    model = AutoModelForCausalLM.from_pretrained(compression_model_path,torch_dtype=torch.bfloat16,device_map="auto")
+    tokenizer = AutoTokenizer.from_pretrained(compression_model_path)
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+
+    # assert len(dataset) == len(compressed_dataset)
+    ppl_result = []
+    
+    dataset = get_common_compression_dataset(dataset=dataset)
+    for data in tqdm(dataset, desc="get the PPL of every demo in each data entry."):
+        ppl_dict = {}
+        for key, value in data.items():
+            if "demo" in key:
+                high_ppl_tokens, mean_PPL = get_single_PPL(
+                    model=model,
+                    tokenizer=tokenizer,
+                    text=value,
+                    top_k=top_k,
+                )
+                ppl_dict[key] = mean_PPL
+        ppl_result.append(ppl_dict)
+
+    
+    output_path = f"{output_path}/mean_ppl_origin_{ppl_model_name}.json"
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(ppl_result, file, indent=4)
+    
+    print("------------------Successfully finished the calculation of mean PPL of every demo.--------------------")
+
+    
+        
 def get_ppl(
     model_path: str,
     compression_model_path: str,
@@ -261,7 +313,15 @@ if __name__ == "__main__":
 
     dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
 
-    get_ppl(
+    # get_ppl(
+    #     model_path="/opt/model/Qwen3-32B",
+    #     compression_model_path=str(compression_model_name),
+    #     dataset=dataset,
+    #     top_k=20,
+    #     output_path="/home/lzs/Comattack/src/data",
+    #     target_token=100,
+    # )
+    get_mean_PPL(
         model_path="/opt/model/Qwen3-32B",
         compression_model_path=str(compression_model_name),
         dataset=dataset,

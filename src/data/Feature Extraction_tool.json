@@ -1,0 +1,806 @@
+[
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+        "description": "SapBERT is a pretraining scheme that self-aligns the representation space of biomedical entities. It is trained with UMLS 2020AA (English only) and uses microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext as the base model. The input should be a string of biomedical entity names, and the [CLS] embedding of the last layer is regarded as the output."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+        "description": "SapBERT is a pretraining scheme that self-aligns the representation space of biomedical entities. It is trained with UMLS 2020AA (English only) and uses microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext as the base model. The input should be a string of biomedical entity names, and the [CLS] embedding of the last layer is regarded as the output."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+        "description": "SapBERT is a pretraining scheme that self-aligns the representation space of biomedical entities. It is trained with UMLS 2020AA (English only) and uses microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext as the base model. The input should be a string of biomedical entity names, and the [CLS] embedding of the last layer is regarded as the output."
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+        "description": "SapBERT is a pretraining scheme that self-aligns the representation space of biomedical entities. It is trained with UMLS 2020AA (English only) and uses microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext as the base model. The input should be a string of biomedical entity names, and the [CLS] embedding of the last layer is regarded as the output."
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+        "description": "SapBERT is a pretraining scheme that self-aligns the representation space of biomedical entities. It is trained with UMLS 2020AA (English only) and uses microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext as the base model. The input should be a string of biomedical entity names, and the [CLS] embedding of the last layer is regarded as the output."
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "facebook/dpr-question_encoder-single-nq-base",
+        "description": "Dense Passage Retrieval (DPR) is a set of tools and models for state-of-the-art open-domain Q&A research. dpr-question_encoder-single-nq-base is the question encoder trained using the Natural Questions (NQ) dataset (Lee et al., 2019; Kwiatkowski et al., 2019)."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "google/vit-base-patch16-224-in21k",
+        "description": "The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on ImageNet-21k (14 million images, 21,843 classes) at resolution 224x224. It was introduced in the paper An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale by Dosovitskiy et al. and first released in this repository. However, the weights were converted from the timm repository by Ross Wightman, who already converted the weights from JAX to PyTorch. Credits go to him."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "setu4993/LaBSE",
+        "description": "Language-agnostic BERT Sentence Encoder (LaBSE) is a BERT-based model trained for sentence embedding for 109 languages. The pre-training process combines masked language modeling with translation language modeling. The model is useful for getting multilingual sentence embeddings and for bi-text retrieval."
+    },
+    {
+        "api_name": "YituTech/conv-bert-base",
+        "description": "A pre-trained ConvBERT model for feature extraction provided by YituTech, based on the Hugging Face Transformers library."
+    },
+    {
+        "api_name": "dmis-lab/biobert-v1.1",
+        "description": "BioBERT is a pre-trained biomedical language representation model for biomedical text mining tasks such as biomedical named entity recognition, relation extraction, and question answering."
+    },
+    {
+        "api_name": "cambridgeltl/SapBERT-from-PubMedBERT-fulltext",
+        "description": "SapBERT is a pretraining scheme that self-aligns the representation space of biomedical entities. It is trained with UMLS 2020AA (English only) and uses microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext as the base model. The input should be a string of biomedical entity names, and the [CLS] embedding of the last layer is regarded as the output."
+    },
+    {
+        "api_name": "princeton-nlp/unsup-simcse-roberta-base",
+        "description": "An unsupervised sentence embedding model trained using the SimCSE approach with a Roberta base architecture."
+    },
+    {
+        "api_name": "facebook/bart-base",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "facebook/bart-large",
+        "description": "BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by (1) corrupting text with an arbitrary noising function, and (2) learning a model to reconstruct the original text. BART is particularly effective when fine-tuned for text generation (e.g. summarization, translation) but also works well for comprehension tasks (e.g. text classification, question answering)."
+    },
+    {
+        "api_name": "kobart-base-v2",
+        "description": "KoBART is a Korean encoder-decoder language model trained on over 40GB of Korean text using the BART architecture. It can be used for feature extraction and has been trained on a variety of data sources, including Korean Wiki, news, books, and more."
+    },
+    {
+        "api_name": "GanjinZero/UMLSBert_ENG",
+        "description": "CODER: Knowledge infused cross-lingual medical term embedding for term normalization. English Version. Old name. This model is not UMLSBert! Github Link: https://github.com/GanjinZero/CODER"
+    },
+    {
+        "api_name": "facebook/dino-vits8",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. It was introduced in the paper Emerging Properties in Self-Supervised Vision Transformers by Mathilde Caron, Hugo Touvron, Ishan Misra, Herv\u00e9 J\u00e9gou, Julien Mairal, Piotr Bojanowski, Armand Joulin and first released in this repository."
+    },
+    {
+        "api_name": "microsoft/codebert-base",
+        "description": "Pretrained weights for CodeBERT: A Pre-Trained Model for Programming and Natural Languages. The model is trained on bi-modal data (documents & code) of CodeSearchNet. This model is initialized with Roberta-base and trained with MLM+RTD objective."
+    },
+    {
+        "api_name": "facebook/dino-vitb16",
+        "description": "Vision Transformer (ViT) model trained using the DINO method. The model is pretrained on a large collection of images in a self-supervised fashion, namely ImageNet-1k, at a resolution of 224x224 pixels. Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Note that this model does not include any fine-tuned heads."
+    },
+    {
+        "api_name": "hubert-large-ll60k",
+        "description": "Hubert-Large is a self-supervised speech representation learning model pretrained on 16kHz sampled speech audio. It is designed to deal with the unique problems in speech representation learning, such as multiple sound units in each input utterance, no lexicon of input sound units during the pre-training phase, and variable lengths of sound units with no explicit segmentation. The model relies on an offline clustering step to provide aligned target labels for a BERT-like prediction loss."
+    },
+    {
+        "api_name": "sup-simcse-roberta-large",
+        "description": "A pretrained RoBERTa-large model for simple contrastive learning of sentence embeddings. It can be used for feature extraction and has been evaluated on semantic textual similarity (STS) tasks and downstream transfer tasks."
+    },
+    {
+        "api_name": "DeepPavlov/rubert-base-cased",
+        "description": "RuBERT (Russian, cased, 12\u2011layer, 768\u2011hidden, 12\u2011heads, 180M parameters) was trained on the Russian part of Wikipedia and news data. We used this training data to build a vocabulary of Russian subtokens and took a multilingual version of BERT\u2011base as an initialization for RuBERT[1]."
+    },
+    {
+        "api_name": "microsoft/wavlm-large",
+        "description": "WavLM-Large is a large model pretrained on 16kHz sampled speech audio. It is built based on the HuBERT framework, with an emphasis on both spoken content modeling and speaker identity preservation. WavLM is pretrained on 60,000 hours of Libri-Light, 10,000 hours of GigaSpeech, and 24,000 hours of VoxPopuli. It achieves state-of-the-art performance on the SUPERB benchmark and brings significant improvements for various speech processing tasks on their representative benchmarks."
+    },
+    {
+        "api_name": "sentence-transformers/distilbert-base-nli-mean-tokens",
+        "description": "This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search."
+    },
+    {
+        "api_name": "sberbank-ai/sbert_large_mt_nlu_ru",
+        "description": "BERT large model multitask (cased) for Sentence Embeddings in Russian language."
+    },
+    {
+        "api_name": "lanwuwei/BERTOverflow_stackoverflow_github",
+        "description": "BERT-base model pre-trained on 152 million sentences from the StackOverflow's 10 year archive. It can be used for code and named entity recognition in StackOverflow."
+    },
+    {
+        "api_name": "microsoft/xclip-base-patch16-zero-shot",
+        "description": "X-CLIP is a minimal extension of CLIP for general video-language understanding. The model is trained in a contrastive way on (video, text) pairs. This allows the model to be used for tasks like zero-shot, few-shot or fully supervised video classification and video-text retrieval."
+    },
+    {
+        "api_name": "rasa/LaBSE",
+        "description": "LaBSE (Language-agnostic BERT Sentence Embedding) model for extracting sentence embeddings in multiple languages."
+    }
+]

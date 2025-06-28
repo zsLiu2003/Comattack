@@ -1,0 +1,754 @@
+[
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-ema",
+        "description": "This is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It has been fine-tuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets. The decoder can be used as a drop-in replacement for the existing autoencoder."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-ema",
+        "description": "This is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It has been fine-tuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets. The decoder can be used as a drop-in replacement for the existing autoencoder."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-ema",
+        "description": "This is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It has been fine-tuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets. The decoder can be used as a drop-in replacement for the existing autoencoder."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-ema",
+        "description": "This is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It has been fine-tuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets. The decoder can be used as a drop-in replacement for the existing autoencoder."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-ema",
+        "description": "This is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It has been fine-tuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets. The decoder can be used as a drop-in replacement for the existing autoencoder."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    },
+    {
+        "api_name": "prompthero/openjourney",
+        "description": "Openjourney is an open source Stable Diffusion fine-tuned model on Midjourney images, by PromptHero. It can be used for generating AI art based on text prompts."
+    },
+    {
+        "api_name": "hakurei/waifu-diffusion",
+        "description": "waifu-diffusion is a latent text-to-image diffusion model that has been conditioned on high-quality anime images through fine-tuning."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-mse",
+        "description": "This model is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It is designed to be used with the diffusers library and can be integrated into existing workflows by including a vae argument to the StableDiffusionPipeline. The model has been finetuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets and has been evaluated on COCO 2017 and LAION-Aesthetics 5+ datasets."
+    },
+    {
+        "api_name": "Realistic_Vision_V1.4",
+        "description": "Realistic_Vision_V1.4 is a text-to-image model that generates high-quality and detailed images based on textual prompts. It can be used for various applications such as generating realistic portraits, landscapes, and other types of images."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-photoreal-2.0",
+        "description": "Dreamlike Photoreal 2.0 is a photorealistic model based on Stable Diffusion 1.5, made by dreamlike.art. It can be used to generate photorealistic images from text prompts."
+    },
+    {
+        "api_name": "andite/anything-v4.0",
+        "description": "Anything V4 is a latent diffusion model for generating high-quality, highly detailed anime-style images with just a few prompts. It supports danbooru tags to generate images and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "stabilityai/sd-vae-ft-ema",
+        "description": "This is a fine-tuned VAE decoder for the Stable Diffusion Pipeline. It has been fine-tuned on a 1:1 ratio of LAION-Aesthetics and LAION-Humans datasets. The decoder can be used as a drop-in replacement for the existing autoencoder."
+    },
+    {
+        "api_name": "prompthero/openjourney-v4",
+        "description": "Openjourney v4 is trained on +124k Midjourney v4 images by PromptHero. It is used for generating images based on text inputs."
+    },
+    {
+        "api_name": "Linaqruf/anything-v3.0",
+        "description": "A text-to-image model that generates images from text descriptions."
+    },
+    {
+        "api_name": "EimisAnimeDiffusion_1.0v",
+        "description": "EimisAnimeDiffusion_1.0v is a text-to-image model trained with high-quality and detailed anime images. It works well on anime and landscape generations and supports a Gradio Web UI."
+    },
+    {
+        "api_name": "wavymulder/Analog-Diffusion",
+        "description": "Analog Diffusion is a dreambooth model trained on a diverse set of analog photographs. It can generate images based on text prompts with an analog style. Use the activation token 'analog style' in your prompt to get the desired output. The model is available on the Hugging Face Inference API and can be used with the transformers library."
+    },
+    {
+        "api_name": "nitrosocke/nitro-diffusion",
+        "description": "Nitro Diffusion is a fine-tuned Stable Diffusion model trained on three artstyles simultaneously while keeping each style separate from the others. It allows for high control of mixing, weighting, and single style use."
+    },
+    {
+        "api_name": "Lykon/DreamShaper",
+        "description": "Dream Shaper is a text-to-image model that generates artistic images based on the given input text. Read more about this model here: https://civitai.com/models/4384/dreamshaper"
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-diffusion-1.0",
+        "description": "Dreamlike Diffusion 1.0 is SD 1.5 fine tuned on high quality art, made by dreamlike.art."
+    },
+    {
+        "api_name": "dreamlike-art/dreamlike-anime-1.0",
+        "description": "Dreamlike Anime 1.0 is a high quality anime model, made by dreamlike.art. It can be used to generate anime-style images based on text prompts. The model is trained on 768x768px images and works best with prompts that include 'photo anime, masterpiece, high quality, absurdres'. It can be used with the Stable Diffusion Pipeline from the diffusers library."
+    },
+    {
+        "api_name": "gsdf/Counterfeit-V2.5",
+        "description": "Counterfeit-V2.5 is a text-to-image model that generates anime-style images based on text prompts. It has been updated for ease of use and can be used with negative prompts to create high-quality images."
+    },
+    {
+        "api_name": "vintedois-diffusion-v0-1",
+        "description": "Vintedois (22h) Diffusion model trained by Predogl and piEsposito with open weights, configs and prompts. This model generates beautiful images without a lot of prompt engineering. It can also generate high fidelity faces with a little amount of steps."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_v2.2_Official_Release",
+        "description": "Protogen v2.2 is a text-to-image model that generates high-quality images based on text prompts. It was warm-started with Stable Diffusion v1-5 and fine-tuned on a large amount of data from large datasets new and trending on civitai.com. The model can be used with the Stable Diffusion Pipeline and supports trigger words like 'modelshoot style' to enforce camera capture."
+    },
+    {
+        "api_name": "darkstorm2150/Protogen_x5.8_Official_Release",
+        "description": "Protogen x5.8 is a text-to-image model that generates images based on text prompts. It was warm-started with Stable Diffusion v1-5 and is rebuilt using dreamlikePhotoRealV2.ckpt as a core. The model uses granular adaptive learning techniques for fine-grained adjustments and can be used just like any other Stable Diffusion model."
+    },
+    {
+        "api_name": "lllyasviel/control_v11p_sd15_scribble",
+        "description": "Controlnet v1.1 is a neural network structure to control diffusion models by adding extra conditions. This checkpoint corresponds to the ControlNet conditioned on Scribble images. It can be used in combination with Stable Diffusion, such as runwayml/stable-diffusion-v1-5."
+    }
+]
