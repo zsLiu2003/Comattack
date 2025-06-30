@@ -207,6 +207,7 @@ class EditPrompt():
                 # select the correcr functions
                 replaced_list = []
                 selected_function = None
+                prompt = ""
                 if strategy == "synonym":
                     selected_function=self.optimize_with_synonyms
                 elif strategy == "connectors":
@@ -371,10 +372,10 @@ class EditPrompt():
     def get_insert_tokens(self,):
         """"""
 
-    def get_remove_tokens():
+    def get_remove_tokens(self,):
         """"""
 
-    def objective_function():
+    def objective_function(self,):
         """"""
         # first: edit high PPL and key information token to make the compressed model remove them
         # the high PPL token is not the Sufficient and Necessary Condition of key token
@@ -389,13 +390,46 @@ class EditPrompt():
         # forth: remove tokens, remove high PPL tokens without key information
         # after that, the demo seems to maintain a high quality, but it will not be maintained after compression
 
+    
+    def get_connectors_and_pre_context(
+            self,
+            model: None,
+            tokenizer: None,
+            prompt: str,
+    ):
+        """
+        To get the proper connectors and pre-context experssion of the given word.
+        """  
 
-    def get_edit_tokens():
+        device = model.device
+        inputs = tokenizer(prompt, return_tensors='pt').to(device)
+        
+        with torch.no_grad():
+            output = model.generate(
+                input_ids = inputs.input_ids,
+                max_new_tokens=50,
+                num_return_sequences=1,
+                do_sample=True,
+                top_k = 50,
+                top_p=0.95,
+                pad_token_id = tokenizer.eos_token_id,
+            )
+        
+        input_length = len(inputs.input_ids[0])
+        output_text = tokenizer.decode(output[0][input_length:], skip_special_tokens=True)
+        output_text = output_text.strip()
+        phrase_words = [p.strip() for p in output_text.split(",") if p.strip()]
+
+        return phrase_words
+
+    def get_edit_tokens(self,):
         """"""
         
-        connector_list = ["so", "and", "therefore", "as a result", "consequently", "because"]
-        pre_context_list = [
-            "for example,",
-            "specifically,",
-            "that is to say,"
-        ]
+        # connector_list = ["so", "and", "therefore", "as a result", "consequently", "because", "however", "in addition", "what's more", "else", "hence"]
+        # pre_context_list = [
+        #     "for example,",
+        #     "specifically,",
+        #     "that is to say,"
+        # ]
+
+        
