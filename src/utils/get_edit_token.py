@@ -123,12 +123,14 @@ class EditPrompt():
         return word_ppls[-top_k:]
 
 
-    def optimize_with_synonyms(self, model, tokenizer, device, senetence: str, ppl_of_senetence: float, target_word: str, flag: bool):
+    def optimize_with_synonyms(self, model, tokenizer, senetence: str, target_word: str, flag: bool, replaced_list: list):
         """
         seltect the best synonyms to meet the ppl requirements
         """
-        original_ppl = ppl_of_senetence
+        original_ppl = self.get_ppl(senetence)
         sysnonyms = set()
+        
+        device = model.device
         
         for syn in wordnet.synsets(target_word):
             for lemma in syn.lemmas():
@@ -159,7 +161,7 @@ class EditPrompt():
         return best_sentence
 
 
-    def replace_tokens_in_demo(self, flag: bool, top_k: int, output_path):
+    def replace_tokens_in_demo(self, flag: bool, top_k: int, output_path: str, conntectors_list: list, pre_context_list: list, strategy: str):
         # replace the top5 or top10 tokens with high and low PPL in the demo
         # the tokens with higher PPL are not keywords
         # there is a question. how to replace these high PPL tokens?
@@ -200,14 +202,54 @@ class EditPrompt():
                     device=device,
                     flag=flag,
                 )
+
+
+                # select the correcr functions
+                replaced_list = []
+                selected_function = None
+                if strategy == "synonym":
+                    selected_function=self.optimize_with_synonyms
+                elif strategy == "connectors":
+                    selected_function=self.optimize_with_connectors
+                    replaced_list = conntectors_list
+                else:
+                    selected_function=self.optimize_with_prep_context
+                    replaced_list = pre_context_list
+                
                 if not selected_words:
                     print("-"*10 + "Could not identify any specific ppl word" + "-"*10)
                 optimized_sentence = value
                 for word_to_replace, _ in selected_words:
-                    optimized_sentence = self.optimize_with_synonyms(
+                    # 1. decrease the ppl of selected tokens by replacing some synonyms
+                    optimized_sentence = selected_function(
+                        model=model,
+                        tokenizer=tokenizer,
+                        # device=device,
                         senetence=optimized_sentence,
+                        # ppl_of_senetence=
+                        replaced_list=replaced_list,
                         target_word=word_to_replace,
+                        flag=flag,
                     )
+                    
+                    # 2. decrease the ppl of selected tokens by adding some connectors
+                    # optimized_sentence_with_connectors = self.optimize_with_connectors(
+                    #     model=model,
+                    #     tokenizer=tokenizer,
+                    #     sentence=optimized_sentence,
+                    #     target_word=word_to_replace,
+                    #     replaced_list=conntectors_list,
+                    # )
+
+                    # # 3. ........by add some experssion contenxt before the selected tokens
+                    # optimized_sentence_with_prepared_context = self.optimize_with_prep_context(
+                    #     model=model,
+                    #     tokenizer=tokenizer,
+                    #     sentence=optimized_sentence,
+                    #     target_word=word_to_replace,
+                    #     pre_contexts_list=pre_context_list,
+                    # )
+
                 if optimized_sentence != value:
                     final_ppl = self.get_ppl(
                         text=optimized_sentence,
@@ -228,8 +270,84 @@ class EditPrompt():
         with open(output_path,'w', encoding='utf-8') as file:
             json.dump(ppl_list, file, indent=4)
                     
-                
+
+    def optimize_with_connectors(self, model: None, tokenizer: None, sentence: str, target_word: str, replaced_list: list, flag: bool):
+
+        """
+        Optimize the prompt with connectors
+        """
+        device = model.device
+        original_ppl = self.get_ppl(
+            text=sentence,
+            model=model,
+            tokenizer=tokenizer,
+            device=device,
+        )
+
+        parts = sentence.split(f" {target_word}", 1)
+        if len(parts) != 2:
+            print("-"*10 + "Could not split the sentence by target word" + "-"*10)
+            return sentence, original_ppl
         
+        pre_target, post_target = parts[0], target_word + " " + parts[1]
+        best_ppl = original_ppl
+        best_sentence = sentence
+        
+        for connector in replaced_list:
+            candidate_sentence = f"{pre_target} {connector} {post_target.strip()}"
+            candidate_ppl = self.get_ppl(candidate_sentence)
+        
+            if candidate_ppl < best_ppl:
+                best_ppl = candidate_ppl
+                best_sentence = candidate_sentence
+            # else:
+            #     if candidate_ppl > best_ppl:
+            #         best_ppl = candidate_ppl
+            #         best_sentence = candidate_sentence
+        
+        return best_sentence, best_ppl
+
+    def optimize_with_prep_context(self, sentence: str, target_word: str, replaced_list: list, model: None, tokenizer: None, flag: bool):
+        """
+        Add some prepared context experssion before the high PPL tokens to lower down its PPL
+        """
+
+        device = model.device
+        original_ppl = self.get_ppl(
+            text=sentence,
+            model=model,
+            tokenizer=tokenizer,
+            device=device,
+        )
+        best_ppl = original_ppl
+        best_senetence = sentence
+
+
+        parts = sentence.split(f" {target_word}", 1)
+        if len(parts) != 2:
+            print("-"*10 + "Could not split the sentence by target word" + "-"*10)
+            return sentence, original_ppl
+        
+        pre_target = parts[0]
+        post_target = target_word + " " + parts[1]
+        for context in replaced_list:
+            separator = " " if context and context[-1] not in ".!?" else " "
+            # separator = " " if context and context[-1] not in ".!?" else " "
+            # candidate_sentence = parts[0] + context + separator + sentence
+            candidate_sentence = f"{pre_target} {context} {post_target.strip()}"
+            candidate_ppl = self.get_ppl(
+                text=candidate_sentence,
+                model=model,
+                tokenizer=tokenizer,
+                device=device,
+            )
+            if candidate_ppl < best_ppl:
+                best_ppl = candidate_ppl
+                best_senetence = candidate_sentence
+            
+        return best_senetence,best_ppl
+
+
     # def replace_low_PPL_tokens_in_demo(self):
     #     """
     #     Replace the tokens with lower PPL in demo with some synonyms to improve the ppl of the whole demo.
@@ -241,13 +359,14 @@ class EditPrompt():
     #     device = model.devices
     #     data = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
 
-    def get_high_PPL_tokens(self):
-        """"""
+    # def get_high_PPL_tokens(self):
+        # """"""
     
 
 
-    def get_low_PPL_tokens(self):
-        """"""
+    # def get_low_PPL_tokens(self):
+        # """"""
+
 # the objective is to effect the recommandation
     def get_insert_tokens(self,):
         """"""
@@ -273,3 +392,10 @@ class EditPrompt():
 
     def get_edit_tokens():
         """"""
+        
+        connector_list = ["so", "and", "therefore", "as a result", "consequently", "because"]
+        pre_context_list = [
+            "for example,",
+            "specifically,",
+            "that is to say,"
+        ]
