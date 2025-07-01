@@ -38,7 +38,7 @@ class EditPrompt():
         print("-----------Downloading WordNet data...")
         nltk.download("wordnet")
         nltk.download('omw-1.4')
-    
+        nltk.download('averaged_perceptron_tagger')
 
     # def get_ppl(self) -> float:
         
@@ -46,10 +46,12 @@ class EditPrompt():
     #         compression_model_path=""
     #     )
 
-    def get_ppl(self, text: str, model:None, tokenizer: None, device: str) -> float:
+    def get_ppl(self, text: str, model:None, tokenizer: None) -> float:
         """
         Calculates the overall perplexity of a given text.
         """
+
+        device = model.device
         encodings = tokenizer(text, return_tensors="pt")
         input_ids = encodings.input_ids.to(device)
         
@@ -127,7 +129,11 @@ class EditPrompt():
         """
         seltect the best synonyms to meet the ppl requirements
         """
-        original_ppl = self.get_ppl(senetence)
+        original_ppl = self.get_ppl(
+            model=model,
+            tokenizer=tokenizer,
+            text=senetence,
+        )
         sysnonyms = set()
         
         device = model.device
@@ -148,7 +154,7 @@ class EditPrompt():
                 text=candidate_sentence,
                 model=model,
                 tokenizer=tokenizer,
-                device=device,
+                # device=device,
             )
             if flag:
                 if candidate_ppl < best_ppl:
@@ -190,7 +196,107 @@ class EditPrompt():
         phrase_words = [p.strip() for p in output_text.split(",") if p.strip()]
 
         return phrase_words
+                    
+
+    def optimize_with_connectors(self, model: None, tokenizer: None, sentence: str, target_word: str, replaced_list: list, flag: bool):
+
+        """
+        Optimize the prompt with connectors
+        """
+        device = model.device
+        original_ppl = self.get_ppl(
+            text=sentence,
+            model=model,
+            tokenizer=tokenizer,
+            # device=device,
+        )
+
+        parts = sentence.split(f" {target_word}", 1)
+        if len(parts) != 2:
+            print("-"*10 + "Could not split the sentence by target word" + "-"*10)
+            return sentence, original_ppl
+        
+        pre_target, post_target = parts[0], target_word + " " + parts[1]
+        best_ppl = original_ppl
+        best_sentence = sentence
+        
+        for connector in replaced_list:
+            candidate_sentence = f"{pre_target} {connector} {post_target.strip()}"
+            candidate_ppl = self.get_ppl(
+                text=candidate_sentence,
+                model=model,
+                tokenizer=tokenizer,    
+            )
+        
+            if candidate_ppl < best_ppl:
+                best_ppl = candidate_ppl
+                best_sentence = candidate_sentence
+            # else:
+            #     if candidate_ppl > best_ppl:
+            #         best_ppl = candidate_ppl
+            #         best_sentence = candidate_sentence
+        
+        return best_sentence, best_ppl
+
+    def optimize_with_prep_context(self, sentence: str, target_word: str, replaced_list: list, model: None, tokenizer: None, flag: bool):
+        """
+        Add some prepared context experssion before the high PPL tokens to lower down its PPL
+        """
+
+        device = model.device
+        original_ppl = self.get_ppl(
+            text=sentence,
+            model=model,
+            tokenizer=tokenizer,
+            # device=device,
+        )
+        best_ppl = original_ppl
+        best_senetence = sentence
+
+
+        parts = sentence.split(f" {target_word}", 1)
+        if len(parts) != 2:
+            print("-"*10 + "Could not split the sentence by target word" + "-"*10)
+            return sentence, original_ppl
+        
+        pre_target = parts[0]
+        post_target = target_word + " " + parts[1]
+        for context in replaced_list:
+            separator = " " if context and context[-1] not in ".!?" else " "
+            # separator = " " if context and context[-1] not in ".!?" else " "
+            # candidate_sentence = parts[0] + context + separator + sentence
+            candidate_sentence = f"{pre_target} {context} {post_target.strip()}"
+            candidate_ppl = self.get_ppl(
+                text=candidate_sentence,
+                model=model,
+                tokenizer=tokenizer,
+                # device=device,
+            )
+            if candidate_ppl < best_ppl:
+                best_ppl = candidate_ppl
+                best_senetence = candidate_sentence
+            
+        return best_senetence,best_ppl
+
+
+    # def replace_low_PPL_tokens_in_demo(self):
+    #     """
+    #     Replace the tokens with lower PPL in demo with some synonyms to improve the ppl of the whole demo.
+    #     """
+    #     self.load_dataset()
+    #     model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
+    #     tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+    #     model.eval()
+    #     device = model.devices
+    #     data = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
+
+    # def get_high_PPL_tokens(self):
+        # """"""
     
+    # def get_low_PPL_tokens(self):
+        # """"""
+
+
     def decrease_ppl_in_demo(self, flag: bool, top_k: int, output_path: str, conntectors_list: list, pre_context_list: list, strategy: str):
         # replace the top5 or top10 tokens with high and low PPL in the demo
         # the tokens with higher PPL are not keywords
@@ -222,7 +328,7 @@ class EditPrompt():
                     text=value,
                     model=model,
                     tokenizer=tokenizer,
-                    device=device
+                    # device=device
                 )
                 selected_words = self.find_high_and_low_ppl_words(
                     sentence=value,
@@ -286,7 +392,7 @@ class EditPrompt():
                         text=optimized_sentence,
                         model=model,
                         tokenizer=tokenizer,
-                        device=device,
+                        # device=device,
                     )
                 
                 temp_dict = {}
@@ -297,105 +403,9 @@ class EditPrompt():
                 ppl_dict[key] = temp_dict
             ppl_list.append(ppl_dict)
 
-        output_path = f"{output_path}/replaced_ppl.json"
+        output_path = f"{output_path}/replaced_ppl_{strategy}_decrease.json"
         with open(output_path,'w', encoding='utf-8') as file:
             json.dump(ppl_list, file, indent=4)
-                    
-
-    def optimize_with_connectors(self, model: None, tokenizer: None, sentence: str, target_word: str, replaced_list: list, flag: bool):
-
-        """
-        Optimize the prompt with connectors
-        """
-        device = model.device
-        original_ppl = self.get_ppl(
-            text=sentence,
-            model=model,
-            tokenizer=tokenizer,
-            device=device,
-        )
-
-        parts = sentence.split(f" {target_word}", 1)
-        if len(parts) != 2:
-            print("-"*10 + "Could not split the sentence by target word" + "-"*10)
-            return sentence, original_ppl
-        
-        pre_target, post_target = parts[0], target_word + " " + parts[1]
-        best_ppl = original_ppl
-        best_sentence = sentence
-        
-        for connector in replaced_list:
-            candidate_sentence = f"{pre_target} {connector} {post_target.strip()}"
-            candidate_ppl = self.get_ppl(candidate_sentence)
-        
-            if candidate_ppl < best_ppl:
-                best_ppl = candidate_ppl
-                best_sentence = candidate_sentence
-            # else:
-            #     if candidate_ppl > best_ppl:
-            #         best_ppl = candidate_ppl
-            #         best_sentence = candidate_sentence
-        
-        return best_sentence, best_ppl
-
-    def optimize_with_prep_context(self, sentence: str, target_word: str, replaced_list: list, model: None, tokenizer: None, flag: bool):
-        """
-        Add some prepared context experssion before the high PPL tokens to lower down its PPL
-        """
-
-        device = model.device
-        original_ppl = self.get_ppl(
-            text=sentence,
-            model=model,
-            tokenizer=tokenizer,
-            device=device,
-        )
-        best_ppl = original_ppl
-        best_senetence = sentence
-
-
-        parts = sentence.split(f" {target_word}", 1)
-        if len(parts) != 2:
-            print("-"*10 + "Could not split the sentence by target word" + "-"*10)
-            return sentence, original_ppl
-        
-        pre_target = parts[0]
-        post_target = target_word + " " + parts[1]
-        for context in replaced_list:
-            separator = " " if context and context[-1] not in ".!?" else " "
-            # separator = " " if context and context[-1] not in ".!?" else " "
-            # candidate_sentence = parts[0] + context + separator + sentence
-            candidate_sentence = f"{pre_target} {context} {post_target.strip()}"
-            candidate_ppl = self.get_ppl(
-                text=candidate_sentence,
-                model=model,
-                tokenizer=tokenizer,
-                device=device,
-            )
-            if candidate_ppl < best_ppl:
-                best_ppl = candidate_ppl
-                best_senetence = candidate_sentence
-            
-        return best_senetence,best_ppl
-
-
-    # def replace_low_PPL_tokens_in_demo(self):
-    #     """
-    #     Replace the tokens with lower PPL in demo with some synonyms to improve the ppl of the whole demo.
-    #     """
-    #     self.load_dataset()
-    #     model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
-    #     tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
-    #     model.eval()
-    #     device = model.devices
-    #     data = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
-
-    # def get_high_PPL_tokens(self):
-        # """"""
-    
-    # def get_low_PPL_tokens(self):
-        # """"""
-
 
     def increase_ppl_with_adjectives(
             self,
@@ -403,8 +413,14 @@ class EditPrompt():
             tokenizer: None,
             sentence: str,
             target_word: str,
+            replaced_list: list,
+            flag: bool,
     ):
-        original_ppl = self.get_ppl(sentence)
+        original_ppl = self.get_ppl(
+            text=sentence,
+            model=model,
+            tokenizer=tokenizer,
+        )
         tagged_words = nltk.pos_tag(sentence.split())
         target_pos = None
         for word, pos in tagged_words:
@@ -441,7 +457,11 @@ class EditPrompt():
             else:
                 candidate_sentence = sentence.replace(target_word, f"{target_word} {added_word}")
 
-            candidate_ppl = self.get_ppl(candidate_sentence)
+            candidate_ppl = self.get_ppl(
+                text=candidate_sentence,
+                model=model,
+                tokenizer=tokenizer,    
+            )
             if candidate_ppl > best_ppl:
                 best_ppl = candidate_ppl
                 best_sentence = candidate_sentence
@@ -449,14 +469,76 @@ class EditPrompt():
         return best_sentence, best_ppl
 
 
-    def increase_ppl_in_demo(self):
+    def increase_ppl_in_demo(self, flag: bool, top_k: int, output_path: str, strategy: str):
         """
         Decrease the ppl of selected tokens with low PPL
         1. replace the low PPL tokens with their synonyms;
         2. add an adjective before a noun or add a adverd before the verd
         """
+        self.load_dataset()
+        
+        # device = "cuda:0" if torch.cuda.is_available() else "cpu"
+        model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
+        tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+        model.eval()
+        device = model.device
+        dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
 
+        print("-"*20 + "Automated optimize demo by increase its mean PPL." + "-"*20)
+        
+        # select the proper strategy function
+        selected_function = None
+        if strategy == "synonym":
+            selected_function = self.optimize_with_synonyms
+        else:
+            selected_function =  self.increase_ppl_with_adjectives
 
+        ppl_list = []        
+        for data in tqdm(dataset):
+            ppl_dict = {}
+            for key, value in data:
+                original_ppl = self.get_ppl(
+                    text=value,
+                    model=model,
+                    tokenizer=tokenizer,
+                )
+                selected_words = self.find_high_and_low_ppl_words(
+                    sentence=value,
+                    top_k=top_k,
+                    model=model,
+                    tokenizer=tokenizer,
+                    device=device,
+                    flag=False
+                )
+                
+                optimized_sentence = value
+                for target_word, _ in selected_words:
+                    optimized_sentence = selected_function(
+                        model=model,
+                        tokenizer=tokenizer,
+                        sentence=optimized_sentence,
+                        target_word=target_word,
+                        flag=flag,
+                        replaced_list=None,
+                    )
+                    
+                    if optimized_sentence != value:
+                        new_ppl = self.get_ppl(
+                            text=optimized_sentence,
+                            model=model,
+                            tokenizer=tokenizer,
+                        )
+                temp_dict = {}
+                temp_dict["original"] = value
+                temp_dict["replaced"] = optimized_sentence 
+                temp_dict["ppl"] = original_ppl
+                temp_dict["ppl_replaced"] = new_ppl
+                ppl_dict[key] = temp_dict
+            ppl_list.append(ppl_dict)
+        
+        output_path = f"{output_path}/replaced_ppl_{strategy}_increase.json"
+        with open(output_path, 'w', encoding='utf-8') as file:
+            json.dump(ppl_list, file, indent=4)
 
 # the objective is to effect the recommandation
     def get_insert_tokens(self,):
