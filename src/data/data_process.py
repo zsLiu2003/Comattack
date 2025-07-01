@@ -4,6 +4,9 @@ from datasets import load_dataset, Dataset
 import json
 def get_compression_dataset(dataset: None):
 
+    """
+    Get the data with the integrated requirements
+    """
     new_dataset = []
     for origin_data in dataset:
         new_data = {}
@@ -30,6 +33,10 @@ def get_compression_dataset(dataset: None):
 
 def get_common_compression_dataset(dataset: None):
 
+    """
+    Get the recommendation dataset with seperated requirements
+    """
+
     new_dataset = []
     for data in dataset:
         new_data = {}
@@ -45,6 +52,10 @@ def get_common_compression_dataset(dataset: None):
     return Dataset.from_list(new_dataset)
 
 def get_tool_selection_dataset(extraction_domain, dataset_path, output_path):
+
+    """
+    Extract the tool description and API-name from the complicated dataset.
+    """
 
     # extracted_domain = ["Feature Extraction", "Text-to-Image"]
     with open(dataset_path, "r", encoding='utf-8') as file:
@@ -64,4 +75,9 @@ def get_tool_selection_dataset(extraction_domain, dataset_path, output_path):
     with open(output_path, "w", encoding='utf-8') as file:
         json.dump(output_data, file, indent=4)
 
+def process_tool_selection_dataset():
+    """"""
+
+def process_SEO_dataset():
+    """"""
 

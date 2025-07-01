@@ -66,6 +66,8 @@ class EditPrompt():
         ppl = torch.exp(loss)
         return ppl.item()
 
+    # 1. In the demo level
+
     def find_high_and_low_ppl_words(self, sentence: str, top_k: int, model: None, tokenizer: None, device: str, flag: bool):
         """
         Analyzes a sentence to find the words with the highest and lowest individual perplexity.
@@ -407,7 +409,7 @@ class EditPrompt():
         with open(output_path,'w', encoding='utf-8') as file:
             json.dump(ppl_list, file, indent=4)
 
-    def increase_ppl_with_adjectives(
+    def optimize_with_adjectives(
             self,
             model: None,
             tokenizer: None,
@@ -491,7 +493,7 @@ class EditPrompt():
         if strategy == "synonym":
             selected_function = self.optimize_with_synonyms
         else:
-            selected_function =  self.increase_ppl_with_adjectives
+            selected_function =  self.optimize_with_adjectives
 
         ppl_list = []        
         for data in tqdm(dataset):
@@ -540,7 +542,20 @@ class EditPrompt():
         with open(output_path, 'w', encoding='utf-8') as file:
             json.dump(ppl_list, file, indent=4)
 
-# the objective is to effect the recommandation
+# 2. in the token/word level, all the functions above is in the demo level, the following code is for the word level
+
+    def optimize_with_character_edits(self,):
+        """"""
+    
+    def optimize_with_symbol_framing(self,):
+        """"""
+
+    def optimize_with_token_manipulation(self,):
+        """"""
+    
+    
+
+# 3. in the recommendation level, the objective is to effect the recommandation
     def get_insert_tokens(self,):
         """"""
 
