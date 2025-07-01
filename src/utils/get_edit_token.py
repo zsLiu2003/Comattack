@@ -160,8 +160,38 @@ class EditPrompt():
                     best_sentence = candidate_sentence
         return best_sentence
 
+    def get_phrase_context(
+            self,
+            model: None,
+            tokenizer: None,
+            prompt: str,
+    ):
+        """
+        To get the proper connectors and pre-context experssion of the given word.
+        """  
 
-    def replace_tokens_in_demo(self, flag: bool, top_k: int, output_path: str, conntectors_list: list, pre_context_list: list, strategy: str):
+        device = model.device
+        inputs = tokenizer(prompt, return_tensors='pt').to(device)
+        
+        with torch.no_grad():
+            output = model.generate(
+                input_ids = inputs.input_ids,
+                max_new_tokens=50,
+                num_return_sequences=1,
+                do_sample=True,
+                top_k = 50,
+                top_p=0.95,
+                pad_token_id = tokenizer.eos_token_id,
+            )
+        
+        input_length = len(inputs.input_ids[0])
+        output_text = tokenizer.decode(output[0][input_length:], skip_special_tokens=True)
+        output_text = output_text.strip()
+        phrase_words = [p.strip() for p in output_text.split(",") if p.strip()]
+
+        return phrase_words
+    
+    def decrease_ppl_in_demo(self, flag: bool, top_k: int, output_path: str, conntectors_list: list, pre_context_list: list, strategy: str):
         # replace the top5 or top10 tokens with high and low PPL in the demo
         # the tokens with higher PPL are not keywords
         # there is a question. how to replace these high PPL tokens?
@@ -363,10 +393,70 @@ class EditPrompt():
     # def get_high_PPL_tokens(self):
         # """"""
     
-
-
     # def get_low_PPL_tokens(self):
         # """"""
+
+
+    def increase_ppl_with_adjectives(
+            self,
+            model: None,
+            tokenizer: None,
+            sentence: str,
+            target_word: str,
+    ):
+        original_ppl = self.get_ppl(sentence)
+        tagged_words = nltk.pos_tag(sentence.split())
+        target_pos = None
+        for word, pos in tagged_words:
+            if word.strip(".,!?") == target_word:
+                target_pos = pos
+                break
+
+        if not target_pos:
+            print("-"*10 + "Could not determine the part-of-speech for this target word." + "-"*10)
+            return sentence, original_ppl
+        
+        # generate appropriate adjective or adverb word for target_word
+        type = ""
+        if target_pos.startswith("N"): # Noun (NN, NNS, NNP, NNPS)
+            type = "adjective"
+        elif target_pos.startswith("V"): # Verb (VB, VBD...)
+            type = "adverb"
+        else:
+            print(f"----------{target_word} is not a Noun or Verb, Skipping.----------")
+            return sentence, original_ppl
+        
+        prompt = f"List three creative, unusual {type}s to describe the word '{target_word}'. Separate them with commas. Don't output any other content!!!"
+        added_words = self.get_phrase_context(
+            model=model,
+            tokenizer=tokenizer,
+            prompt=prompt,
+        )
+
+        best_ppl = original_ppl
+        best_sentence = sentence
+        for added_word in added_words:
+            if type == "adjective":
+                candidate_sentence = sentence.replace(target_word, f"{added_word} {target_word}")
+            else:
+                candidate_sentence = sentence.replace(target_word, f"{target_word} {added_word}")
+
+            candidate_ppl = self.get_ppl(candidate_sentence)
+            if candidate_ppl > best_ppl:
+                best_ppl = candidate_ppl
+                best_sentence = candidate_sentence
+
+        return best_sentence, best_ppl
+
+
+    def increase_ppl_in_demo(self):
+        """
+        Decrease the ppl of selected tokens with low PPL
+        1. replace the low PPL tokens with their synonyms;
+        2. add an adjective before a noun or add a adverd before the verd
+        """
+
+
 
 # the objective is to effect the recommandation
     def get_insert_tokens(self,):
@@ -390,37 +480,6 @@ class EditPrompt():
         # forth: remove tokens, remove high PPL tokens without key information
         # after that, the demo seems to maintain a high quality, but it will not be maintained after compression
 
-    
-    def get_connectors_and_pre_context(
-            self,
-            model: None,
-            tokenizer: None,
-            prompt: str,
-    ):
-        """
-        To get the proper connectors and pre-context experssion of the given word.
-        """  
-
-        device = model.device
-        inputs = tokenizer(prompt, return_tensors='pt').to(device)
-        
-        with torch.no_grad():
-            output = model.generate(
-                input_ids = inputs.input_ids,
-                max_new_tokens=50,
-                num_return_sequences=1,
-                do_sample=True,
-                top_k = 50,
-                top_p=0.95,
-                pad_token_id = tokenizer.eos_token_id,
-            )
-        
-        input_length = len(inputs.input_ids[0])
-        output_text = tokenizer.decode(output[0][input_length:], skip_special_tokens=True)
-        output_text = output_text.strip()
-        phrase_words = [p.strip() for p in output_text.split(",") if p.strip()]
-
-        return phrase_words
 
     def get_edit_tokens(self,):
         """"""
