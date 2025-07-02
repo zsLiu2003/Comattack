@@ -27,11 +27,11 @@ from tqdm import tqdm
 
 class EditPrompt():
 
-    def __init__(self, data, keywords, model_name, high_ppl_tokens, low_ppl_tokens=None):
-        self.data = data
-        self.keywords = keywords
-        self.high_ppl_tokens = high_ppl_tokens
-        self.low_ppl_tokens = low_ppl_tokens
+    def __init__(self, dataset, keywords, model_name, high_ppl_tokens, low_ppl_tokens=None):
+        self.dataset = dataset
+        # self.keywords = keywords
+        # self.high_ppl_tokens = high_ppl_tokens
+        # self.low_ppl_tokens = low_ppl_tokens
         self.model_name = model_name
 
     def load_dataset(self):
@@ -68,7 +68,7 @@ class EditPrompt():
 
     # 1. In the demo level
 
-    def find_high_and_low_ppl_words(self, sentence: str, top_k: int, model: None, tokenizer: None, device: str, flag: bool):
+    def find_high_and_low_ppl_words(self, sentence: str, top_k: int, model: None, tokenizer: None, flag: bool):
         """
         Analyzes a sentence to find the words with the highest and lowest individual perplexity.
         This helps automatically identify which words to target for optimization.
@@ -76,6 +76,8 @@ class EditPrompt():
         Returns:
             A list of tuples, where each tuple is (word, word_perplexity).
         """
+
+        device = model.device
         # Tokenize the sentence and get the model's predictions (logits)
         encodings = tokenizer(sentence, return_tensors="pt")
         input_ids = encodings.input_ids.to(device)
@@ -299,21 +301,21 @@ class EditPrompt():
         # """"""
 
 
-    def decrease_ppl_in_demo(self, flag: bool, top_k: int, output_path: str, conntectors_list: list, pre_context_list: list, strategy: str):
+    def decrease_ppl_in_demo(self, model: None, tokenizer: None, flag: bool, top_k: int, output_path: str, conntectors_list: list, pre_context_list: list, strategy: str):
         # replace the top5 or top10 tokens with high and low PPL in the demo
         # the tokens with higher PPL are not keywords
         # there is a question. how to replace these high PPL tokens?
         # 1. select some synonym tokens with a smooth and familmiar meaning.
         # 2. providing some paraphrase tokens before the high PPL tokens.
         # 3. add or remove some sudden connection words before the high PPL tokens.
-        self.load_dataset()
+        # self.load_dataset()
         
         # device = "cuda:0" if torch.cuda.is_available() else "cpu"
-        model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
-        tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
-        model.eval()
+        # model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
+        # tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+        # model.eval()
         device = model.device
-        dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
+        # dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
 
         print(f"-------------The model is in the {device}------------------")
         print(f"-------------Model name: {self.model_name}")  
@@ -321,8 +323,8 @@ class EditPrompt():
         print("\n" + "-"*20 + "Automated optimization" + "-"*20)
         
         ppl_list = []
-        sentence_list = []
-        for data in tqdm(dataset):
+        # sentence_list = []
+        for data in tqdm(self.dataset):
             ppl_dict = {}
             sentence_dict = {}
             for key, value in data.items():
@@ -337,7 +339,7 @@ class EditPrompt():
                     top_k=top_k,
                     model=model,
                     tokenizer=tokenizer,
-                    device=device,
+                    # device=device,
                     flag=flag,
                 )
 
@@ -471,20 +473,20 @@ class EditPrompt():
         return best_sentence, best_ppl
 
 
-    def increase_ppl_in_demo(self, flag: bool, top_k: int, output_path: str, strategy: str):
+    def increase_ppl_in_demo(self, model: None, tokenizer: None, flag: bool, top_k: int, output_path: str, strategy: str):
         """
         Decrease the ppl of selected tokens with low PPL
         1. replace the low PPL tokens with their synonyms;
         2. add an adjective before a noun or add a adverd before the verd
         """
-        self.load_dataset()
+        # self.load_dataset()
         
         # device = "cuda:0" if torch.cuda.is_available() else "cpu"
-        model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
-        tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
-        model.eval()
+        # model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
+        # tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+        # model.eval()
         device = model.device
-        dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
+        # dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
 
         print("-"*20 + "Automated optimize demo by increase its mean PPL." + "-"*20)
         
@@ -496,9 +498,9 @@ class EditPrompt():
             selected_function =  self.optimize_with_adjectives
 
         ppl_list = []        
-        for data in tqdm(dataset):
+        for data in tqdm(self.dataset):
             ppl_dict = {}
-            for key, value in data:
+            for key, value in data.items():
                 original_ppl = self.get_ppl(
                     text=value,
                     model=model,
@@ -509,7 +511,7 @@ class EditPrompt():
                     top_k=top_k,
                     model=model,
                     tokenizer=tokenizer,
-                    device=device,
+                    # device=device,
                     flag=False
                 )
                 
@@ -544,16 +546,318 @@ class EditPrompt():
 
 # 2. in the token/word level, all the functions above is in the demo level, the following code is for the word level
 
-    def optimize_with_character_edits(self,):
-        """"""
-    
-    def optimize_with_symbol_framing(self,):
-        """"""
+    def get_keyword_ppl_in_context(self, sentence: str, keyword: str, model: None, tokenizer: None):
+        
+        """
+        NEW: Only calculate the PPL of one word,
+        return (keyword_ppl, full_sentence_ppl)
+        """
+        
+        device = model.device
+        try:
+            keyword_start_char = sentence.index(keyword)
+            keyword_end_char = keyword_start_char + len(keyword)
+        except ValueError:
+            return float('inf'), float('inf')
 
-    def optimize_with_token_manipulation(self,):
-        """"""
+        # Tokenize with offset mapping to find keyword tokens
+        encodings = tokenizer(sentence, return_tensors="pt", return_offsets_mapping=True)
+        input_ids = encodings.input_ids.to(device)
+        offset_mapping = encodings.offset_mapping[0]
+
+        keyword_token_indices = []
+        for i, offset in enumerate(offset_mapping):
+            start, end = offset.tolist()
+            if start >= keyword_start_char and end <= keyword_end_char:
+                keyword_token_indices.append(i)
+
+        if not keyword_token_indices:
+            # print(f"Warning: Could not map keyword '{keyword}' to tokens.")
+            return float('inf'), float('inf')
+
+        # Get per-token loss for the whole sentence
+        with torch.no_grad():
+            outputs = model(input_ids, labels=input_ids)
+            logits = outputs.logits
+
+        loss_fct = torch.nn.CrossEntropyLoss(reduction='none')
+        shift_logits = logits[..., :-1, :].contiguous()
+        shift_labels = input_ids[..., 1:].contiguous()
+        per_token_loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+
+        keyword_token_losses = []
+        for token_idx in keyword_token_indices:
+            if token_idx > 0: # The first token has no loss
+                keyword_token_losses.append(per_token_loss[token_idx - 1].item())
+
+        if not keyword_token_losses:
+            return float('inf'), torch.exp(outputs.loss).item()
+
+        keyword_ppl = np.exp(np.mean(keyword_token_losses))
+        sentence_ppl = torch.exp(outputs.loss).item()
+        
+        return keyword_ppl, sentence_ppl
+
+
+    def optimize_with_character_edits(
+        self,
+        model: None,
+        tokenizer: None,
+        sentence: str,
+        target_word: str,
+    ):
+        """
+        Insert, delete, or replace one character in one word to decrease the PPL of keyword.
+        Return (optimized sentence, optimized_word, optimized_keyword_ppl)
+        """
+        
+        original_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+            model=model,
+            tokenizer=tokenizer,
+            sentence=sentence,
+            keyword=target_word,
+        )
+        if original_keyword_ppl == float("inf"): 
+            return sentence, target_word, original_keyword_ppl
+        
+        # find the delete, insert, and replaced characters
+        letters = "abcdefghijklmnopqrstuvwxyz"
+        splits = [(target_word[:i], target_word[i:]) for i in range(len(target_word) + 1)]
+        deletes    = [L + R[1:] for L, R in splits if R]
+        transposes = [L + R[1] + R[0] + R[2:] for L, R in splits if len(R)>1]
+        replaces   = [L + c + R[1:] for L, R in splits if R for c in letters]
+        inserts    = [L + c + R for L, R in splits for c in letters]
+
+        candidates = set(deletes + transposes + replaces + inserts)
+        valid_candidates = {word for word in candidates if wordnet.synsets(word)}
+        if not valid_candidates:
+            print("-"*10 + "No valid single-edit word found." + "-"*10)
+            return sentence, target_word, original_keyword_ppl
+        
+        best_keyword_ppl = original_keyword_ppl
+        best_sentence = sentence
+        best_keyword = target_word
+
+        for word in valid_candidates:
+            candidate_sentence = sentence.replace(target_word, word)
+            candidata_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+                model=model,
+                tokenizer=tokenizer,
+                sentence=candidate_sentence,
+                keyword=word,
+            )
+            if candidata_keyword_ppl < best_keyword_ppl:
+                best_keyword_ppl = candidata_keyword_ppl
+                best_sentence = candidate_sentence
+                best_keyword = word
+        
+        return best_sentence, best_keyword, best_keyword_ppl
     
+    def optimizer_with_symbol(
+            self,
+            model: None,
+            tokenizer: None,
+            sentence: str,
+            target_word: str,
+    ):
+        """
+        Decrease the PPL of the keyword by insert some symbols
+        return (optimized_sentence, optimized_keyword, optimized_keyword_ppl)
+        """
+
+        original_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+            model=model,
+            tokenizer=tokenizer,
+            sentence=sentence,
+            keyword=target_word,
+        )
+        if original_keyword_ppl == float("inf"):
+            return sentence, target_word, original_keyword_ppl
+        
+        framing_patterns = [f'"{target_word}"', f"'{target_word}'", f"{target_word},"]
+        if ' ' in target_word:
+            framing_patterns.append(target_word.replace(' ', '-'))
+
+        best_keyword = target_word
+        best_keyword_ppl = original_keyword_ppl
+        best_sentence = sentence
+        
+        for pattern in framing_patterns:
+            candidate_sentence = sentence.replace(target_word, pattern)
+            candidate_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+                model=model,
+                tokenizer=tokenizer,
+                sentence=candidate_sentence,
+                keyword=pattern,
+            )
+            if candidate_keyword_ppl < best_keyword_ppl:
+                best_keyword = pattern
+                best_sentence = candidate_sentence
+                best_keyword_ppl = candidate_keyword_ppl
+            
+        return best_sentence, best_keyword, best_keyword_ppl
+            
+
+    def optimize_with_token_manipulation(
+        self, 
+        model: None,
+        tokenizer: None,
+        sentence: str,
+        target_word: str,
+    ):
+        """
+        Delelte one token when the length of keyword excceed two token
+        return optimized_sentence, optimized_keyword, optimized_keyword_ppl
+        """
+
+        original_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+            model=model,
+            tokenizer=tokenizer,
+            sentence=sentence,
+            keyword=target_word,
+        )
+        if original_keyword_ppl == float("inf"):
+            return sentence, target_word, original_keyword_ppl
+        
+        tokens = target_word.split()
+        if len(target_word) < 2: 
+            return sentence, target_word, original_keyword_ppl
+        
+        best_sentence = sentence
+        bset_keyword = target_word
+        best_keyword_ppl = original_keyword_ppl
+        
+        for i in range(len(tokens)):
+            new_keyword = ' '.join(tokens[:i] + tokens[i+1:])
+            if not new_keyword: continue
+            candidate_sentence = sentence.replace(target_word, new_keyword)
+            candidate_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+                model=model,
+                tokenizer=tokenizer,
+                sentence=candidate_sentence,
+                keyword=new_keyword
+            )
+            if candidate_keyword_ppl < best_keyword_ppl:
+                best_keyword_ppl, best_sentence, best_keyword = candidate_keyword_ppl, candidate_sentence, new_keyword
     
+        return best_sentence, best_keyword, best_keyword_ppl
+
+    def optimize_to_ppl_threshold(
+        self, 
+        model: None, 
+        tokenizer: None, 
+        keyword_dataset: None,
+        top_k: int, 
+        k: int,
+        output_path: str,
+        # strategy: str,
+    ):
+
+        """
+        Decrease the ppl of keyword to one threshold
+        """
+        
+        # selected_function = None
+        # if strategy == "character":
+        #     selected_function = self.optimize_with_character_edits
+        # elif strategy == "symbol":
+        #     selected_function = self.optimizer_with_symbol
+        # else:
+        #     selected_function = self.optimize_with_token_manipulation
+
+
+        output_list = []
+        for data,keywrods in tqdm(zip(self.dataset,keyword_dataset)):
+            output_dict = {}
+            for key, value in data.items():
+                keyword = keywrods[key]
+                word_list = self.find_high_and_low_ppl_words(
+                    model=model,
+                    tokenizer=tokenizer,
+                    sentence=value,
+                    top_k=top_k,
+                    flag=False,
+                )
+                word, threshold_ppl = word_list[-k]
+                # candidate_sentence = value
+                current_sentence = value
+                # best_keyword = target_word
+                for target_word in keyword:
+                    if target_word not in value:
+                        break
+                    # candidate_sentence,candidate_keyword, candidate_keyword_ppl = selected_function(
+                    #     model=model,
+                    #     tokenizer=tokenizer,
+                    #     sentence=candidate_sentence,
+                    #     target_word=target_word,
+                    # )
+                    _, original_word_ppl = self.get_keyword_ppl_in_context(
+                        model=model,
+                        tokenizer=tokenizer,
+                        sentence=value,
+                        keyword=target_word,
+                    )
+                    best_sentence_for_this_word, best_keyword, best_ppl = current_sentence, target_word, original_word_ppl
+
+                    # 1. optimized with character_edit
+                    char_s, char_k, char_p = self.optimize_with_character_edits(
+                            model=model,
+                            tokenizer=tokenizer,
+                            sentence=value,
+                            target_word=target_word,
+                        )
+                    if char_p < best_ppl: best_sentence_for_this_word, best_keyword, best_ppl = char_s, char_k, char_p
+
+                    # 2. optimized with added symbol
+                    sym_s, sym_k, sym_p = self.optimizer_with_symbol(
+                            model=model,
+                            tokenizer=tokenizer,
+                            sentence=best_sentence_for_this_word,
+                            target_word=best_keyword,
+                        )
+                    if sym_p < best_ppl: best_sentence_for_this_word, best_keyword, best_ppl = sym_s, sym_k, sym_p   
+                    
+                    # 3. optimized with token deletion
+                    # if ' ' in best_keyword:
+                    tok_s, tok_k, tok_p = self.optimize_with_token_manipulation(
+                        model=model,
+                        tokenizer=tokenizer,
+                        sentence=best_sentence_for_this_word,
+                        target_word=best_keyword,
+                    )
+                    if tok_p < best_ppl: best_sentence_for_this_word, best_keyword, best_ppl = tok_s, tok_k, tok_p
+                    # else:
+                     
+                        
+                    # 4. Chekc if the optimized ppl < threshold_ppl
+                    if best_ppl < threshold_ppl:
+                        # print(f"   SUCCESS: Optimized '{word_to_fix}' -> '{best_keyword}'. New PPL {best_ppl:.4f} is below threshold.")
+                        print("-"*10 + "Successfully" + "-"*10)
+                        temp_dict = {}
+                        temp_dict["original"] = value
+                        temp_dict["replaced"] = best_sentence_for_this_word
+                        temp_dict["original_keyword"] = target_word
+                        temp_dict["replaced_keyword"] = best_keyword
+                        temp_dict["original_keyword_ppl"] = original_word_ppl
+                        temp_dict["replaced_keyword_ppl"] = best_ppl
+                        temp_dict["threshold_ppl"] = threshold_ppl
+
+                        output_dict[key] = temp_dict
+
+                        # output_dict[key] = best_sentence_for_this_word
+                        
+                        # current_sentence = best_sentence_for_this_word
+                        
+                        break
+                    current_sentence = best_sentence_for_this_word
+                    # else:
+                        # print(f"   FAILURE: Could not optimize '{word_to_fix}' to be below the threshold. Best PPL found was {best_ppl:.4f}.")
+            
+            output_list.append(output_dict)
+            output_path = f"{output_path}/decrease_keyword_ppl.json"
+            with open(output_path, "w", encoding='utf-8') as file:
+                json.dump(output_list, file, indent=4)
+
 
 # 3. in the recommendation level, the objective is to effect the recommandation
     def get_insert_tokens(self,):
@@ -588,4 +892,9 @@ class EditPrompt():
         #     "that is to say,"
         # ]
 
-        
+        model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
+        tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+        model.eval()
+        device = model.device
+        # dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
+        self.load_dataset()
