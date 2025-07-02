@@ -11,6 +11,8 @@ import numpy as np
 import nltk
 from nltk.corpus import wordnet
 from datasets import Dataset, load_dataset
+from src.data.data_process import get_keyword_dataset, get_target_demo_dataset
+
 # from src.utils.get_ppl import get_mean_PPL
 # from src.utils.verify_PPL import get_single_PPL
 from tqdm import tqdm
@@ -950,29 +952,33 @@ class EditPrompt():
                 json.dump(output_list, file, indent=4)
 
 
-    def get_insert_tokens(self,):
-        """"""
+    # def get_insert_tokens(self,):
+    #     """"""
 
-    def get_remove_tokens(self,):
-        """"""
+    # def get_remove_tokens(self,):
+    #     """"""
 
-    def objective_function(self,):
-        """"""
-        # first: edit high PPL and key information token to make the compressed model remove them
-        # the high PPL token is not the Sufficient and Necessary Condition of key token
-
-
-        # second: edit the low PPL token to imporve its PPL and make compression model leave them
-        # but these tokens is not the key information when recommandation
-
-        # third: insert tokens, we can insert tokens with a high PPL with key information 
-        # this is to confuse the recommand LLM
-
-        # forth: remove tokens, remove high PPL tokens without key information
-        # after that, the demo seems to maintain a high quality, but it will not be maintained after compression
+    # def objective_function(self,):
+    #     """"""
+    #     # first: edit high PPL and key information token to make the compressed model remove them
+    #     # the high PPL token is not the Sufficient and Necessary Condition of key token
 
 
-    def get_edit_tokens(self,):
+    #     # second: edit the low PPL token to imporve its PPL and make compression model leave them
+    #     # but these tokens is not the key information when recommandation
+
+    #     # third: insert tokens, we can insert tokens with a high PPL with key information 
+    #     # this is to confuse the recommand LLM
+
+    #     # forth: remove tokens, remove high PPL tokens without key information
+    #     # after that, the demo seems to maintain a high quality, but it will not be maintained after compression
+
+
+    def get_edit_tokens(
+        self,
+        keywords_dataset_path: str,
+        target_demo_path: str,
+    ):
         """"""
         
         # connector_list = ["so", "and", "therefore", "as a result", "consequently", "because", "however", "in addition", "what's more", "else", "hence"]
@@ -988,3 +994,15 @@ class EditPrompt():
         device = model.device
         # dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
         self.load_dataset()
+
+        keyword_dataset = get_keyword_dataset(dataset_path=keywords_dataset_path)
+        target_demo_dataset = get_target_demo_dataset(dataset_path=target_demo_path)
+
+        # 1. demo level edit
+        
+
+        # 2. token or word level edit, including editing the keywords in the demo
+
+        # 3. how to affect the product recommandation result
+
+        

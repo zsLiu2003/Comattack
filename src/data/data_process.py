@@ -76,9 +76,33 @@ def get_tool_selection_dataset(extraction_domain, dataset_path, output_path):
     with open(output_path, "w", encoding='utf-8') as file:
         json.dump(output_data, file, indent=4)
 
+# get the keyword_dataset
+def get_keyword_dataset(dataset_path: str):
+    
+    """
+    return: 
+    """
+    dataset = load_dataset("json", data_files=dataset_path, split="True")
+    return dataset
+        
+# get the index dataset which includes best_demo and target_demo.
+def get_target_demo_dataset(dataset_path: str):
+    """
+    Args:
+
+    Return:
+
+    """
+    dataset = load_dataset("json", data_files=dataset_path, split="True")
+    return dataset
+
 def process_tool_selection_dataset():
-    """"""
+    """
+    
+    """
 
 def process_SEO_dataset():
-    """"""
+    """
+    
+    """
 
