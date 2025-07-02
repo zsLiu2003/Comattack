@@ -860,6 +860,96 @@ class EditPrompt():
 
 
 # 3. in the recommendation level, the objective is to effect the recommandation
+
+    def get_confused_words(self):
+        """
+        Get the word list to increase or decrease the probability of remmendation
+        return positive_words, superlative_words, trust_words, weakning_words, hesitant_words, uncertainty_words
+        """
+
+        # increase
+        positive_words = ["revolutionary", "groundbreaking", "unparalleled", "state-of-the-art", "essential"]
+        superlative_words = {
+            "good": ["outstanding", "superior", "excellent", "exceptional"],
+            "fast": ["blazing-fast", "instantaneous", "ultra-responsive"],
+            "powerful": ["robust", "high-performance", "dominant"]
+        }
+        trust_words = ["expert-approved", "industry-standard", "certified", "award-winning"]
+
+        # decrease
+        weakning_words = ["decent", "adequate", "suitable", "workable"]
+        hesitant_words = [
+            "While it's a solid option,",
+            "It's worth considering that",
+            "One perspective is that",
+            "Although effective in some cases,"
+        ]
+        uncertainty_words = {
+            "is": ["can be", "is often", "is sometimes"],
+            "will": ["may", "could potentially", "might"]
+        }
+
+        return positive_words, superlative_words, trust_words, weakning_words, hesitant_words, uncertainty_words
+    
+    def recommendation_manipulation(
+        self, 
+        model: None, 
+        tokenizer: None, 
+        target_dataset: None,
+    ):
+        """
+        Edit the description of one product or one tool.
+        
+        Args:
+            target_dataset: the index of the best demo and the target demo.
+        
+        Return:
+        """
+        import random
+
+        positive_words, superlative_words, trust_words, weakning_words, hesitant_words, uncertainty_words = self.get_confused_words()
+        
+        output_list = []
+        for data,index in tqdm(zip(self.dataset, target_dataset)):
+            best_index = index["best"]
+            target_index = index["target"]
+            output_dict = {}
+            for key,value in data.items():
+                if key == target_index:
+                    # Strategy 1: Prepend a strong positive keyword and a trust trigger
+                    new_demo = f"{random.choice(trust_words).capitalize()}, this {random.choice(positive_words)} product {value.lower()}"
+                    for word, replacements in superlative_words.items():
+                        if word in new_demo:
+                            new_demo = new_demo.replace(word, random.choice(replacements), 1)
+                    temp_dict = {}
+                    temp_dict["original"] = value
+                    temp_dict["new"] = new_demo
+                    output_dict[key] = temp_dict
+                else:
+                    #  --- Strategy 2: Weaken the Competitors ---
+                    new_demo = value
+                    for word in superlative_words.keys():
+                        if word in new_demo:
+                            new_demo = new_demo.replace(word, random.choice(weakning_words), 1)
+                    
+                    for word, replacements in uncertainty_words.items():
+                        if re.search(r'\b' + word + r'\b' + new_demo):
+                            new_demo = re.sub(r'\b' + word + r'\b', random.choice(replacements), new_demo, 1)
+                            break
+                    
+                    new_demo = f"{random.choice(hesitant_words)} {new_demo.lower()}"
+                    temp_dict = {}
+                    temp_dict["original"] = value
+                    temp_dict["new"] = new_demo
+                    output_dict[key] = temp_dict
+            
+            output_list.append(output_dict)
+            output_path = f"{output_path}/confused_recommendation.json"
+            
+            with open(output_path, "w", encoding="utf-8") as file:
+                json.dump(output_list, file, indent=4)
+
+
     def get_insert_tokens(self,):
         """"""
 
