@@ -29,7 +29,7 @@ from tqdm import tqdm
 
 class EditPrompt():
 
-    def __init__(self, dataset, keywords, model_name, phrase_model_name, high_ppl_tokens, low_ppl_tokens=None):
+    def __init__(self, dataset, model_name, phrase_model_name):
         self.dataset = dataset
         # self.keywords = keywords
         # self.high_ppl_tokens = high_ppl_tokens
@@ -132,14 +132,14 @@ class EditPrompt():
         return word_ppls[-top_k:]
 
 
-    def optimize_with_synonyms(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, senetence: str, target_word: str, flag: bool):
+    def optimize_with_synonyms(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, sentence: str, target_word: str, flag: bool):
         """
         seltect the best synonyms to meet the ppl requirements
         """
         original_ppl = self.get_ppl(
             model=model,
             tokenizer=tokenizer,
-            text=senetence,
+            text=sentence,
         )
         sysnonyms = set()
         
@@ -150,13 +150,13 @@ class EditPrompt():
                 sysnonym = lemma.name().replace('_', ' ')
                 if sysnonym.lower() != target_word.lower() and ' ' not in sysnonym:
                     sysnonyms.add(sysnonym)
-        if not sysnonyms: return senetence
+        if not sysnonyms: return sentence
         
         best_ppl = original_ppl
-        best_sentence = senetence
+        best_sentence = sentence
 
         for synonym in sysnonyms:
-            candidate_sentence = senetence.replace(target_word, synonym)
+            candidate_sentence = sentence.replace(target_word, synonym)
             candidate_ppl = self.get_ppl(
                 text=candidate_sentence,
                 model=model,
@@ -267,7 +267,7 @@ class EditPrompt():
             # device=device,
         )
         best_ppl = original_ppl
-        best_senetence = sentence
+        best_sentence = sentence
 
 
         parts = sentence.split(f" {target_word}", 1)
@@ -299,9 +299,9 @@ class EditPrompt():
             )
             if candidate_ppl < best_ppl:
                 best_ppl = candidate_ppl
-                best_senetence = candidate_sentence
+                best_sentence = candidate_sentence
             
-        return best_senetence,best_ppl
+        return best_sentence,best_ppl
 
 
     # def replace_low_PPL_tokens_in_demo(self):
@@ -392,8 +392,8 @@ class EditPrompt():
                         phrase_model=phrase_model,
                         phrase_tokenizer=phrase_tokenizer,
                         # device=device,
-                        senetence=optimized_sentence,
-                        # ppl_of_senetence=
+                        sentence=optimized_sentence,
+                        # ppl_of_sentence=
                         # replaced_list=replaced_list,
                         target_word=word_to_replace,
                         flag=flag,
@@ -416,7 +416,7 @@ class EditPrompt():
                     #     target_word=word_to_replace,
                     #     pre_contexts_list=pre_context_list,
                     # )
-
+                final_ppl = original_ppl
                 if optimized_sentence != value:
                     final_ppl = self.get_ppl(
                         text=optimized_sentence,
@@ -557,7 +557,7 @@ class EditPrompt():
                         flag=flag,
                         # replaced_list=None,
                     )
-                    
+                    new_ppl = original_ppl
                     if optimized_sentence != value:
                         new_ppl = self.get_ppl(
                             text=optimized_sentence,
