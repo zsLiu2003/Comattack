@@ -29,12 +29,13 @@ from tqdm import tqdm
 
 class EditPrompt():
 
-    def __init__(self, dataset, keywords, model_name, high_ppl_tokens, low_ppl_tokens=None):
+    def __init__(self, dataset, keywords, model_name, phrase_model_name, high_ppl_tokens, low_ppl_tokens=None):
         self.dataset = dataset
         # self.keywords = keywords
         # self.high_ppl_tokens = high_ppl_tokens
         # self.low_ppl_tokens = low_ppl_tokens
         self.model_name = model_name
+        self.phrase_model_name =  phrase_model_name
 
     def load_dataset(self):
         print("-----------Downloading WordNet data...")
@@ -131,7 +132,7 @@ class EditPrompt():
         return word_ppls[-top_k:]
 
 
-    def optimize_with_synonyms(self, model, tokenizer, senetence: str, target_word: str, flag: bool, replaced_list: list):
+    def optimize_with_synonyms(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, senetence: str, target_word: str, flag: bool):
         """
         seltect the best synonyms to meet the ppl requirements
         """
@@ -204,7 +205,7 @@ class EditPrompt():
         return phrase_words
                     
 
-    def optimize_with_connectors(self, model: None, tokenizer: None, sentence: str, target_word: str, replaced_list: list, flag: bool):
+    def optimize_with_connectors(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, sentence: str, target_word: str, flag: bool):
 
         """
         Optimize the prompt with connectors
@@ -225,6 +226,15 @@ class EditPrompt():
         pre_target, post_target = parts[0], target_word + " " + parts[1]
         best_ppl = original_ppl
         best_sentence = sentence
+
+        # get the connectors
+        # prompt = f"List five different connection words which are suitable be inserted between '{pre_target}' and '{post_target}'. Separate them with commas. Don't output any other content!!!"
+        prompt = f"Given the sentence '{sentence}', list five short, common connecting words (like 'so', 'therefore', 'and as a result') that could naturally come before the word '{target_word}'. Separate them with commas.  Don't output any other content!!!"
+        replaced_list = self.get_phrase_context(
+            model=phrase_model,
+            tokenizer=phrase_tokenizer,
+            prompt=prompt,
+        )
         
         for connector in replaced_list:
             candidate_sentence = f"{pre_target} {connector} {post_target.strip()}"
@@ -244,11 +254,11 @@ class EditPrompt():
         
         return best_sentence, best_ppl
 
-    def optimize_with_prep_context(self, sentence: str, target_word: str, replaced_list: list, model: None, tokenizer: None, flag: bool):
+    def optimize_with_prep_context(self, sentence: str, target_word: str, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, flag: bool):
         """
         Add some prepared context experssion before the high PPL tokens to lower down its PPL
         """
-
+        
         device = model.device
         original_ppl = self.get_ppl(
             text=sentence,
@@ -267,6 +277,15 @@ class EditPrompt():
         
         pre_target = parts[0]
         post_target = target_word + " " + parts[1]
+
+        # prompt = f"List five different prep context to explain"
+        prompt = f"Given the text '{sentence}', list three short, common phrases that could naturally come before the word '{target_word}' to make it sound more natural. Phrases should be separated by commas. For example: (in other words, that is to say, to be more specific). Don't output any other content!!!"
+        replaced_list = self.get_phrase_context(
+            model=phrase_model,
+            tokenizer=phrase_tokenizer,
+            prompt=prompt,
+        )
+
         for context in replaced_list:
             separator = " " if context and context[-1] not in ".!?" else " "
             # separator = " " if context and context[-1] not in ".!?" else " "
@@ -303,7 +322,7 @@ class EditPrompt():
         # """"""
 
 
-    def decrease_ppl_in_demo(self, model: None, tokenizer: None, flag: bool, top_k: int, output_path: str, conntectors_list: list, pre_context_list: list, strategy: str):
+    def decrease_ppl_in_demo(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, flag: bool, top_k: int, output_path: str, strategy: str):
         # replace the top5 or top10 tokens with high and low PPL in the demo
         # the tokens with higher PPL are not keywords
         # there is a question. how to replace these high PPL tokens?
@@ -319,10 +338,10 @@ class EditPrompt():
         device = model.device
         # dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
 
-        print(f"-------------The model is in the {device}------------------")
-        print(f"-------------Model name: {self.model_name}")  
+        # print(f"-------------The model is in the {device}------------------")
+        # print(f"-------------Model name: {self.model_name}")  
 
-        print("\n" + "-"*20 + "Automated optimization" + "-"*20)
+        # print("\n" + "-"*20 + "Automated optimization" + "-"*20)
         
         ppl_list = []
         # sentence_list = []
@@ -352,12 +371,15 @@ class EditPrompt():
                 prompt = ""
                 if strategy == "synonym":
                     selected_function=self.optimize_with_synonyms
+                    print("-"*20 + "Decrease the ppl of demo with synonym strategy." + "-"*20)
                 elif strategy == "connectors":
                     selected_function=self.optimize_with_connectors
-                    replaced_list = conntectors_list
-                else:
+                    print("-"*20 + "Decrease the ppl of demo with connectors strategy." + "-"*20)
+                    # replaced_list = conntectors_list
+                elif strategy == "prep_context":
                     selected_function=self.optimize_with_prep_context
-                    replaced_list = pre_context_list
+                    print("-"*20 + "Decrease the ppl of demo with prep_context strategy." + "-"*20)
+                    # replaced_list = pre_context_list
                 
                 if not selected_words:
                     print("-"*10 + "Could not identify any specific ppl word" + "-"*10)
@@ -367,10 +389,12 @@ class EditPrompt():
                     optimized_sentence = selected_function(
                         model=model,
                         tokenizer=tokenizer,
+                        phrase_model=phrase_model,
+                        phrase_tokenizer=phrase_tokenizer,
                         # device=device,
                         senetence=optimized_sentence,
                         # ppl_of_senetence=
-                        replaced_list=replaced_list,
+                        # replaced_list=replaced_list,
                         target_word=word_to_replace,
                         flag=flag,
                     )
@@ -417,9 +441,11 @@ class EditPrompt():
             self,
             model: None,
             tokenizer: None,
+            phrase_model: None,
+            phrase_tokenizer: None,
             sentence: str,
             target_word: str,
-            replaced_list: list,
+            # replaced_list: list,
             flag: bool,
     ):
         original_ppl = self.get_ppl(
@@ -450,8 +476,8 @@ class EditPrompt():
         
         prompt = f"List three creative, unusual {type}s to describe the word '{target_word}'. Separate them with commas. Don't output any other content!!!"
         added_words = self.get_phrase_context(
-            model=model,
-            tokenizer=tokenizer,
+            model=phrase_model,
+            tokenizer=phrase_tokenizer,
             prompt=prompt,
         )
 
@@ -475,7 +501,7 @@ class EditPrompt():
         return best_sentence, best_ppl
 
 
-    def increase_ppl_in_demo(self, model: None, tokenizer: None, flag: bool, top_k: int, output_path: str, strategy: str):
+    def increase_ppl_in_demo(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, flag: bool, top_k: int, output_path: str, strategy: str):
         """
         Decrease the ppl of selected tokens with low PPL
         1. replace the low PPL tokens with their synonyms;
@@ -496,8 +522,10 @@ class EditPrompt():
         selected_function = None
         if strategy == "synonym":
             selected_function = self.optimize_with_synonyms
-        else:
+            print("-"*20 + "Increase the ppl of demo with synonym strategy." + "-"*20)
+        elif strategy == "adjective":
             selected_function =  self.optimize_with_adjectives
+            print("-"*20 + "Increase the ppl of demo with adjectives and adverbs." + "-"*20)
 
         ppl_list = []        
         for data in tqdm(self.dataset):
@@ -522,10 +550,12 @@ class EditPrompt():
                     optimized_sentence = selected_function(
                         model=model,
                         tokenizer=tokenizer,
+                        phrase_model=phrase_model,
+                        phrase_tokenizer=phrase_tokenizer,
                         sentence=optimized_sentence,
                         target_word=target_word,
                         flag=flag,
-                        replaced_list=None,
+                        # replaced_list=None,
                     )
                     
                     if optimized_sentence != value:
@@ -744,6 +774,7 @@ class EditPrompt():
     
         return best_sentence, best_keyword, best_keyword_ppl
 
+    # execution function of word/token level edit
     def optimize_to_ppl_threshold(
         self, 
         model: None, 
@@ -895,8 +926,8 @@ class EditPrompt():
     
     def recommendation_manipulation(
         self, 
-        model: None, 
-        tokenizer: None, 
+        # model: None, 
+        # tokenizer: None, 
         target_dataset: None,
     ):
         """
@@ -978,6 +1009,8 @@ class EditPrompt():
         self,
         keywords_dataset_path: str,
         target_demo_path: str,
+        output_path: str,
+        top_k: int,
     ):
         """"""
         
@@ -988,21 +1021,74 @@ class EditPrompt():
         #     "that is to say,"
         # ]
 
+        # initial compression model
         model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
         tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
         model.eval()
-        device = model.device
+        # device = model.device
+        # initial inference model
+        phrase_model = AutoModelForCausalLM.from_pretrained(self.phrase_model_name, device_map="auto")
+        phrase_tokenizer = AutoTokenizer.from_pretrained(self.phrase_model_name)
+        phrase_model.eval()
+
         # dataset = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
+        # get dataset
         self.load_dataset()
 
         keyword_dataset = get_keyword_dataset(dataset_path=keywords_dataset_path)
         target_demo_dataset = get_target_demo_dataset(dataset_path=target_demo_path)
 
         # 1. demo level edit
+        # 1.a decrease the mean ppl of the whole demo
+        decrease_strategy_list = ["synonym", "connectors", "prep_context"]
+        increase_strategy_list = ["sysnonym", "adjectives"]
         
+        for strategy in decrease_strategy_list:
+            self.decrease_ppl_in_demo(
+                model=model,
+                tokenizer=tokenizer,
+                phrase_model=phrase_model,
+                phrase_tokenizer=phrase_tokenizer,
+                flag=False,
+                top_k=20,
+                output_path=output_path,
+                # conntectors_list=,
+                # pre_context_list=,
+                strategy=strategy,
+            )
+        
+        print("-"*20 + "Successfully finishing that task: Decrease the ppl of demo." + "-"*20)
+        
+        # 1.b increase the mean ppl of the whole demo
+        for strategy in increase_strategy_list:
+            self.increase_ppl_in_demo(
+                model=model,
+                tokenizer=tokenizer,
+                phrase_model=phrase_model,
+                phrase_tokenizer=phrase_tokenizer,
+                flag=False,
+                top_k=20,
+                output_path=output_path,
+                strategy=strategy,
+            )
+        print("-"*20 + "Successfully finishing that task: Increase the ppl of demo." + "-"*20)
 
         # 2. token or word level edit, including editing the keywords in the demo
+        self.optimize_to_ppl_threshold(
+            model=model,
+            tokenizer=tokenizer,
+            keyword_dataset=keyword_dataset,
+            top_k=top_k,
+            k=int(top_k / 2),
+            output_path=output_path,
+        )
+
+        print("-"*20 + "Successfully finishing that task: Decrease the ppl of keyword." + "-"*20)
 
         # 3. how to affect the product recommandation result
-
+        self.recommendation_manipulation(
+            target_dataset=target_demo_dataset,
+        )
         
+        print("-"*20 + "Successfully finishing that task: Manipulate the product recommendation." + "-"*20)
+
