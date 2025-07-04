@@ -82,7 +82,7 @@ def get_keyword_dataset(dataset_path: str):
     """
     return: 
     """
-    dataset = load_dataset("json", data_files=dataset_path, split="True")
+    dataset = load_dataset("json", data_files=dataset_path, split="train")
     return dataset
         
 # get the index dataset which includes best_demo and target_demo.
@@ -93,7 +93,7 @@ def get_target_demo_dataset(dataset_path: str):
     Return:
 
     """
-    dataset = load_dataset("json", data_files=dataset_path, split="True")
+    dataset = load_dataset("json", data_files=dataset_path, split="train")
     return dataset
 
 def process_tool_selection_dataset():

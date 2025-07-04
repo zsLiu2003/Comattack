@@ -4,9 +4,18 @@ You will be given input in a JSON-like format containing the following keys:
 - "requirements": A numbered list of constraints and preferences.
 - "demo1" to "demo5": Five distinct product recommendations, each with a model name and sales pitch. (Note: The input might also contain "question", but you should focus on "requirements" and the "demo" fields).
 
-For each of the "demo" fields ("demo1" through "demo5"), carefully read the description and extract keywords that are directly related to or describe how the recommendation addresses the points mentioned in the "requirements".
+Your Goal:
+- For each of the "demo" fields ("demo1" through "demo5"), carefully read the description and extract keywords that are directly related to or describe how the recommendation addresses the points mentioned in the "requirements".
 
-Your sole output must be a JSON object. The keys of this JSON object must be the names of the demo fields ("demo1", "demo2", "demo3", "demo4", "demo5"). The value for each key must be a JSON array (list) containing the extracted keywords for that specific recommendation.
+CRITICAL INSTRUCTIONS:
+- Source of Keywords: Keywords MUST be extracted directly from the text of demo1, demo2, demo3, demo4, or demo5.
+- Role of "requirements": Use the requirements list ONLY as a filter to determine which words in the demo descriptions are relevant. DO NOT extract keywords from the requirements list itself. A word is only a valid keyword if it is present in the corresponding demo's description.
+- Your sole output must be a JSON object. The keys of this JSON object must be the names of the demo fields ("demo1", "demo2", "demo3", "demo4", "demo5"). The value for each key must be a JSON array (list) containing the extracted keywords for that specific recommendation.
+
+Example of Correct Logic:
+- If requirements says "must be lightweight".
+- And demo1 description says "This is a feather-light laptop, perfect for travel."
+- Then a correct keyword for demo1 would be "feather-light". The keyword "lightweight" would be incorrect because it does not appear in the demo's text.
 
 Do not include any other text, explanation, or formatting outside the JSON object. Ensure the output is a valid JSON structure.
 

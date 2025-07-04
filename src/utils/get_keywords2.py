@@ -128,10 +128,10 @@ if __name__ == "__main__":
 
     dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
     dataset = get_common_compression_dataset(dataset=dataset)
-    dataset = dataset.select(range(50))
+    dataset = dataset.select(range(50, len(dataset)))
     get_keywords(
         model_path="/opt/model/Qwen3-32B",
         dataset=dataset,
-        output_path="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
+        output_path="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json",
         device="auto",
     )

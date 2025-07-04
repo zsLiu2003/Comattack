@@ -1,0 +1,1744 @@
+[
+    {
+        "demo1": [
+            "multitasking",
+            "light gaming",
+            "OS upgrades",
+            "security patches",
+            "64 MP main sensor",
+            "Night Sight",
+            "HDR+"
+        ],
+        "demo2": [
+            "under $500",
+            "smooth performance",
+            "productivity tasks",
+            "security updates",
+            "OS upgrades",
+            "50 MP main",
+            "triple-camera array"
+        ],
+        "demo3": [
+            "around $460",
+            "everyday tasks",
+            "108 MP main camera",
+            "AI scene detection"
+        ],
+        "demo4": [
+            "around $460",
+            "email",
+            "browsing",
+            "security patches",
+            "50 MP triple-camera module",
+            "night vision mode"
+        ],
+        "demo5": [
+            "multitasking",
+            "casual gaming",
+            "120 Hz AMOLED",
+            "50 MP OIS main lens",
+            "8 MP ultrawide"
+        ]
+    },
+    {
+        "demo1": [
+            "50 MP main sensor",
+            "48 MP telephoto",
+            "5\u00d7 optical zoom",
+            "Night Sight",
+            "Expert RAW",
+            "RockSteady stabilization",
+            "4K60 fps"
+        ],
+        "demo2": [
+            "200 MP ISOCELL HP2",
+            "10 MP periscope telephoto",
+            "3\u00d7 optical zoom",
+            "Expert RAW app",
+            "Nightography",
+            "Super Steady 3.0",
+            "8K30 fps"
+        ],
+        "demo3": [
+            "50 MP Sony IMX890",
+            "RAW+",
+            "UltraSteady",
+            "8K30 fps"
+        ],
+        "demo4": [
+            "12 MP Exmor RS",
+            "Photo Pro interface",
+            "21:9 CinemaWide 4K HDR",
+            "BIONZ X",
+            "LOG recording"
+        ],
+        "demo5": [
+            "48 MP quad-pixel main sensor",
+            "3\u00d7 telephoto",
+            "ProRAW",
+            "Photonic Engine",
+            "Action mode",
+            "4K30 fps"
+        ]
+    },
+    {
+        "demo1": [
+            "165 Hz",
+            "Snapdragon 8 Gen 2",
+            "vapor-chamber cooling",
+            "6,000 mAh battery",
+            "Armoury Crate"
+        ],
+        "demo2": [
+            "144 Hz",
+            "Snapdragon 8 Gen 1",
+            "liquid cooling 5.0",
+            "4,650 mAh",
+            "Shark Space",
+            "GameDock"
+        ],
+        "demo3": [
+            "144 Hz",
+            "Snapdragon 8+ Gen 1",
+            "dual-fan cooling",
+            "5,000 mAh",
+            "Legion Realm"
+        ],
+        "demo4": [
+            "120 Hz",
+            "Snapdragon 8 Gen 2",
+            "vapor-chamber cooling",
+            "5,500 mAh",
+            "Gaming Toolkit"
+        ],
+        "demo5": [
+            "120 Hz",
+            "Snapdragon 8 Gen 3",
+            "vapor chamber cooling",
+            "5,000 mAh",
+            "Game Booster Pro"
+        ]
+    },
+    {
+        "demo1": [
+            "5,000 mAh",
+            "Snapdragon 4 Gen 2",
+            "90 Hz",
+            "Android 14",
+            "15 W TurboPower charging"
+        ],
+        "demo2": [
+            "5,000 mAh",
+            "Snapdragon 685",
+            "adaptive 120 Hz",
+            "33 W charging",
+            "Android 13",
+            "update path to Android 14"
+        ],
+        "demo3": [
+            "6,000 mAh",
+            "Exynos 1280",
+            "90 Hz",
+            "25 W Super Fast Charging"
+        ],
+        "demo4": [
+            "5,000 mAh",
+            "MediaTek Dimensity 920",
+            "adaptive refresh rate",
+            "33 W Dart Charge"
+        ],
+        "demo5": [
+            "5,000 mAh",
+            "Helio G99",
+            "adaptive 120 Hz",
+            "33 W fast charger"
+        ]
+    },
+    {
+        "demo1": [
+            "Screen size \u22646.2\u2033",
+            "Premium build quality",
+            "Strong performance",
+            "Good camera",
+            "Stereo speakers"
+        ],
+        "demo2": [
+            "Screen size \u22646.2\u2033",
+            "Premium build quality",
+            "Good camera",
+            "Stereo speakers"
+        ],
+        "demo3": [
+            "Strong performance",
+            "Good camera"
+        ],
+        "demo4": [
+            "Screen size \u22646.2\u2033",
+            "Premium build quality",
+            "Strong performance",
+            "Good camera",
+            "Stereo speakers"
+        ],
+        "demo5": [
+            "Screen size \u22646.2\u2033",
+            "Premium build quality",
+            "Strong performance",
+            "Good camera",
+            "Stereo speakers"
+        ]
+    },
+    {
+        "demo1": [
+            "$34,000",
+            "247 miles",
+            "DC fast-charging",
+            "Super Cruise",
+            "Chevy Safety Assist"
+        ],
+        "demo2": [
+            "$38,000",
+            "226 miles",
+            "CHAdeMO fast-charging",
+            "ProPilot Assist"
+        ],
+        "demo3": [
+            "$34,500",
+            "258 miles",
+            "100 kW DC fast charger",
+            "Hyundai SmartSense"
+        ],
+        "demo4": [
+            "$39,000",
+            "239 miles",
+            "77.4 kW DC fast charger",
+            "IQ.DRIVE"
+        ],
+        "demo5": [
+            "$38,000",
+            "260 miles",
+            "125 kW DC fast charging",
+            "IQ.DRIVE"
+        ]
+    },
+    {
+        "demo1": [
+            "7-seat",
+            "330 miles",
+            "68 cubic feet cargo",
+            "Autopilot",
+            "Full Self-Driving",
+            "eight airbags",
+            "rear USB-C",
+            "heated seats"
+        ],
+        "demo2": [
+            "7-seat",
+            "260 miles",
+            "Active Distance Assist",
+            "Active Steering Assist",
+            "three-zone climate",
+            "ambient lighting",
+            "USB ports"
+        ],
+        "demo3": [
+            "7-seat",
+            "85 cubic feet",
+            "Pilot Assist",
+            "Run-off Road Mitigation",
+            "heated seats",
+            "ventilated seats",
+            "power-folding third-row",
+            "Bowers & Wilkins"
+        ],
+        "demo4": [
+            "7-seat",
+            "300 miles",
+            "Highway Driving Assist II",
+            "remote smart parking",
+            "blind-spot collision-avoidance",
+            "captain's chairs",
+            "panoramic display",
+            "rear entertainment"
+        ],
+        "demo5": [
+            "7-seat",
+            "316 miles",
+            "adaptive cruise control",
+            "lane-keep assist",
+            "off-road modes",
+            "quilted leather",
+            "15.6\" touchscreen",
+            "individual climate zones"
+        ]
+    },
+    {
+        "demo1": [
+            "subcompact",
+            "247-mile range",
+            "tight turning radius",
+            "electric power steering",
+            "240-volt home charging",
+            "wireless smartphone integration"
+        ],
+        "demo2": [
+            "114-mile range",
+            "compact",
+            "go-kart-like chassis",
+            "precise cornering",
+            "Level 2 charging",
+            "6.5\" digital display",
+            "ambient lighting"
+        ],
+        "demo3": [
+            "149-mile range",
+            "hatchback",
+            "electronically controlled steering",
+            "e-Pedal",
+            "120V home charging (free)",
+            "Level 2 charger",
+            "8\" touchscreen",
+            "ProPILOT Assist"
+        ],
+        "demo4": [
+            "250-mile range",
+            "compact SUV",
+            "electric torque vectoring AWD",
+            "dual 12.3\" displays",
+            "wireless charging",
+            "Google built-in"
+        ],
+        "demo5": [
+            "153-mile range",
+            "carbon-fiber-reinforced plastic body",
+            "rear-wheel drive",
+            "Level 2 charging",
+            "DC fast-charging",
+            "10.25\" display"
+        ]
+    },
+    {
+        "demo1": [
+            "EPA range",
+            "Supercharger",
+            "air suspension",
+            "touchscreen",
+            "Autopilot"
+        ],
+        "demo2": [
+            "EPA range",
+            "DC fast charging",
+            "spacious cabin",
+            "adaptive suspension",
+            "Glass Cockpit"
+        ],
+        "demo3": [
+            "EPA range",
+            "DC fast charging",
+            "E-Active Body Control",
+            "Hyperscreen",
+            "MBUX"
+        ],
+        "demo4": [
+            "EPA range",
+            "Supercharger",
+            "cavernous interior",
+            "air suspension",
+            "touchscreen"
+        ],
+        "demo5": [
+            "EPA range",
+            "Rivian Adventure Network",
+            "air-sprung suspension",
+            "15.6\" touchscreen"
+        ]
+    },
+    {
+        "demo1": [
+            "0\u201360 mph in under 3 seconds",
+            "dual electric motors",
+            "leather-wrapped sport seats",
+            "curved 16.8\u2033 digital instrument cluster",
+            "Porsche"
+        ],
+        "demo2": [
+            "0\u201360 mph in under 3 seconds",
+            "tri-motor setup",
+            "carbon-fiber interior trim",
+            "17\u2033 landscape touchscreen",
+            "Tesla"
+        ],
+        "demo3": [
+            "sub-1.9-second 0\u201360 mph",
+            "tri-motor AWD platform",
+            "Venetian leather",
+            "34\u2033 curved Glass Cockpit display cluster",
+            "Lucid"
+        ],
+        "demo4": [
+            "0\u201360 mph in under 3 seconds",
+            "EQ Boost starter-generator",
+            "Nappa leather",
+            "Hyperscreen",
+            "Mercedes-Benz"
+        ],
+        "demo5": [
+            "M-specific xDrive all-wheel-drive system",
+            "Merino leather upholstery",
+            "iDrive 8 with natural voice assistant",
+            "Bowers & Wilkins Diamond Surround Sound",
+            "BMW"
+        ]
+    },
+    {
+        "demo1": [
+            "weight under 4 pounds",
+            "8 GB RAM",
+            "256 GB SSD",
+            "Full HD display",
+            "comfortable keyboard"
+        ],
+        "demo2": [
+            "weight under 4 pounds",
+            "8 GB RAM",
+            "256 GB SSD",
+            "Full HD display",
+            "comfortable keyboard"
+        ],
+        "demo3": [
+            "weight under 4 pounds",
+            "8 GB RAM",
+            "256 GB SSD",
+            "Full HD display",
+            "comfortable keyboard"
+        ],
+        "demo4": [
+            "weight under 4 pounds",
+            "8 GB RAM",
+            "256 GB SSD",
+            "Full HD display",
+            "comfortable keyboard"
+        ],
+        "demo5": [
+            "weight under 4 pounds",
+            "8 GB RAM",
+            "256 GB SSD",
+            "Full HD display",
+            "comfortable keyboard"
+        ]
+    },
+    {
+        "demo1": [
+            "NVIDIA RTX 3070 Ti",
+            "Intel Core i7-12700H",
+            "240 Hz",
+            "Cooler Boost 5"
+        ],
+        "demo2": [
+            "NVIDIA RTX 3080",
+            "AMD Ryzen 9 6900HX",
+            "300 Hz",
+            "ROG Intelligent Cooling"
+        ],
+        "demo3": [
+            "NVIDIA RTX 4090",
+            "Intel Core i7-13700H",
+            "240 Hz",
+            "vapor chamber cooling"
+        ],
+        "demo4": [
+            "NVIDIA RTX 4070",
+            "AMD Ryzen 7 7840HS",
+            "165 Hz",
+            "Coldfront 4.0"
+        ],
+        "demo5": [
+            "NVIDIA RTX 3080 Ti",
+            "Intel Core i9-12900H",
+            "240 Hz",
+            "Windforce Infinity",
+            "32 GB DDR5"
+        ]
+    },
+    {
+        "demo1": [
+            "2.7 pounds",
+            "12 hours",
+            "CNC-machined aluminum",
+            "3.5K OLED",
+            "Thunderbolt 4"
+        ],
+        "demo2": [
+            "2.95 pounds",
+            "13 hours",
+            "CNC aluminum",
+            "3K2K OLED",
+            "Thunderbolt 4"
+        ],
+        "demo3": [
+            "2.7 pounds",
+            "18 hours",
+            "all-metal unibody",
+            "13.6-inch Liquid Retina",
+            "Thunderbolt 4"
+        ],
+        "demo4": [
+            "2.4 pounds",
+            "15 hours",
+            "2.8K OLED",
+            "Thunderbolt 4"
+        ],
+        "demo5": [
+            "2.75 pounds",
+            "2.8K OLED",
+            "Thunderbolt 4"
+        ]
+    },
+    {
+        "demo1": [
+            "1.8 mm key travel",
+            "14 hours battery",
+            "16 GB RAM",
+            "MIL-STD-810H"
+        ],
+        "demo2": [
+            "1.5 mm travel",
+            "13 hours battery",
+            "anti-glare",
+            "16 GB DDR4"
+        ],
+        "demo3": [
+            "1.6 mm travel",
+            "16 hours battery",
+            "16 GB LPDDR5",
+            "MIL-STD-810G"
+        ],
+        "demo4": [
+            "16 GB LPDDR4x",
+            "20 hours battery",
+            "sturdy aluminum body"
+        ],
+        "demo5": [
+            "16 GB LPDDR4x",
+            "17 hours battery",
+            "sturdy aluminum body"
+        ]
+    },
+    {
+        "demo1": [
+            "price",
+            "battery life",
+            "touchscreen",
+            "stylus",
+            "SSD",
+            "lightweight",
+            "durable"
+        ],
+        "demo2": [
+            "touchscreen",
+            "stylus",
+            "SSD",
+            "battery life",
+            "lightweight",
+            "durable"
+        ],
+        "demo3": [
+            "touchscreen",
+            "stylus",
+            "battery life",
+            "lightweight",
+            "durable"
+        ],
+        "demo4": [
+            "touchscreen",
+            "stylus",
+            "SSD",
+            "battery life",
+            "lightweight",
+            "durable"
+        ],
+        "demo5": [
+            "touchscreen",
+            "stylus",
+            "SSD",
+            "battery life",
+            "lightweight",
+            "durable"
+        ]
+    },
+    {
+        "demo1": [
+            "55 inches",
+            "under $800",
+            "4K",
+            "Roku TV",
+            "Dolby Vision HDR"
+        ],
+        "demo2": [
+            "65 inches",
+            "under $800",
+            "4K",
+            "Google TV",
+            "HDR10+/Dolby Vision"
+        ],
+        "demo3": [
+            "55/65 inches",
+            "$800",
+            "4K",
+            "Tizen OS",
+            "HDR10/HLG"
+        ],
+        "demo4": [
+            "55 inches",
+            "under $800",
+            "4K",
+            "SmartCast OS",
+            "HDR10+/Dolby Vision"
+        ],
+        "demo5": [
+            "65 inches",
+            "under $800",
+            "4K",
+            "webOS",
+            "HDR10/HLG"
+        ]
+    },
+    {
+        "demo1": [
+            "65 inches",
+            "OLED",
+            "infinite contrast",
+            "absolute blacks",
+            "Dolby Vision",
+            "Dolby Atmos"
+        ],
+        "demo2": [
+            "77 inches",
+            "OLED",
+            "XR Triluminos Pro",
+            "DCI-P3",
+            "Dolby Vision",
+            "Acoustic Surface Audio+"
+        ],
+        "demo3": [
+            "65 inches",
+            "OLED",
+            "Master HDR OLED",
+            "Dolby Vision",
+            "multi-driver speaker array"
+        ],
+        "demo4": [
+            "65 inches",
+            "OLED",
+            "perfect blacks",
+            "Bowers & Wilkins"
+        ],
+        "demo5": [
+            "77 inches",
+            "OLED",
+            "EVO panel",
+            "Dolby Atmos"
+        ]
+    },
+    {
+        "demo1": [
+            "input lag under 9 ms",
+            "120 Hz",
+            "VRR",
+            "HDMI 2.1",
+            "ALLM",
+            "HDR performance"
+        ],
+        "demo2": [
+            "input lag 5 ms",
+            "120 Hz",
+            "VRR (FreeSync Premium Pro)",
+            "HDMI 2.1",
+            "ALLM",
+            "HDR"
+        ],
+        "demo3": [
+            "input lag under 8 ms",
+            "120 Hz",
+            "VRR",
+            "HDMI 2.1",
+            "ALLM",
+            "HDR"
+        ],
+        "demo4": [
+            "input lag 8 ms",
+            "120 Hz",
+            "HDMI 2.1",
+            "HDR"
+        ],
+        "demo5": [
+            "input lag under 10 ms",
+            "120 Hz",
+            "VRR",
+            "HDMI 2.1",
+            "ALLM",
+            "HDR"
+        ]
+    },
+    {
+        "demo1": [
+            "Price \u2264 $400",
+            "4K UHD resolution",
+            "Built-in streaming apps",
+            "At least two HDMI ports",
+            "Decent upscaling engine"
+        ],
+        "demo2": [
+            "Price \u2264 $400",
+            "4K UHD resolution",
+            "Built-in streaming apps",
+            "At least two HDMI ports"
+        ],
+        "demo3": [
+            "Price \u2264 $400",
+            "4K UHD resolution",
+            "Built-in streaming apps",
+            "At least two HDMI ports",
+            "Decent upscaling engine"
+        ],
+        "demo4": [
+            "Price \u2264 $400",
+            "4K UHD resolution",
+            "Built-in streaming apps",
+            "At least two HDMI ports"
+        ],
+        "demo5": [
+            "Price \u2264 $400",
+            "4K UHD resolution",
+            "Built-in streaming apps",
+            "At least two HDMI ports",
+            "Decent upscaling engine"
+        ]
+    },
+    {
+        "demo1": [
+            "32\"",
+            "VESA 100\u00d7100",
+            "Clear Voice III",
+            "webOS",
+            "HDMI"
+        ],
+        "demo2": [
+            "32\"",
+            "Tizen",
+            "Adaptive Sound Lite",
+            "HDMI"
+        ],
+        "demo3": [
+            "32\"",
+            "ClearAudio+",
+            "Linux-based",
+            "HDMI"
+        ],
+        "demo4": [
+            "32\"",
+            "Noise Reduction",
+            "Roku OS",
+            "tabletop stand",
+            "HDMI"
+        ],
+        "demo5": [
+            "40\"",
+            "Android TV",
+            "DTS TruSurround",
+            "VESA 200\u00d7200",
+            "HDMI"
+        ]
+    },
+    {
+        "demo1": [
+            "mirrorless",
+            "4K video",
+            "Real-time Eye AF",
+            "interchangeable lenses (Z-mount adapter)"
+        ],
+        "demo2": [
+            "mirrorless",
+            "4K video",
+            "interchangeable lenses (X-mount)"
+        ],
+        "demo3": [
+            "mirrorless",
+            "4K video",
+            "Dual Pixel CMOS AF",
+            "interchangeable lenses (EF-M)"
+        ],
+        "demo4": [
+            "mirrorless",
+            "4K video",
+            "interchangeable lenses (Micro Four Thirds)"
+        ],
+        "demo5": [
+            "mirrorless",
+            "4K video",
+            "interchangeable lenses (Micro Four Thirds)"
+        ]
+    },
+    {
+        "demo1": [
+            "Lightweight",
+            "pocketable",
+            "4K60p",
+            "touchscreen",
+            "RockSteady stabilization",
+            "3.5 mm audio adapter"
+        ],
+        "demo2": [
+            "pocketable",
+            "side-flip LCD",
+            "Active SteadyShot",
+            "directional 3-capsule mic",
+            "wind-screen accessory"
+        ],
+        "demo3": [
+            "pocketable",
+            "side-tilt touchscreen",
+            "5-axis stabilization",
+            "3.5 mm mic jack"
+        ],
+        "demo4": [
+            "pocketable",
+            "4K60p",
+            "front-facing LCD",
+            "HyperSmooth 5.0",
+            "directional mic"
+        ],
+        "demo5": [
+            "pocketable",
+            "LVF",
+            "5-axis HYBRID I.S.",
+            "mic input"
+        ]
+    },
+    {
+        "demo1": [
+            "large sensor size",
+            "high ISO performance",
+            "fast lens compatibility",
+            "in-body stabilization"
+        ],
+        "demo2": [
+            "large sensor size",
+            "high ISO performance",
+            "dynamic range",
+            "in-body stabilization"
+        ],
+        "demo3": [
+            "large sensor size",
+            "high ISO performance",
+            "in-body stabilization",
+            "fast lens compatibility",
+            "dynamic range"
+        ],
+        "demo4": [
+            "high ISO performance",
+            "in-body stabilization",
+            "dynamic range"
+        ],
+        "demo5": [
+            "high ISO performance",
+            "in-body stabilization",
+            "fast lens compatibility"
+        ]
+    },
+    {
+        "demo1": [
+            "DSLR",
+            "51-point AF system",
+            "Dual memory card slots",
+            "Weather sealing"
+        ],
+        "demo2": [
+            "Mirrorless",
+            "Real-time Tracking and Eye AF",
+            "E-mount",
+            "5-axis IBIS"
+        ],
+        "demo3": [
+            "DSLR",
+            "Dual Pixel AF",
+            "EF lens catalog",
+            "Magnesium-alloy chassis"
+        ],
+        "demo4": [
+            "Mirrorless",
+            "5-axis stabilization",
+            "X-mount",
+            "mechanical shutter"
+        ],
+        "demo5": [
+            "DSLR",
+            "K-mount",
+            "Weather-sealed",
+            "Magnesium-alloy body"
+        ]
+    },
+    {
+        "demo1": [
+            "waterproof without housing",
+            "4K60p",
+            "image stabilization",
+            "durable build"
+        ],
+        "demo2": [
+            "waterproof without housing",
+            "4K60p",
+            "image stabilization",
+            "durable build"
+        ],
+        "demo3": [
+            "waterproof without housing",
+            "4K60p",
+            "image stabilization",
+            "durable build"
+        ],
+        "demo4": [
+            "4K60p",
+            "image stabilization",
+            "mountable"
+        ],
+        "demo5": [
+            "waterproof without housing",
+            "durable build",
+            "compact",
+            "mountable"
+        ]
+    },
+    {
+        "demo1": [
+            "heart-rate monitoring",
+            "swim-proof design"
+        ],
+        "demo2": [
+            "heart-rate monitoring",
+            "battery life (11 days)",
+            "swim-proof design"
+        ],
+        "demo3": [
+            "heart-rate monitoring",
+            "battery life (6 days)",
+            "swim-proof design"
+        ],
+        "demo4": [
+            "budget-friendly",
+            "heart-rate monitoring",
+            "battery life (15 days)",
+            "swim-proof design",
+            "customizable watch faces"
+        ],
+        "demo5": [
+            "heart-rate monitoring",
+            "swim-proof design"
+        ]
+    },
+    {
+        "demo1": [
+            "multi-band GPS",
+            "exceptional positional accuracy",
+            "VO\u2082 max estimates",
+            "advanced running dynamics",
+            "30 hours GPS battery life",
+            "Garmin Coach integration",
+            "Strava, TrainingPeaks compatibility"
+        ],
+        "demo2": [
+            "GPS + GLONASS",
+            "ultra-efficient performance",
+            "cadence",
+            "running power",
+            "stride length",
+            "recovery advisor",
+            "29 g",
+            "30 hours continuous GPS"
+        ],
+        "demo3": [
+            "professional-grade GPS",
+            "barometric altimeter",
+            "accurate to within a few meters",
+            "Training Load Pro",
+            "Leg Recovery Test",
+            "Hill Splitter",
+            "under 40 g",
+            "35 hours GPS battery life"
+        ],
+        "demo4": [
+            "FusedTrack\u2122 algorithm",
+            "extended accuracy",
+            "52 g",
+            "25 hours Performance GPS",
+            "100 hours Tour mode",
+            "Movescount-compatible ecosystem"
+        ],
+        "demo5": [
+            "GPS, GLONASS, Galileo, BEIDOU support",
+            "Wahoo ELEMNT app integration"
+        ]
+    },
+    {
+        "demo1": [
+            "Grade 2 titanium",
+            "sapphire crystal",
+            "AMOLED",
+            "heart-rate",
+            "SpO\u2082",
+            "customizable watch faces"
+        ],
+        "demo2": [
+            "high-polished black ceramic",
+            "AMOLED",
+            "heart-rate",
+            "activity tracking",
+            "exclusive Hublot watch faces",
+            "custom designs"
+        ],
+        "demo3": [
+            "Grade 5 titanium",
+            "sapphire glass",
+            "AMOLED",
+            "ECG",
+            "heart-rate",
+            "SpO\u2082",
+            "sleep tracking",
+            "high-contrast AMOLED",
+            "customizable watch faces"
+        ],
+        "demo4": [
+            "DLC-coated titanium",
+            "advanced health metrics",
+            "ballistic nylon strap",
+            "quick-release hardware"
+        ],
+        "demo5": [
+            "AMOLED",
+            "heart-rate",
+            "fitness tracking",
+            "stainless-steel case",
+            "Monogram pattern",
+            "bespoke LV watch faces"
+        ]
+    },
+    {
+        "demo1": [
+            "battery life",
+            "fitness tracking",
+            "notifications",
+            "USB charging"
+        ],
+        "demo2": [
+            "solar charging",
+            "durable build",
+            "notifications",
+            "activity tracking"
+        ],
+        "demo3": [
+            "battery life",
+            "fitness tracking",
+            "fast charging",
+            "sleep tracking"
+        ],
+        "demo4": [
+            "battery life",
+            "fast charging",
+            "swim-proof",
+            "health metrics"
+        ],
+        "demo5": [
+            "battery life",
+            "ECG",
+            "durable build",
+            "clinical-grade"
+        ]
+    },
+    {
+        "demo1": [
+            "case size",
+            "weight",
+            "heart-rate",
+            "sleep",
+            "customizable straps",
+            "water resistance"
+        ],
+        "demo2": [
+            "weight",
+            "heart-rate",
+            "sleep",
+            "customizable straps",
+            "water resistance"
+        ],
+        "demo3": [
+            "case size",
+            "heart-rate",
+            "sleep",
+            "customizable straps",
+            "water resistance"
+        ],
+        "demo4": [
+            "case size",
+            "weight",
+            "heart-rate",
+            "customizable straps",
+            "water resistance"
+        ],
+        "demo5": [
+            "heart-rate",
+            "customizable straps"
+        ]
+    },
+    {
+        "demo1": [
+            "8000 BTU",
+            "EER 11.1",
+            "remote control",
+            "easy installation"
+        ],
+        "demo2": [
+            "8000 BTU",
+            "EER 10.7",
+            "budget-friendly",
+            "easy installation"
+        ],
+        "demo3": [
+            "8000 BTU",
+            "EER 12.1",
+            "remote control",
+            "easy installation"
+        ],
+        "demo4": [
+            "10000 BTU",
+            "EER 10.3",
+            "remote control",
+            "easy installation"
+        ],
+        "demo5": [
+            "8000 BTU",
+            "ENERGY STAR",
+            "remote control",
+            "easy installation"
+        ]
+    },
+    {
+        "demo1": [
+            "ENERGY STAR",
+            "6,000 BTU",
+            "EER 11.5",
+            "eco mode",
+            "sleep mode",
+            "quiet operation"
+        ],
+        "demo2": [
+            "ENERGY STAR",
+            "5,000 BTU",
+            "EER 11.0",
+            "sleep mode"
+        ],
+        "demo3": [
+            "6,000 BTU",
+            "EER 12.0",
+            "Night Mode"
+        ],
+        "demo4": [
+            "ENERGY STAR",
+            "6,000 BTU",
+            "EER 11.2",
+            "eco mode",
+            "quiet night setting"
+        ],
+        "demo5": [
+            "ENERGY STAR",
+            "6,000 BTU",
+            "EER 11.3",
+            "eco-energy setting"
+        ]
+    },
+    {
+        "demo1": [
+            "14,000 BTU",
+            "built-in dehumidifier",
+            "53 dB",
+            "caster wheels",
+            "integrated handles"
+        ],
+        "demo2": [
+            "12,500 BTU",
+            "four-caster design"
+        ],
+        "demo3": [
+            "10,000 BTU",
+            "built-in dehumidifier",
+            "four-wheel frame",
+            "fold-away handles"
+        ],
+        "demo4": [
+            "10,000 BTU",
+            "45 dB",
+            "built-in casters",
+            "handles"
+        ],
+        "demo5": [
+            "12,000 BTU",
+            "built-in dehumidifier",
+            "44 dB"
+        ]
+    },
+    {
+        "demo1": [
+            "Wi-Fi",
+            "ThinQ app",
+            "Alexa",
+            "Google Assistant",
+            "Smart Energy mode",
+            "24-hour timer"
+        ],
+        "demo2": [
+            "Alexa",
+            "Google Home",
+            "M-Smart app",
+            "geofencing",
+            "eco-mode"
+        ],
+        "demo3": [
+            "SmartHQ",
+            "voice assistants",
+            "customizable schedules"
+        ],
+        "demo4": [
+            "Cool Connect app",
+            "Alexa",
+            "Google Assistant",
+            "energy saver mode",
+            "programmable timer"
+        ],
+        "demo5": [
+            "TCL Home app",
+            "Alexa",
+            "Google Assistant",
+            "eco-mode",
+            "24-hour timer"
+        ]
+    },
+    {
+        "demo1": [
+            "44 dB",
+            "6,000 BTU",
+            "Sleep Mode",
+            "24-hour timer",
+            "washable filter",
+            "front access",
+            "no tools"
+        ],
+        "demo2": [
+            "42 dB",
+            "5,000 BTU",
+            "Sleep Mode",
+            "front-loader",
+            "washable filter",
+            "simple to clean"
+        ],
+        "demo3": [
+            "39 dB",
+            "6,000 BTU",
+            "Sleep Mode",
+            "schedule",
+            "app control"
+        ],
+        "demo4": [
+            "43 dB",
+            "6,000 BTU",
+            "Sleep Mode",
+            "schedule",
+            "washable filter"
+        ],
+        "demo5": [
+            "44 dB",
+            "10,000 BTU",
+            "Sleep Mode"
+        ]
+    },
+    {
+        "demo1": [
+            "consistent browning",
+            "easy to clean",
+            "compact footprint"
+        ],
+        "demo2": [
+            "budget \u2264$50",
+            "consistent browning",
+            "easy to clean",
+            "compact footprint"
+        ],
+        "demo3": [
+            "budget \u2264$50",
+            "consistent browning",
+            "easy to clean",
+            "compact footprint"
+        ],
+        "demo4": [
+            "budget \u2264$50",
+            "consistent browning"
+        ],
+        "demo5": [
+            "budget \u2264$50",
+            "consistent browning",
+            "easy to clean"
+        ]
+    },
+    {
+        "demo1": [
+            "four slots",
+            "wide slots",
+            "die-cast metal body",
+            "under $80"
+        ],
+        "demo2": [
+            "four slots",
+            "bagel function",
+            "under $80"
+        ],
+        "demo3": [
+            "four slots",
+            "extra-wide slots",
+            "high lift lever",
+            "under $80"
+        ],
+        "demo4": [
+            "four slots",
+            "high lift lever",
+            "extra-wide slots",
+            "independent controls",
+            "under $80"
+        ],
+        "demo5": [
+            "four slots",
+            "under $80"
+        ]
+    },
+    {
+        "demo1": [
+            "app-enabled",
+            "Bluetooth",
+            "custom browning profiles",
+            "precision browning",
+            "extra-wide slots",
+            "modern design",
+            "smart home integration"
+        ],
+        "demo2": [
+            "app-enabled",
+            "Wi-Fi",
+            "extra-wide slots",
+            "multiple toasting functions",
+            "smart notifications"
+        ],
+        "demo3": [
+            "app-enabled",
+            "voice-assistant integration",
+            "precision browning",
+            "multiple presets",
+            "modern design"
+        ],
+        "demo4": [
+            "precision browning",
+            "extra-wide slots",
+            "modern design"
+        ],
+        "demo5": [
+            "app-enabled",
+            "Bluetooth",
+            "precision browning",
+            "extra-wide slots",
+            "modern design"
+        ]
+    },
+    {
+        "demo1": [
+            "continuous run",
+            "stainless steel",
+            "removable crumb pan",
+            "adjustable speed"
+        ],
+        "demo2": [
+            "conveyor",
+            "tough aluminum",
+            "adjustable heat zones"
+        ],
+        "demo3": [
+            "continuous use",
+            "stainless steel",
+            "removable crumb tray",
+            "12 shade settings"
+        ],
+        "demo4": [
+            "stainless steel",
+            "quick-release crumb trays",
+            "variable conveyor speed",
+            "infinite shade adjustment"
+        ],
+        "demo5": [
+            "stainless steel",
+            "infinite shade selector",
+            "quick-release crumb tray",
+            "continuous operation"
+        ]
+    },
+    {
+        "demo1": [
+            "2-slice",
+            "7\" wide",
+            "under 2 lbs",
+            "6 shade settings",
+            "$25"
+        ],
+        "demo2": [
+            "2-slice",
+            "under 7\"",
+            "1.7 lbs",
+            "7 shade settings"
+        ],
+        "demo3": [
+            "6\" wide",
+            "2-slice",
+            "lightweight",
+            "$30",
+            "7 shade positions"
+        ],
+        "demo4": [
+            "6.3\" wide",
+            "2-slice",
+            "$20",
+            "6 shade controls"
+        ],
+        "demo5": [
+            "compact",
+            "2-slice",
+            "$35",
+            "5 browning settings"
+        ]
+    },
+    {
+        "demo1": [
+            "2-slice toaster",
+            "even toasting",
+            "affordable",
+            "reliable"
+        ],
+        "demo2": [
+            "2-slice toaster",
+            "durable",
+            "consistent results",
+            "budget-friendly"
+        ],
+        "demo3": [
+            "2-slice toaster",
+            "dependable",
+            "even toasting",
+            "accessible price"
+        ],
+        "demo4": [
+            "2-slice toaster",
+            "affordable",
+            "reliable",
+            "basic choice"
+        ],
+        "demo5": [
+            "2-slice toaster",
+            "competitive prices",
+            "reliable",
+            "simple and effective"
+        ]
+    },
+    {
+        "demo1": [
+            "bagel",
+            "defrost",
+            "quick/even toasting",
+            "modern design"
+        ],
+        "demo2": [
+            "stainless steel",
+            "bagel",
+            "frozen",
+            "efficient toasting"
+        ],
+        "demo3": [
+            "bagel",
+            "frozen",
+            "stylish design",
+            "high-lift lever"
+        ],
+        "demo4": [
+            "bagel",
+            "frozen",
+            "fast",
+            "vintage design"
+        ],
+        "demo5": [
+            "bagel",
+            "defrost",
+            "modern design",
+            "fast"
+        ]
+    },
+    {
+        "demo1": [
+            "4-slice",
+            "independent controls",
+            "even toasting",
+            "dual crumb trays"
+        ],
+        "demo2": [
+            "4-slice",
+            "motorized lowering",
+            "Lift & Look",
+            "A Bit More",
+            "evenly toasts",
+            "front-pull crumb trays"
+        ],
+        "demo3": [
+            "4-slice",
+            "evenly toasts",
+            "removable crumb trays"
+        ],
+        "demo4": [
+            "4-slice",
+            "independent controls",
+            "consistent toasting",
+            "dual crumb trays"
+        ],
+        "demo5": [
+            "4-slice",
+            "consistent toasting",
+            "easy-to-access crumb trays"
+        ]
+    },
+    {
+        "demo1": [
+            "intuitive digital controls",
+            "LED indicators",
+            "solid build",
+            "brushed stainless steel finish"
+        ],
+        "demo2": [
+            "precise electronic controls",
+            "multiple toasting levels",
+            "powder-coated steel body",
+            "iconic design"
+        ],
+        "demo3": [
+            "digital countdown timers",
+            "precise control",
+            "durable metal body",
+            "modern premium feel"
+        ],
+        "demo4": [
+            "accurate toasting",
+            "browning control",
+            "high-quality construction",
+            "polished body"
+        ],
+        "demo5": [
+            "digital controls",
+            "auto-sensing function",
+            "die-cast metal construction",
+            "seven shade settings"
+        ]
+    },
+    {
+        "demo1": [
+            "compact",
+            "extra-wide slots",
+            "high-lift lever"
+        ],
+        "demo2": [
+            "compact",
+            "extra-wide slots",
+            "high-lift lever"
+        ],
+        "demo3": [
+            "compact",
+            "high-lift lever"
+        ],
+        "demo4": [
+            "space-saving",
+            "high-lift lever"
+        ],
+        "demo5": [
+            "compact",
+            "high-lift lever"
+        ]
+    },
+    {
+        "demo1": [
+            "wireless",
+            "Unifying receiver",
+            "sculpted design",
+            "3 years battery life",
+            "laser tracking"
+        ],
+        "demo2": [
+            "wireless",
+            "USB dongle",
+            "ergonomic",
+            "natural hand posture",
+            "respectable battery life",
+            "various surfaces"
+        ],
+        "demo3": [
+            "2.4G wireless",
+            "vertical ergonomic",
+            "handshake grip",
+            "decent battery life",
+            "standard surfaces"
+        ],
+        "demo4": [
+            "wireless",
+            "Bluetooth",
+            "Darkfield sensor",
+            "70 days battery life",
+            "any surface including glass"
+        ],
+        "demo5": [
+            "wireless",
+            "Bluetooth",
+            "2.4 GHz",
+            "compact",
+            "350 hours battery",
+            "7,200 DPI optical sensor",
+            "various surfaces"
+        ]
+    },
+    {
+        "demo1": [
+            "25,600 DPI",
+            "11 programmable buttons",
+            "durable construction"
+        ],
+        "demo2": [
+            "wired",
+            "20K DPI",
+            "8 programmable buttons",
+            "70 million clicks"
+        ],
+        "demo3": [
+            "8,500 CPI",
+            "6 programmable buttons",
+            "durable polymer"
+        ],
+        "demo4": [
+            "18,000 DPI",
+            "17 programmable buttons",
+            "50 million clicks"
+        ],
+        "demo5": [
+            "wired",
+            "12,000 DPI",
+            "6 programmable buttons"
+        ]
+    },
+    {
+        "demo1": [
+            "Bluetooth",
+            "multi-device",
+            "MagSpeed scroll",
+            "horizontal scroll",
+            "ergonomic"
+        ],
+        "demo2": [
+            "Bluetooth",
+            "multi-device",
+            "ergonomic"
+        ],
+        "demo3": [
+            "Bluetooth",
+            "multi-device",
+            "MagSpeed scroll",
+            "ergonomic"
+        ],
+        "demo4": [
+            "Bluetooth",
+            "multi-device",
+            "horizontal scroll",
+            "ergonomic"
+        ],
+        "demo5": [
+            "ergonomic"
+        ]
+    },
+    {
+        "demo1": [
+            "portable",
+            "compact",
+            "long battery life",
+            "reliable wireless connection",
+            "durable"
+        ],
+        "demo2": [
+            "extreme portability",
+            "Bluetooth connectivity",
+            "good battery life",
+            "flat design"
+        ],
+        "demo3": [
+            "super slim",
+            "compact",
+            "reliable wireless",
+            "excellent battery life",
+            "durable construction"
+        ],
+        "demo4": [
+            "compact",
+            "reliable wireless",
+            "long battery life",
+            "durable construction"
+        ],
+        "demo5": [
+            "ultra-slim",
+            "compact",
+            "reliable wireless",
+            "good battery life",
+            "portable"
+        ]
+    },
+    {
+        "demo1": [
+            "vertical angle",
+            "handshake posture",
+            "wireless Bluetooth",
+            "ergonomic design",
+            "high-precision sensor",
+            "all-day comfort",
+            "multiple device pairing"
+        ],
+        "demo2": [
+            "vertical mouse",
+            "handshake grip",
+            "2.4G wireless",
+            "ergonomic design",
+            "standard surface compatibility"
+        ],
+        "demo3": [
+            "dome shape",
+            "elevated design",
+            "ergonomic contours",
+            "wireless connectivity",
+            "all-day support"
+        ],
+        "demo4": [
+            "vertical design",
+            "natural hand position",
+            "wireless connectivity",
+            "programmable buttons",
+            "ergonomic relief"
+        ],
+        "demo5": [
+            "ergonomic design",
+            "wireless connectivity (Bluetooth/2.4 GHz)",
+            "all-day comfort",
+            "tilt-click scroll",
+            "expert co-design"
+        ]
+    }
+]

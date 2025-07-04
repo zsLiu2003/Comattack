@@ -141,21 +141,21 @@ class EditPrompt():
             tokenizer=tokenizer,
             text=sentence,
         )
-        sysnonyms = set()
+        synonyms = set()
         
         device = model.device
         
         for syn in wordnet.synsets(target_word):
             for lemma in syn.lemmas():
-                sysnonym = lemma.name().replace('_', ' ')
-                if sysnonym.lower() != target_word.lower() and ' ' not in sysnonym:
-                    sysnonyms.add(sysnonym)
-        if not sysnonyms: return sentence
+                synonym = lemma.name().replace('_', ' ')
+                if synonym.lower() != target_word.lower() and ' ' not in synonym:
+                    synonyms.add(synonym)
+        if not synonyms: return sentence, original_ppl
         
         best_ppl = original_ppl
         best_sentence = sentence
 
-        for synonym in sysnonyms:
+        for synonym in synonyms:
             candidate_sentence = sentence.replace(target_word, synonym)
             candidate_ppl = self.get_ppl(
                 text=candidate_sentence,
@@ -171,7 +171,8 @@ class EditPrompt():
                 if candidate_ppl > best_ppl:
                     best_ppl = candidate_ppl
                     best_sentence = candidate_sentence
-        return best_sentence
+
+        return best_sentence, best_ppl
 
     def get_phrase_context(
             self,
@@ -343,6 +344,18 @@ class EditPrompt():
 
         # print("\n" + "-"*20 + "Automated optimization" + "-"*20)
         
+        if strategy == "synonym":
+            selected_function=self.optimize_with_synonyms
+            print("-"*20 + "Decrease the ppl of demo with synonym strategy." + "-"*20)
+        elif strategy == "connectors":
+            selected_function=self.optimize_with_connectors
+            print("-"*20 + "Decrease the ppl of demo with connectors strategy." + "-"*20)
+            # replaced_list = conntectors_list
+        elif strategy == "prep_context":
+            selected_function=self.optimize_with_prep_context
+            print("-"*20 + "Decrease the ppl of demo with prep_context strategy." + "-"*20)
+            # replaced_list = pre_context_list
+                        
         ppl_list = []
         # sentence_list = []
         for data in tqdm(self.dataset):
@@ -369,24 +382,24 @@ class EditPrompt():
                 replaced_list = []
                 selected_function = None
                 prompt = ""
-                if strategy == "synonym":
-                    selected_function=self.optimize_with_synonyms
-                    print("-"*20 + "Decrease the ppl of demo with synonym strategy." + "-"*20)
-                elif strategy == "connectors":
-                    selected_function=self.optimize_with_connectors
-                    print("-"*20 + "Decrease the ppl of demo with connectors strategy." + "-"*20)
-                    # replaced_list = conntectors_list
-                elif strategy == "prep_context":
-                    selected_function=self.optimize_with_prep_context
-                    print("-"*20 + "Decrease the ppl of demo with prep_context strategy." + "-"*20)
-                    # replaced_list = pre_context_list
+                # if strategy == "synonym":
+                #     selected_function=self.optimize_with_synonyms
+                #     print("-"*20 + "Decrease the ppl of demo with synonym strategy." + "-"*20)
+                # elif strategy == "connectors":
+                #     selected_function=self.optimize_with_connectors
+                #     print("-"*20 + "Decrease the ppl of demo with connectors strategy." + "-"*20)
+                #     # replaced_list = conntectors_list
+                # elif strategy == "prep_context":
+                #     selected_function=self.optimize_with_prep_context
+                #     print("-"*20 + "Decrease the ppl of demo with prep_context strategy." + "-"*20)
+                #     # replaced_list = pre_context_list
                 
                 if not selected_words:
                     print("-"*10 + "Could not identify any specific ppl word" + "-"*10)
                 optimized_sentence = value
                 for word_to_replace, _ in selected_words:
                     # 1. decrease the ppl of selected tokens by replacing some synonyms
-                    optimized_sentence = selected_function(
+                    optimized_sentence, *_ = selected_function(
                         model=model,
                         tokenizer=tokenizer,
                         phrase_model=phrase_model,
@@ -542,12 +555,12 @@ class EditPrompt():
                     model=model,
                     tokenizer=tokenizer,
                     # device=device,
-                    flag=False
+                    flag=flag,
                 )
                 
                 optimized_sentence = value
                 for target_word, _ in selected_words:
-                    optimized_sentence = selected_function(
+                    optimized_sentence, *_ = selected_function(
                         model=model,
                         tokenizer=tokenizer,
                         phrase_model=phrase_model,
@@ -557,13 +570,14 @@ class EditPrompt():
                         flag=flag,
                         # replaced_list=None,
                     )
-                    new_ppl = original_ppl
-                    if optimized_sentence != value:
-                        new_ppl = self.get_ppl(
-                            text=optimized_sentence,
-                            model=model,
-                            tokenizer=tokenizer,
-                        )
+                
+                new_ppl = original_ppl
+                if optimized_sentence != value:
+                    new_ppl = self.get_ppl(
+                        text=optimized_sentence,
+                        model=model,
+                        tokenizer=tokenizer,
+                    )
                 temp_dict = {}
                 temp_dict["original"] = value
                 temp_dict["replaced"] = optimized_sentence 
@@ -752,11 +766,11 @@ class EditPrompt():
             return sentence, target_word, original_keyword_ppl
         
         tokens = target_word.split()
-        if len(target_word) < 2: 
+        if len(tokens) < 2: 
             return sentence, target_word, original_keyword_ppl
         
         best_sentence = sentence
-        bset_keyword = target_word
+        best_keyword = target_word
         best_keyword_ppl = original_keyword_ppl
         
         for i in range(len(tokens)):
@@ -815,9 +829,12 @@ class EditPrompt():
                 # candidate_sentence = value
                 current_sentence = value
                 # best_keyword = target_word
+                # final_optimized_sentence = value
+                # all_keywords_optimized_info = [] 
+                # flag_ppl = True
                 for target_word in keyword:
-                    if target_word not in value:
-                        break
+                    if target_word not in current_sentence:
+                        continue
                     # candidate_sentence,candidate_keyword, candidate_keyword_ppl = selected_function(
                     #     model=model,
                     #     tokenizer=tokenizer,
@@ -827,16 +844,17 @@ class EditPrompt():
                     _, original_word_ppl = self.get_keyword_ppl_in_context(
                         model=model,
                         tokenizer=tokenizer,
-                        sentence=value,
+                        sentence=current_sentence,
                         keyword=target_word,
                     )
+                    
                     best_sentence_for_this_word, best_keyword, best_ppl = current_sentence, target_word, original_word_ppl
 
                     # 1. optimized with character_edit
                     char_s, char_k, char_p = self.optimize_with_character_edits(
                             model=model,
                             tokenizer=tokenizer,
-                            sentence=value,
+                            sentence=best_sentence_for_this_word,
                             target_word=target_word,
                         )
                     if char_p < best_ppl: best_sentence_for_this_word, best_keyword, best_ppl = char_s, char_k, char_p
@@ -860,36 +878,49 @@ class EditPrompt():
                     )
                     if tok_p < best_ppl: best_sentence_for_this_word, best_keyword, best_ppl = tok_s, tok_k, tok_p
                     # else:
-                     
-                        
+                    
+                    # current_sentence = best_sentence_for_this_word
+
+                    
                     # 4. Chekc if the optimized ppl < threshold_ppl
+                    temp_dict = {}
+                    temp_dict["original"] = value
+                    temp_dict["replaced"] = best_sentence_for_this_word
+                    temp_dict["original_keyword"] = target_word
+                    temp_dict["replaced_keyword"] = best_keyword
+                    temp_dict["original_keyword_ppl"] = original_word_ppl
+                    temp_dict["replaced_keyword_ppl"] = best_ppl
+                    temp_dict["threshold_ppl"] = threshold_ppl
+                    output_dict[key] = temp_dict
                     if best_ppl < threshold_ppl:
                         # print(f"   SUCCESS: Optimized '{word_to_fix}' -> '{best_keyword}'. New PPL {best_ppl:.4f} is below threshold.")
                         print("-"*10 + "Successfully" + "-"*10)
-                        temp_dict = {}
-                        temp_dict["original"] = value
-                        temp_dict["replaced"] = best_sentence_for_this_word
-                        temp_dict["original_keyword"] = target_word
-                        temp_dict["replaced_keyword"] = best_keyword
-                        temp_dict["original_keyword_ppl"] = original_word_ppl
-                        temp_dict["replaced_keyword_ppl"] = best_ppl
-                        temp_dict["threshold_ppl"] = threshold_ppl
-
-                        output_dict[key] = temp_dict
+                        # temp_dict = {}
+                        # temp_dict["original"] = value
+                        # temp_dict["replaced"] = best_sentence_for_this_word
+                        # temp_dict["original_keyword"] = target_word
+                        # temp_dict["replaced_keyword"] = best_keyword
+                        # temp_dict["original_keyword_ppl"] = original_word_ppl
+                        # temp_dict["replaced_keyword_ppl"] = best_ppl
+                        # temp_dict["threshold_ppl"] = threshold_ppl
 
                         # output_dict[key] = best_sentence_for_this_word
                         
                         # current_sentence = best_sentence_for_this_word
-                        
+                        # flag_ppl = False
                         break
                     current_sentence = best_sentence_for_this_word
+                    
                     # else:
                         # print(f"   FAILURE: Could not optimize '{word_to_fix}' to be below the threshold. Best PPL found was {best_ppl:.4f}.")
-            
+                # if flag_ppl:
+                # output_dict[key] = temp_dict
+
             output_list.append(output_dict)
-            output_path = f"{output_path}/decrease_keyword_ppl.json"
-            with open(output_path, "w", encoding='utf-8') as file:
-                json.dump(output_list, file, indent=4)
+            
+        output_path = f"{output_path}/decrease_keyword_ppl.json"
+        with open(output_path, "w", encoding='utf-8') as file:
+            json.dump(output_list, file, indent=4)
 
 
 # 3. in the recommendation level, the objective is to effect the recommandation
@@ -929,6 +960,7 @@ class EditPrompt():
         # model: None, 
         # tokenizer: None, 
         target_dataset: None,
+        output_path: str,
     ):
         """
         Edit the description of one product or one tool.
@@ -966,7 +998,7 @@ class EditPrompt():
                             new_demo = new_demo.replace(word, random.choice(weakning_words), 1)
                     
                     for word, replacements in uncertainty_words.items():
-                        if re.search(r'\b' + word + r'\b' + new_demo):
+                        if re.search(r'\b' + word + r'\b', new_demo):
                             new_demo = re.sub(r'\b' + word + r'\b', random.choice(replacements), new_demo, 1)
                             break
                     
@@ -977,10 +1009,11 @@ class EditPrompt():
                     output_dict[key] = temp_dict
             
             output_list.append(output_dict)
-            output_path = f"{output_path}/confused_recommendation.json"
+
+        dataset_path = f"{output_path}/confused_recommendation.json"
             
-            with open(output_path, "w", encoding="utf-8") as file:
-                json.dump(output_list, file, indent=4)
+        with open(dataset_path, "w", encoding="utf-8") as file:
+            json.dump(output_list, file, indent=4)
 
 
     # def get_insert_tokens(self,):
@@ -1041,7 +1074,7 @@ class EditPrompt():
         # 1. demo level edit
         # 1.a decrease the mean ppl of the whole demo
         decrease_strategy_list = ["synonym", "connectors", "prep_context"]
-        increase_strategy_list = ["sysnonym", "adjectives"]
+        increase_strategy_list = ["synonym", "adjectives"]
         
         for strategy in decrease_strategy_list:
             self.decrease_ppl_in_demo(
@@ -1049,7 +1082,7 @@ class EditPrompt():
                 tokenizer=tokenizer,
                 phrase_model=phrase_model,
                 phrase_tokenizer=phrase_tokenizer,
-                flag=False,
+                flag=True,
                 top_k=20,
                 output_path=output_path,
                 # conntectors_list=,
@@ -1088,6 +1121,7 @@ class EditPrompt():
         # 3. how to affect the product recommandation result
         self.recommendation_manipulation(
             target_dataset=target_demo_dataset,
+            output_path=output_path,
         )
         
         print("-"*20 + "Successfully finishing that task: Manipulate the product recommendation." + "-"*20)
