@@ -219,7 +219,7 @@ class EditPrompt():
             # device=device,
         )
 
-        parts = sentence.split(f" {target_word}", 1)
+        parts = sentence.split(f"{target_word}", 1)
         if len(parts) != 2:
             print("-"*10 + "Could not split the sentence by target word" + "-"*10)
             return sentence, original_ppl
@@ -271,7 +271,7 @@ class EditPrompt():
         best_sentence = sentence
 
 
-        parts = sentence.split(f" {target_word}", 1)
+        parts = sentence.split(f"{target_word}", 1)
         if len(parts) != 2:
             print("-"*10 + "Could not split the sentence by target word" + "-"*10)
             return sentence, original_ppl
@@ -344,6 +344,7 @@ class EditPrompt():
 
         # print("\n" + "-"*20 + "Automated optimization" + "-"*20)
         
+        selected_function = None
         if strategy == "synonym":
             selected_function=self.optimize_with_synonyms
             print("-"*20 + "Decrease the ppl of demo with synonym strategy." + "-"*20)
@@ -360,7 +361,7 @@ class EditPrompt():
         # sentence_list = []
         for data in tqdm(self.dataset):
             ppl_dict = {}
-            sentence_dict = {}
+            # sentence_dict = {}
             for key, value in data.items():
                 original_ppl = self.get_ppl(
                     text=value,
@@ -379,9 +380,8 @@ class EditPrompt():
 
 
                 # select the correcr functions
-                replaced_list = []
-                selected_function = None
-                prompt = ""
+                # replaced_list = []
+                # prompt = ""
                 # if strategy == "synonym":
                 #     selected_function=self.optimize_with_synonyms
                 #     print("-"*20 + "Decrease the ppl of demo with synonym strategy." + "-"*20)
@@ -1074,7 +1074,7 @@ class EditPrompt():
         # 1. demo level edit
         # 1.a decrease the mean ppl of the whole demo
         decrease_strategy_list = ["synonym", "connectors", "prep_context"]
-        increase_strategy_list = ["synonym", "adjectives"]
+        increase_strategy_list = ["synonym", "adjective"]
         
         for strategy in decrease_strategy_list:
             self.decrease_ppl_in_demo(

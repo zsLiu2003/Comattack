@@ -1,6 +1,6 @@
 import torch
 import transformers
-from datasets import load_dataset, Dataset
+from datasets import load_dataset, Dataset, concatenate_datasets
 import json
 
 def get_compression_dataset(dataset: None):
@@ -106,3 +106,30 @@ def process_SEO_dataset():
     
     """
 
+def get_integrate_keywords_dataset(keywords_dataset_path1, keywords_dataset_path2):
+    
+    # keywords1 = load_dataset("json", data_files=keywords_dataset_path1, split="train")
+    # keywords2 = load_dataset("json", data_files=keywords_dataset_path2, split="train")
+
+    # merged_dataset = concatenate_datasets([keywords1, keywords2])
+    output_json_path = "/home/lzs/Comattack/src/data/new_keywords_Qwen3.json"
+    # merged_dataset.to_json(output_json_path, force_ascii=False, indent=4)
+
+    with open(keywords_dataset_path1, 'r', encoding='utf-8') as f1:
+        list1 = json.load(f1)
+    
+    with open(keywords_dataset_path2, 'r', encoding='utf-8') as f2:
+        list2 = json.load(f2)
+    
+    if isinstance(list1, list) and isinstance(list2, list):
+        merged_list = list1 + list2
+
+    with open(output_json_path, 'w', encoding='utf-8') as f_out:
+        json.dump(merged_list, f_out, ensure_ascii=False, indent=4)
+
+if __name__ == "__main__":
+
+    get_integrate_keywords_dataset(
+        keywords_dataset_path1="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
+        keywords_dataset_path2="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json"
+    )

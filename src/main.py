@@ -16,7 +16,7 @@ if __name__ == "__main__":
     dataset = get_common_compression_dataset(dataset=dataset)
 
     # get the keywords dataset
-    keywords_dataset_path = "/home/lzs/Comattack/src/data/data_keywords_with_Qwen3.json"
+    keywords_dataset_path = "/home/lzs/Comattack/src/data/new_keywords_Qwen3.json"
     # keywords_dataset = get_keyword_dataset(
     #     dataset_path=keywords_dataset_path,
     # )
