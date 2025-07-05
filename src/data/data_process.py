@@ -2,6 +2,7 @@ import torch
 import transformers
 from datasets import load_dataset, Dataset, concatenate_datasets
 import json
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 def get_compression_dataset(dataset: None):
 
@@ -31,6 +32,20 @@ def get_compression_dataset(dataset: None):
 
     return Dataset.from_list(new_dataset)
                  
+
+def get_pure_demo_dataset(dataset: None):
+
+    new_dataset = []
+    for data in dataset:
+        new_data = {}
+        for key, value in data.items():
+            if "output" in key:
+                k = str(key[6])
+                new_data[f"demo_{k}"] = value
+            
+        new_dataset.append(new_data)
+    
+    return Dataset.from_list(new_dataset)
 
 def get_common_compression_dataset(dataset: None):
 

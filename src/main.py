@@ -1,5 +1,5 @@
 from src.utils.get_edit_token import EditPrompt
-from src.data.data_process import get_common_compression_dataset, get_keyword_dataset, get_target_demo_dataset
+from src.data.data_process import get_common_compression_dataset, get_keyword_dataset, get_target_demo_dataset,get_pure_demo_dataset
 from datasets import load_dataset
 
 if __name__ == "__main__":
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # get the demo dataset
     dataset_path = "/home/lzs/Comattack/src/data/data.json"
     dataset = load_dataset("json", data_files=dataset_path, split="train")
-    dataset = get_common_compression_dataset(dataset=dataset)
+    dataset = get_pure_demo_dataset(dataset=dataset)
 
     # get the keywords dataset
     keywords_dataset_path = "/home/lzs/Comattack/src/data/new_keywords_Qwen3.json"

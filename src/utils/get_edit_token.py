@@ -11,7 +11,7 @@ import numpy as np
 import nltk
 from nltk.corpus import wordnet
 from datasets import Dataset, load_dataset
-from src.data.data_process import get_keyword_dataset, get_target_demo_dataset
+from src.data.data_process import get_keyword_dataset, get_target_demo_dataset, get_pure_demo_dataset
 
 # from src.utils.get_ppl import get_mean_PPL
 # from src.utils.verify_PPL import get_single_PPL
@@ -42,7 +42,8 @@ class EditPrompt():
         nltk.download("wordnet")
         nltk.download('omw-1.4')
         nltk.download('averaged_perceptron_tagger')
-
+        nltk.download('punkt')
+        # nltk.download('averaged_perceptron_tagger')
     # def get_ppl(self) -> float:
         
     #     get_mean_PPL(
@@ -109,6 +110,7 @@ class EditPrompt():
         # Start from the second token since the first token has no loss/PPL
         for i, token_id in enumerate(input_ids[0][1:]):
             token_str = tokenizer.decode(token_id)
+            print(f"---------------{token_str}------------------")
             # GPT-2 tokenizer uses 'Ġ' to mark the start of a new word
             if token_str.startswith('Ġ') or i == 0:
                 if current_word:
@@ -127,10 +129,15 @@ class EditPrompt():
         word_ppls.sort(key=lambda x: x[1], reverse=True)
         
         if flag:
+            print("-----------------------------find high ppl tokens----------------------------------------")
+            print(word_ppls[:top_k])
             return word_ppls[:top_k]
-
+            
+        
+        print(word_ppls[-top_k:])
         return word_ppls[-top_k:]
 
+    # def 
 
     def optimize_with_synonyms(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, sentence: str, target_word: str, flag: bool):
         """
@@ -144,14 +151,20 @@ class EditPrompt():
         synonyms = set()
         
         device = model.device
+        prompt = f"Given the word '{target_word}', please give me ten synonyms. Separate them with commas.  Don't output any other content!!!"
+        # for syn in wordnet.synsets(target_word):
+        #     for lemma in syn.lemmas():
+        #         synonym = lemma.name().replace('_', ' ')
+        #         if synonym.lower() != target_word.lower() and ' ' not in synonym:
+        #             synonyms.add(synonym)
+        # if not synonyms: return sentence, original_ppl
         
-        for syn in wordnet.synsets(target_word):
-            for lemma in syn.lemmas():
-                synonym = lemma.name().replace('_', ' ')
-                if synonym.lower() != target_word.lower() and ' ' not in synonym:
-                    synonyms.add(synonym)
-        if not synonyms: return sentence, original_ppl
-        
+        synonyms = self.get_phrase_context(
+            model=phrase_model,
+            tokenizer=phrase_tokenizer,
+            prompt=prompt,
+        )
+
         best_ppl = original_ppl
         best_sentence = sentence
 
@@ -1074,8 +1087,9 @@ class EditPrompt():
         # 1. demo level edit
         # 1.a decrease the mean ppl of the whole demo
         decrease_strategy_list = ["synonym", "connectors", "prep_context"]
+        # decrease_strategy_list = []
         increase_strategy_list = ["synonym", "adjective"]
-        
+        # increase_strategy_list = ["adjective"]
         for strategy in decrease_strategy_list:
             self.decrease_ppl_in_demo(
                 model=model,

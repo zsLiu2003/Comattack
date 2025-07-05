@@ -47,6 +47,14 @@ def get_edit_keywords_decrease_prompt():
     return content
 
 
+def get_tool_keywords_prompt():
+
+    prompt_path = "/home/lzs/Comattack/src/data/get_tool_selection_keywords.txt"
+    with open(prompt_path, "r", encoding="utf-8") as file:
+        content = file.read()
+    
+    return content
+
 # test code
 # print(get_distill_prompt())
 
