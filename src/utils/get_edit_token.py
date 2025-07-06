@@ -83,8 +83,10 @@ class EditPrompt():
 
         device = model.device
         # Tokenize the sentence and get the model's predictions (logits)
-        encodings = tokenizer(sentence, return_tensors="pt")
+        encodings = tokenizer(sentence, return_tensors="pt",return_offsets_mapping=True)
         input_ids = encodings.input_ids.to(device)
+        offset_mapping = encodings.offset_mapping.squeeze().tolist()
+        full_token_list = tokenizer.convert_ids_to_tokens(input_ids[0])
 
         with torch.no_grad():
             outputs = model(input_ids, labels=input_ids)
@@ -97,47 +99,177 @@ class EditPrompt():
         shift_labels = input_ids[..., 1:].contiguous()
         
         per_token_loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
-        per_token_ppl = torch.exp(per_token_loss)
+        nlls = list(per_token_loss.cpu().numpy())
+        per_token_ppl = [None] + [torch.exp(loss).item() for loss in per_token_loss]
 
         # Re-align tokens with their PPL scores
         tokens = [tokenizer.decode(token_id) for token_id in input_ids[0]]
-        
-        # Group subword tokens back into whole words and calculate their average PPL
+        tokens_with_ppl = list(zip(tokens[1:], per_token_ppl[1:]))
+        tokens_with_ppl_sorted = sorted(tokens_with_ppl, key=lambda x: x[1], reverse=True)
+        top_k_tokens = tokens_with_ppl_sorted[:top_k]
+        print(top_k_tokens)
+
+        # return top_k_tokens
+
+        # get the word list
+        original_words = re.findall(r"[\w']+|[.,!?;]", sentence)
+        token_to_word_map = []
+        current_word_idx = 0
+        reconstructed_word = ""
+        print(full_token_list)
+        for i,token in enumerate(full_token_list):
+        # 去掉特殊的前缀字符，方便匹配
+            clean_token = token.lstrip('Ġ') if token.startswith('Ġ') else token
+            reconstructed_word += clean_token
+            
+            token_to_word_map.append(original_words[current_word_idx])
+            
+            if i != len(full_token_list) - 1:
+                if reconstructed_word == original_words[current_word_idx] or full_token_list[i+1].startswith("Ġ") == True:
+                    current_word_idx += 1
+                    reconstructed_word = ""
+
+        while len(token_to_word_map) < len(full_token_list):
+            token_to_word_map.append(original_words[-1])
+        word_to_nlls = {}
+        print(f"---------token_to_word_map---------{token_to_word_map}")
+        for i, token_nll in enumerate(nlls):
+            word = token_to_word_map[i+1]
+            if word not in word_to_nlls:
+                word_to_nlls[word] = []
+            word_to_nlls[word].append(token_nll)
+            # print()
         word_ppls = []
-        current_word = ""
-        current_word_losses = []
-        
-        # Start from the second token since the first token has no loss/PPL
-        for i, token_id in enumerate(input_ids[0][1:]):
-            token_str = tokenizer.decode(token_id)
-            print(f"---------------{token_str}------------------")
-            # GPT-2 tokenizer uses 'Ġ' to mark the start of a new word
-            if token_str.startswith('Ġ') or i == 0:
-                if current_word:
-                    word_ppls.append((current_word, np.mean(current_word_losses)))
-                current_word = token_str.lstrip('Ġ')
-                current_word_losses = [per_token_ppl[i].item()]
+        for word in original_words:
+            if word in word_to_nlls and word_to_nlls[word]:
+                mean_nll = sum(word_to_nlls[word]) / len(word_to_nlls[word])
+                ppl = torch.exp(torch.tensor(mean_nll)).item()
+                word_ppls.append((word, ppl))
             else:
-                current_word += token_str
-                current_word_losses.append(per_token_ppl[i].item())
+            # 对于第一个词或无法计算的词，PPL可以设为0或忽略
+                word_ppls.append((word, 0.0))
+
+        word_ppls.sort(key=lambda x: x[1], reverse=True)
+        print(word_ppls)
+        if flag:
+            return word_ppls[:top_k]
+        return word_ppls[-top_k:]
+    
+        # words_token_list = []
+        # for word in original_words:
+        #     token_list = []
+        #     token_list = tokenizer(word, return_tensors="pt",return_offsets_mapping=True)
+        #     input_ids = encodings.input_ids.to(device)
+        #     token_list = [tokenizer.decode(token_id) for token_id in input_ids[0]]
+        #     words_token_list.append(token_list)
+        
+        
+        # token_index = 0
+        # word_index = 0
+        # token_index_list = []
+        # while(True):
+        #     token = tokens[token_index]
+        #     tokens = words_token_list[word_index]
+        #     if token == tokens[0]:
+        #         token_index = 
+            
+
+        # words_spans = []
+        # start_char = 0
+        
+        # for word in original_words:
+        #     start_char = sentence.find(word, start_char)
+        #     end_char = start_char + len(word)
+        #     words_spans.append((start_char, end_char))
+        #     start_char = end_char
+
+        # word_to_token_indices_map = {}
+        # for token_idx, (token_start_char, token_end_char) in enumerate(offset_mapping):
+        #     if token_start_char == token_end_char: continue
+            
+        #     for word_idx, (word_start_char, word_end_char) in enumerate(words_spans):
+        #         if token_start_char >= word_start_char and token_end_char <= word_end_char:
+        #             word_key = (original_words[word_idx], word_idx)
+        #             if word_key not in word_to_token_indices_map:
+        #                 word_to_token_indices_map[word_key] = []
+        #             word_to_token_indices_map[word_key].append(token_idx)
+        #             break
+        # for i, word in enumerate(original_words):
+        #     key = (word, i)
+        #     tokens = [full_token_list[j] for j in word_to_token_indices_map.get(key, [])]
+       
+        # final_word_ppls = []
+
+        # # test
+        # for i, token in enumerate(full_token_list):
+        #     ppl = per_token_ppl[i]
+        #     if ppl is not None:
+        #         print(f"  > Token '{token}' (位置 {i}) -> PPL: {ppl:.2f}")
+        #     else:
+        #         print(f"  > Token '{token}' (位置 {i}) -> PPL: 未定义")
+
+        # for idx, word in enumerate(original_words):
+        #     word_key = (word, idx)
+        #     print(word_to_token_indices_map)
+        #     indices_of_tokens_for_word = word_to_token_indices_map.get(word_key, [])
+        #     print(indices_of_tokens_for_word)
+        #     ppls_for_this_word = [per_token_ppl[i] for i in indices_of_tokens_for_word if per_token_ppl[i] is not None]
+        #     print(ppls_for_this_word)
+        #     if ppls_for_this_word:
+        #         average_ppl = sum(ppls_for_this_word) / len(ppls_for_this_word)
+        #         final_word_ppls.append((word, average_ppl))
+        #         print(f"  > 单词 '{word}': 平均PPL = {average_ppl:.2f} (来自 {len(ppls_for_this_word)} 个tokens)")
+        #     else:
+        #         # 如果所有token都没有可计算的PPL（通常只发生在第一个词）
+        #         final_word_ppls.append((word, None))
+        #         print(f"  > 单词 '{word}': 平均PPL = 未定义")
+        
+        # print(final_word_ppls)
+        # Group subword tokens back into whole words and calculate their average PPL
+        # word_ppls = []
+        # current_word = ""
+        # current_word_losses = []
+        # original_words = re.findall(r"[\w']+|[.,!?;]", sentence)
+        # word_to_tokens_indices = {}
+        # current_word_idx = 0
+        # word_spans = []
+        # start = 0
+        # # for word in original_words:
+        #     # find the start index in the sentence
+        #     start = sentence.find(word, start)
+        #     end = start + len(word)
+        #     word_spans.append((start, end))
+        #     start = end
+
+        # # Start from the second token since the first token has no loss/PPL
+        # for i, token_id in enumerate(input_ids[0][1:]):
+        #     token_str = tokenizer.decode(token_id)
+        #     print(f"---------------{token_str}------------------")
+        #     # GPT-2 tokenizer uses 'Ġ' to mark the start of a new word
+            
+        #         if current_word:
+        #             word_ppls.append((current_word, np.mean(current_word_losses)))
+        #         current_word = token_str.lstrip('Ġ')
+        #         current_word_losses = [per_token_ppl[i].item()]
+        #     else:
+        #         current_word += token_str
+        #         current_word_losses.append(per_token_ppl[i].item())
         
         # Add the last word
-        if current_word:
-            word_ppls.append((current_word, np.mean(current_word_losses)))
+        # if current_word:
+        #     word_ppls.append((current_word, np.mean(current_word_losses)))
 
-        # Sort words by their PPL in descending order and return the top N
-        word_ppls.sort(key=lambda x: x[1], reverse=True)
+        # # Sort words by their PPL in descending order and return the top N
+        # word_ppls.sort(key=lambda x: x[1], reverse=True)
         
-        if flag:
-            print("-----------------------------find high ppl tokens----------------------------------------")
-            print(word_ppls[:top_k])
-            return word_ppls[:top_k]
+        # if flag:
+        #     print("-----------------------------find high ppl tokens----------------------------------------")
+        #     print(word_ppls[:top_k])
+        #     return word_ppls[:top_k]
             
         
-        print(word_ppls[-top_k:])
-        return word_ppls[-top_k:]
-
-    # def 
+        # print(word_ppls[-top_k:])
+        # return word_ppls[-top_k:]
 
     def optimize_with_synonyms(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, sentence: str, target_word: str, flag: bool):
         """
@@ -198,22 +330,44 @@ class EditPrompt():
         """  
 
         device = model.device
-        inputs = tokenizer(prompt, return_tensors='pt').to(device)
+        messages = [
+            {"role": "user", "content": prompt}
+        ]
+        text = tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
+        )
+        inputs = tokenizer([text], return_tensors='pt').to(device)
         
-        with torch.no_grad():
-            output = model.generate(
-                input_ids = inputs.input_ids,
-                max_new_tokens=50,
-                num_return_sequences=1,
-                do_sample=True,
-                top_k = 50,
-                top_p=0.95,
-                pad_token_id = tokenizer.eos_token_id,
-            )
+        generate_ids = model.generate(
+            **inputs,
+            max_new_tokens=32768,
+        )
+
+        output_ids = generate_ids[0][len(inputs.input_ids[0]):].tolist()
+        try:
+            index = len(output_ids) - output_ids[::-1].index(151668)
+        except ValueError:
+            index = 0
+
+        thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
+        content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
+        # with torch.no_grad():
+        #     output = model.generate(
+        #         input_ids = inputs.input_ids,
+        #         max_new_tokens=50,
+        #         num_return_sequences=1,
+        #         do_sample=True,
+        #         top_k = 50,
+        #         top_p=0.95,
+        #         pad_token_id = tokenizer.eos_token_id,
+        #     )
         
-        input_length = len(inputs.input_ids[0])
-        output_text = tokenizer.decode(output[0][input_length:], skip_special_tokens=True)
-        output_text = output_text.strip()
+        # input_length = len(inputs.input_ids[0])
+        # output_text = tokenizer.decode(output[0][input_length:], skip_special_tokens=True)
+        output_text = content.strip()
         phrase_words = [p.strip() for p in output_text.split(",") if p.strip()]
 
         return phrase_words
@@ -657,6 +811,27 @@ class EditPrompt():
         
         return keyword_ppl, sentence_ppl
 
+    def get_similarity_score(self, word, original_word):
+        """
+        Calculates a simple similarity score.
+        The lower the score, the more similar the two words are.
+        """
+        if word == original_word:
+            return 0
+        
+        # Different lengths (from an insert/delete operation) get the highest score.
+        if len(word) != len(original_word):
+            return 3
+
+        # Same length, calculate the number of different characters (Hamming distance).
+        # A replacement operation has a Hamming distance of 1, a transpose has 2.
+        distance = sum(c1 != c2 for c1, c2 in zip(word, original_word))
+        
+        # Theoretically, distance won't be 0 here because of the initial check,
+        # but as a fallback, return a high score if it is.
+        return distance if distance > 0 else 4 
+
+
 
     def optimize_with_character_edits(
         self,
@@ -665,21 +840,73 @@ class EditPrompt():
         sentence: str,
         target_word: str,
     ):
-        """
-        Insert, delete, or replace one character in one word to decrease the PPL of keyword.
-        Return (optimized sentence, optimized_word, optimized_keyword_ppl)
-        """
+        # """
+        # Insert, delete, or replace one character in one word to decrease the PPL of keyword.
+        # Return (optimized sentence, optimized_word, optimized_keyword_ppl)
+        # """
         
+        # original_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+        #     model=model,
+        #     tokenizer=tokenizer,
+        #     sentence=sentence,
+        #     keyword=target_word,
+        # )
+        # if original_keyword_ppl == float("inf"): 
+        #     return sentence, target_word, original_keyword_ppl
+        
+        # # find the delete, insert, and replaced characters
+        # letters = "abcdefghijklmnopqrstuvwxyz"
+        # splits = [(target_word[:i], target_word[i:]) for i in range(len(target_word) + 1)]
+        # deletes    = [L + R[1:] for L, R in splits if R]
+        # transposes = [L + R[1] + R[0] + R[2:] for L, R in splits if len(R)>1]
+        # replaces   = [L + c + R[1:] for L, R in splits if R for c in letters]
+        # inserts    = [L + c + R for L, R in splits for c in letters]
+
+        # valid_candidates = set(deletes + transposes + replaces + inserts)
+        # # valid_candidates = {word for word in candidates if wordnet.synsets(word)}
+        # if not valid_candidates:
+        #     print("-"*10 + "No valid single-edit word found." + "-"*10)
+        #     return sentence, target_word, original_keyword_ppl
+        
+        # best_keyword_ppl = original_keyword_ppl
+        # best_sentence = sentence
+        # best_keyword = target_word
+
+        # for word in valid_candidates:
+        #     candidate_sentence = sentence.replace(target_word, word)
+        #     candidata_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+        #         model=model,
+        #         tokenizer=tokenizer,
+        #         sentence=candidate_sentence,
+        #         keyword=word,
+        #     )
+        #     if candidata_keyword_ppl < best_keyword_ppl:
+        #         best_keyword_ppl = candidata_keyword_ppl
+        #         best_sentence = candidate_sentence
+        #         best_keyword = word
+        
+        # return best_sentence, best_keyword, best_keyword_ppl
+    
+        """
+        Complete process to find the best correction:
+        1. Calculate the PPL for all candidate words.
+        2. Select the top-n candidates with the lowest PPL.
+        3. From the top-n, select the one with the highest similarity to the original word.
+        
+        Args:
+            n (int): Specifies the range for top-n, e.g., 5 or 10.
+        """
         original_keyword_ppl, _ = self.get_keyword_ppl_in_context(
             model=model,
             tokenizer=tokenizer,
             sentence=sentence,
             keyword=target_word,
         )
-        if original_keyword_ppl == float("inf"): 
+        n = 5
+        if original_keyword_ppl == float("inf"):
             return sentence, target_word, original_keyword_ppl
         
-        # find the delete, insert, and replaced characters
+        # 1. Generate all single-edit-distance candidate words
         letters = "abcdefghijklmnopqrstuvwxyz"
         splits = [(target_word[:i], target_word[i:]) for i in range(len(target_word) + 1)]
         deletes    = [L + R[1:] for L, R in splits if R]
@@ -687,31 +914,77 @@ class EditPrompt():
         replaces   = [L + c + R[1:] for L, R in splits if R for c in letters]
         inserts    = [L + c + R for L, R in splits for c in letters]
 
-        candidates = set(deletes + transposes + replaces + inserts)
-        valid_candidates = {word for word in candidates if wordnet.synsets(word)}
+        # Use a set to remove duplicate candidates
+        valid_candidates = set(deletes + transposes + replaces + inserts)
+        
         if not valid_candidates:
-            print("-"*10 + "No valid single-edit word found." + "-"*10)
+            print("-" * 10 + "No single-edit-distance candidates found." + "-" * 10)
             return sentence, target_word, original_keyword_ppl
         
-        best_keyword_ppl = original_keyword_ppl
-        best_sentence = sentence
-        best_keyword = target_word
-
+        # 2. [CANDIDATE GATHERING STAGE] Calculate PPL for all candidates and store them
+        all_candidates_with_ppl = []
+        # print(f"Calculating PPL for {len(valid_candidates)} candidates...")
         for word in valid_candidates:
             candidate_sentence = sentence.replace(target_word, word)
-            candidata_keyword_ppl, _ = self.get_keyword_ppl_in_context(
+            candidate_keyword_ppl, _ = self.get_keyword_ppl_in_context(
                 model=model,
                 tokenizer=tokenizer,
                 sentence=candidate_sentence,
                 keyword=word,
             )
-            if candidata_keyword_ppl < best_keyword_ppl:
-                best_keyword_ppl = candidata_keyword_ppl
-                best_sentence = candidate_sentence
-                best_keyword = word
+            if candidate_keyword_ppl != float("inf"):
+                all_candidates_with_ppl.append({
+                    "word": word,
+                    "ppl": candidate_keyword_ppl,
+                    "sentence": candidate_sentence
+                })
+
+        if not all_candidates_with_ppl:
+            # print("-" * 10 + "PPL for all candidates is inf." + "-" * 10)
+            return sentence, target_word, original_keyword_ppl
+
+        # 3. Sort by PPL and select the top-n
+        all_candidates_with_ppl.sort(key=lambda x: x['ppl'])
+        top_n_candidates = all_candidates_with_ppl[:n]
         
-        return best_sentence, best_keyword, best_keyword_ppl
-    
+        # print(f"\n--- Top-{n} Candidates with the Lowest PPL ---")
+        # for cand in top_n_candidates:
+        #     print(f"  - Word: {cand['word']:<15} PPL: {cand['ppl']:.4f}")
+
+        # 4. [FINAL SELECTION STAGE] From top-n, select the word with the highest similarity (lowest score)
+        best_candidate = None
+        lowest_similarity_score = float('inf')
+
+        for candidate in top_n_candidates:
+            score = self.get_similarity_score(candidate['word'], target_word)
+            if score < lowest_similarity_score:
+                lowest_similarity_score = score
+                best_candidate = candidate
+        
+        # Also consider the original word. If its PPL is within the top-n range 
+        # and its similarity score is the best (0), it should be chosen.
+        original_score = self.get_similarity_score(target_word, target_word) # This will be 0
+        if best_candidate and original_keyword_ppl <= top_n_candidates[-1]['ppl'] and original_score < lowest_similarity_score:
+            best_candidate = {
+                "word": target_word, 
+                "ppl": original_keyword_ppl, 
+                "sentence": sentence
+            }
+
+        # Handle case where no best_candidate was found in the loop (e.g., top_n_candidates was empty)
+        if not best_candidate and top_n_candidates:
+            best_candidate = top_n_candidates[0] # Fallback to the one with the best PPL
+        
+        if best_candidate:
+            final_score = self.get_similarity_score(best_candidate['word'], target_word)
+            # print(f"\n--- Final Selection ---")
+            # print(f"From the Top-{n}, the word most similar to '{target_word}' is '{best_candidate['word']}' (Similarity Score: {final_score})")
+            return best_candidate['sentence'], best_candidate['word'], best_candidate['ppl']
+        else:
+            # Fallback if no candidates could be processed at all
+            return sentence, target_word, original_keyword_ppl
+        
+
     def optimizer_with_symbol(
             self,
             model: None,

@@ -3,6 +3,8 @@ import transformers
 from datasets import load_dataset, Dataset, concatenate_datasets
 import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import pandas as pd
+from tqdm import tqdm
 
 def get_compression_dataset(dataset: None):
 
@@ -142,9 +144,48 @@ def get_integrate_keywords_dataset(keywords_dataset_path1, keywords_dataset_path
     with open(output_json_path, 'w', encoding='utf-8') as f_out:
         json.dump(merged_list, f_out, ensure_ascii=False, indent=4)
 
+def get_QA_dataset(dataset_path: str):
+
+    df = pd.read_parquet(dataset_path)
+    print("-----------Successfully read the dataset!------------")
+    
+    print("------------The first five data entries in the dataset--------------")
+    print(df.head())
+
+    print("-"*10 + "The detailed information of this dataset." + "-"*10)
+    df.info()
+
+    print("-"*10 + "The number of column and row." + "-"*10)
+    print(df.shape)
+
+    """Get the subset of squad: context, question, and answers."""
+    subset = df[["context", "question", "answers"]]
+    
+    # data_dict_list = subset.to_dict(orient="records")
+    
+    # dataset = load_dataset("parquet", data_files=dataset_path, split="train")
+    
+    dataset = df.to_dict(orient="records")
+    
+    return dataset
+    # for data in dataset[:5]:
+    #     for key, value in data.items():
+    #         print(f"key={key}, value={value}")
+    # # output_path = f"{output_path}/squad_QA_dataset.json"
+    # with open(output_path, "w", encoding="utf-8") as file:
+    #     json.dump(dataset, file, indent=4)
+    # print(data_dict[1]["answers"])
+
+        # print(data)
+                
+    # return df
+
+
 if __name__ == "__main__":
 
-    get_integrate_keywords_dataset(
-        keywords_dataset_path1="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
-        keywords_dataset_path2="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json"
-    )
+    # get_integrate_keywords_dataset(
+    #     keywords_dataset_path1="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
+    #     keywords_dataset_path2="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json"
+    # )
+    output_path = "/home/lzs/Comattack/src/data"
+    get_QA_dataset(dataset_path="/home/zzx/Comattack_dataset/squad/validation-00000-of-00001.parquet")

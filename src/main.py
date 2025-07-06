@@ -42,5 +42,5 @@ if __name__ == "__main__":
         keywords_dataset_path=keywords_dataset_path,
         target_demo_path=target_demo_path,
         output_path=output_path,
-        top_k=20, 
+        top_k=10, 
     )
