@@ -43,6 +43,8 @@ class EditPrompt():
         nltk.download('omw-1.4')
         nltk.download('averaged_perceptron_tagger')
         nltk.download('punkt')
+        nltk.download('popular')
+        nltk.download('averaged_perceptron_tagger_eng')
         # nltk.download('averaged_perceptron_tagger')
     # def get_ppl(self) -> float:
         
@@ -107,7 +109,7 @@ class EditPrompt():
         tokens_with_ppl = list(zip(tokens[1:], per_token_ppl[1:]))
         tokens_with_ppl_sorted = sorted(tokens_with_ppl, key=lambda x: x[1], reverse=True)
         top_k_tokens = tokens_with_ppl_sorted[:top_k]
-        print(top_k_tokens)
+        # print(top_k_tokens)
 
         # return top_k_tokens
 
@@ -116,7 +118,7 @@ class EditPrompt():
         token_to_word_map = []
         current_word_idx = 0
         reconstructed_word = ""
-        print(full_token_list)
+        # print(full_token_list)
         for i,token in enumerate(full_token_list):
         # 去掉特殊的前缀字符，方便匹配
             clean_token = token.lstrip('Ġ') if token.startswith('Ġ') else token
@@ -132,7 +134,7 @@ class EditPrompt():
         while len(token_to_word_map) < len(full_token_list):
             token_to_word_map.append(original_words[-1])
         word_to_nlls = {}
-        print(f"---------token_to_word_map---------{token_to_word_map}")
+        # print(f"---------token_to_word_map---------{token_to_word_map}")
         for i, token_nll in enumerate(nlls):
             word = token_to_word_map[i+1]
             if word not in word_to_nlls:
@@ -150,7 +152,7 @@ class EditPrompt():
                 word_ppls.append((word, 0.0))
 
         word_ppls.sort(key=lambda x: x[1], reverse=True)
-        print(word_ppls)
+        # print(word_ppls)
         if flag:
             return word_ppls[:top_k]
         return word_ppls[-top_k:]
@@ -343,7 +345,7 @@ class EditPrompt():
         
         generate_ids = model.generate(
             **inputs,
-            max_new_tokens=32768,
+            max_new_tokens=100,
         )
 
         output_ids = generate_ids[0][len(inputs.input_ids[0]):].tolist()
@@ -370,6 +372,7 @@ class EditPrompt():
         output_text = content.strip()
         phrase_words = [p.strip() for p in output_text.split(",") if p.strip()]
 
+        # print(phrase_words)
         return phrase_words
                     
 
@@ -1103,6 +1106,7 @@ class EditPrompt():
         for data,keywrods in tqdm(zip(self.dataset,keyword_dataset)):
             output_dict = {}
             for key, value in data.items():
+                key = key[:4] + key[-1]
                 keyword = keywrods[key]
                 word_list = self.find_high_and_low_ppl_words(
                     model=model,
@@ -1360,8 +1364,10 @@ class EditPrompt():
         # 1. demo level edit
         # 1.a decrease the mean ppl of the whole demo
         decrease_strategy_list = ["synonym", "connectors", "prep_context"]
+        # decrease_strategy_list = ["synonym"]
         # decrease_strategy_list = []
         increase_strategy_list = ["synonym", "adjective"]
+        # increase_strategy_list = ["synonym"]
         # increase_strategy_list = ["adjective"]
         for strategy in decrease_strategy_list:
             self.decrease_ppl_in_demo(
@@ -1380,36 +1386,36 @@ class EditPrompt():
         print("-"*20 + "Successfully finishing that task: Decrease the ppl of demo." + "-"*20)
         
         # 1.b increase the mean ppl of the whole demo
-        for strategy in increase_strategy_list:
-            self.increase_ppl_in_demo(
-                model=model,
-                tokenizer=tokenizer,
-                phrase_model=phrase_model,
-                phrase_tokenizer=phrase_tokenizer,
-                flag=False,
-                top_k=20,
-                output_path=output_path,
-                strategy=strategy,
-            )
-        print("-"*20 + "Successfully finishing that task: Increase the ppl of demo." + "-"*20)
+        # for strategy in increase_strategy_list:
+        #     self.increase_ppl_in_demo(
+        #         model=model,
+        #         tokenizer=tokenizer,
+        #         phrase_model=phrase_model,
+        #         phrase_tokenizer=phrase_tokenizer,
+        #         flag=False,
+        #         top_k=20,
+        #         output_path=output_path,
+        #         strategy=strategy,
+        #     )
+        # print("-"*20 + "Successfully finishing that task: Increase the ppl of demo." + "-"*20)
 
         # 2. token or word level edit, including editing the keywords in the demo
-        self.optimize_to_ppl_threshold(
-            model=model,
-            tokenizer=tokenizer,
-            keyword_dataset=keyword_dataset,
-            top_k=top_k,
-            k=int(top_k / 2),
-            output_path=output_path,
-        )
+        # self.optimize_to_ppl_threshold(
+        #     model=model,
+        #     tokenizer=tokenizer,
+        #     keyword_dataset=keyword_dataset,
+        #     top_k=top_k,
+        #     k=int(top_k / 2),
+        #     output_path=output_path,
+        # )
 
-        print("-"*20 + "Successfully finishing that task: Decrease the ppl of keyword." + "-"*20)
+        # # print("-"*20 + "Successfully finishing that task: Decrease the ppl of keyword." + "-"*20)
 
-        # 3. how to affect the product recommandation result
-        self.recommendation_manipulation(
-            target_dataset=target_demo_dataset,
-            output_path=output_path,
-        )
+        # # 3. how to affect the product recommandation result
+        # self.recommendation_manipulation(
+        #     target_dataset=target_demo_dataset,
+        #     output_path=output_path,
+        # )
         
-        print("-"*20 + "Successfully finishing that task: Manipulate the product recommendation." + "-"*20)
+        # print("-"*20 + "Successfully finishing that task: Manipulate the product recommendation." + "-"*20)
 

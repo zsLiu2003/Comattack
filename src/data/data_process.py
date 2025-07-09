@@ -113,10 +113,13 @@ def get_target_demo_dataset(dataset_path: str):
     dataset = load_dataset("json", data_files=dataset_path, split="train")
     return dataset
 
-def process_tool_selection_dataset():
+def process_tool_selection_dataset(dataset_path):
     """
+    """
+
+    dataset = load_dataset("json", data_files=dataset_path, split="train")
     
-    """
+    return dataset
 
 def process_SEO_dataset():
     """

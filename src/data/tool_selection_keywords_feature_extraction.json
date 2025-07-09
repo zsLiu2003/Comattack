@@ -1,0 +1,254 @@
+[
+    {
+        "YituTech/conv-bert-base": [
+            "ConvBERT",
+            "feature extraction",
+            "Hugging Face Transformers"
+        ]
+    },
+    {
+        "facebook/dino-vits8": [
+            "Vision Transformer (ViT)",
+            "DINO method",
+            "self-supervised",
+            "ImageNet-1k"
+        ]
+    },
+    {
+        "dmis-lab/biobert-v1.1": [
+            "BioBERT",
+            "biomedical language representation",
+            "biomedical text mining",
+            "named entity recognition",
+            "relation extraction",
+            "question answering"
+        ]
+    },
+    {
+        "cambridgeltl/SapBERT-from-PubMedBERT-fulltext": [
+            "SapBERT",
+            "biomedical entities",
+            "UMLS 2020AA",
+            "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+            "self-supervised",
+            "CLS embedding"
+        ]
+    },
+    {
+        "facebook/dino-vitb16": [
+            "Vision Transformer (ViT)",
+            "DINO method",
+            "self-supervised",
+            "ImageNet-1k",
+            "224x224 pixels",
+            "patch-based",
+            "[CLS] token",
+            "position embeddings",
+            "Transformer encoder"
+        ]
+    },
+    {
+        "microsoft/codebert-base": [
+            "CodeBERT",
+            "Programming and Natural Languages",
+            "CodeSearchNet",
+            "MLM+RTD",
+            "RoBERTa-base"
+        ]
+    },
+    {
+        "kobart-base-v2": [
+            "KoBART",
+            "BART architecture",
+            "Korean",
+            "encoder-decoder",
+            "feature extraction",
+            "Korean text",
+            "Korean Wiki",
+            "news",
+            "books"
+        ]
+    },
+    {
+        "sup-simcse-roberta-large": [
+            "RoBERTa-large",
+            "contrastive learning",
+            "sentence embeddings",
+            "semantic textual similarity (STS)",
+            "feature extraction"
+        ]
+    },
+    {
+        "DeepPavlov/rubert-base-cased": [
+            "RuBERT",
+            "Russian",
+            "cased",
+            "BERT-base",
+            "Wikipedia",
+            "news data",
+            "subtokens",
+            "180M parameters"
+        ]
+    },
+    {
+        "microsoft/wavlm-large": [
+            "WavLM",
+            "HuBERT framework",
+            "speech audio",
+            "spoken content modeling",
+            "speaker identity preservation",
+            "Libri-Light",
+            "GigaSpeech",
+            "VoxPopuli",
+            "SUPERB benchmark",
+            "speech processing"
+        ]
+    },
+    {
+        "facebook/dpr-question_encoder-single-nq-base": [
+            "DPR",
+            "Dense Passage Retrieval",
+            "open-domain Q&A",
+            "question encoder",
+            "Natural Questions (NQ) dataset"
+        ]
+    },
+    {
+        "google/vit-base-patch16-224-in21k": [
+            "Vision Transformer (ViT)",
+            "transformer encoder",
+            "ImageNet-21k",
+            "224x224 resolution",
+            "Dosovitskiy et al."
+        ]
+    },
+    {
+        "sentence-transformers/distilbert-base-nli-mean-tokens": [
+            "DistilBERT",
+            "sentence-transformers",
+            "NLI (Natural Language Inference)",
+            "dense vector space",
+            "semantic search",
+            "clustering"
+        ]
+    },
+    {
+        "lanwuwei/BERTOverflow_stackoverflow_github": [
+            "BERT-base",
+            "code and named entity recognition",
+            "StackOverflow",
+            "pre-trained",
+            "152 million sentences"
+        ]
+    },
+    {
+        "sberbank-ai/sbert_large_mt_nlu_ru": [
+            "BERT large",
+            "multitask",
+            "cased",
+            "Sentence Embeddings",
+            "Russian language"
+        ]
+    },
+    {
+        "microsoft/xclip-base-patch16-zero-shot": [
+            "X-CLIP",
+            "video-language understanding",
+            "contrastive training",
+            "video classification",
+            "video-text retrieval",
+            "zero-shot",
+            "CLIP"
+        ]
+    },
+    {
+        "setu4993/LaBSE": [
+            "LaBSE",
+            "BERT-based",
+            "sentence embedding",
+            "masked language modeling",
+            "translation language modeling",
+            "multilingual",
+            "bi-text retrieval"
+        ]
+    },
+    {
+        "YituTech/conv-bert-base": [
+            "ConvBERT",
+            "feature extraction",
+            "Hugging Face Transformers"
+        ]
+    },
+    {
+        "dmis-lab/biobert-v1.1": [
+            "BioBERT",
+            "biomedical language representation",
+            "biomedical text mining",
+            "biomedical named entity recognition",
+            "relation extraction",
+            "question answering"
+        ]
+    },
+    {
+        "princeton-nlp/unsup-simcse-roberta-base": [
+            "SimCSE",
+            "sentence embedding",
+            "unsupervised",
+            "RoBERTa base"
+        ]
+    },
+    {
+        "cambridgeltl/SapBERT-from-PubMedBERT-fulltext": [
+            "SapBERT",
+            "biomedical entities",
+            "UMLS 2020AA",
+            "self-aligns",
+            "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+            "pretraining",
+            "CLS embedding"
+        ]
+    },
+    {
+        "facebook/bart-large": [
+            "BART",
+            "transformer",
+            "encoder-decoder",
+            "seq2seq",
+            "bidirectional",
+            "autoregressive",
+            "text generation",
+            "summarization",
+            "translation",
+            "text classification",
+            "question answering"
+        ]
+    },
+    {
+        "facebook/bart-base": [
+            "BART",
+            "transformer",
+            "seq2seq",
+            "bidirectional",
+            "autoregressive",
+            "text generation",
+            "summarization",
+            "translation",
+            "text classification",
+            "question answering"
+        ]
+    },
+    {
+        "kobart-base-v2": [
+            "KoBART",
+            "BART architecture",
+            "Korean",
+            "encoder-decoder",
+            "language model",
+            "feature extraction",
+            "Korean text",
+            "Korean Wiki",
+            "news",
+            "books"
+        ]
+    }
+]
