@@ -94,3 +94,13 @@ def get_llama2_template():
     )
     
     return chat_template
+
+
+def get_QA_prompt():
+
+    prompt_path = "/home/lzs/Comattack/src/data/QA_prompt.txt"
+    
+    with open(prompt_path, "r", encoding="utf-8") as file:
+        content = file.read()
+
+    return content

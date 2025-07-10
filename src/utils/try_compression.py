@@ -14,11 +14,12 @@ compression_model = PromptCompressor(
 
 data = dataset[0]
 prompt = str(data["output1"] + data["output2"])
+prompt_list = [data["output1"], data["output2"], data["output3"], data["output4"], data["output5"]]
 compressed_data = compression_model.compress_prompt(
-    prompt,
+    prompt_list,
     instruction="",
     question="",
     target_token=50,
 )
-print(len(prompt), len(compressed_data["compressed_prompt"]))
-print(f"origin={prompt} \n--- compressed={compressed_data}")
+print(len(prompt_list), len(compressed_data["compressed_prompt_list"]))
+print(f"origin={prompt_list} \n--- compressed={compressed_data}")
