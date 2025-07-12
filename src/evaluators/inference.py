@@ -2,9 +2,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from datasets import load_dataset
 from tqdm import tqdm
 import json
+import transformers
+import torch
 
 
-def dataset_process(dataset, question_dataset, flag):
+def dataset_process(dataset, question_dataset, compression_model, flag, compressed):
     
     output_list = []
     selection_function = None
@@ -26,6 +28,20 @@ def dataset_process(dataset, question_dataset, flag):
                 optimized_demos += value["replaced"]
             else:
                 optimized_demos += value["original"]
+        if compressed:
+            le = 0 
+            if len(optimized_demos) < 800:
+                le = 25
+            elif len(optimized_demos) < 1200:
+                le = 50
+            else:
+                le = 100
+            optimized_demos = compression_model(
+                optimized_demos,
+                instruction="",
+                question="",
+                target_token=le,
+            )
         message_dict = {}
         message_dict["original_message"] = [
             {"role": "system", "content": system_prompt},
@@ -33,7 +49,7 @@ def dataset_process(dataset, question_dataset, flag):
         ]
         message_dict["optimized_message"] = [
             {"role": "system", "content": system_prompt},
-            {"role": "system", "content": optimized_demos},
+            {"role": "user", "content": optimized_demos},
         ]
         # message_list.append(optimized_message)
         message_dict["pure_original_message"] = [
@@ -52,7 +68,7 @@ def dataset_process(dataset, question_dataset, flag):
     return output_list
 
 
-def qwen3_inference(dataset, question_dataset, flag="increase", output_path="", compressed=None):
+def qwen3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
     """"""
     model_name =  "/opt/model/Qwen3-32B"
     model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype="auto", device_map="auto")
@@ -67,8 +83,13 @@ def qwen3_inference(dataset, question_dataset, flag="increase", output_path="", 
         dataset=dataset,
         question_dataset=question_dataset,
         flag=flag,
+        compressed=compressed,
+        compression_model=compression_model,
     )
+    # if compressed is not None:
+    #     message_dict = dataset
     for message_dict in tqdm(message_list):
+        output_dict = {}
         for key, prompt in message_dict.items():
             messages = tokenizer.apply_chat_template(
                 prompt,
@@ -97,6 +118,7 @@ def qwen3_inference(dataset, question_dataset, flag="increase", output_path="", 
 
             thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
             content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
+            output_dict[key] = content
             
         # output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
         # output_dict = {}
@@ -119,22 +141,113 @@ def qwen3_inference(dataset, question_dataset, flag="increase", output_path="", 
         
         output_list.append(output_dict)
 
-    if compressed is not None:
-        output_path = f"{output_path}/{flag}_compressed.json"
+    if compressed:
+        output_path = f"{output_path}/{flag}_compressed_qwen3.json"
     else:
-        output_path = f"{output_path}/{flag}_without_compressed.json"
+        output_path = f"{output_path}/{flag}_without_compressed_qwen3.json"
     
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(output_list, file, indent=4)
     
-def llama3_inference(dataset,):
-    """"""
+def llama3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
+    """
+    Llama3 as the large model to inference.
+    """
 
-def phi4_inference():
-    """"""
+    model_name = "/opt/model/models/Llama-3-8B-Instruct"
+    pipeline = transformers.pipeline(
+        "text-generation",
+        model=model_name,
+        model_kwargs={"torch_dtype": torch.bfloat16},
+        device_map="auto",
+    )
 
+    terminators = [
+        pipeline.tokenizer.eos_token_id,
+        pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
+    ]
+
+    message_list = dataset_process(
+        dataset=dataset,
+        question_dataset=question_dataset,
+        flag=flag,
+        compressed=compressed,
+        compression_model=compression_model,
+    )
+
+    output_list = []
+    for data_entry in tqdm(message_list):
+        output_dict = {}
+        for key, value in data_entry.items():
+            outputs = pipeline(
+                value,
+                max_new_tokens=256,
+                eos_token_id=terminators,
+                do_sample=True,
+                temperature=0.6,
+                top_p=0.9,
+            )
+            output = outputs[0]["generated_text"][-1]
+            output_dict[key] = output
+        
+        output_list.append(output_dict)
+    
+    if compressed:
+        output_path = f"{output_path}/{flag}_compressed_llama3.json"
+    else:
+        output_path = f"{output_path}/{flag}_without_compressed_llama3.json"
+    
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(output_list, file, indent=4)
+
+def phi4_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
+    """
+    Phi-4 of Microsoft as the large model to inference
+    """
+
+    model_name = "/opt/model/models/phi-4"
+    pipeline = transformers.pipeline(
+        "text-generation",
+        model=model_name,
+        model_kwargs={"torch_dtype": "auto"},
+       device_map="auto",
+    )
+    
+    message_list = dataset_process(
+        dataset=dataset,
+        question_dataset=question_dataset,
+        flag=flag,
+        compressed=compressed,
+        compression_model=compression_model,
+    )
+
+    output_list = []
+    for data_entry in tqdm(message_list):
+        output_dict = {}
+        for key, value in data_entry.items():
+            outputs = pipeline(
+                value, 
+                max_new_tokens=128,
+                do_sample=True,
+                temperature=0.6,
+                top_p=0.9,
+                )
+            output = outputs[0]["generated_text"][-1]
+            output_dict[key] = output
+        
+        output_list.append(output_dict)
+    if compressed is not None:
+        output_path = f"{output_path}/{flag}_compressed_phi4.json"
+    else:
+        output_path = f"{output_path}/{flag}_without_compressed_phi4.json"
+    
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(output_list, file, indent=4)
+        
 def deepseekr1_inference():
-    """"""
+    """
+    
+    """
 
 def mistral3_inference():
     """"""
