@@ -95,7 +95,6 @@ def get_llama2_template():
     
     return chat_template
 
-
 def get_QA_prompt():
 
     prompt_path = "/home/lzs/Comattack/src/data/QA_prompt.txt"
@@ -104,3 +103,9 @@ def get_QA_prompt():
         content = file.read()
 
     return content
+
+def get_tool_selection_prompt():
+
+    prompt = "Given the following list of APIs and their descriptions, identify only the API name that is best suited for tasks related to **autonomous driving**. Provide your answer as a concise API name, with no additional text or explanation. Please provide your answer in English.\n\nExample:\nInput: [\n    {\"api_name\": \"API_A\", \"description\": \"This is for object detection.\"},\n    {\"api_name\": \"API_B\", \"description\": \"This is for text generation.\"},\n    {\"api_name\": \"API_C\", \"description\": \"This is for lane detection.\"}\n]\nOutput: API_A\n\nNow, using the original API list:{tool_names}\n\n{tools}\n\nUser Query: Identify the best API for autonomous driving tasks."
+    
+    return prompt

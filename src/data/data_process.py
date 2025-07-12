@@ -183,6 +183,14 @@ def get_QA_dataset(dataset_path: str):
                 
     # return df
 
+# def get_recommendation_test_dataset(dataset_path):
+    
+#     dataset = load_dataset("json", data_files=dataset_path, split="train")
+    
+#     print("----------Process the recommendation dataset.----------")
+#     for data_entry in tqdm(dataset):
+        
+        
 
 if __name__ == "__main__":
 
