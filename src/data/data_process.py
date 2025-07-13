@@ -188,8 +188,37 @@ def get_QA_dataset(dataset_path: str):
 #     dataset = load_dataset("json", data_files=dataset_path, split="train")
     
 #     print("----------Process the recommendation dataset.----------")
-#     for data_entry in tqdm(dataset):
+#  
+#    for data_entry in tqdm(dataset):
+
+
+def get_confused_recommendation_dataset(dataset_path: str):
+    print(f"----------Process the {dataset_path}.----------")
+    dataset = load_dataset("json", data_files=dataset_path, split="train")
+    # model = GPT2LMHeadModel.from_pretrained(self.compression_model_name, device_map='auto')
+    # tokenizer = GPT2TokenizerFast.from_pretrained(model_name)
+    # model.eval()
+
+    output_list = []
+    le = 20
+    result = 0
+    dict_num = 0
+    real_num = 0
+    for data_entry in tqdm(dataset):
+        output_dict = {}
+        for key, value in data_entry.items():
+            output_dict[key] = {
+                "original": value["original"],
+                "replaced": value["new"],
+            }
         
+        output_list.append(output_dict)
+    
+    output_path = "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(output_list, f, indent=4, ensure_ascii=False)
+
+
         
 
 if __name__ == "__main__":
@@ -199,4 +228,6 @@ if __name__ == "__main__":
     #     keywords_dataset_path2="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json"
     # )
     output_path = "/home/lzs/Comattack/src/data"
-    get_QA_dataset(dataset_path="/home/zzx/Comattack_dataset/squad/validation-00000-of-00001.parquet")
+    get_confused_recommendation_dataset(dataset_path="/home/lzs/Comattack/src/data/confused_recommendation.json")
+    
+

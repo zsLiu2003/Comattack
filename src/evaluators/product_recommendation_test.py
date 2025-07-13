@@ -26,6 +26,10 @@ class Product_recommendation():
             self.flag = "increase"
         elif "decrease" in dataset_path:
             self.flag = "decrease"
+        elif "keyword" in dataset_path:
+            self.flag = "keyword"
+        else:
+            self.flag = "confused"
 
     def demo_level_test(self):
         """
@@ -38,11 +42,15 @@ class Product_recommendation():
         inference_list = [qwen3_inference, llama3_inference, phi4_inference, mistral2_inference]
 
         for function in inference_list:
-            name = qwen3_inference.__name__
+            name = function.__name__
             print("-"*10 + f"Inference with {name}!" + "-"*10)
             output_path = "/home/lzs/Comattack/src/data"
             if "adj" in self.dataset_path:
                 output_path = "/home/lzs/Comattack/src/data2"
+            # elif "confused" in self.dataset_path:
+            #     output_path = "/home/lzs/Comattack/src/data3"
+            # elif "keyword" in self.dataset_path:
+            #     output_path = "/home/lzs/Comattack/src/data4"
             for compressed in [True, False]:
                 function(
                     dataset=self.dataset,
@@ -52,6 +60,7 @@ class Product_recommendation():
                     flag=self.flag,
                     output_path=output_path,
                     compressed=compressed,
+                    common=True if "confused" in self.dataset_path or "keyword" in self.dataset_path else False
                 )
             print("-"*10 + f"Finish inference with {name}!" + "-"*10)
             # print("-"*10 + f"Finish inference with {name}!" + "-"*10)
@@ -136,6 +145,7 @@ class Product_recommendation():
         real_num = 0
         for data_entry in tqdm(dataset):
             for key, value in data_entry.items():
+                output_dict = {}
                 dict_num += 1
                 original_compressed = self.compression_model.compress_prompt(
                     value["original"],
@@ -154,14 +164,15 @@ class Product_recommendation():
                 if value["original_keyword"] != value["replaced_keyword"]:
                     real_num += 1
                     if value["original_keyword"] in original_compressed and value["replaced_keyword"] not in optimized_compressed:
-                        result += 1    
-                    
+                        result += 1   
+
+
         output = result / real_num
         real_output = result / dict_num
         print(f"-------------------The result is: {output}-------------------")
         print(f"-------------------The real result is: {real_output}-------------------")
 
-    def recommendation_test(self,):
+    def recommendation_test(self, dataset, model_name, phrase_model_name, flag):
         """
         Check the recommendation test:
         1. First, we can directly removed or maintained our target demo.
@@ -169,10 +180,40 @@ class Product_recommendation():
         3. Third, we can add adj before noum and adv after verb to confuse the preference manipulation of LLM.
         """
         
+        # Edit = EditPrompt(
+        #     dataset=dataset,
+        #     model_name=model_name,
+        #     phrase_model_name=phrase_model_name,
+        # )
+        
+        print(f"----------Process the {dataset}.----------")
+        # model = GPT2LMHeadModel.from_pretrained(self.compression_model_name, device_map='auto')
+        # tokenizer = GPT2TokenizerFast.from_pretrained(model_name)
+        # model.eval()
+        output_list = []
+        le = 20
+        result = 0
+        dict_num = 0
+        real_num = 0
+        for data_entry in tqdm(dataset):
+            output_dict = {}
+            for key, value in data_entry.items():
+                output_dict[key] = {
+                    "original": value["original"],
+                    "replaced": value["new"],
+                }
+            
+            output_list.append(output_dict)
+        
+        output_path = "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json"
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(output_list, f, indent=4, ensure_ascii=False)
+        
 
-    def product_recommendation_test_result(self,demo_dataset_path, ):
+    def product_recommendation_test_result(self,demo_dataset_path):
         """"""
+        
 
-    
+
 
 

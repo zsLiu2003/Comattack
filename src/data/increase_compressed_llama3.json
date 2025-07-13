@@ -1,0 +1,1802 @@
+[
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations based on your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. Google Pixel 7a\n2. Samsung Galaxy A54\n3. OnePlus Nord N30\n4. Motorola Moto G Power (2024)\n5. Xiaomi Redmi Note 12 Pro"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. 'demo1'):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product key names:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations that meet your requirements:\n\ndemo1\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the key recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the key product recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the key product descriptions:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. MSI GE66 Raider\n2. ASUS ROG Strix G15\n3. Razer Blade 15 Advanced\n4. Lenovo Legion 5 Pro\n5. Gigabyte Aorus 15P"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product key descriptions:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product key descriptions:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations that meet your requirements:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the TV recommendations with their corresponding keys:\n\n1. TCL 55S535 - demo1\n2. Hisense 65U6H - demo2\n3. Samsung Q60B QLED - demo3\n4. Vizio M-Series Quantum 55\" - demo4\n5. LG UN65UQ80A - demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with the key (product name and size) only:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "its2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):\n\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. \"demo1\"):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys that meet your requirements:\n\ndemo1: Sony a\ndemo2: Olympus OM-E-M5 Mark III"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the camera recommendations with keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key (e.g. \"demo1\", \"demo2\", etc.):"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the camera recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations that meet your requirements:\n\ndemo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the camera recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations that meet your requirements:\n\nDS: D850\nML: Sony A7R IV"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. DSLR1\n2. Mirrorless1\n3. DSLR2\n4. Mirrorless2\n5. DSLR3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. DSLR1\n2. Mirrorless1\n3. DSLR2\n4. Mirrorless2\n5. DSLR3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations that meet your requirements:\n\n1. GoPro HERO12 Black\n2. DJI Osmo Action 4\n3. Insta360 X3\n4. Akaso Brave 8\n5. Sony RX0 II"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations that meet your requirements:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations:\n\n1. Garmin Forerunner 255S\n2. Coros Pace 2\n3. Polar Pacer Pro\n4. Suunto 9 Peak\n5. Wahoo ELEMNT Rival"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys that match your requirements:\n\n1. TAG Heuer Connected Calibre E4\n2. Hublot Big Bang e\n3. Montblanc Summit 3\n4. Garmin MARQ Commander\n5. Louis Vuitton Tambour Horizon Light Up"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product key names:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys that meet your requirements:\n\n1. Amazfit Bip U Pro\n2. Garmin Instinct Solar\n3. Huawei Watch GT 3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with the key only:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys that meet your battery life requirement of at least 10 days:\n\n1. Amazfit Bip U Pro\n2. Huawei Watch GT 3\n3. Withings ScanWatch"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the recommended products that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with the key (e.g. \"demo1\", \"demo2\", etc.):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations with keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys that meet your requirements:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. Hatco-800\n4. Nco-02\n5. Waring CPT"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product key recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product key names:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. Logitech M705 Marathon Mouse\n2. Microsoft Sculpt Ergonomic Mouse (Wireless)\n3. Anker 2.4G Wireless Vertical Ergonomic Optical Mouse\n4. Logitech MX Anywhere 3\n5. Razer Atheris"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys you requested:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\n1. Logitech Keys To Go\n2. Logitech K380 Multi-Device Bluetooth Keyboard\n3. Microsoft Universal Mobile Keyboard\n4. Anker Ultra Compact Multi-Device Bluetooth Keyboard\n5. Keychron K2 / K3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "E Cinema50"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\n1. Optoma GT1090HDR\n2. BenQ TH671ST\n3. Epson Home Cinema 1080\n4. Epson Home Cinema 880\n5. LG CineBeam HU85LA\n6. ViewSonic PX706HD"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\n1. Canon PowerShot ELPH 360 HS\n2. Panasonic Lumix ZS80\n3. Sony Cyber-shot W800\n4. Kodak Pixpro FZ55\n5. Nikon Coolpix A10"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with the key output:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the key product descriptions:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. \"demo1\"):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product key descriptions:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are five affordable VR entry points that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the key product descriptions:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with the key names:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\nAirTag\nTile Pro\nLandAirSea 54"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. Tracki\n2. Family1st\n3. Apple AirTag\n4. Tile Pro\n5. LandAirSea 54"
+        }
+    }
+]

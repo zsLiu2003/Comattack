@@ -7,9 +7,10 @@ import torch
 from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
 from mistral_common.protocol.instruct.messages import UserMessage
 from mistral_common.protocol.instruct.request import ChatCompletionRequest
-    
+import gc
+import random
 
-def dataset_process(dataset, question_dataset, compression_model, flag, compressed):
+def dataset_process(dataset, question_dataset, compression_model, flag, compressed, common):
     
     output_list = []
     selection_function = None
@@ -17,8 +18,12 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
         selection_function = max
     else:
         selection_function = min
-    for data, question_data in tqdm(zip(dataset,question_dataset)):        
-        target_demo = selection_function(data, key=lambda k: data[k]["ppl"])
+    for data, question_data in tqdm(zip(dataset,question_dataset)): 
+        target_demo = "" 
+        if common:
+            target_demo = random.choice(list(data.keys()))
+        else:
+            target_demo = selection_function(data, key=lambda k: data[k]["ppl"])
         question = question_data["question"]
         requirements = question_data["requirements"]
         system_prompt = f"{question}, and I have some requirements in the following:\n {requirements}\n. Next will be five product descriptions, please only output the key of product such as 'demo1' or 'demo2', don't output any other content.\n"
@@ -72,7 +77,7 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
     return output_list
 
 
-def qwen3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
+def qwen3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
     """"""
     model_name =  "/opt/model/Qwen3-32B"
     model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype="auto", device_map="auto")
@@ -89,7 +94,9 @@ def qwen3_inference(dataset, question_dataset, compression_model, flag="increase
         flag=flag,
         compressed=compressed,
         compression_model=compression_model,
+        common=common,
     )
+    
     # if compressed is not None:
     #     message_dict = dataset
     for message_dict in tqdm(message_list):
@@ -155,9 +162,10 @@ def qwen3_inference(dataset, question_dataset, compression_model, flag="increase
     
     del model
     del tokenizer
+    gc.collect()
     torch.cuda.empty_cache()
     
-def llama3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
+def llama3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
     """
     Llama3 as the large model to inference.
     """
@@ -181,6 +189,7 @@ def llama3_inference(dataset, question_dataset, compression_model, flag="increas
         flag=flag,
         compressed=compressed,
         compression_model=compression_model,
+        common=common,
     )
 
     output_list = []
@@ -210,10 +219,11 @@ def llama3_inference(dataset, question_dataset, compression_model, flag="increas
         json.dump(output_list, file, indent=4)
     
     del pipeline
+    gc.collect()
     torch.cuda.empty_cache()
 
 
-def phi4_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
+def phi4_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
     """
     Phi-4 of Microsoft as the large model to inference
     """
@@ -232,6 +242,7 @@ def phi4_inference(dataset, question_dataset, compression_model, flag="increase"
         flag=flag,
         compressed=compressed,
         compression_model=compression_model,
+        common=common,
     )
 
     output_list = []
@@ -260,6 +271,7 @@ def phi4_inference(dataset, question_dataset, compression_model, flag="increase"
 
 
     del pipeline
+    gc.collect()
     torch.cuda.empty_cache()
         
 def deepseekr1_inference():
@@ -267,7 +279,7 @@ def deepseekr1_inference():
     
     """
     
-def mistral2_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
+def mistral2_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
     """"""
     # mistral_models_path = "MISTRAL_MODELS_PATH"
     
@@ -289,6 +301,7 @@ def mistral2_inference(dataset, question_dataset, compression_model, flag="incre
         compressed=compressed,
         compression_model=compression_model,
         flag=flag,
+        common=common,
     )
     
     output_list = []
@@ -314,6 +327,7 @@ def mistral2_inference(dataset, question_dataset, compression_model, flag="incre
 
     del model
     del tokenizer
+    gc.collect()
     torch.cuda.empty_cache()
 
     

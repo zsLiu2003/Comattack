@@ -1,0 +1,38 @@
+[
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the phone recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the phone recommendations based on your requirements:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the phone recommendations based on your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys you requested:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+        }
+    }
+]
