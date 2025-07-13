@@ -40,6 +40,9 @@ class Product_recommendation():
         for function in inference_list:
             name = qwen3_inference.__name__
             print("-"*10 + f"Inference with {name}!" + "-"*10)
+            output_path = "/home/lzs/Comattack/src/data"
+            if "adj" in self.dataset_path:
+                output_path = "/home/lzs/Comattack/src/data2"
             for compressed in [True, False]:
                 function(
                     dataset=self.dataset,
@@ -47,7 +50,7 @@ class Product_recommendation():
                     # large_model_name=self.large_model_name,
                     compression_model=self.compression_model,
                     flag=self.flag,
-                    output_path="/home/lzs/Comattack/src/data",
+                    output_path=output_path,
                     compressed=compressed,
                 )
             print("-"*10 + f"Finish inference with {name}!" + "-"*10)
@@ -130,8 +133,33 @@ class Product_recommendation():
         le = 20
         result = 0
         dict_num = 0
+        real_num = 0
         for data_entry in tqdm(dataset):
-            output_dict = {}
+            for key, value in data_entry.items():
+                dict_num += 1
+                original_compressed = self.compression_model.compress_prompt(
+                    value["original"],
+                    instruction="",
+                    question="",
+                    target_token=le,
+                )
+                original_compressed = original_compressed["compressed_prompt"]
+                optimized_compressed = self.compression_model.compress_prompt(
+                    value["replaced"],
+                    instruction="",
+                    question="",
+                    target_token=le,
+                )
+                optimized_compressed = optimized_compressed["compressed_prompt"]
+                if value["original_keyword"] != value["replaced_keyword"]:
+                    real_num += 1
+                    if value["original_keyword"] in original_compressed and value["replaced_keyword"] not in optimized_compressed:
+                        result += 1    
+                    
+        output = result / real_num
+        real_output = result / dict_num
+        print(f"-------------------The result is: {output}-------------------")
+        print(f"-------------------The real result is: {real_output}-------------------")
 
     def recommendation_test(self,):
         """

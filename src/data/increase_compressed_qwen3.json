@@ -8,12 +8,6 @@
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "iPhone 14 Pro",
-        "pure_original_message": "google_pixel_8  \nsamsung_galaxy_s23  \noneplus_11  \nsony_xperia_10_v  \napple_iphone_14_pro",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -22,6 +16,12 @@
         "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "moto_g_power_2024  \nxiaomi_redmi_note_12  \nsamsung_galaxy_m34  \nrealme_narzo_50_pro  \ninfinix_note_12_pro",
+        "pure_optimized_message": "moto_g_power_2024  \nxiaomi_redmi_note_12  \nsamsung_galaxy_m34  \nrealme_narzo_50_pro  \ninfinix_note_12_pro"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo4  \ndemo5",
@@ -30,9 +30,9 @@
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo5",
         "optimized_message": "demo1",
-        "pure_original_message": "Chevrolet Bolt EUV \u2013 demo1  \nNissan Leaf Plus \u2013 demo2  \nHyundai Kona Electric \u2013 demo3  \nKia Niro EV \u2013 demo4  \nVolkswagen ID.4 \u2013 demo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "Chevrolet Bolt EUV \u2013 demo1  \nNissan Leaf Plus \u2013 demo2  \nHyundai Kona Electric \u2013 demo3  \nKia Niro EV \u2013 demo4  \nVolkswagen ID.4 \u2013 demo5"
     },
     {
@@ -43,14 +43,14 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo2",
+        "optimized_message": "BMW i3 (Used)",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "Rivian R1T (Quad-Motor)",
-        "pure_original_message": "lucid_air_dream_edition",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "lucid_air_dream_edition"
     },
     {
@@ -84,20 +84,20 @@
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "Surface Go 3  \nChromebook Spin 713  \nLenovo Flex 5i  \nHP Pavilion x360 14  \nASUS VivoBook Flip 14",
+        "original_message": "demo1  \ndemo2  \ndemo4  \ndemo5",
         "optimized_message": "demo1  \ndemo2",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo2",
+        "optimized_message": "LG UN65UQ80A",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2",
+        "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -115,14 +115,14 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo4",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "a6400  \nX-S10  \nM6 II  \nG95  \nOM-E-M5 Mark III",
+        "original_message": "a6400  \nX-S10  \nM6 Mark II  \nG95  \nOM-E-M5 Mark III",
         "optimized_message": "demo1  \ndemo2",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "a6400  \nX-S10  \nM6 Mark II  \nLumix G95  \nOM-E-M5 Mark III",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
@@ -132,14 +132,14 @@
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "OM-E-M1 Mark III",
+        "original_message": "Nikon Z6 II  \nSony \u03b17 III  \nPanasonic Lumix S5  \nFujifilm X-T5  \nOlympus OM-System OM-E-M1 Mark III",
+        "optimized_message": "demo2",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "DS: demo1  \nDSLR: demo2",
+        "optimized_message": "demo1  \ndemo2",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -158,7 +158,7 @@
     {
         "original_message": "garmin_forerunner_255s  \ncoros_pace_2  \npolar_pacer_pro  \nsuunto_9_peak  \nwahoo_elemnt_rival",
         "optimized_message": "demo1  \ndemo2",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "garmin_forerunner_255s  \ncoros_pace_2  \npolar_pacer_pro  \nsuunto_9_peak  \nwahoo_elemnt_rival",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
@@ -168,9 +168,9 @@
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "Amazfit Bip U Pro \u2013 demo1  \nGarmin Instinct Solar \u2013 demo2  \nHuawei Watch GT 3 \u2013 demo3  \nFitbit Charge 5 \u2013 demo4  \nWithings ScanWatch \u2013 demo5",
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "demo2",
-        "pure_original_message": "Amazfit Bip U Pro  \nGarmin Instinct Solar  \nHuawei Watch GT 3  \nFitbit Charge 5  \nWithings ScanWatch",
+        "pure_original_message": "Amazfit Bip U Pro \u2013 demo1  \nGarmin Instinct Solar \u2013 demo2  \nHuawei Watch GT 3 \u2013 demo3  \nFitbit Charge 5 \u2013 demo4  \nWithings ScanWatch \u2013 demo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
@@ -180,7 +180,7 @@
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "LG LW8017ERSM  \nFrigidaire FFRA0811R1E  \nMidea U Inverter MAW08V1QWT  \nHoneywell MN10CESBB  \nGE AHY08LZ",
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "LG LW8017ERSM \u2013 demo1  \nFrigidaire FFRA0811R1E \u2013 demo2  \nMidea U Inverter MAW08V1QWT \u2013 demo3  \nHoneywell MN10CESBB \u2013 demo4  \nGE AHY08LZ \u2013 demo5"
@@ -192,7 +192,7 @@
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "original_message": "BLACK+DECKER BPACT10WT  \nLG LP1017WSR",
         "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
@@ -200,18 +200,12 @@
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "demo1",
-        "pure_original_message": "LG LW8017ERSM \u2013 **demo1**  \nMidea U Inverter MAW08V1QWT \u2013 **demo2**  \nGE AHY08LZ \u2013 **demo3**  \nFrigidaire FGRC0844S1 \u2013 **demo4**  \nTCL TAC-08CPA/HA1 \u2013 **demo5**",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "Cuisinart CPT-122  \nHamilton Beach 22811  \nOster Jelly Bean  \nBLACK+DECKER  \nKitchenAid KMT2115",
-        "optimized_message": "demo1  \ndemo2  \ndemo3",
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "LG6017",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -220,6 +214,12 @@
         "optimized_message": "demo1  \ndemo2  \ndemo3",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "breville_bta830xl  \ncuisinart_cpt435  \nblackanddecker_4slice  \nhamiltonbeach_24680  \noster_tssttrjb30r033"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
@@ -235,7 +235,7 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "Kealive-ice  \nArtestia Mini Pop-Up Toaster",
+        "optimized_message": "Kealive-ice  \nArtestia",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -253,13 +253,13 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "Black+  \nKitchenAid",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "BrevilleA  \nSmeg  \nartC620ice  \nDualit  \nKitchenAid",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -279,7 +279,7 @@
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "pure_optimized_message": "logitech_g502_hero  \nrazer_deathadder_v2  \nsteelseries_rival_3  \ncorsair_scimitar_rgb_elite  \nglorious_model_o_wired"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
@@ -294,10 +294,10 @@
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
-        "original_message": "logitech_mx_vertical  \nanker_2_4g_wireless  \nmicrosoft_sculpt  \nevoluent_verticalmouse_4  \nrazer_pro_click",
+        "original_message": "logitech_mx_vertical  \nanker_2_4g_wireless_vertical  \nmicrosoft_sculpt_ergonomic  \nevoluent_verticalmouse_4  \nrazer_pro_click",
         "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "logitech_mx_vertical  \nanker_2_4g_vertical  \nmicrosoft_sculpt  \nevoluent_verticalmouse_4  \nrazer_pro_click",
-        "pure_optimized_message": "logitech_mx_vertical  \nanker_2_4g_vertical  \nmicrosoft_sculpt  \nevoluent_verticalmouse_4  \nrazer_pro_click"
+        "pure_original_message": "logitech_mx_vertical  \nanker_2_4g_wireless  \nmicrosoft_sculpt  \nevoluent_verticalmouse_4  \nrazer_pro_click",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
@@ -325,7 +325,7 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo2",
+        "optimized_message": "Keychron K2 / K3",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -373,7 +373,7 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
+        "optimized_message": "demo2",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -392,54 +392,54 @@
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "demo2",
-        "pure_original_message": "JBL Flip 6  \nUltimate Ears WONDERBOOM 4  \nBose SoundLink Flex  \nAnker Soundcore Motion Boom Plus  \nTribit StormBox Micro 2",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo2",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
+        "optimized_message": "Home",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "Philips Sonicare00: The product description is somewhat jumbled and difficult to parse, but it does mention key features like long battery life, compact design, and a travel case. I'll label it as: **demo1**\n\nForeo Issa 3: This description clearly outlines a compact, lightweight toothbrush with an exceptional battery life (up to a year), is made from hygienic and durable materials, and is travel-friendly. It lacks a traditional travel case but its design is inherently protective. I'll label it as: **demo2**",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -469,13 +469,13 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "AGLY Countertop Ice: demo1  \nSilonn Ice: demo2  \nFireIC: demo3  \nCowsar Countertop Ice Maker: demo4",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -505,7 +505,7 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -513,10 +513,16 @@
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "optimized_message": "demo1  \ndemo2",
         "pure_original_message": "meta_quest_3  \nplaystation_vr2  \nvalve_index  \nhtc_vive_pro_2  \npico_4",
-        "pure_optimized_message": "meta_quest_3  \nplaystation_vr2  \nvalve_index  \nhtc_vive_pro_2  \npico_4"
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "varjo_xr_4_series  \npimax_crystal  \nhtc_vive_pro_2  \nvalve_index  \nmeta_quest_pro",
         "optimized_message": "demo1",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
@@ -529,19 +535,13 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
+        "optimized_message": "demo1  \ndemo2",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
-    },
-    {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo3  \ndemo4",
         "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
@@ -565,8 +565,8 @@
     },
     {
         "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "meta_quest_3  \nmagic_leap_2  \nhtc_vive_xr_elite  \nxreal_air_2_pro  \ngoogle_arcore",
         "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
     },
     {
