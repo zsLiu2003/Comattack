@@ -27,7 +27,7 @@ def edit_QA_keywords(
     )
 
     QA_list = []
-    for idx, data in tqdm(enumerate(dataset[:5000]), desc="---------Process the QA dataset by editing keywords.----------"):
+    for idx, data in tqdm(enumerate(dataset), desc="---------Process the QA dataset by editing keywords.----------"):
         sentence = data["context"]
         QA_dict = {}
 

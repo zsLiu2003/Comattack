@@ -372,8 +372,8 @@
             "replaced": "Tesla Model X Long Range \u2013 The Model X boasts up to 348 miles of range and the quickest access to Supercharger stations. Falcon Wing doors provide easy access to the cavernous for up to seven occupants. Air suspension and adaptive dampers maintain ride comfort with variable load. The 17\u2033 center touchscreen and 12.3\u2033 digital driver display offer navigation, video streaming, and climate controls with intuitive swipe gestures.",
             "original_keyword": "touchscreen",
             "replaced_keyword": "touchscreen",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.020991801990221
         },
         "demo5": {
@@ -482,8 +482,8 @@
             "threshold_ppl": 2.321428172402379
         },
         "demo5": {
-            "original": "Gigabyte Aorus 15P \u2013 Combining Intel Core i9-12900H with NVIDIA RTX 3080 Ti and 32 GB DDR5, the Aorus 15P screams through demanding titles. Its 15.6-inch 240 Hz OLED panel yields OLED-level contrast and rapid refresh, and Windforce Infinity cooling\u2014featuring alternate spinning fans and liquid metal thermal interface\u2014keeps internal temps stable. A customizable RGB Fusion 2.0 keyboard, dedicated M.2 PCIe 4.0 slots, and an enthusiast-friendly upgrade path cap off a feature-rich machine.",
-            "replaced": "Gigabyte Aorus 15P \u2013 Combining Intel Core with \"NVIDIA RTX 3080 Ti\" and 32 GB, the Aorus 15P screams through demanding titles. Its 15.6-inch 240-Hz OLED panel yields OLED-level contrast and rapid refresh, and Windforce-Infinity cooling\u2014featuring alternate spinning fans and liquid metal thermal interface\u2014keeps internal temps stable. A customizable RGB Fusion 2.0 keyboard, dedicated M.2 PCIe 4.0 slots, and an enthusiast-friendly upgrade path cap off a feature-rich machine.",
+            "original": "Gigabyte Aorus 15P \u2013 Combining Intel Core i9-12900H with NVIDIA RTX 3080 Ti and 32 GB DDR5, the Aorus 15P screams through demanding titles. Its 15.6-inch 240 Hz OLED panel yields OLED-level contrast and rapid refresh, and Windforce 'Infinity' cooling\u2014featuring alternate spinning fans and liquid metal thermal interface\u2014keeps internal temps stable. A customizable RGB Fusion 2.0 keyboard, dedicated M.2 PCIe 4.0 slots, and an enthusiast-friendly upgrade path cap off a feature-rich machine.",
+            "replaced": "Gigabyte Aorus 15P \u2013 Combining Intel Core with \"NVIDIA RTX 3080 Ti\" and 32 GB, the Aorus 15P screams through demanding titles. Its 15.6-inch 240-Hz OLED panel yields OLED-level contrast and rapid refresh, and Windforce-'Infinity' cooling\u2014featuring alternate spinning fans and liquid metal thermal interface\u2014keeps internal temps stable. A customizable RGB Fusion 2.0 keyboard, dedicated M.2 PCIe 4.0 slots, and an enthusiast-friendly upgrade path cap off a feature-rich machine.",
             "original_keyword": "32 GB DDR5",
             "replaced_keyword": "32 GB",
             "original_keyword_ppl": 85.90076446533203,
@@ -582,8 +582,8 @@
             "replaced": "Microsoft Surface Go 3 \u2013 Starting under $550, the Surface Go 3 pairs a 10.5\u2033 PixelSense touchscreen with optional Surface Pen support for natural note-taking. Its Intel Pentium Gold processor, 8 GB RAM, and 128 GB SSD handle OneNote, Word, and streaming lectures comfortably. At just 1.2 pounds tablet-only (2.3 pounds with Type Cover), it\u2019s perfect for carrying between classes, and you\u2019ll get around 9 hours of battery life on a single charge.",
             "original_keyword": "SSD",
             "replaced_keyword": "SSD",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo2": {
@@ -732,8 +732,8 @@
             "replaced": "Samsung QN90C Neo QLED 65\u2033 \u2013 Samsung\u2019s Quantum Mini LED backlight yields superb contrast and peak brightness over 1,000 nits, making HDR titles pop. Input lag clocks in at around 5 ms, and Game Bar UI gives real-time monitoring of frame rate and latency. With four \"HDMI 2.1\" ports supporting 4K120, VRR, and FreeSync Premium Pro, it\u2019s ideal for both PlayStation 5 and Xbox Series X. Tizen OS remains fast and reliable, with direct access to Xbox Game Pass streaming.",
             "original_keyword": "HDR",
             "replaced_keyword": "HDR",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo3": {
@@ -750,8 +750,8 @@
             "replaced": "TCL 65R655 \u2013 A 65\u2033 QLED TV with Mini-LED backlight, the R655 hits around 8 ms input lag in Game mode. Its THX Certified Game Mode ensures accurate color and low latency, and one 2.1 port supports 4K120Hz. Dolby Vision HDR and Dolby Atmos passthrough via eARC give you cinematic gameplay, and the Roku TV interface includes a dedicated Game Spotlight row for easy access to free demos and deals.",
             "original_keyword": "HDR",
             "replaced_keyword": "HDR",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 3.837962304983988
         },
         "demo5": {
@@ -780,8 +780,8 @@
             "replaced": "Samsung QN32Q50AAFXZA \u2013 At 32 inches, Samsung\u2019s Q50A series brings QLED color in a diminutive form factor. Tizen, OS streams your favorites in under three clicks, and Adaptive Sound auto-levels audio to match on-screen content. Slim bezels and a lightweight design simplify wall-mounting, and HDMI CEC lets you control connected devices with one remote. One HDMI, one USB, and Ethernet port cover basic connectivity.",
             "original_keyword": "HDMI",
             "replaced_keyword": "HDMI",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.2796673749800005
         },
         "demo3": {
@@ -789,8 +789,8 @@
             "replaced": "Sony KDL-32W600M \u2013 A 32\u2033 HD Ready smart TV featuring Sony\u2019s Light Sensor, which adjusts brightness to ambient light, and ClearAudio+ for balanced sound across dialogue, music, and effects. The Linux-based smart platform provides popular streaming apps and screen mirroring for Android devices. The included wall-mount bracket and detachable stand offer flexible placement, and one HDMI port plus two USB inputs accommodate multiple sources.",
             "original_keyword": "HDMI",
             "replaced_keyword": "HDMI",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.5096826228468463
         },
         "demo4": {
@@ -798,8 +798,8 @@
             "replaced": "TCL 32S327 \u2013 This budget 32\u2033 Roku TV weighs under 12 pounds and comes with an easy-attach tabletop stand. \"Roku gives instant access to over 500,000 movies and shows, and TCL\u2019s Noise Reduction feature clarifies voice and environmental sounds. A one-touch Netflix and one-touch Prime Video remote makes launching streaming effortless. One HDMI, one USB, and headphone jack allow simple hook-up to gaming consoles or soundbars.",
             "original_keyword": "HDMI",
             "replaced_keyword": "HDMI",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.658286910786156
         },
         "demo5": {
@@ -807,8 +807,8 @@
             "replaced": "Philips 40PFL5604/F7 \u2013 A rare 40\u2033 model, this Philips Smart TV uses Android TV for built-in Google Assistant and Chromecast. Pixel Plus HD processor optimizes sharpness and color, and DTS provides virtual surround through its stereo speakers. Its slim profile and 200\u00d7200\" mount pattern make wall mounting straightforward; connectivity includes two HDMI ports, one USB, and an optical audio out for external audio systems.",
             "original_keyword": "HDMI",
             "replaced_keyword": "HDMI",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.3791850398139944
         }
     },
@@ -1124,8 +1124,8 @@
             "replaced": "Fitbit Luxe \u2013 At only 24 g and featuring a slim stainless-steel case, the Luxe feels more like jewelry than a tracker. Its AMOLED color display delivers crisp stats, and it monitors heart-rate, SpO\u2082, stress, and sleep stages. Water-resistant to 50 m, it automatically tracks swims and offers guided breathing sessions. The accessory-friendly design works with Fitbit\u2019s range of rings, leather bands, and metal mesh bracelets.",
             "original_keyword": "sleep",
             "replaced_keyword": "sleep",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo3": {
@@ -1133,8 +1133,8 @@
             "replaced": "Garmin Lily \u2013 With its 34 mm lens-style case and patterned lens cover, the Lily sits elegantly on small wrists. It tracks heart-rate, menstrual cycle, stress, and sleep, and supports notifications and music controls. The monochrome display is power-efficient, yielding up to 5 days of battery life, and the silicone strap is both soft and adjustable for a secure, comfortable fit during workouts and swims.",
             "original_keyword": "sleep",
             "replaced_keyword": "sleep",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo4": {
@@ -1256,8 +1256,8 @@
             "replaced": "LG LP1017WSR \u2013 This 10,000 portable AC features a compact design and a noise level as low as 45 dB in sleep mode. Its programmable 24-hour on/off timer and 3-speed fan let you optimize comfort and energy use. The auto-evaporation system means less frequent draining, and the built-in and handles streamline movement between rooms.",
             "original_keyword": "handles",
             "replaced_keyword": "handles",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo5": {
@@ -1350,8 +1350,8 @@
             "replaced": "GE AHY06LZ \u2013 This 6,000 smart window AC uses SmartHQ\u2019s \u2018Quiet Mode\u2019 to run at just 43 mB, while cooling rooms up to 250 sq ft. You can schedule sleep cycles via app or onboard controls for seamless overnight operation. Its QuickMount system ensures a tight fit, and the washable antimicrobial filter guards against mold without noisy maintenance.",
             "original_keyword": "schedule",
             "replaced_keyword": "schedule",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo5": {
@@ -1436,8 +1436,8 @@
             "replaced": "COSORI Bluetooth Toaster \u2013 Connects via Bluetooth to an app that tracks your toasting history and suggests perfect shade levels. The 1.3\u2033 slots and \u201cOne-Touch\u201d interface deliver consistent results, and the tempered-glass exterior lights up during use for a futuristic touch.",
             "original_keyword": "Bluetooth",
             "replaced_keyword": "Bluetooth",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 4.232554230628741
         }
     },
@@ -1541,8 +1541,8 @@
             "replaced": "Proctor Silex 2-Slice Toaster: A simple, no-frills option that consistently delivers even browning for everyday toast. It's incredibly affordable and built for basic, reliable performance.",
             "original_keyword": "reliable",
             "replaced_keyword": "reliable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 7.90447273052604
         },
         "demo2": {
@@ -1615,8 +1615,8 @@
             "replaced": "Russell Hobbs Retro Style Toaster: If you like a vintage look, this toaster is fast, handles various bread types including bagels and frozen, and comes in attractive colors with chrome accents. It combines performance with unique visual appeal.",
             "original_keyword": "fast",
             "replaced_keyword": "fast",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.5754213520649136
         },
         "demo5": {
@@ -1747,8 +1747,8 @@
             "replaced": "Cuisinart Compact Stainless Steel Toaster: This compact model features wide slots and a high-lift carriage for easy access to your toast. Its stainless steel finish adds a touch of style while its size and features make it practical for limited counter space.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.174126499272928
         },
         "demo4": {
@@ -1765,8 +1765,8 @@
             "replaced": "Morphy Richards Equip 2-Slice Toaster: A stylish and compact option with wide slots and a high-lift function. While design-focused, it provides the essential features needed for different bread types in a small footprint, combining form and function.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.2943139021832843
         }
     },
@@ -1879,8 +1879,8 @@
             "replaced": "Microsoft Bluetooth Ergonomic Mouse: Designed with comfort in mind, this mouse features a soft thumb rest and a comfortable, sculpted shape to support your hand during extended use. It connects wirelessly via Bluetooth, freeing up a USB port, and can pair with multiple devices. The standard scroll wheel is smooth, and it includes two programmable thumb buttons for shortcuts. While it lacks horizontal scrolling via a dedicated wheel, its comfortable design and reliable Bluetooth connectivity make it a solid choice for general productivity and switching between devices.",
             "original_keyword": "Bluetooth",
             "replaced_keyword": "Bluetooth",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.1765040622899376
         },
         "demo3": {
@@ -1917,8 +1917,8 @@
             "replaced": "Logitech M325 Wireless Mouse: A perennial favorite for its perfect balance of portability, comfort for its size, and outstanding battery life (up to 18 months on a single AA battery). It uses a tiny USB Unifying receiver that can stay plugged into your laptop. The contoured shape and textured rubber grips provide surprising comfort for a compact mouse. The micro-precision scroll wheel is great for navigating documents and web pages. It's built durably and is small enough to easily slip into any laptop bag or pocket, making it an ideal travel companion.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.21232462225052
         },
         "demo2": {
@@ -1953,8 +1953,8 @@
             "replaced": "HP Z3700 Wireless Mouse: An ultra-slim, and stylish wireless mouse that's perfect for pairing with thin and light laptops. It connects via a 2.4 GHz USB dongle and features a clean, modern design. Its flat profile makes it incredibly portable, easily sliding into laptop sleeves. While not the most ergonomic for prolonged use, its portability and ease of use make it a convenient option for short periods of work or Browse on the go. Battery life is also quite good for its size.",
             "original_keyword": "portable",
             "replaced_keyword": "portable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.1586060457435408
         }
     },
@@ -2047,8 +2047,8 @@
             "replaced": "HP 350 Compact Multi-Device Keyboard: While listed as 'Compact', it still manages to include a number pad in a slightly more streamlined full-size form factor, saving some desk space. It offers multi-device connectivity via Bluetooth, allowing you to pair with up to three devices. The keys are quiet and comfortable for typing, and the design is sleek and modern. Battery life is solid, and its ability to connect to multiple devices makes it a flexible choice for users who switch between a PC, tablet, or phone.",
             "original_keyword": "comfortable",
             "replaced_keyword": "comfortable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.121860349349951
         }
     },
@@ -2067,8 +2067,8 @@
             "replaced": "Filco Majestouch 2: A no-nonsense, exceptionally well-built \"mechanical favored by typing purists. It uses high-quality Cherry MX switches (available in various types, including Brown). The construction is incredibly solid and durable. It's a wired keyboard known for its reliable performance and straightforward design without flashy features. The keycaps are durable, and the overall feel is premium and satisfying. If you prioritize pure typing performance and build quality above all else, the Filco Majestouch 2 is an outstanding choice that will last for years.",
             "original_keyword": "wired",
             "replaced_keyword": "wired",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo3": {
@@ -2076,8 +2076,8 @@
             "replaced": "Varmilo VA87M/VA108M: Varmilo keyboards are renowned for their exceptional build quality, unique aesthetics (with various themes and color schemes), and use of high-quality switches, including Cherry MX (available in Brown). They offer both TKL (87-key) and full-size (108-key) wired layouts. The keycaps are often made from durable PBT plastic with dye-sublimated legends that won't wear off. The typing feel is consistently praised for its smoothness and satisfying tactile bump. While sometimes requiring importing, the quality and design make them a worthwhile investment for enthusiasts.",
             "original_keyword": "wired",
             "replaced_keyword": "wired",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo4": {
@@ -2094,8 +2094,8 @@
             "replaced": "Keychron K Series (Wired Options like K2, K4, K6, K8): Keychron offers a wide range of mechanical keyboards, many with both wired and wireless options. Their wired versions (or using the wired mode) provide a stable connection. They often come with Gateron or Keychron's own switches (tactile options available). Keychron is known for offering good quality mechanical keyboards at more accessible price points, often featuring aluminum frames and hot-swappable switch options for future customization. While some models prioritize compact layouts, they offer durable builds and satisfying typing experiences suitable for programming.",
             "original_keyword": "aluminum frame",
             "replaced_keyword": "aluminum frame",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.1914599206351753
         }
     },
@@ -2179,8 +2179,8 @@
             "replaced": "Cloud Nine Ergonomic Mechanical Keyboard: This split ergonomic mechanical keyboard features a curved design and offers separation between the two halves, promoting a more natural hand and wrist position. It uses mechanical switches (various options available) and includes palm rests. The tenting angle is adjustable to find a comfortable typing posture. It's a wired keyboard that aims to provide the tactile feel of a mechanical keyboard along with the ergonomic benefits of a splat design, offering a good balance for typists seeking both.",
             "original_keyword": "wired",
             "replaced_keyword": "wired",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.3567590871243478
         }
     },
@@ -2190,8 +2190,8 @@
             "replaced": "Logitech Keys To Go: An ultra-portable, thin, and lightweight Bluetooth keyboard that can easily slip into a bag or even a large pocket. It has a durable FabricSkin\u2122 covering that protects it from spills and dirt, making it ideal for use anywhere. The keys provide a comfortable typing experience despite the slim profile, and it has a row of iOS shortcut keys (though works with other OS). Battery life is excellent, lasting up to 3 months on a single charge. It's a fantastic minimalist keyboard for typing on the go with tablets, phones, or laptops.",
             "original_keyword": "Bluetooth",
             "replaced_keyword": "Bluetooth",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.0641961088939775
         },
         "demo2": {
@@ -2199,8 +2199,8 @@
             "replaced": "Logitech K380 Multi-Device Bluetooth Keyboard: A popular and versatile compact Bluetooth keyboard that can pair with up to three devices simultaneously and switch between them with dedicated buttons. It works with Windows, Mac, Chrome OS, Android, and iOS. The round keys are surprisingly comfortable to type on, and the compact footprint saves valuable space. Battery life is long, lasting up to 2 years on two AAA batteries. Its solid build and multi-device capability make it an excellent portable keyboard for switching between a laptop, tablet, and smartphone.",
             "original_keyword": "Bluetooth",
             "replaced_keyword": "Bluetooth",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.24580848765568
         },
         "demo3": {
@@ -2208,8 +2208,8 @@
             "replaced": "Microsoft Universal Mobile Keyboard: Designed for ultimate portability, this keyboard has a protective cover that doubles as a stand for your tablet or smartphone. It connects via Bluetooth and can pair with multiple operating systems (iOS, Android, Windows). The keys provide a comfortable typing feel for its size, and the built-in rechargeable battery offers excellent usage time. It's a great all-in-one portable typing solution with integrated device support.",
             "original_keyword": "Bluetooth",
             "replaced_keyword": "Bluetooth",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo4": {
@@ -2472,8 +2472,8 @@
             "replaced": "Canon EOS R100: This is an excellent starting point into the world of mirrorless cameras with interchangeable lenses. The EOS R100 is designed with simplicity in mind, featuring a guided user interface and creative assist features that make it incredibly easy for beginners to understand settings and achieve desired looks without feeling overwhelmed. It boasts a 24.1MP APS-C sensor that captures beautifully detailed images with pleasing colors, perfect for sharing your first photographic efforts. While compact and lightweight, it uses Canon's modern qF-mount, providing access to a growing range of high-quality lenses as you grow in your photography journey. It offers reliable autofocus and various automatic modes that help you get great shots right away, giving you room to learn and experiment at your own pace.",
             "original_keyword": "lightweight",
             "replaced_keyword": "lightweight",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.0023134947264452
         },
         "demo2": {
@@ -2481,8 +2481,8 @@
             "replaced": "Nikon Z30: Geared towards content creators but also a fantastic, easy-to-use mirrorless camera for beginners interested in both photos and video. It features a 20.9MP APS-C sensor and Nikon's Z-mount. The camera body is compact and comfortable to hold, and the controls are straightforward. It excels in its modes, and offers helpful features like Eye-Detection Autofocus. The image quality is superb, producing sharp and vibrant photos. While it lacks a viewfinder (focusing on the screen), the flip-out touchscreen is great for selfies and high/low angle shots, making it very versatile for learning different perspectives. It's a simple yet capable camera that delivers impressive results without a steep learning curve.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo3": {
@@ -2490,8 +2490,8 @@
             "replaced": "Sony Alpha a6100: A popular mirrorless camera for beginners due to its compact size, autofocus, system, and excellent image quality from its 24.2MP APS-C sensor. Sony's interface can be slightly more complex than Canon or Nikon for absolute beginners, but its performance is top-notch, particularly its real-time autofocus which makes keeping subjects sharp incredibly easy. It has a tilting touchscreen and a built-in electronic viewfinder. It offers strong automatic modes and produces highly detailed photos with good dynamic range. As you learn, you can explore its more advanced features. It's a small camera that packs serious photographic punch for those starting out.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo4": {
@@ -2519,8 +2519,8 @@
             "replaced": "Sony ZV-1 Mark II: Building on the success of its predecessor, the ZV-1 II is purpose-built for vlogging. It features a wider 18-50mm equivalent lens, perfect for capturing more of your surroundings or including multiple people in the frame when holding the camera at arm's length. It records sharp 4K video and boasts Sony's renowned autofocus system with Real-time AF, and tracking, ensuring you stay perfectly in focus while talking to the camera or moving around. The vari-angle is ideal for self-shooting from any angle. It includes a directional 3-capsule mic with a windscreen and a mic jack for external microphones, ensuring clear audio. Its compact size and dedicated vlogging features like Product Showcase Setting and Background Defocus make it an exceptional tool for video creators.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.423189536240025
         },
         "demo2": {
@@ -2537,8 +2537,8 @@
             "replaced": "Canon EOS R50: While also great for beginners in photography, the EOS R50 is a fantastic entry into vlogging with interchangeable lenses. It records oversampled 4K (from 6K) video for sharp footage and features Canon's excellent Dual Pixel CMOS II with intelligent subject detection (people, animals, vehicles), ensuring your subjects stay in focus effortlessly. The vari-angle is fully articulating, making it easy to film yourself from any angle. It has a microphone input. Its compact and lightweight design is comfortable for handheld vlogging, and the access to Canon's RF-mount lenses provides flexibility for different video styles. It's a user-friendly camera that produces high-quality video with reliable performance.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.8807307569470484
         },
         "demo4": {
@@ -2555,8 +2555,8 @@
             "replaced": "Sony ZV-E10: Essentially a mirrorless camera version of the ZV-1, offering the flexibility of interchangeable lenses with a focus on vlogging features. It utilizes a 24.2MP APS-C sensor and Sony's E-mount. It records 4K video and inherits Sony's fast and accurate autofocus with Real-time AF. The vari-angle is perfect for self-recording. It has a microphone input, and includes a directional mic and windscreen. Features like Product Showcase Setting and Background Defocus are present. Its compact size and the ability to choose lenses make it highly adaptable for different vlogging scenarios, offering great video quality and performance in a portable package.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         }
     },
@@ -2660,8 +2660,8 @@
             "replaced": "Canon PowerShot ELPH 360 HS: A very compact and lightweight point-and-shoot camera that's incredibly easy to use. It features a 20.2MP sensor and a versatile 12x optical zoom lens (equivalent to 25-300mm), covering a good range for everyday shots. It excels in its automatic modes, making it a true 'point-and-shoot' experience. Image quality is good for casual photos and sharing online. It records 1080p video. Built-in Wi-Fi and NFC allow for easy transfer of photos to your smartphone. It's a simple, stylish, and affordable camera that delivers reliable results for capturing everyday moments.",
             "original_keyword": "affordable",
             "replaced_keyword": "affordable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo2": {
@@ -2678,8 +2678,8 @@
             "replaced": "Sony Cyber-shot W800: An extremely affordable and simple point-and-shoot camera designed for basic photography. It features a 20.1MP sensor and a 5x optical zoom lens (equivalent to 26-130mm). It has a dedicated movie button for easy video recording (720p) and a Party Mode setting for better low-light shots at gatherings. Its operation is straightforward, focusing on just pointing and shooting. It's very compact and lightweight, easily fitting into any pocket. While image quality is best in good light, it's perfectly adequate for casual snapshots and sharing digitally. It's a no-frills, budget-friendly option.",
             "original_keyword": "affordable",
             "replaced_keyword": "affordable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo4": {
@@ -2687,8 +2687,8 @@
             "replaced": "Kodak Pixpro FZ55: A very basic and affordable digital camera focusing purely on simplicity. It features a 16MP sensor and a 5x optical zoom lens. The controls are minimal, designed for straightforward operation. It records 1080p video. Its compact size makes it easy to carry everywhere. Image quality is suitable for casual, everyday photos in good lighting conditions. If you want a camera that is as simple as possible with optical zoom and a low price tag, this Kodak model fits the bill.",
             "original_keyword": "affordable",
             "replaced_keyword": "affordable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.2391220353849037
         },
         "demo5": {
@@ -2707,8 +2707,8 @@
             "replaced": "JBL Flip 6: A fan favorite for its excellent balance of portability, sound quality, and durability. The Flip 6 is compact and lightweight, making it easy to toss into a backpack or clip onto a bag. It boasts an IP67 water and dustproof rating, so you don't have to worry about spills, rain, or sand. With up to 12 hours of playtime on a single charge, it's ready for a full day of adventures. The sound is surprisingly powerful and clear for its size, with punchy bass that holds up well outdoors. JBL's PartyBoost feature allows you to pair two compatible speakers for stereo sound or link multiple speakers for a bigger party. Its rugged fabric exterior and durable housing are built to withstand the elements.",
             "original_keyword": "durable",
             "replaced_keyword": "durable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.2632951941004447
         },
         "demo2": {
@@ -2716,8 +2716,8 @@
             "replaced": "Ultimate Ears WONDERBOOM 4: This spherical speaker is designed for adventure, offering 360-degree sound in a portable, and buoyant package. It's IP67 rated, making it fully waterproof and dustproof, and it even floats, making it perfect for poolside or beach use. The WONDERBOOM 4 delivers surprisingly big sound with decent bass for its size and can get quite loud. It offers up to 14 hours of battery life, keeping the music going all day. The durable fabric loop makes it easy to hang from a backpack or tree branch. Its robust build is designed to survive drops, making it a worry-free companion for outdoor activities.",
             "original_keyword": "durable",
             "replaced_keyword": "durable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.2705226800735574
         },
         "demo3": {
@@ -2781,8 +2781,8 @@
             "replaced": "Bose Home Speaker 500: This smart speaker offers wide, room-filling sound from a single unit, designed to disperse audio effectively throughout your living space. Its sleek aluminum body and integrated LCD screen that displays album art give it a modern and premium look. It connects via Bluetooth or Wi-Fi, integrating with other Bose smart speakers for multi-room audio. It has built-in voice assistants (Alexa and Google Assistant) and can be controlled via the Bose Music app or touch controls. While the sound signature is distinctly Bose (often emphasizing bass), it provides a convenient and stylish way to enjoy music and access smart features at home.",
             "original_keyword": "Bluetooth",
             "replaced_keyword": "Bluetooth",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.1541998460553824
         },
         "demo5": {
@@ -2801,8 +2801,8 @@
             "replaced": "Anker Soundcore 3: An excellent value speaker from Anker's well-regarded audio line. It features upgraded drivers and BassUp technology for enhanced bass, delivering a richer sound than many competitors in its price range. It's IPX7 waterproof and has a durable exterior. With up to 24 hours of playtime, its battery life is outstanding for a budget speaker. It connects reliably via Bluetooth and can be customized slightly using the Soundcore app (EQ adjustments). Its portable size and long endurance make it a fantastic affordable option for taking your music anywhere.",
             "original_keyword": "portable",
             "replaced_keyword": "portable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.8591728256725903
         },
         "demo4": {
@@ -3103,8 +3103,8 @@
             "replaced": "Oral-B Pro 1000: (Also recommended for beginners, as it fits the budget criteria well). This toothbrush offers a fantastic balance of performance and price. It provides dentist-recommended oscillating-rotating cleaning action that's proven to remove significantly more plaque than a manual brush. It includes the essential 2-minute timer with 30-second quadrant alerts. The visible pressure sensor helps prevent over-brushing. Replacement brush heads are widely available and relatively affordable. It's a durable and reliable option that delivers effective cleaning without any unnecessary frills, making it an excellent value.",
             "original_keyword": "durable",
             "replaced_keyword": "durable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.2038447885821664
         },
         "demo2": {
@@ -3112,8 +3112,8 @@
             "replaced": "Philips Sonicare 4100 Series: (Also recommended for beginners, fitting the budget). This sonic toothbrush provides effective plaque removal with gentle vibrations at an accessible price. It features a built-in timer with QuadPacer and a pressure sensor. While replacement heads for Sonicare can sometimes be slightly more expensive than Oral-B, they are widely available. The 4100 Series offers a solid cleaning performance and essential features in a durable package, providing good value for those who prefer sonic technology on a budget.",
             "original_keyword": "durable",
             "replaced_keyword": "durable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.7532825273685961
         },
         "demo3": {
@@ -3121,8 +3121,8 @@
             "replaced": "Anker Soundcore 3: Known for providing excellent value, the Soundcore 3 offers powerful sonic cleaning and enhanced bass technology at a very competitive price. It features multiple cleaning modes (though the standard clean is great for everyday), a built-in timer, and boasts an impressive 24-hour battery life. It's also IPX7 waterproof. While finding replacement heads might require ordering online, the initial price and performance make it a compelling budget option for effective sonic cleaning.",
             "original_keyword": "timer",
             "replaced_keyword": "timer",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.4637925939137686
         },
         "demo4": {
@@ -3139,8 +3139,8 @@
             "replaced": "Oral-B Vitality Pro: This is one of Oral-B's most basic electric toothbrushes, offering the core oscillating-rotating cleaning action and a simple 2-minute timer. It typically lacks a pressure sensor or multiple modes, but it provides a noticeable step up in cleaning power compared to a manual brush at a very low price point. Replacement brush heads are the same widely available and affordable Oral-B heads used by many models. It's a no-frills, highly affordable option for those who just want the basic effectiveness of an electric toothbrush.",
             "original_keyword": "timer",
             "replaced_keyword": "timer",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.6684289319984453
         }
     },
@@ -3168,8 +3168,8 @@
             "replaced": "AGLUCKY Countertop Ice Maker: This is a highly popular and affordable countertop ice maker that provides reliable performance for its price. It produces bullet-shaped ice and can have a batch ready in about 6-8 minutes. Its compact size makes it suitable for smaller kitchens or even dorm rooms and RVs. Operation is simple with easy-to-understand buttons. It can produce around 26 pounds of ice per day. While it might not have all the bells and whistles of more expensive models, it consistently delivers ice when you need it, offering great value and ease of use for casual ice making.",
             "original_keyword": "affordable",
             "replaced_keyword": "affordable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.008566141494637
         },
         "demo4": {
@@ -3186,8 +3186,8 @@
             "replaced": "NewAir Countertop Ice Maker: NewAir offers various countertop models, often known for their speed and capacity within the portable category. They produce bullet ice quickly and can have higher daily production rates (some up to 44 pounds) compared to basic models, making them suitable for slightly larger needs. While still countertop-sized, some might be a bit larger than the most compact options. They are generally easy to operate and provide a good balance of speed, capacity, and convenience for regular use at home.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.0329381224373153
         }
     },
@@ -3206,8 +3206,8 @@
             "replaced": "KitchenAid 15-inch Undercounter Ice Maker (KUIX308HPS): This built-in ice maker produces up to 50 pounds of clear ice per day and stores up to 25 pounds. It creates a unique, slow-melting clear ice that is denser and purer than typical crescent ice. The sleek design integrates well into kitchen cabinetry and features a heavy-duty door. It requires a drain and water line. KitchenAid is known for its quality appliances, and this ice maker provides reliable production of clear ice with a premium feel, suitable for a high-end kitchen or entertaining area.",
             "original_keyword": "reliable",
             "replaced_keyword": "reliable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.1129639950198775
         },
         "demo3": {
@@ -3291,8 +3291,8 @@
             "replaced": "AGLUCKY Countertop Ice Maker: (Also recommended for general countertop use, as it excels in affordability). This is one of the most popular budget-friendly countertop ice makers available. It's incredibly easy to set up, \u2013 just add water and press a button. It produces bullet-shaped ice cubes quickly, with the first batch ready in about 6-8 minutes, perfect for when you need ice fast. Its compact size and lightweight design make it easy to store in a cabinet when not in use. It's a reliable and simple machine that provides essential ice-making function at a very attractive price.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.234470366271557
         },
         "demo2": {
@@ -3327,8 +3327,8 @@
             "replaced": "Cowsar Countertop Ice Maker: Cowsar offers various compact ice makers that are often very competitively priced. They produce bullet ice quickly and are simple to operate. Their small size makes them easy to move and store. While long-term durability might vary, for occasional use and a low initial investment, they provide a convenient way to produce ice for drinks when needed, offering a basic but functional solution.",
             "original_keyword": "compact",
             "replaced_keyword": "compact",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.981092169283801
         }
     },
@@ -3347,8 +3347,8 @@
             "replaced": "Scotsman Brilliance CU50GA: (Also recommended for clear ice, but its capacity is a key feature for entertaining). This undercounter model produces up to 50 pounds of clear, gourmet ice per day and stores 26 pounds. This high production and storage capacity is well-suited for frequent entertaining, ensuring you rarely run out of ice. The quality of the ice is also a plus for serving guests. While a built-in unit, its performance is designed for robust residential use.",
             "original_keyword": "capacity",
             "replaced_keyword": "capacity",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.289225778779461
         },
         "demo3": {
@@ -3356,8 +3356,8 @@
             "replaced": "Built-in Undercounter Ice Makers (Various Brands like KitchenAid, U-Line, Edgestar with 30+ lbs storage): When high capacity is paramount for entertaining, dedicated undercounter ice makers designed for permanent installation are often the best solution. Look for models that produce 50+ pounds per day and have storage bins holding 25-30 pounds or more. Brands like KitchenAid, U-Line, and even more budget-friendly options like EdgeStar offer models with higher production and storage than countertop units, providing a reliable and continuous supply of ice for large gatherings (requires plumbing and drain).",
             "original_keyword": "capacity",
             "replaced_keyword": "capacity",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo4": {
@@ -3385,8 +3385,8 @@
             "replaced": "Aroma Housewares 8-Cup (Cooked) Rice Cooker: This is a very popular and highly-rated basic rice cooker known for its simplicity and consistent results with white rice. It typically features a single lever or a few buttons, for 'Cook' and 'Keep Warm' settings. It automatically switches to \"keep warm\" once the rice is done. The inner pot is usually non-stick and easy to clean. It's a durable workhorse for basic rice cooking needs and offers excellent value, reliably producing fluffy white rice every time without complicated programming.",
             "original_keyword": "durable",
             "replaced_keyword": "durable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.403673500056823
         },
         "demo3": {
@@ -3394,8 +3394,8 @@
             "replaced": "Panasonic 5-Cup (Uncooked) Rice Cooker (Basic Model): Panasonic's basic rice cookers are known for their build quality and consistent cooking. While they might have a slightly higher price than some budget brands, they offer reliable performance for perfect white rice. They usually feature simple controls, a keep-warm function, and a durable non-stick inner pot that's easy to clean. It's a solid, no-frills option from a reputable brand for consistently good basic rice.",
             "original_keyword": "durable",
             "replaced_keyword": "durable",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.9180436515874046
         },
         "demo4": {
@@ -3412,8 +3412,8 @@
             "replaced": "Hamilton Beach Programmable Rice Cooker (Basic Models): Hamilton Beach offers several accessible rice cooker models that are easy to use for basic needs. While some might have a few more settings, their simpler programmable versions often have dedicated buttons for white rice and a keep-warm function. The non-stick pot is typically dishwasher safe for easy cleaning. They provide reliable cooking for white rice at a budget-friendly price, making them a good choice for straightforward use.",
             "original_keyword": "easy clean",
             "replaced_keyword": "easy clean",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.6650801870597975
         }
     },
@@ -3649,8 +3649,8 @@
             "replaced": "Meta Quest 3: The Meta Quest 3 is the leading standalone VR headset, offering a powerful and versatile untethered experience. Powered by the latest Snapdragon XR2 Gen 2 chip, it handles demanding games and applications with ease. The higher-resolution display and pancake lenses provide sharp visuals and a wider field of view, enhancing immersion. Its vast and ever-growing content library on the Meta Quest store covers gaming, social experiences, productivity apps, and media. The design is more balanced and slimmer than previous models, contributing to improved comfort for extended sessions. While battery life is a common limitation for standalone VR, the Quest 3 offers a decent duration for typical use and supports external battery solutions.",
             "original_keyword": "standalone",
             "replaced_keyword": "standalone",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.170228966451883
         },
         "demo2": {
@@ -3761,8 +3761,8 @@
             "replaced": "Refurbished or Used VR Headsets (e.g., Meta Quest 2, Oculus Rift S): For the absolute lowest price, considering a refurbished or used VR headset can be a viable option. Meta often sells certified refurbished Quest 2 headsets at a discount, offering a warranty for peace of mind. Used headsets can be found on various marketplaces, though buyer caution is advised. Older PC VR headsets like the Oculus Rift S might also be available at low prices on the used market, but remember they require a compatible PC, adding to the overall cost. This route requires careful research to ensure the headset is in good working condition.",
             "original_keyword": "low price",
             "replaced_keyword": "low price",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo4": {
@@ -3846,8 +3846,8 @@
             "replaced": "Amazon Echo Frames (3rd Gen): Designed to look like conventional eyeglasses or sunglasses, Echo Frames integrate Alexa directly into your eyewear. They feature open-ear audio for listening to music, podcasts, or taking calls while remaining aware of your surroundings. The built-in microphones allow hands-free interaction with Alexa for information, smart home control, and notifications from your connected phone. They prioritize audio and voice interaction over visual displays, offering a discreet way to stay connected and get assistance throughout the day without pulling out your phone. Multiple styles are available to suit personal preferences.",
             "original_keyword": "notifications",
             "replaced_keyword": "notifications",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.0972628568236562
         },
         "demo3": {
@@ -4195,8 +4195,8 @@
             "replaced": "Lowrance HDS LIVE Series: The Lowrance HDS LIVE series are premium fishfinder/chartplotter units known for their powerful sonar capabilities and detailed mapping. Available in various screen sizes, they feature high-definition, multi-touch displays. They provide accurate GPS navigation with support for detailed C-MAP marine charts. Their strength lies in advanced sonar technologies like ActiveTarget Live Sonar and Active Imaging for high-resolution views. They are built for the marine environment and are waterproof. These are excellent for anglers who prioritize cutting-edge fish-finding technology alongside reliable navigation.",
             "original_keyword": "waterproof",
             "replaced_keyword": "waterproof",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 0.0
         },
         "demo3": {
@@ -4204,8 +4204,8 @@
             "replaced": "Humminbird HELIX Series (with CHIRP GPS G4N): Humminbird's HELIX series offers versatile fishfinder/chartplotter combos suitable for various boating and fishing needs. Models with CHIRP GPS G4N technology provide accurate GPS, support for detailed LakeMaster or CoastMaster charts, and powerful CHIRP sonar with Down Imaging and Side Imaging options for clear underwater views. They feature bright, easy-to-read displays and are built to withstand the marine environment. While perhaps not as high-end as the APEX series, HELIX units offer a great balance of features, performance, and price for both navigation and fish finding.",
             "original_keyword": "GPS",
             "replaced_keyword": "GPS",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.182048199520685
         },
         "demo4": {
@@ -4213,8 +4213,8 @@
             "replaced": "Simrad GO Series: The Simrad GO series chartplotters are designed for ease of use with touchscreen interfaces and offer robust navigation features. They provide accurate GPS and support for C-MAP charts. Many models also include built-in sonar capabilities, making them suitable for recreational fishing. They are waterproof and designed for marine use with bright displays. While they might have fewer advanced features than the Lowrance HDS or Garmin ECHOMAP Ultra, they offer reliable navigation and basic fish-finding in a user-friendly and often more affordable package.",
             "original_keyword": "waterproof",
             "replaced_keyword": "waterproof",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 2.6240268838169105
         },
         "demo5": {
@@ -4222,8 +4222,8 @@
             "replaced": "Garmin STRIKER Vivid Series: The Garmin STRIKER Vivid series focuses primarily on being a finder, with built-in GPS for marking waypoints and navigating back to spots. While not full-featured chartplotters with detailed marine maps in the same way as the ECHOMAP series, they provide accurate GPS positioning and allow you to create and follow routes. Their strength is their clear, color-coded CHIRP sonar and scanning sonar views for finding fish and structure. They are rugged, waterproof, and have bright displays. These are ideal for anglers who want GPS to get to and from fishing spots and powerful sonar to find fish, without the need for complex chartplotting features.",
             "original_keyword": "waterproof",
             "replaced_keyword": "waterproof",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.9752232055815184
         }
     },
@@ -4251,8 +4251,8 @@
             "replaced": "Apple AirTag (for Apple users): For users within the Apple ecosystem, the AirTag is a simple and affordable way to track items. It's a small, lightweight disc that uses Apple's Find My network (leveraging hundreds of millions of Apple devices) to report its location. While not a dedicated GPS tracker with continuous real-time updates in the same way, it provides location information when it comes within range of an Apple device. Precision Finding uses UWB for close-range location. It has a user-replaceable battery that lasts about a year. It's best for tracking items like luggage or keys, relying on the density of Apple devices for location updates.",
             "original_keyword": "lightweight",
             "replaced_keyword": "lightweight",
-            "original_keyword_ppl": Infinity,
-            "replaced_keyword_ppl": Infinity,
+            "original_keyword_ppl": "Infinity",
+            "replaced_keyword_ppl": "Infinity",
             "threshold_ppl": 1.24531227466819
         },
         "demo4": {

@@ -35,8 +35,8 @@ def QA_test_result(context_dataset_path, question_dataset_path, compressed_model
         # original_context = data_entry["original"]
         # optimized_context = data_entry["optimized"]
         context = data_entry[key]
-        question = question_dataset[idx]["question"]
-        answers = question_dataset[idx]["answers"]["text"][0]
+        question = question_dataset[idx-1]["question"]
+        answers = question_dataset[idx-1]["answers"]["text"][0]
 
         print(f"-----Original length: {len(context)}-----")
         # execute the compression process
@@ -101,7 +101,7 @@ def QA_test_result(context_dataset_path, question_dataset_path, compressed_model
         output_list.append(output_dict)
         # break
     
-    output_path = f"{output_path}/QA_{key}_results.json"
+    output_path = f"{output_path}/QA_{key}_results2.json"
 
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(output_list, file, indent=4)
