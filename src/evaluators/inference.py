@@ -4,7 +4,10 @@ from tqdm import tqdm
 import json
 import transformers
 import torch
-
+from mistral_common.tokens.tokenizers.mistral import MistralTokenizer
+from mistral_common.protocol.instruct.messages import UserMessage
+from mistral_common.protocol.instruct.request import ChatCompletionRequest
+    
 
 def dataset_process(dataset, question_dataset, compression_model, flag, compressed):
     
@@ -192,6 +195,7 @@ def llama3_inference(dataset, question_dataset, compression_model, flag="increas
         
         output_list.append(output_dict)
     
+    
     if compressed:
         output_path = f"{output_path}/{flag}_compressed_llama3.json"
     else:
@@ -248,7 +252,52 @@ def deepseekr1_inference():
     """
     
     """
-
-def mistral3_inference():
+    
+def mistral2_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
     """"""
+    # mistral_models_path = "MISTRAL_MODELS_PATH"
+    
+    tokenizer = MistralTokenizer.v1()
+    
+    # completion_request = ChatCompletionRequest(messages=[UserMessage(content="Explain Machine Learning to me in a nutshell.")])
+    
+    # tokens = tokenizer.encode_chat_completion(completion_request).tokens
 
+    model_name = "/opt/model/models/Mistral-7B-Instruct-v0.2"
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+    )
+    model.to("cuda")
+
+    message_list = dataset_process(
+        dataset=dataset,
+        question_dataset=question_dataset,
+        compressed=compressed,
+        compression_model=compression_model,
+        flag=flag,
+    )
+    
+    output_list = []
+    for data_entry in tqdm(message_list):
+        output_dict = {}
+        for key, value in data_entry.items():
+            message = ChatCompletionRequest(messages=[UserMessage(content=value)])
+            tokens = tokenizer.encode_chat_completion(message).tokens
+            generated_ids = model.generate(tokens, max_new_tokens=1000, do_sample=True)
+            result = tokenizer.decode(generated_ids[0].tolist())
+            
+            output_dict[key] = result
+        
+        output_list.append(output_dict)
+    
+    if compressed is not None:
+        output_path = f"{output_path}/{flag}_compressed_mistral.json"
+    else:
+        output_path = f"{output_path}/{flag}_without_compressed_mistral.json"
+    
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(output_list, file, indent=4)
+
+
+
+    
