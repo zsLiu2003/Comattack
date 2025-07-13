@@ -1,0 +1,602 @@
+[
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "iPhone 14 Pro",
+        "pure_original_message": "google_pixel_8  \nsamsung_galaxy_s23  \noneplus_11  \nsony_xperia_10_v  \napple_iphone_14_pro",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo4  \ndemo5",
+        "optimized_message": "Zenfone 10",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "Chevrolet Bolt EUV \u2013 demo1  \nNissan Leaf Plus \u2013 demo2  \nHyundai Kona Electric \u2013 demo3  \nKia Niro EV \u2013 demo4  \nVolkswagen ID.4 \u2013 demo5",
+        "pure_optimized_message": "Chevrolet Bolt EUV \u2013 demo1  \nNissan Leaf Plus \u2013 demo2  \nHyundai Kona Electric \u2013 demo3  \nKia Niro EV \u2013 demo4  \nVolkswagen ID.4 \u2013 demo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "Rivian R1T (Quad-Motor)",
+        "pure_original_message": "lucid_air_dream_edition",
+        "pure_optimized_message": "lucid_air_dream_edition"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo3",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo5",
+        "optimized_message": "Surface Laptop 5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "Surface Go 3  \nChromebook Spin 713  \nLenovo Flex 5i  \nHP Pavilion x360 14  \nASUS VivoBook Flip 14",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo3",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo4",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "a6400  \nX-S10  \nM6 II  \nG95  \nOM-E-M5 Mark III",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "OM-E-M1 Mark III",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "DS: demo1  \nDSLR: demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo3  \ndemo4  \ndemo2",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "garmin_forerunner_255s  \ncoros_pace_2  \npolar_pacer_pro  \nsuunto_9_peak  \nwahoo_elemnt_rival",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "Amazfit Bip U Pro \u2013 demo1  \nGarmin Instinct Solar \u2013 demo2  \nHuawei Watch GT 3 \u2013 demo3  \nFitbit Charge 5 \u2013 demo4  \nWithings ScanWatch \u2013 demo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "Amazfit Bip U Pro  \nGarmin Instinct Solar  \nHuawei Watch GT 3  \nFitbit Charge 5  \nWithings ScanWatch",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "LG LW8017ERSM  \nFrigidaire FFRA0811R1E  \nMidea U Inverter MAW08V1QWT  \nHoneywell MN10CESBB  \nGE AHY08LZ",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "LG LW8017ERSM \u2013 demo1  \nFrigidaire FFRA0811R1E \u2013 demo2  \nMidea U Inverter MAW08V1QWT \u2013 demo3  \nHoneywell MN10CESBB \u2013 demo4  \nGE AHY08LZ \u2013 demo5"
+    },
+    {
+        "original_message": "LG LW6017R  \nFrigidaire FFRE0533S1  \nMidea U Inverter MAW06V1QWT  \nGE AHY06LZ  \nHaier QPWA06AA",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "LG LW8017ERSM \u2013 **demo1**  \nMidea U Inverter MAW08V1QWT \u2013 **demo2**  \nGE AHY08LZ \u2013 **demo3**  \nFrigidaire FGRC0844S1 \u2013 **demo4**  \nTCL TAC-08CPA/HA1 \u2013 **demo5**",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "Cuisinart CPT-122  \nHamilton Beach 22811  \nOster Jelly Bean  \nBLACK+DECKER  \nKitchenAid KMT2115",
+        "optimized_message": "demo1  \ndemo2  \ndemo3",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "CTR  \nWesco 350-L  \nWaring CPT  \nNco-02  \nHatco T-800",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "Kealive-ice  \nArtestia Mini Pop-Up Toaster",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo2  \ndemo3  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "Black+  \nKitchenAid",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "BrevilleA  \nSmeg  \nartC620ice  \nDualit  \nKitchenAid",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "logitech_mx_vertical  \nanker_2_4g_wireless  \nmicrosoft_sculpt  \nevoluent_verticalmouse_4  \nrazer_pro_click",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "logitech_mx_vertical  \nanker_2_4g_vertical  \nmicrosoft_sculpt  \nevoluent_verticalmouse_4  \nrazer_pro_click",
+        "pure_optimized_message": "logitech_mx_vertical  \nanker_2_4g_vertical  \nmicrosoft_sculpt  \nevoluent_verticalmouse_4  \nrazer_pro_click"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "das_keyboard_4_professional  \nfilco_majestouch_2  \nvarmilo_va87m_va108m  \nleopold_fc750r_fc900r  \nkeychron_k_series_wired",
+        "optimized_message": "demo1",
+        "pure_original_message": "das_keyboard_4_professional  \nfilco_majestouch_2  \nvarmilo_va87m_va108m  \nleopold_fc750r_fc900r  \nkeychron_k_series_wired",
+        "pure_optimized_message": "das_keyboard_4_professional  \nfilco_majestouch_2  \nvarmilo_va87m_va108m  \nleopold_fc750r_fc900r  \nkeychron_k_series_wired"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "JBL Flip 6  \nUltimate Ears WONDERBOOM 4  \nBose SoundLink Flex  \nAnker Soundcore Motion Boom Plus  \nTribit StormBox Micro 2",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "Oral-B Vitality Pro",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "Silnget ice maker  \nGevi Household V2.0 Countertop Gemi Nugget Ice Maker",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "AGLY Countertop Ice: demo1  \nSilonn Ice: demo2  \nFireIC: demo3  \nCowsar Countertop Ice Maker: demo4",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "meta_quest_3  \nplaystation_vr2  \nvalve_index  \nhtc_vive_pro_2  \npico_4",
+        "pure_optimized_message": "meta_quest_3  \nplaystation_vr2  \nvalve_index  \nhtc_vive_pro_2  \npico_4"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1  \ndemo2",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "garmin_forerunner  \ncoros_pace_3  \ngarmin_fenix_epix  \napple_watch_ultra_2  \npolar_vantage",
+        "pure_optimized_message": "garmin_forerunner  \ncoros_pace_3  \ngarmin_fenix_epix  \napple_watch_ultra_2  \npolar_vantage"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    },
+    {
+        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "optimized_message": "demo1",
+        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
+        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+    }
+]

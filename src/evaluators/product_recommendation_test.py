@@ -86,18 +86,20 @@ class Product_recommendation():
                     tokenizer=tokenizer,
                     flag=flag
                 )
-                original_compressed = self.compression_model.compress(
+                original_compressed = self.compression_model.compress_prompt(
                     value["original"],
                     instruction="",
                     question="",
                     target_token=le,
                 )
-                optimized_compressed = self.compression_model.compress(
+                original_compressed = original_compressed["compressed_prompt"]
+                optimized_compressed = self.compression_model.compress_prompt(
                     value["optimized"],
                     instruction="",
                     question="",
                     target_token=le,
                 )
+                optimized_compressed = optimized_compressed["compressed_prompt"]
                 # output = False
                 for word, _ in target_ppl_words:
                     if word in original_compressed and word not in optimized_compressed:
@@ -111,9 +113,25 @@ class Product_recommendation():
         return output
     
     def keywords_test(self, dataset, model_name, phrase_model_name, flag):
-        """"
-        
         """
+        Detect whether the keywords can be removed or maintained.
+        """
+        Edit = EditPrompt(
+            dataset=dataset,
+            model_name=model_name,
+            phrase_model_name=phrase_model_name,
+        )
+        
+        print(f"----------Process the {dataset}.----------")
+        model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
+        tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+        model.eval()
+        output_list = []
+        le = 20
+        result = 0
+        dict_num = 0
+        for data_entry in tqdm(dataset):
+            output_dict = {}
 
     def recommendation_test(self,):
         """

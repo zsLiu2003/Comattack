@@ -39,12 +39,13 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
                 le = 50
             else:
                 le = 100
-            optimized_demos = compression_model(
+            optimized_demos = compression_model.compress_prompt(
                 optimized_demos,
                 instruction="",
                 question="",
                 target_token=le,
             )
+            optimized_demos = optimized_demos["compressed_prompt"]
         message_dict = {}
         message_dict["original_message"] = [
             {"role": "system", "content": system_prompt},
@@ -76,7 +77,7 @@ def qwen3_inference(dataset, question_dataset, compression_model, flag="increase
     model_name =  "/opt/model/Qwen3-32B"
     model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype="auto", device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    selection_function = None
+    # selection_function = None
     # if flag=="decrease":
     #     selection_function = max
     # else:
@@ -111,7 +112,7 @@ def qwen3_inference(dataset, question_dataset, compression_model, flag="increase
                 max_new_tokens=32768
             )
             output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist() 
-
+            del generated_ids
             # parsing thinking content
             try:
                 # rindex finding 151668 (</think>)
@@ -151,6 +152,10 @@ def qwen3_inference(dataset, question_dataset, compression_model, flag="increase
     
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(output_list, file, indent=4)
+    
+    del model
+    del tokenizer
+    torch.cuda.empty_cache()
     
 def llama3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
     """
@@ -192,7 +197,7 @@ def llama3_inference(dataset, question_dataset, compression_model, flag="increas
             )
             output = outputs[0]["generated_text"][-1]
             output_dict[key] = output
-        
+            del outputs
         output_list.append(output_dict)
     
     
@@ -203,6 +208,10 @@ def llama3_inference(dataset, question_dataset, compression_model, flag="increas
     
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(output_list, file, indent=4)
+    
+    del pipeline
+    torch.cuda.empty_cache()
+
 
 def phi4_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True):
     """
@@ -238,6 +247,7 @@ def phi4_inference(dataset, question_dataset, compression_model, flag="increase"
                 )
             output = outputs[0]["generated_text"][-1]
             output_dict[key] = output
+            del outputs
         
         output_list.append(output_dict)
     if compressed is not None:
@@ -247,6 +257,10 @@ def phi4_inference(dataset, question_dataset, compression_model, flag="increase"
     
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(output_list, file, indent=4)
+
+
+    del pipeline
+    torch.cuda.empty_cache()
         
 def deepseekr1_inference():
     """
@@ -285,7 +299,7 @@ def mistral2_inference(dataset, question_dataset, compression_model, flag="incre
             tokens = tokenizer.encode_chat_completion(message).tokens
             generated_ids = model.generate(tokens, max_new_tokens=1000, do_sample=True)
             result = tokenizer.decode(generated_ids[0].tolist())
-            
+            del generated_ids
             output_dict[key] = result
         
         output_list.append(output_dict)
@@ -298,6 +312,8 @@ def mistral2_inference(dataset, question_dataset, compression_model, flag="incre
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(output_list, file, indent=4)
 
-
+    del model
+    del tokenizer
+    torch.cuda.empty_cache()
 
     
