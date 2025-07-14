@@ -9,6 +9,7 @@ from mistral_common.protocol.instruct.messages import UserMessage
 from mistral_common.protocol.instruct.request import ChatCompletionRequest
 import gc
 import random
+from src.utils.get_prompt import get_target_prompt, get_pure_target_prompt
 
 def dataset_process(dataset, question_dataset, compression_model, flag, compressed, common):
     
@@ -18,6 +19,8 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
         selection_function = max
     else:
         selection_function = min
+    
+    i = 1
     for data, question_data in tqdm(zip(dataset,question_dataset)): 
         target_demo = "" 
         if common:
@@ -26,16 +29,34 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
             target_demo = selection_function(data, key=lambda k: data[k]["ppl"])
         question = question_data["question"]
         requirements = question_data["requirements"]
-        system_prompt = f"{question}, and I have some requirements in the following:\n {requirements}\n. Next will be five product descriptions, please only output the key of product such as 'demo1' or 'demo2', don't output any other content.\n"
-        pure_system_prompt = f"{question}, Next will be five product descriptions, please only output the key of product such as 'demo1' or 'demo2', don't output any other content.\n"
+        system_prompt = get_target_prompt()
+        pure_system_prompt = get_pure_target_prompt()
+
         original_demos = ""
         optimized_demos = ""
+        original_demos += f"question: {question}\n requirements: {requirements}\n"
+        optimized_demos += f"question: {question}\n requirements: {requirements}\n"
+        print(i)
+        i+=1
         for key, value in data.items():
+            print(f"key = {key}, value = {value}")
+            original_demos += str(key)
+            original_demos += ": "
             original_demos += value["original"]
+            original_demos += "\n"
             if key == target_demo:
+                optimized_demos += str(key)
+                optimized_demos += ": "
                 optimized_demos += value["replaced"]
+                optimized_demos += "\n"
             else:
+                optimized_demos += str(key)
+                optimized_demos += ": "
                 optimized_demos += value["original"]
+                optimized_demos += "\n"
+        
+        print(f"Original demos: {original_demos}")
+        print(f"Optimized demos: {optimized_demos}")
         if compressed:
             le = 0 
             if len(optimized_demos) < 800:
@@ -50,7 +71,15 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
                 question="",
                 target_token=le,
             )
+            original_demos = compression_model.compress_prompt(
+                original_demos,
+                instruction="",
+                question="",
+                target_token=le,
+            )
+            original_demos = original_demos["compressed_prompt"]
             optimized_demos = optimized_demos["compressed_prompt"]
+
         message_dict = {}
         message_dict["original_message"] = [
             {"role": "system", "content": system_prompt},
@@ -73,6 +102,7 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
         # message_list.append(pure_optimized_message)
 
         output_list.append(message_dict)
+        # break
     
     return output_list
 
@@ -130,6 +160,7 @@ def qwen3_inference(dataset, question_dataset, compression_model, flag="increase
             thinking_content = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
             content = tokenizer.decode(output_ids[index:], skip_special_tokens=True).strip("\n")
             output_dict[key] = content
+            print(f"key = {key}, content = {content}")
             
         # output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
         # output_dict = {}
@@ -308,7 +339,9 @@ def mistral2_inference(dataset, question_dataset, compression_model, flag="incre
     for data_entry in tqdm(message_list):
         output_dict = {}
         for key, value in data_entry.items():
-            message = ChatCompletionRequest(messages=[UserMessage(content=value)])
+            prompt = value[0]["content"] + "\n" + value[1]["content"]
+            
+            message = ChatCompletionRequest(messages=[UserMessage(content=prompt)])
             tokens = tokenizer.encode_chat_completion(message).tokens
             generated_ids = model.generate(tokens, max_new_tokens=1000, do_sample=True)
             result = tokenizer.decode(generated_ids[0].tolist())

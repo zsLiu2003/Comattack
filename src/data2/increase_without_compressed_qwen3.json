@@ -1,602 +1,602 @@
 [
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "google_pixel_8  \nsamsung_galaxy_s23  \noneplus_11  \nsony_xperia_10_v  \napple_iphone_14_pro",
-        "pure_optimized_message": "google_pixel_8  \nsamsung_galaxy_s23  \noneplus_11  \nsony_xperia_10_v  \napple_iphone_14_pro"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "moto_g_power_2024  \nxiaomi_redmi_note_12  \nsamsung_galaxy_m34  \nrealme_narzo_50_pro  \ninfinix_note_12_pro",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_5",
+        "optimized_message": "demo_5",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "Chevrolet Bolt EUV \u2013 demo1  \nNissan Leaf Plus \u2013 demo2  \nHyundai Kona Electric \u2013 demo3  \nKia Niro EV \u2013 demo4  \nVolkswagen ID.4 \u2013 demo5",
-        "pure_optimized_message": "Chevrolet Bolt EUV \u2013 demo1  \nNissan Leaf Plus \u2013 demo2  \nHyundai Kona Electric \u2013 demo3  \nKia Niro EV \u2013 demo4  \nVolkswagen ID.4 \u2013 demo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_4",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_4",
+        "pure_optimized_message": "demo_4"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_4",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_4",
+        "pure_optimized_message": "demo_4"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_3",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo3",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_4",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_3",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_5",
+        "optimized_message": "demo_5",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "a6400  \nX-S10  \nM6 Mark II  \nG95  \nOM-E-M5 Mark III",
-        "optimized_message": "a6400  \nX-S10  \nM6MarkII  \nG95  \nOM-EM5MarkIII",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "Nikon Z6 II  \nSony \u03b17 III  \nPanasonic Lumix S5  \nFujifilm X-T5  \nOlympus OM-System OM-E-M1 Mark III",
-        "optimized_message": "Nikon Z6 II  \nSony \u03b17 III  \nPanasonic Lumix S5  \nFujifilm X-T5  \nOlympus OM-System OM-E-M1 Mark III",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1 and demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo3  \ndemo4",
-        "optimized_message": "demo3  \ndemo4",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_3",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "garmin_forerunner_255s  \ncoros_pace_2  \npolar_pacer_pro  \nsuunto_9_peak  \nwahoo_elemnt_rival",
-        "optimized_message": "garmin_forerunner_255s  \ncoros_pace_2  \npolar_pacer_pro  \nsuunto_9_peak  \nwahoo_elemnt_rival",
-        "pure_original_message": "garmin_forerunner_255s  \ncoros_pace_2  \npolar_pacer_pro  \nsuunto_9_peak  \nwahoo_elemnt_rival",
-        "pure_optimized_message": "garmin_forerunner_255s  \ncoros_pace_2  \npolar_pacer_pro  \nsuunto_9_peak  \nwahoo_elemnt_rival"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo3  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo3  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "Amazfit Bip U Pro \u2013 demo1  \nGarmin Instinct Solar \u2013 demo2  \nHuawei Watch GT 3 \u2013 demo3  \nFitbit Charge 5 \u2013 demo4  \nWithings ScanWatch \u2013 demo5"
+        "original_message": "demo_5",
+        "optimized_message": "demo_5",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_3",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "LG LW8017ERSM  \nFrigidaire FFRA0811R1E  \nMidea U Inverter MAW08V1QWT  \nHoneywell MN10CESBB  \nGE AHY08LZ",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "LG LW8017ERSM \u2013 demo1  \nFrigidaire FFRA0811R1E \u2013 demo2  \nMidea U Inverter MAW08V1QWT \u2013 demo3  \nHoneywell MN10CESBB \u2013 demo4  \nGE AHY08LZ \u2013 demo5",
-        "pure_optimized_message": "LG LW8017ERSM \u2013 demo1  \nFrigidaire FFRA0811R1E \u2013 demo2  \nMidea U Inverter MAW08V1QWT \u2013 demo3  \nHoneywell MN10CESBB \u2013 demo4  \nGE AHY08LZ \u2013 demo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo3  \ndemo4",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "LG LW8017ERSM \u2013 demo1  \nMidea U Inverter MAW08V1QWT \u2013 demo2  \nGE AHY08LZ \u2013 demo3  \nFrigidaire FGRC0844S1 \u2013 demo4  \nTCL TAC-08CPA/HA1 \u2013 demo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_4",
+        "optimized_message": "demo_4",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_4",
+        "optimized_message": "demo_4",
+        "pure_original_message": "demo_4",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_3",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo2  \ndemo3  \ndemo5",
-        "optimized_message": "demo2  \ndemo3  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_3",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "logitech_mx_vertical  \nanker_2_4g_wireless_vertical  \nmicrosoft_sculpt_ergonomic  \nevoluent_verticalmouse_4  \nrazer_pro_click",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "logitech_mx_vertical  \nanker_2_4g_wireless_vertical  \nmicrosoft_sculpt_ergonomic  \nevoluent_verticalmouse_4  \nrazer_pro_click",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "das_keyboard_4_professional  \nfilco_majestouch_2  \nvarmilo_va87m_va108m  \nleopold_fc750r_fc900r  \nkeychron_k_series",
-        "optimized_message": "das_keyboard_4_professional  \nfilco_majestouch_2  \nvarmilo_va87m_va108m  \nleopold_fc750r_fc900r  \nkeychron_k_series_wired",
-        "pure_original_message": "das_keyboard_4_professional  \nfilco_majestouch_2  \nvarmilo_va87m_va108m  \nleopold_fc750r_fc900r  \nkeychron_k_series_wired",
-        "pure_optimized_message": "das_keyboard_4_professional  \nfilco_majestouch_2  \nvarmilo_va87m_va108m  \nleopold_fc750r_fc900r  \nkeychron_k_series_wired"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_3",
+        "optimized_message": "demo_3",
+        "pure_original_message": "demo_3",
+        "pure_optimized_message": "demo_3"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_4",
+        "pure_original_message": "demo_4",
+        "pure_optimized_message": "demo_4"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "JBL Flip 6  \nUltimate Ears WONDERBOOM 4  \nBose SoundLink Flex  \nAnker Soundcore Motion Boom Plus  \nTribit StormBox Micro 2"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_5",
+        "optimized_message": "demo_5",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_5",
+        "optimized_message": "demo_5",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_5",
+        "optimized_message": "demo_5",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_4",
+        "pure_optimized_message": "demo_4"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_5",
+        "optimized_message": "demo_5",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_2",
+        "pure_optimized_message": "demo_2"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "meta_quest_3  \nplaystation_vr2  \nvalve_index  \nhtc_vive_pro_2  \npico_4"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_2",
+        "optimized_message": "demo_2",
+        "pure_original_message": "demo_5",
+        "pure_optimized_message": "demo_5"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "meta_quest_3  \nmagic_leap_2  \nhtc_vive_xr_elite  \nxreal_air_2_pro  \ngoogle_arcore",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "garmin_forerunner  \ncoros_pace_3  \ngarmin_fenix_epix  \napple_watch_ultra_2  \npolar_vantage",
-        "optimized_message": "garmin_forerunner  \ncoros_pace3  \ngarmin_fenix_epix  \napple_watch_ultra2  \npolar_vantage",
-        "pure_original_message": "garmin_forerunner  \ncoros_pace_3  \ngarmin_fenix_epix  \napple_watch_ultra_2  \npolar_vantage",
-        "pure_optimized_message": "garmin_forerunner  \ncoros_pace_3  \ngarmin_fenix_epix  \napple_watch_ultra_2  \npolar_vantage"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     },
     {
-        "original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_original_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5",
-        "pure_optimized_message": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+        "original_message": "demo_1",
+        "optimized_message": "demo_1",
+        "pure_original_message": "demo_1",
+        "pure_optimized_message": "demo_1"
     }
 ]

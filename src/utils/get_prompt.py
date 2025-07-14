@@ -9,6 +9,15 @@ def get_target_prompt():
         print(f"The prompt has been read successfully!")
 
         return content
+
+def get_pure_target_prompt():
+
+    prompt_path = "/home/lzs/Comattack/src/data/get_pure_target_prompt.txt"
+    with open(prompt_path, "r", encoding="utf-8") as file:
+        content = file.read()
+        print(f"The pure target prompt has been read successfully!")
+
+        return content
     
 def get_distill_prompt():
     

@@ -2,25 +2,979 @@
     {
         "original_message": {
             "role": "assistant",
-            "content": "Here are the product descriptions with just the key (e.g. \"demo1\", \"demo2\", etc.):"
+            "content": "demo4"
         },
         "optimized_message": {
             "role": "assistant",
-            "content": "Here are the phone recommendations that meet your requirements:\n\ndemo1\ndemo2"
+            "content": "demo4"
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+            "content": "demo3"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo_2"
         }
     },
     {
         "original_message": {
             "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
         },
         "optimized_message": {
             "role": "assistant",
@@ -28,17 +982,737 @@
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
+            "content": "demo_4"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo3"
         }
     },
     {
         "original_message": {
             "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "output3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "output2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo5"
         },
         "optimized_message": {
             "role": "assistant",
@@ -46,1757 +1720,83 @@
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo_2"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo_2"
         }
     },
     {
         "original_message": {
             "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+            "content": "output1"
         },
         "optimized_message": {
             "role": "assistant",
-            "content": "demo1"
+            "content": "output2"
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+            "content": "demo_4"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+            "content": "demo_4"
         }
     },
     {
         "original_message": {
             "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo5"
         },
         "optimized_message": {
             "role": "assistant",
-            "content": "demo1"
+            "content": "demo5"
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo_5"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo_5"
         }
     },
     {
         "original_message": {
             "role": "assistant",
-            "content": "Here are the recommended EVs that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo5"
         },
         "optimized_message": {
             "role": "assistant",
-            "content": "Here are the product recommendations that meet your requirements:\n\ndemo1\ndemo2"
+            "content": "demo5"
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "Here are the product key recommendations based on your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo_5"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "Here are the key recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+            "content": "demo_5"
         }
     },
     {
         "original_message": {
             "role": "assistant",
-            "content": "Here are the product descriptions with the key output:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "output1"
         },
         "optimized_message": {
             "role": "assistant",
-            "content": "demo1\ndemo2"
+            "content": "demo5"
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
+            "content": "demo3"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys that meet your requirements:\n\n1. TCL 55S535\n2. Hisense 65U6H\n3. Samsung Q60B QLED\n4. Vizio M-Series Quantum 55\u2033\n5. LG UN65UQ80A"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are five product recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with the key only:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (product name):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1: Sony Alpha a6400\ndemo2: Fujifilm X-S10\ndemo3: Canon EOS M6 Mark II\ndemo4: Panasonic Lumix G95\ndemo5: Olympus OM-System OM-E-M5 Mark III"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the key camera recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations that meet your requirements:\n\ndemo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product key recommendations:\n\n1. DSLR: demo1\n2. Mirrorless: demo2\n3. DSLR: demo3\n4. Mirrorless: demo4\n5. DSLR: demo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "DS1\nDS2\nDS3"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. DSLR1\n2. Mirrorless1\n3. DSLR2\n4. Mirrorless2\n5. DSLR3"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. DSLR1\n2. Mirrorless1\n3. DSLR2\n4. Mirrorless2\n5. DSLR3"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys that meet your requirements:\n\n1. demo1\n2. demo2\n3. demo4"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are five product recommendations that meet your requirements:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations based on your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are five product recommendations that meet your requirements:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys that match your requirements:\n\n1. TAG Heuer Connected Calibre E4\n2. Hublot Big Bang e\n3. Montblanc Summit 3\n4. Garmin MARQ Commander\n5. Louis Vuitton Tambour Horizon Light Up"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations that meet your requirements:\n\ndemo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product key names:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys that meet your requirements:\n\n1. Amazfit Bip U Pro\n2. Garmin Instinct Solar\n3. Huawei Watch GT 3"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions that meet your battery life requirement of at least 10 days:\n\n1. Amazfit Bip U Pro\n2. Huawei Watch GT 3\n3. Withings ScanWatch"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions that meet your battery life requirement of at least 10 days:\n\n1. Amazfit Bip U Pro\n2. Huawei Watch GT 3\n3. Withings ScanWatch"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the recommended products that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations for you:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product key recommendations:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product key descriptions:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product key recommendations:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys you requested:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product key names:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product key recommendations that meet your requirements:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product recommendations with only the key (e.g. \"demo1\"):\n\n1. Logitech M705 Marathon Mouse\n2. Microsoft Sculpt Ergonomic Mouse (Wireless)\n3. Anker 2.4G Wireless Vertical Ergonomic Optical Mouse\n4. Logitech MX Anywhere 3\n5. Razer Atheris"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key (e.g. 'demo1', 'demo2', etc.):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5\ndemo6"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key names:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1: Epson Cinema50\ndemo2: Optoma HD27\ndemo3: Sony VW325\ndemo4: JVC RS40\ndemo5: JVC NP5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\"):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (product name):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with the key output:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product key names:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the key product descriptions:\n\n1. Meta Quest 2\n2. Meta Quest 3S\n3. Refurbished or Used VR Headsets\n4. HP Reverb G2\n5. Basic Smartphone VR Headsets"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with just the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key (e.g. \"demo1\", \"demo2\", etc.):\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\ndemo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "Here are the product keys:\n\n1. MLVision M5\n2. XREAL Air 2 Pro\n3. RayNeo Air 2S\n4. Amazon Echo Frames (3rd Gen)\n5. Solos AirGo 3"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with the required key:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\n1. Garmin DriveSmart 86\n2. TomTom GO Discover\n3. Garmin Drive 53 & Traffic\n4. Directional PNDs\n5. Smartphone Navigation Apps"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key output:\n\ndemo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        }
-    },
-    {
-        "original_message": {
-            "role": "assistant",
-            "content": "Here are the product descriptions with only the key:\n\ndemo1\ndemo2\nAirTag\nTile Pro\nLandAirSea54"
-        },
-        "optimized_message": {
-            "role": "assistant",
-            "content": "demo1"
-        },
-        "pure_original_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\ndemo3\ndemo4\ndemo5"
-        },
-        "pure_optimized_message": {
-            "role": "assistant",
-            "content": "demo1\ndemo2\nAirTag\nTile Pro\ndemo5"
+            "content": "demo2"
         }
     }
 ]

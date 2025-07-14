@@ -26,10 +26,10 @@ class Product_recommendation():
             self.flag = "increase"
         elif "decrease" in dataset_path:
             self.flag = "decrease"
-        elif "keyword" in dataset_path:
-            self.flag = "keyword"
         else:
             self.flag = "confused"
+        if "keyword" in dataset_path:
+            self.flag = "keyword"
 
     def demo_level_test(self):
         """
@@ -39,7 +39,7 @@ class Product_recommendation():
         """
         
         print(f"----------Process the {self.dataset_path}.----------")
-        inference_list = [qwen3_inference, llama3_inference, phi4_inference, mistral2_inference]
+        inference_list = [qwen3_inference, llama3_inference, phi4_inference]
 
         for function in inference_list:
             name = function.__name__
@@ -80,8 +80,8 @@ class Product_recommendation():
         ) 
         
         print(f"----------Process the {dataset}.----------")
-        model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
-        tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+        model = GPT2LMHeadModel.from_pretrained(self.compression_model_name, device_map='auto')
+        tokenizer = GPT2TokenizerFast.from_pretrained(self.compression_model_name)
         model.eval()
         output_list = []
         le = 20
@@ -106,7 +106,7 @@ class Product_recommendation():
                 )
                 original_compressed = original_compressed["compressed_prompt"]
                 optimized_compressed = self.compression_model.compress_prompt(
-                    value["optimized"],
+                    value["replaced"],
                     instruction="",
                     question="",
                     target_token=le,
@@ -128,43 +128,56 @@ class Product_recommendation():
         """
         Detect whether the keywords can be removed or maintained.
         """
-        Edit = EditPrompt(
-            dataset=dataset,
-            model_name=model_name,
-            phrase_model_name=phrase_model_name,
-        )
+        # Edit = EditPrompt(
+        #     dataset=dataset,
+        #     model_name=model_name,
+        #     phrase_model_name=phrase_model_name,
+        # )
         
         print(f"----------Process the {dataset}.----------")
-        model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
-        tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
+        model = GPT2LMHeadModel.from_pretrained(self.compression_model_name, device_map='auto')
+        tokenizer = GPT2TokenizerFast.from_pretrained(self.compression_model_name)
         model.eval()
         output_list = []
-        le = 20
+        le = 50
         result = 0
         dict_num = 0
         real_num = 0
         for data_entry in tqdm(dataset):
+            # for key, value in data_entry.items():
+                
+            #     dict_num += 1
+            #     original_compressed = self.compression_model.compress_prompt(
+            #         value["original"],
+            #         instruction="",
+            #         question="",
+            #         target_token=le,
+            #     )
+            #     original_compressed = original_compressed["compressed_prompt"]
+            #     optimized_compressed = self.compression_model.compress_prompt(
+            #         value["replaced"],
+            #         instruction="",
+            #         question="",
+            #         target_token=le,
+            #     )
+            keyword_list = []
+            prompt = ""
             for key, value in data_entry.items():
-                output_dict = {}
+                keyword_list.append(value["replaced_keyword"])
                 dict_num += 1
-                original_compressed = self.compression_model.compress_prompt(
-                    value["original"],
-                    instruction="",
-                    question="",
-                    target_token=le,
-                )
-                original_compressed = original_compressed["compressed_prompt"]
-                optimized_compressed = self.compression_model.compress_prompt(
-                    value["replaced"],
-                    instruction="",
-                    question="",
-                    target_token=le,
-                )
-                optimized_compressed = optimized_compressed["compressed_prompt"]
-                if value["original_keyword"] != value["replaced_keyword"]:
-                    real_num += 1
-                    if value["original_keyword"] in original_compressed and value["replaced_keyword"] not in optimized_compressed:
-                        result += 1   
+                prompt += value["replaced"]
+            compressed_prompt = self.compression_model.compress_prompt(
+                value["replaced"],
+                instruction="",
+                question="",
+                target_token=le,
+            )
+            optimized_compressed = compressed_prompt["compressed_prompt"]
+            if value["original_keyword"] != value["replaced_keyword"]:
+                real_num += 1
+                for keyword in keyword_list:
+                    if keyword not in optimized_compressed:
+                        result += 1 
 
 
         output = result / real_num

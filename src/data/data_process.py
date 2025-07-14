@@ -219,7 +219,62 @@ def get_confused_recommendation_dataset(dataset_path: str):
         json.dump(output_list, f, indent=4, ensure_ascii=False)
 
 
+def process_keyword_dataset(dataset_path: str, output_path: str):
+
+    def replace_infinity(obj):
+        if isinstance(obj, dict):
+            return {k: replace_infinity(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [replace_infinity(item) for item in obj]
+        elif isinstance(obj, str) and obj.strip() == "Infinity":
+            return 0
+        else:
+            return obj
         
+
+    """
+    Process the keyword dataset to get the keywords and their corresponding demo.
+    """
+    # dataset = load_dataset("json", data_files=dataset_path, split="train")  
+
+    with open(dataset_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    cleaned_data = replace_infinity(data)
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(cleaned_data, f, indent=4, ensure_ascii=False)
+
+
+def fill_missing_keywords(dataset1_path: str, dataset2_path: str, output_path: str):
+    """
+    Fill the missing keywords in the dataset.
+    """
+    filled = []
+    with open(dataset1_path, "r", encoding="utf-8") as f1, open(dataset2_path, "r", encoding="utf-8") as f2:
+        dataset1 = json.load(f1)
+        dataset2 = json.load(f2)
+    for i, (d1, d2) in enumerate(zip(dataset1, dataset2)):
+        merged_entry = d2.copy()
+        for key in d1:
+            if "output" in key:
+                index = str(key[6])
+                new_key = f"demo{index}"
+                if new_key not in merged_entry:
+                    merged_entry[new_key] = {
+                        "original": d1[key],
+                        "replaced": d1[key],
+                        "original_keyword": "",
+                        "replaced_keyword": "",
+                        "original_keyword_ppl": 0,
+                        "replaced_keyword_ppl": 0, # Assuming you want to keep the original as replaced
+                    }
+        filled.append(merged_entry)
+    
+    with open(output_path, "w", encoding="utf-8") as f_out:
+        json.dump(filled, f_out, indent=4, ensure_ascii=False)
+        
+    print(f"Filled dataset saved to {output_path}")
 
 if __name__ == "__main__":
 
@@ -227,7 +282,16 @@ if __name__ == "__main__":
     #     keywords_dataset_path1="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
     #     keywords_dataset_path2="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json"
     # )
-    output_path = "/home/lzs/Comattack/src/data"
-    get_confused_recommendation_dataset(dataset_path="/home/lzs/Comattack/src/data/confused_recommendation.json")
+    output_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_3.json"
+    dataset1_path = "/home/lzs/Comattack/src/data/data.json"
+    dataset_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_2.json"
+    process_keyword_dataset(dataset_path=dataset_path, output_path=output_path)
+    # fill_missing_keywords(
+    #     dataset1_path=dataset1_path,
+    #     dataset2_path=dataset_path,
+    #     output_path=output_path
+    # )
+    # get_keyword_dataset(dataset_path="/home/lzs/Comattack/src/data/data.json"
+    # get_confused_recommendation_dataset(dataset_path="/home/lzs/Comattack/src/data/confused_recommendation.json")
     
 

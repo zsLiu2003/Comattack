@@ -2,37 +2,1801 @@
     {
         "original_message": {
             "role": "assistant",
-            "content": "Here are the key identifiers for each product based on your requirements:\n\n- demo1: Google Pixel 7a\n- demo2: Samsung Galaxy A54\n- demo3: OnePlus Nord N30\n- demo4: Motorola Moto G Power (2024)\n- demo5: Xiaomi Redmi Note 12 Pro"
+            "content": "demo_1"
         },
         "optimized_message": {
             "role": "assistant",
-            "content": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+            "content": "demo_2"
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+            "content": "demo_1"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+            "content": "demo_1"
         }
     },
     {
         "original_message": {
             "role": "assistant",
-            "content": "- demo1\n- demo2\n- demo3\n- demo4\n- demo5"
+            "content": "demo_2"
         },
         "optimized_message": {
             "role": "assistant",
-            "content": "Here are the keys for the product descriptions provided:\n\n1. demo1\n2. demo2\n3. demo3\n4. demo4\n5. demo5"
+            "content": "demo2"
         },
         "pure_original_message": {
             "role": "assistant",
-            "content": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+            "content": "demo_2"
         },
         "pure_optimized_message": {
             "role": "assistant",
-            "content": "demo1  \ndemo2  \ndemo3  \ndemo4  \ndemo5"
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1, demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1, demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1, demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1, demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_5"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_4"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_3"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_2"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        }
+    },
+    {
+        "original_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "optimized_message": {
+            "role": "assistant",
+            "content": "demo1"
+        },
+        "pure_original_message": {
+            "role": "assistant",
+            "content": "demo_1"
+        },
+        "pure_optimized_message": {
+            "role": "assistant",
+            "content": "demo_1"
         }
     }
 ]
