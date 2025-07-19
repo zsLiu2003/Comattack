@@ -364,3 +364,4 @@ def mistral2_inference(dataset, question_dataset, compression_model, flag="incre
     torch.cuda.empty_cache()
 
     
+
