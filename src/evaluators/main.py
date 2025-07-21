@@ -25,3 +25,4 @@ if __name__ == "__main__":
     torch.cuda.empty_cache()
     dataset_path = sys.argv[1] if len(sys.argv) > 1 else "/home/lzs/Comattack/src/data/increase_demo.json"
     main(dataset_path=dataset_path)
+
