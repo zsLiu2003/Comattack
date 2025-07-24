@@ -5,7 +5,7 @@ from datasets import load_dataset
 from llmlingua import PromptCompressor
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 
-from src.evaluators.inference import qwen3_inference, llama3_inference, phi4_inference, deepseekr1_inference, mistral2_inference
+from src.evaluators.inference import qwen3_inference, llama3_inference, phi4_inference, deepseekr1_inference, mistral2_inference, llama2_inference
 from src.utils.get_edit_token import EditPrompt
 
 
@@ -39,7 +39,7 @@ class Product_recommendation():
         """
         
         print(f"----------Process the {self.dataset_path}.----------")
-        inference_list = [qwen3_inference, llama3_inference, phi4_inference]
+        inference_list = [llama2_inference]
 
         for function in inference_list:
             name = function.__name__

@@ -106,6 +106,8 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
     
     return output_list
 
+# def llama2_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
+
 
 def qwen3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
     """"""
@@ -195,7 +197,7 @@ def qwen3_inference(dataset, question_dataset, compression_model, flag="increase
     del tokenizer
     gc.collect()
     torch.cuda.empty_cache()
-    
+
 def llama3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
     """
     Llama3 as the large model to inference.
@@ -250,6 +252,62 @@ def llama3_inference(dataset, question_dataset, compression_model, flag="increas
         json.dump(output_list, file, indent=4)
     
     del pipeline
+    gc.collect()
+    torch.cuda.empty_cache()
+
+
+def llama2_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
+    """
+    LLaMA-2 as the large model to inference.
+    """
+
+    model_name = "/opt/model/models/Llama-2-7b-chat-hf"  # 修改为你的LLaMA-2模型路径
+    
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer.eos_token_id = tokenizer.pad_token_id
+
+    message_list = dataset_process(
+        dataset=dataset,
+        question_dataset=question_dataset,
+        flag=flag,
+        compressed=compressed,
+        compression_model=compression_model,
+        common=common,
+    )
+
+    output_list = []
+    for data_entry in tqdm(message_list):
+        output_dict = {}
+        for key, value in data_entry.items():
+            if isinstance(value, list) and isinstance(value[0], dict) and "role" in value[0]:
+                prompt = ""
+                for msg in value:
+                    role = msg["role"]
+                    content = msg["content"]
+                    prompt += f"<|{role}|>\n{content}\n"
+            else:
+                prompt = str(value)  # fallback
+            inputs = tokenizer(prompt, return_tensors="pt")
+            input_ids = inputs.input_ids.to(model.device)
+            output_ids = model.generate(
+                input_ids = input_ids,
+                max_new_tokens = 100,
+            )
+            output_text = tokenizer.decode(output_ids[0][len(input_ids[0]):], skip_special_tokens=True)
+            output_dict[key] = output_text
+            del output_ids
+        output_list.append(output_dict)
+
+    if compressed:
+        output_path = f"{output_path}/{flag}_compressed_llama2.json"
+    else:
+        output_path = f"{output_path}/{flag}_without_compressed_llama2.json"
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(output_list, file, indent=4)
+
+    # del pipeline
     gc.collect()
     torch.cuda.empty_cache()
 

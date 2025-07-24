@@ -276,16 +276,34 @@ def fill_missing_keywords(dataset1_path: str, dataset2_path: str, output_path: s
         
     print(f"Filled dataset saved to {output_path}")
 
+def QA_dataset_process(dataset1_path, dataset2_path):
+    
+    dataset1 = load_dataset("json", data_files=dataset1_path, split="train")
+    dataset2 = load_dataset("json", data_files=dataset2_path, split="train")
+
+    output_list = []
+    for data_entry1, data_entry2 in zip(dataset1, dataset2):
+        output_dict = {}
+        output_dict["original"] = data_entry1["original"]
+        output_dict["replaced"] = data_entry2["optimized"]
+
+        output_list.append(output_dict)
+
+    output_path = "/home/lzs/Comattack/src/data/QA_Stealth.json"
+    
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(output_list, file, indent=4)
+
 if __name__ == "__main__":
 
     # get_integrate_keywords_dataset(
     #     keywords_dataset_path1="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
     #     keywords_dataset_path2="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json"
     # )
-    output_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_3.json"
-    dataset1_path = "/home/lzs/Comattack/src/data/data.json"
-    dataset_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_2.json"
-    process_keyword_dataset(dataset_path=dataset_path, output_path=output_path)
+    # output_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_3.json"
+    # dataset1_path = "/home/lzs/Comattack/src/data/data.json"
+    # dataset_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_2.json"
+    # # process_keyword_dataset(dataset_path=dataset_path, output_path=output_path)
     # fill_missing_keywords(
     #     dataset1_path=dataset1_path,
     #     dataset2_path=dataset_path,
@@ -294,4 +312,10 @@ if __name__ == "__main__":
     # get_keyword_dataset(dataset_path="/home/lzs/Comattack/src/data/data.json"
     # get_confused_recommendation_dataset(dataset_path="/home/lzs/Comattack/src/data/confused_recommendation.json")
     
+    dataset1_path = "/home/lzs/Comattack/src/data/QA_original_results2.json"
+    dataset2_path = "/home/lzs/Comattack/src/data/QA_optimized_results.json"
 
+    QA_dataset_process(
+        dataset1_path=dataset1_path,
+        dataset2_path=dataset2_path,
+    )
