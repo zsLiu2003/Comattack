@@ -122,7 +122,7 @@ def get_tool_selection_prompt():
 def get_defense_prompt():
 
     prompt_path = "/home/lzs/Comattack/src/data/LLM_detection.txt"
-    with open(prompt_path, "w", encoding="utf=8") as file:
+    with open(prompt_path, "r", encoding="utf=8") as file:
         content = file.read()
 
     return content
