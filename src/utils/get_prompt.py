@@ -118,3 +118,11 @@ def get_tool_selection_prompt():
     prompt = "Given the following list of APIs and their descriptions, identify only the API name that is best suited for tasks related to **autonomous driving**. Provide your answer as a concise API name, with no additional text or explanation. Please provide your answer in English.\n\nExample:\nInput: [\n    {\"api_name\": \"API_A\", \"description\": \"This is for object detection.\"},\n    {\"api_name\": \"API_B\", \"description\": \"This is for text generation.\"},\n    {\"api_name\": \"API_C\", \"description\": \"This is for lane detection.\"}\n]\nOutput: API_A\n\nNow, using the original API list:{tool_names}\n\n{tools}\n\nUser Query: Identify the best API for autonomous driving tasks."
     
     return prompt
+
+def get_defense_prompt():
+
+    prompt_path = "/home/lzs/Comattack/src/data/LLM_detection.txt"
+    with open(prompt_path, "w", encoding="utf=8") as file:
+        content = file.read()
+
+    return content
