@@ -33,8 +33,8 @@ Update `config.py` with your specific model paths:
 
 ```python
 # Example configuration
-COMPRESSION_MODEL_PATH = "microsoft/gpt2"  # or local path
-LARGE_MODEL_PATH = "Qwen/Qwen-7B-Chat"              # or local path
+COMPRESSION_MODEL_PATH = "NousResearch/Llama-2-7b-hf"  # or local path
+LARGE_MODEL_PATH = "Qwen/Qwen3-7B"              # or local path
 CUDA_DEVICE = "cuda:0"  # adjust based on your GPU setup
 ```
 
