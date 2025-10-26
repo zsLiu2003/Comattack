@@ -53,28 +53,6 @@ python src/attacks/attack_llmlingua.py
 python examples/try_llmlingua.py
 ```
 
-### Defense Evaluation
-
-```bash
-# Perplexity-based detection
-python src/defense/ppl_detection.py
-
-# LLM-based detection
-python src/defense/LLM_detection.py
-```
-
-### Stealthiness Evaluation
-
-Evaluate attack stealthiness using BERT-Score and semantic similarity:
-
-```bash
-# BERT-Score based stealthiness evaluation
-python src/evaluators/stealthy_word.py
-
-# Character-level edit distance stealthiness evaluation
-python src/evaluators/stealthy_character.py
-```
-
 **Stealthiness Metrics:**
 - **Composite Stealth Score**: `Stealth(C, C~) = λ · cosine_sim(C, C~) + (1 - λ) · BERTScore(C, C~)`
 - **Semantic Similarity**: Using SentenceTransformers (all-mpnet-base-v2)
