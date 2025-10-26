@@ -44,7 +44,7 @@ llm = ChatOllama(
 )
 
 # Step 2: LLMLingua Compression Tool
-compressor = PromptCompressor("/opt/model/models/phi-2")
+compressor = PromptCompressor("models/phi-2")
 def compress_prompt(prompt: str) -> str:
     print(f"[LLMLingua Tool] Compressing prompt...")
     result = compressor.compress_prompt(

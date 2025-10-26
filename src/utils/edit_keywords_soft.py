@@ -79,10 +79,10 @@ def edit_keywords(model_path,output_path, dataset_path, keywords_dataset_path, f
 if __name__ == "__main__":
     
     flag = sys.argv[1]
-    model_name = "/opt/model/Qwen3-32B"
-    output_path = "/home/lzs/Comattack/src/data"
-    dataset_path = "/home/lzs/Comattack/src/data/data.json"
-    keywords_path = "/home/lzs/Comattack/src/data/data_keywords_with_Qwen3.json"
+    model_name = "models/Qwen3-32B"
+    output_path = "src/data"
+    dataset_path = "src/data/data.json"
+    keywords_path = "src/data/data_keywords_with_Qwen3.json"
 
     edit_keywords(
         model_path=model_name,

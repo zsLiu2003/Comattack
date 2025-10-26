@@ -9,8 +9,8 @@ from src.evaluators.product_recommendation_test import Product_recommendation
 def main(dataset_path):
     
     dataset = load_dataset("json", data_files=dataset_path, split="train")
-    model_name = "/opt/model/models/gpt2-dolly"
-    phrase_model_name = "/opt/model/Qwen3-32B"
+    model_name = "models/gpt2-dolly"
+    phrase_model_name = "models/Qwen3-32B"
     
     flag = None
     if "increase" in dataset_path:

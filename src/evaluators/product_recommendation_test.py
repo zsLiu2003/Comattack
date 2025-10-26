@@ -44,13 +44,13 @@ class Product_recommendation():
         for function in inference_list:
             name = function.__name__
             print("-"*10 + f"Inference with {name}!" + "-"*10)
-            output_path = "/home/lzs/Comattack/src/data"
+            output_path = "src/data"
             if "adj" in self.dataset_path:
-                output_path = "/home/lzs/Comattack/src/data2"
+                output_path = "src/data2"
             # elif "confused" in self.dataset_path:
-            #     output_path = "/home/lzs/Comattack/src/data3"
+            #     output_path = "src/data3"
             # elif "keyword" in self.dataset_path:
-            #     output_path = "/home/lzs/Comattack/src/data4"
+            #     output_path = "src/data4"
             for compressed in [True, False]:
                 function(
                     dataset=self.dataset,
@@ -218,7 +218,7 @@ class Product_recommendation():
             
             output_list.append(output_dict)
         
-        output_path = "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json"
+        output_path = "src/data/replaced_confused_recommendation.json"
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(output_list, f, indent=4, ensure_ascii=False)
         

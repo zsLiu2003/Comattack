@@ -90,12 +90,12 @@ def API_inference():
 
 if __name__ == "__main__":
     
-    dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
+    dataset = load_dataset("json", data_files="src/data/data.json", split="train")
     dataset = get_common_compression_dataset(dataset=dataset)
 
     Qwen3_inference(
-        model_name="/opt/model/Qwen3-32B",
+        model_name="models/Qwen3-32B",
         dataset=dataset,
         device="auto",
-        output_path="/home/lzs/Comattack/src/data/data_best_Qwen3.json"
+        output_path="src/data/data_best_Qwen3.json"
     )

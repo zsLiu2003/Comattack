@@ -51,7 +51,7 @@ def get_PPL(model, tokenizer, origin_text, compressed_text):
     return ppl_per_token, ppl_mean_origin, compressed_ppl, ppl_mean_compressed
 
 device = "cuda:2" if torch.cuda.is_available() else "cpu"
-model_name = "/opt/lzs/models/gpt2-dolly"
+model_name = "models/gpt2-dolly"
 compressor = PromptCompressor(
     model_name=model_name,
     device_map=device,

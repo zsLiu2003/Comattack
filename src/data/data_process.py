@@ -132,7 +132,7 @@ def get_integrate_keywords_dataset(keywords_dataset_path1, keywords_dataset_path
     # keywords2 = load_dataset("json", data_files=keywords_dataset_path2, split="train")
 
     # merged_dataset = concatenate_datasets([keywords1, keywords2])
-    output_json_path = "/home/lzs/Comattack/src/data/new_keywords_Qwen3.json"
+    output_json_path = "src/data/new_keywords_Qwen3.json"
     # merged_dataset.to_json(output_json_path, force_ascii=False, indent=4)
 
     with open(keywords_dataset_path1, 'r', encoding='utf-8') as f1:
@@ -214,7 +214,7 @@ def get_confused_recommendation_dataset(dataset_path: str):
         
         output_list.append(output_dict)
     
-    output_path = "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json"
+    output_path = "src/data/replaced_confused_recommendation.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output_list, f, indent=4, ensure_ascii=False)
 
@@ -289,7 +289,7 @@ def QA_dataset_process(dataset1_path, dataset2_path):
 
         output_list.append(output_dict)
 
-    output_path = "/home/lzs/Comattack/src/data/QA_Stealth.json"
+    output_path = "src/data/QA_Stealth.json"
     
     with open(output_path, "w", encoding="utf-8") as file:
         json.dump(output_list, file, indent=4)
@@ -297,23 +297,23 @@ def QA_dataset_process(dataset1_path, dataset2_path):
 if __name__ == "__main__":
 
     # get_integrate_keywords_dataset(
-    #     keywords_dataset_path1="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
-    #     keywords_dataset_path2="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_2.json"
+    #     keywords_dataset_path1="src/data/revised_keywords_with_Qwen3_1.json",
+    #     keywords_dataset_path2="src/data/revised_keywords_with_Qwen3_2.json"
     # )
-    # output_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_3.json"
-    # dataset1_path = "/home/lzs/Comattack/src/data/data.json"
-    # dataset_path = "/home/lzs/Comattack/src/data/new_keywords_decrease_2.json"
+    # output_path = "src/data/new_keywords_decrease_3.json"
+    # dataset1_path = "src/data/data.json"
+    # dataset_path = "src/data/new_keywords_decrease_2.json"
     # # process_keyword_dataset(dataset_path=dataset_path, output_path=output_path)
     # fill_missing_keywords(
     #     dataset1_path=dataset1_path,
     #     dataset2_path=dataset_path,
     #     output_path=output_path
     # )
-    # get_keyword_dataset(dataset_path="/home/lzs/Comattack/src/data/data.json"
-    # get_confused_recommendation_dataset(dataset_path="/home/lzs/Comattack/src/data/confused_recommendation.json")
+    # get_keyword_dataset(dataset_path="src/data/data.json"
+    # get_confused_recommendation_dataset(dataset_path="src/data/confused_recommendation.json")
     
-    dataset1_path = "/home/lzs/Comattack/src/data/QA_original_results2.json"
-    dataset2_path = "/home/lzs/Comattack/src/data/QA_optimized_results.json"
+    dataset1_path = "src/data/QA_original_results2.json"
+    dataset2_path = "src/data/QA_optimized_results.json"
 
     QA_dataset_process(
         dataset1_path=dataset1_path,

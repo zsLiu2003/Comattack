@@ -70,37 +70,6 @@ def compress_text(examples, llmlingua_model=None, tokenizer=None):
         target_token=le[i]
     ) for i in range(len(le)) ]
 
-
-
-# def get_PPL(model, tokenizer, original_text, compressed_text, device):
-    
-#     activate = 
-#     inputs = tokenizer(original_text, return_tensors='pt').to(device)
-    
-#     input_ids = inputs["input_ids"]
-#     with torch.no_grad():
-#         output = model(input_ids)
-
-#     # if level == "sentence":
-#     #     loss = output.loss
-#     #     return  torch.exp(loss).item()
-#     # else:
-#     logits = output.logits
-#     shift_logits = logits[...,:-1,:].contiguous()
-#     shift_labels = input_ids[...,1:].contiguous()
-#     loss_function = CrossEntropyLoss(reduction='none', ignore_index=tokenizer.pad_token_id)
-#     loss = loss_function(
-#         shift_logits.view(-1,shift_logits.size(-1)),
-#         shift_labels.view(-1),
-#     )
-#     # calculate the ppl of every single token
-#     ppl_per_token = torch.exp(loss).cpu().numpy()
-#     #get the real token list for view
-#     tokens = tokenizer.convert_ids_to_tokens(input_ids[0][1:].tolist())
-#     sentence_ppl = ppl_per_token.mean().item()
-
-#     return tokens, ppl_per_token.tolist(), sentence_ppl 
-
 def get_topk(ppl_list, input_ids, top_k, tokenizer):
 
     top_k = min(top_k, len(ppl_list))
@@ -232,19 +201,19 @@ def get_parser():
     parser.add_argument(
         "--compression_model_name",
         type=str,
-        default="/opt/lzs/models/gpt2-dolly",
+        default="models/gpt2-dolly",
         help="name of compression_model"
     )
     parser.add_argument(
         "--large_model_name",
         type=str,
-        default="/opt/model/models/Llama-2-7b-chat-hf",
+        default="models/Llama-2-7b-chat-hf",
         help="name of Large Model",
     )
     parser.add_argument(
         "--data_path",
         type=str,
-        default="/opt/lzs/dataset/llmbar_train_1.csv",
+        default="models/dataset/llmbar_train_1.csv",
         help="path of the dataset",
     )
     

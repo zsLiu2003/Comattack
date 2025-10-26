@@ -148,7 +148,6 @@ class EditPrompt():
                 ppl = torch.exp(torch.tensor(mean_nll)).item()
                 word_ppls.append((word, ppl))
             else:
-            # 对于第一个词或无法计算的词，PPL可以设为0或忽略
                 word_ppls.append((word, 0.0))
 
         word_ppls.sort(key=lambda x: x[1], reverse=True)
@@ -156,122 +155,7 @@ class EditPrompt():
         if flag:
             return word_ppls[:top_k]
         return word_ppls[-top_k:]
-    
-        # words_token_list = []
-        # for word in original_words:
-        #     token_list = []
-        #     token_list = tokenizer(word, return_tensors="pt",return_offsets_mapping=True)
-        #     input_ids = encodings.input_ids.to(device)
-        #     token_list = [tokenizer.decode(token_id) for token_id in input_ids[0]]
-        #     words_token_list.append(token_list)
-        
-        
-        # token_index = 0
-        # word_index = 0
-        # token_index_list = []
-        # while(True):
-        #     token = tokens[token_index]
-        #     tokens = words_token_list[word_index]
-        #     if token == tokens[0]:
-        #         token_index = 
-            
 
-        # words_spans = []
-        # start_char = 0
-        
-        # for word in original_words:
-        #     start_char = sentence.find(word, start_char)
-        #     end_char = start_char + len(word)
-        #     words_spans.append((start_char, end_char))
-        #     start_char = end_char
-
-        # word_to_token_indices_map = {}
-        # for token_idx, (token_start_char, token_end_char) in enumerate(offset_mapping):
-        #     if token_start_char == token_end_char: continue
-            
-        #     for word_idx, (word_start_char, word_end_char) in enumerate(words_spans):
-        #         if token_start_char >= word_start_char and token_end_char <= word_end_char:
-        #             word_key = (original_words[word_idx], word_idx)
-        #             if word_key not in word_to_token_indices_map:
-        #                 word_to_token_indices_map[word_key] = []
-        #             word_to_token_indices_map[word_key].append(token_idx)
-        #             break
-        # for i, word in enumerate(original_words):
-        #     key = (word, i)
-        #     tokens = [full_token_list[j] for j in word_to_token_indices_map.get(key, [])]
-       
-        # final_word_ppls = []
-
-        # # test
-        # for i, token in enumerate(full_token_list):
-        #     ppl = per_token_ppl[i]
-        #     if ppl is not None:
-        #         print(f"  > Token '{token}' (位置 {i}) -> PPL: {ppl:.2f}")
-        #     else:
-        #         print(f"  > Token '{token}' (位置 {i}) -> PPL: 未定义")
-
-        # for idx, word in enumerate(original_words):
-        #     word_key = (word, idx)
-        #     print(word_to_token_indices_map)
-        #     indices_of_tokens_for_word = word_to_token_indices_map.get(word_key, [])
-        #     print(indices_of_tokens_for_word)
-        #     ppls_for_this_word = [per_token_ppl[i] for i in indices_of_tokens_for_word if per_token_ppl[i] is not None]
-        #     print(ppls_for_this_word)
-        #     if ppls_for_this_word:
-        #         average_ppl = sum(ppls_for_this_word) / len(ppls_for_this_word)
-        #         final_word_ppls.append((word, average_ppl))
-        #         print(f"  > 单词 '{word}': 平均PPL = {average_ppl:.2f} (来自 {len(ppls_for_this_word)} 个tokens)")
-        #     else:
-        #         # 如果所有token都没有可计算的PPL（通常只发生在第一个词）
-        #         final_word_ppls.append((word, None))
-        #         print(f"  > 单词 '{word}': 平均PPL = 未定义")
-        
-        # print(final_word_ppls)
-        # Group subword tokens back into whole words and calculate their average PPL
-        # word_ppls = []
-        # current_word = ""
-        # current_word_losses = []
-        # original_words = re.findall(r"[\w']+|[.,!?;]", sentence)
-        # word_to_tokens_indices = {}
-        # current_word_idx = 0
-        # word_spans = []
-        # start = 0
-        # # for word in original_words:
-        #     # find the start index in the sentence
-        #     start = sentence.find(word, start)
-        #     end = start + len(word)
-        #     word_spans.append((start, end))
-        #     start = end
-
-        # # Start from the second token since the first token has no loss/PPL
-        # for i, token_id in enumerate(input_ids[0][1:]):
-        #     token_str = tokenizer.decode(token_id)
-        #     print(f"---------------{token_str}------------------")
-        #     # GPT-2 tokenizer uses 'Ġ' to mark the start of a new word
-            
-        #         if current_word:
-        #             word_ppls.append((current_word, np.mean(current_word_losses)))
-        #         current_word = token_str.lstrip('Ġ')
-        #         current_word_losses = [per_token_ppl[i].item()]
-        #     else:
-        #         current_word += token_str
-        #         current_word_losses.append(per_token_ppl[i].item())
-        
-        # Add the last word
-        # if current_word:
-        #     word_ppls.append((current_word, np.mean(current_word_losses)))
-
-        # # Sort words by their PPL in descending order and return the top N
-        # word_ppls.sort(key=lambda x: x[1], reverse=True)
-        
-        # if flag:
-        #     print("-----------------------------find high ppl tokens----------------------------------------")
-        #     print(word_ppls[:top_k])
-        #     return word_ppls[:top_k]
-            
-        
-        # print(word_ppls[-top_k:])
-        # return word_ppls[-top_k:]
 
     def optimize_with_synonyms(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, sentence: str, target_word: str, flag: bool):
         """
@@ -473,24 +357,6 @@ class EditPrompt():
                 best_sentence = candidate_sentence
             
         return best_sentence,best_ppl
-
-
-    # def replace_low_PPL_tokens_in_demo(self):
-    #     """
-    #     Replace the tokens with lower PPL in demo with some synonyms to improve the ppl of the whole demo.
-    #     """
-    #     self.load_dataset()
-    #     model = GPT2LMHeadModel.from_pretrained(self.model_name, device_map='auto')
-    #     tokenizer = GPT2TokenizerFast.from_pretrained(self.model_name)
-    #     model.eval()
-    #     device = model.devices
-    #     data = load_dataset("json", data_files=self.high_ppl_tokens, split="train")
-
-    # def get_high_PPL_tokens(self):
-        # """"""
-    
-    # def get_low_PPL_tokens(self):
-        # """"""
 
 
     def decrease_ppl_in_demo(self, model: None, tokenizer: None, phrase_model: None, phrase_tokenizer: None, flag: bool, top_k: int, output_path: str, strategy: str):

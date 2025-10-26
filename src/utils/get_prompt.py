@@ -3,7 +3,7 @@
 # get_target_prompt is to generate the prompt target to get the real recommendation result of the LLM
 def get_target_prompt():
 
-    prompt_path = "/home/lzs/compressionattack/experiments/src/data/get_target_prompt.txt"
+    prompt_path = "./src/data/get_target_prompt.txt"
     with open(prompt_path, "r", encoding="utf-8") as file:
         content = file.read()
         print(f"The prompt has been read successfully!")
@@ -12,7 +12,7 @@ def get_target_prompt():
 
 def get_pure_target_prompt():
 
-    prompt_path = "/home/lzs/Comattack/src/data/get_pure_target_prompt.txt"
+    prompt_path = "src/data/get_pure_target_prompt.txt"
     with open(prompt_path, "r", encoding="utf-8") as file:
         content = file.read()
         print(f"The pure target prompt has been read successfully!")
@@ -21,7 +21,7 @@ def get_pure_target_prompt():
     
 def get_distill_prompt():
     
-    data_path = "/home/lzs/compressionattack/experiments/src/data/distill_data_prompt.txt"
+    data_path = "./src/data/distill_data_prompt.txt"
     with open(data_path, 'r', encoding="utf-8") as file:
         content = file.read()
         print(f"The prompt has been read successfully!")
@@ -30,7 +30,7 @@ def get_distill_prompt():
 
 def get_keywords_prompt():
     
-    prompt_path = "/home/lzs/compressionattack/experiments/src/data/get_keywords_prompt.txt"
+    prompt_path = "./src/data/get_keywords_prompt.txt"
     with open(prompt_path, "r", encoding="utf-8") as file:
         content = file.read()
 
@@ -41,7 +41,7 @@ def get_keywords_prompt():
 # the second is to decrease the quality and the probality of recommendation
 def get_edit_keywords_increase_prompt():
 
-    prompt_path = "/home/lzs/Comattack/src/data/edit_keywords_soft_increase.txt"
+    prompt_path = "src/data/edit_keywords_soft_increase.txt"
     with open(prompt_path, "r", encoding="utf-8") as file:
         content = file.read()
 
@@ -49,7 +49,7 @@ def get_edit_keywords_increase_prompt():
 
 def get_edit_keywords_decrease_prompt():
 
-    prompt_path = "/home/lzs/Comattack/src/data/edit_keywords_soft_decrease.txt"
+    prompt_path = "src/data/edit_keywords_soft_decrease.txt"
     with open(prompt_path, 'r', encoding="utf-8") as file:
         content = file.read()
 
@@ -58,7 +58,7 @@ def get_edit_keywords_decrease_prompt():
 
 def get_tool_keywords_prompt():
 
-    prompt_path = "/home/lzs/Comattack/src/data/get_tool_selection_keywords.txt"
+    prompt_path = "src/data/get_tool_selection_keywords.txt"
     with open(prompt_path, "r", encoding="utf-8") as file:
         content = file.read()
     
@@ -106,7 +106,7 @@ def get_llama2_template():
 
 def get_QA_prompt():
 
-    prompt_path = "/home/lzs/Comattack/src/data/QA_prompt.txt"
+    prompt_path = "src/data/QA_prompt.txt"
     
     with open(prompt_path, "r", encoding="utf-8") as file:
         content = file.read()
@@ -121,7 +121,7 @@ def get_tool_selection_prompt():
 
 def get_defense_prompt():
 
-    prompt_path = "/home/lzs/Comattack/src/data/LLM_detection.txt"
+    prompt_path = "src/data/LLM_detection.txt"
     with open(prompt_path, "r", encoding="utf=8") as file:
         content = file.read()
 

@@ -10,20 +10,20 @@ def get_argparse():
     parser.add_argument(
         "--model_path",
         type=str,
-        default="/opt/model/Qwen3-32B",
+        default="models/Qwen3-32B",
         help="Path/name of the Large Model",
     )
 
     parser.add_argument(
         "--compression_model_path",
         type=str,
-        default="/opt/model/models/gpt2-dolly",
+        default="models/gpt2-dolly",
         help="Path/name of the compression model"
     )
     parser.add_argument(
         "--dataset_path",
         type=str,
-        default="/home/lzs/Comattack/src/data/data.json",
+        default="src/data/data.json",
     )
 
     return parser.parse_args()
@@ -39,7 +39,7 @@ def main():
         compression_model_path=args.compression_model_path,
         dataset=dataset,
         top_k=20,
-        output_path="/home/lzs/Comattack/src/data",
+        output_path="src/data",
         target_token=20,
     )
 

@@ -29,7 +29,7 @@ def get_ppl(text: str, model, tokenizer) -> float:
 
 if __name__ == "__main__":
     # Load model and tokenizer from the first script
-    model_name = "/opt/model/models/gpt2-large"
+    model_name = "models/gpt2-large"
     model = GPT2LMHeadModel.from_pretrained(model_name).eval()
     tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
@@ -39,12 +39,12 @@ if __name__ == "__main__":
 
     # Load SQuAD dataset
     raw_dataset = load_dataset("parquet", data_files={
-        "train": "/home/zzx/Comattack_dataset/squad/train-00000-of-00001.parquet",
-        "validation": "/home/zzx/Comattack_dataset/squad/validation-00000-of-00001.parquet"
+        "train": "./data/squad/train-00000-of-00001.parquet",
+        "validation": "./data/squad/validation-00000-of-00001.parquet"
     })
     # val_dataset = SquadDataset(data=raw_dataset, split="validation")
     # val_loader = DataLoader(val_dataset, batch_size=1)
-    # val_loader = load_dataset("json", data_files="/home/lzs/Comattack/src/data/QA_keywords_edit.json", split="train")
+    # val_loader = load_dataset("json", data_files="src/data/QA_keywords_edit.json", split="train")
     # Calculate perplexity for each context
     # contexts = []
     # for i, sample in enumerate(val_loader):
@@ -74,12 +74,12 @@ if __name__ == "__main__":
     original_ppls = []
     replaced_ppls = []
     dataset_path_list = [
-        "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_adjective_increase.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_connectors_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_prep_context_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_increase.json",
+        "src/data/replaced_confused_recommendation.json",
+        "src/data/replaced_ppl_adjective_increase.json",
+        "src/data/replaced_ppl_connectors_decrease.json",
+        "src/data/replaced_ppl_prep_context_decrease.json",
+        "src/data/replaced_ppl_synonym_decrease.json",
+        "src/data/replaced_ppl_synonym_increase.json",
     ]
     for dataset_path in dataset_path_list:
         val_loader = load_dataset("json", data_files=dataset_path, split="train")

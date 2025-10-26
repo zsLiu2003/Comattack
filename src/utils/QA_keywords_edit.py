@@ -69,9 +69,9 @@ def edit_QA_keywords(
 
 if __name__ == "__main__":
 
-    model_name = "/opt/model/models/gpt2-dolly"
-    dataset_path = "/home/zzx/Comattack_dataset/squad/validation-00000-of-00001.parquet"
-    output_path = "/home/lzs/Comattack/src/data"
+    model_name = "models/gpt2-dolly"
+    dataset_path = "squad/validation-00000-of-00001.parquet"
+    output_path = "src/data"
 
     edit_QA_keywords(
         model_name=model_name,

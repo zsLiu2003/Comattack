@@ -22,21 +22,21 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "4"
 #     parser.add_argument(
 #         "--model_path",
 #         type=str,
-#         default="/opt/model/models/Qwen3-32B",
+#         default="models/Qwen3-32B",
 #         help="path of the LLM"
 #     )
 
 #     parser.add_argument(
 #         "--data_path",
 #         type=str,
-#         default="/home/lzs/compressionattack/experiments/src/data/data.json",
+#         default="./src/data/data.json",
 #         help="path of the dataset",
 #     )
     
 #     parser.add_argument(
 #         "--compression_model_path",
 #         type=str,
-#         default="/opt/model/models/gpt2-dolly",
+#         default="models/gpt2-dolly",
 #         help="path of compression model",
 #     )
 
@@ -50,9 +50,9 @@ from llmlingua import PromptCompressor
 def get_best_output(
         model_path,
         compression_model_path,
-        data_path="/home/lzs/Comattack/src/data/data.json",
+        data_path="src/data/data.json",
         other_dataset=None, 
-        data_with_target_path="/home/lzs/compressionattack/experiments/src/data/data_with_target.json"
+        data_with_target_path="./src/data/data_with_target.json"
         ):
     
     from src.utils.get_prompt import get_target_prompt
@@ -84,12 +84,8 @@ def get_best_output(
     #     device_map="cuda:6"
     # )
     tokenizer = AutoTokenizer.from_pretrained(model_path)
-    # load Qwen3-32B with two L40s GPUs
     if "Qwen" in model_path:
-        # max_memory = {
-        #     0: "45GB",
-        #     1: "45GB",
-        # }
+
         with init_empty_weights():
             config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
             model = AutoModelForCausalLM.from_config(config)

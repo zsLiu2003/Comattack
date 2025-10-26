@@ -6,9 +6,9 @@ from tqdm import tqdm
 import sys
 
 def main(dataset_path):
-    compression_model_name = "/opt/model/models/gpt2-dolly"
+    compression_model_name = "models/gpt2-dolly"
     
-    question_dataset_path = "/home/lzs/Comattack/src/data/data.json"
+    question_dataset_path = "src/data/data.json"
     
     # for dataset_path in tqdm(dataset_path_list):
     print(f"-----------------------Processing dataset: {dataset_path}------------------------")
@@ -23,6 +23,6 @@ def main(dataset_path):
 
 if __name__ == "__main__":
     torch.cuda.empty_cache()
-    dataset_path = sys.argv[1] if len(sys.argv) > 1 else "/home/lzs/Comattack/src/data/increase_demo.json"
+    dataset_path = sys.argv[1] if len(sys.argv) > 1 else "src/data/increase_demo.json"
     main(dataset_path=dataset_path)
 

@@ -14,5 +14,5 @@ def get_QA_results(dataset_path):
     return count, count / len(dataset)
 
 if __name__ == "__main__":
-    dataset_path = "/home/lzs/Comattack/src/data/QA_optimized_results2.json"
+    dataset_path = "src/data/QA_optimized_results2.json"
     get_QA_results(dataset_path)

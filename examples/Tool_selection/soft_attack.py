@@ -1,6 +1,6 @@
 from unittest import result
 import sys
-sys.path.append('/home/zzx')
+# sys.path.append('/path/to/your/directory')  # Add your path here if needed
 # from Comattack.open_source_code.icae_recommend_keyword_dataset import ICAEEditRecommendationAttacker
 import torch
 # from Comattack.open_source_code.modeling_icae_multi_span import ICAE, ModelArguments, DataArguments, TrainingArguments
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     attack_mode = training_args.attack_mode  # 'improve_target' or 'degrade_best'
     print(f"[Attack Mode]: {attack_mode}")
     
-    tools_and_descriptions = load_tools_from_json('/home/zzx/Comattack_dataset/Feature_Extraction_tool_short.json')
+    tools_and_descriptions = load_tools_from_json('./data/Feature_Extraction_tool_short.json')
     tools = attack_tool_description_with_icae(
         model=model,
         tools=tools_and_descriptions,

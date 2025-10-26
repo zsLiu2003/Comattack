@@ -6,30 +6,30 @@ if __name__ == "__main__":
     
 
     # name of the ppl model and phrase model
-    ppl_model_name = "/opt/model/models/gpt2-dolly"
-    phrase_model_name = "/opt/model/Qwen3-32B"
+    ppl_model_name = "models/gpt2-dolly"
+    phrase_model_name = "models/Qwen3-32B"
 
 
     # get the demo dataset
-    dataset_path = "/home/lzs/Comattack/src/data/data.json"
+    dataset_path = "src/data/data.json"
     dataset = load_dataset("json", data_files=dataset_path, split="train")
     dataset = get_pure_demo_dataset(dataset=dataset)
 
     # get the keywords dataset
-    keywords_dataset_path = "/home/lzs/Comattack/src/data/new_keywords_Qwen3.json"
+    keywords_dataset_path = "src/data/new_keywords_Qwen3.json"
     # keywords_dataset = get_keyword_dataset(
     #     dataset_path=keywords_dataset_path,
     # )
     # keywords_dataset = load_dataset("json", data_files=keywords_dataset_path, split="train")
 
     # get target and best demo dataset 
-    target_demo_path = "/home/lzs/Comattack/src/data/data_best_Qwen3.json"
+    target_demo_path = "src/data/data_best_Qwen3.json"
     # target_demo_dataset = get_target_demo_dataset(
     #     dataset_path=target_demo_path,
     # )
 
     # output path
-    output_path = "/home/lzs/Comattack/src/data"
+    output_path = "src/data"
 
     # edit the demo
     Edit = EditPrompt(

@@ -108,11 +108,11 @@ def QA_test_result(context_dataset_path, question_dataset_path, compressed_model
 
 if __name__ == "__main__":
 
-    question_dataset_path = "/home/zzx/Comattack_dataset/squad/validation-00000-of-00001.parquet"
-    context_dataset_path = "/home/lzs/Comattack/src/data/QA_keywords_edit.json"
-    compressed_model_name = "/opt/model/models/gpt2-dolly"
-    large_model_name = "/opt/model/Qwen3-32B"
-    output_path = "/home/lzs/Comattack/src/data"
+    question_dataset_path = "squad/validation-00000-of-00001.parquet"
+    context_dataset_path = "src/data/QA_keywords_edit.json"
+    compressed_model_name = "models/gpt2-dolly"
+    large_model_name = "models/Qwen3-32B"
+    output_path = "src/data"
 
     keys = ["original","optimized"]
     

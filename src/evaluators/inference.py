@@ -111,7 +111,7 @@ def dataset_process(dataset, question_dataset, compression_model, flag, compress
 
 def qwen3_inference(dataset, question_dataset, compression_model, flag="increase", output_path="", compressed=True, common=False):
     """"""
-    model_name =  "/opt/model/Qwen3-32B"
+    model_name =  "models/Qwen3-32B"
     model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype="auto", device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     # selection_function = None
@@ -203,7 +203,7 @@ def llama3_inference(dataset, question_dataset, compression_model, flag="increas
     Llama3 as the large model to inference.
     """
 
-    model_name = "/opt/model/models/Llama-3-8B-Instruct"
+    model_name = "models/Llama-3-8B-Instruct"
     pipeline = transformers.pipeline(
         "text-generation",
         model=model_name,
@@ -261,7 +261,7 @@ def llama2_inference(dataset, question_dataset, compression_model, flag="increas
     LLaMA-2 as the large model to inference.
     """
 
-    model_name = "/opt/model/models/Llama-2-7b-chat-hf"  # 修改为你的LLaMA-2模型路径
+    model_name = "models/Llama-2-7b-chat-hf" 
     
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -317,7 +317,7 @@ def phi4_inference(dataset, question_dataset, compression_model, flag="increase"
     Phi-4 of Microsoft as the large model to inference
     """
 
-    model_name = "/opt/model/models/phi-4"
+    model_name = "models/phi-4"
     pipeline = transformers.pipeline(
         "text-generation",
         model=model_name,
@@ -378,7 +378,7 @@ def mistral2_inference(dataset, question_dataset, compression_model, flag="incre
     
     # tokens = tokenizer.encode_chat_completion(completion_request).tokens
 
-    model_name = "/opt/model/models/Mistral-7B-Instruct-v0.2"
+    model_name = "models/Mistral-7B-Instruct-v0.2"
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
     )

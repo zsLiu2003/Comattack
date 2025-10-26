@@ -1,11 +1,11 @@
 from llmlingua import PromptCompressor
 from datasets import load_dataset
 # from src.utils.
-dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
+dataset = load_dataset("json", data_files="src/data/data.json", split="train")
 
 print(dataset)
 
-model_name = "/opt/model/models/gpt2-dolly"
+model_name = "models/gpt2-dolly"
 device="cuda:0"
 compression_model = PromptCompressor(
         model_name=model_name,

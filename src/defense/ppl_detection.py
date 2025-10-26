@@ -3,7 +3,7 @@ import tiktoken
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 # Load GPT-2 model and tokenizer
-model_name = "/opt/model/models/gpt2-large"
+model_name = "models/gpt2-large"
 model = GPT2LMHeadModel.from_pretrained(model_name).eval()
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 

@@ -50,18 +50,18 @@ def llm_inference(model=None, tokenizer=None, text=str):
 if __name__ == "__main__":
 
     dataset_path_list = [
-        # "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json",
-        # "/home/lzs/Comattack/src/data/replaced_ppl_adjective_increase.json",
-        # "/home/lzs/Comattack/src/data/replaced_ppl_connectors_decrease.json",
-        # "/home/lzs/Comattack/src/data/replaced_ppl_prep_context_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_increase.json",
+        # "src/data/replaced_confused_recommendation.json",
+        # "src/data/replaced_ppl_adjective_increase.json",
+        # "src/data/replaced_ppl_connectors_decrease.json",
+        # "src/data/replaced_ppl_prep_context_decrease.json",
+        "src/data/replaced_ppl_synonym_decrease.json",
+        "src/data/replaced_ppl_synonym_increase.json",
     ]
-    model_name = "/opt/model/Qwen3-32B"
+    model_name = "models/Qwen3-32B"
     model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    QA_dataset_path = "/home/lzs/Comattack/src/data/QA_keywords_edit.json"
+    QA_dataset_path = "src/data/QA_keywords_edit.json"
 
 
     # count = 0

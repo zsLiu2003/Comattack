@@ -21,20 +21,20 @@ import os
 #     parser.add_argument(
 #         "--compression_model_path",
 #         type=str,
-#         default="/opt/lzs/models/gpt2-dolly",
+#         default="models/gpt2-dolly",
 #         help="path of model to calculte the PPL of every token"
 #     )
 
 #     parser.add_argument(
 #         "--model_path",
 #         type=str,
-#         default="/opt/model/models/Llama-2-7b-chat-hf",
+#         default="models/Llama-2-7b-chat-hf",
 #     )
 
 #     parser.add_argument(
 #         "--dataset_path",
 #         type=str,
-#         default="/home/lzs/compressionattack/experiments/src/data/data.json",
+#         default="./src/data/data.json",
 #     )
 
 #     parser.add_argument(
@@ -64,7 +64,7 @@ def get_mean_PPL(
     compression_model_path: str,
     dataset: Dataset,
     top_k: int,
-    output_path: str="/home/lzs/Comattack/src/data",
+    output_path: str="src/data",
     target_token: int=50,
 ):
     if "gpt2" in compression_model_path:
@@ -117,7 +117,7 @@ def get_ppl(
     compression_model_path: str,
     dataset: Dataset,
     top_k: int,
-    output_path: str="/home/lzs/Comattack/src/data",
+    output_path: str="src/data",
     target_token: int=50,
 ):
     
@@ -315,21 +315,21 @@ if __name__ == "__main__":
     import sys
     compression_model_name = sys.argv[1]
 
-    dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
+    dataset = load_dataset("json", data_files="src/data/data.json", split="train")
 
     # get_ppl(
-    #     model_path="/opt/model/Qwen3-32B",
+    #     model_path="models/Qwen3-32B",
     #     compression_model_path=str(compression_model_name),
     #     dataset=dataset,
     #     top_k=20,
-    #     output_path="/home/lzs/Comattack/src/data",
+    #     output_path="src/data",
     #     target_token=100,
     # )
     get_mean_PPL(
-        model_path="/opt/model/Qwen3-32B",
+        model_path="models/Qwen3-32B",
         compression_model_path=str(compression_model_name),
         dataset=dataset,
         top_k=20,
-        output_path="/home/lzs/Comattack/src/data",
+        output_path="src/data",
         target_token=100,
     )

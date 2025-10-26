@@ -2,21 +2,16 @@ import torch
 import Levenshtein  # pip install python-Levenshtein
 from sentence_transformers import SentenceTransformer, util
 
-# 加载本地 Sentence-BERT 模型
-sentence_model = SentenceTransformer('/opt/model/models/all-mpnet-base-v2')
+sentence_model = SentenceTransformer('models/all-mpnet-base-v2')
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 def compute_normalized_edit_similarity(s_adv: str, s_orig: str) -> float:
-    """
-    计算字符级相似度: 1 - EditDist(S̃, S) / max(len(S̃), len(S))
-    """
     edit_dist = Levenshtein.distance(s_adv, s_orig)
     max_len = max(len(s_adv), len(s_orig))
     return 1 - (edit_dist / max_len) if max_len > 0 else 1.0
 
 def compute_semantic_cosine_similarity(s_adv: str, s_orig: str) -> float:
     """
-    计算语义余弦相似度
     """
     emb_adv = sentence_model.encode(s_adv, convert_to_tensor=True, device=device)
     emb_orig = sentence_model.encode(s_orig, convert_to_tensor=True, device=device)
@@ -24,9 +19,6 @@ def compute_semantic_cosine_similarity(s_adv: str, s_orig: str) -> float:
 
 def compute_stealth_score(s_adv: str, s_orig: str, lambda_weight: float = 0.5) -> tuple:
     """
-    计算综合 stealth 分数：
-    Stealth(S̃, S) = λ * (1 - EditDist/MaxLen) + (1 - λ) * CosineSim
-    返回 Stealth, CharSim, SemanticSim
     """
     char_sim = compute_normalized_edit_similarity(s_adv, s_orig)
     semantic_sim = compute_semantic_cosine_similarity(s_adv, s_orig)
@@ -40,13 +32,13 @@ from tqdm import tqdm
 if __name__ == "__main__":
     
     dataset_path_list = [
-        # "/home/lzs/Comattack/src/data/QA_Stealth.json",
-        "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_adjective_increase.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_connectors_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_prep_context_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_increase.json",
+        # "src/data/QA_Stealth.json",
+        "src/data/replaced_confused_recommendation.json",
+        "src/data/replaced_ppl_adjective_increase.json",
+        "src/data/replaced_ppl_connectors_decrease.json",
+        "src/data/replaced_ppl_prep_context_decrease.json",
+        "src/data/replaced_ppl_synonym_decrease.json",
+        "src/data/replaced_ppl_synonym_increase.json",
     ]
     
     for dataset_path in dataset_path_list:

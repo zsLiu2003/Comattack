@@ -15,7 +15,7 @@ def stealth_score(original: str, adversarial: str, lambda_weight: float = 0.5) -
         Composite similarity score (higher = more stealthy)
     """
     # ===== Sentence-level similarity =====
-    sentence_model = SentenceTransformer('/opt/model/models/all-mpnet-base-v2')
+    sentence_model = SentenceTransformer('models/all-mpnet-base-v2')
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     emb1 = sentence_model.encode(original, convert_to_tensor=True, device=device)
     emb2 = sentence_model.encode(adversarial, convert_to_tensor=True, device=device)
@@ -41,13 +41,13 @@ from tqdm import tqdm
 if __name__ == "__main__":
     
     dataset_path_list = [
-        # "/home/lzs/Comattack/src/data/QA_Stealth.json",
-        "/home/lzs/Comattack/src/data/replaced_confused_recommendation.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_adjective_increase.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_connectors_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_prep_context_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_decrease.json",
-        "/home/lzs/Comattack/src/data/replaced_ppl_synonym_increase.json",
+        # "src/data/QA_Stealth.json",
+        "src/data/replaced_confused_recommendation.json",
+        "src/data/replaced_ppl_adjective_increase.json",
+        "src/data/replaced_ppl_connectors_decrease.json",
+        "src/data/replaced_ppl_prep_context_decrease.json",
+        "src/data/replaced_ppl_synonym_decrease.json",
+        "src/data/replaced_ppl_synonym_increase.json",
     ]
 
     for dataset_path in dataset_path_list:

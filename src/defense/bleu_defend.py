@@ -7,7 +7,7 @@ import numpy as np
 import math
 
 class AttackDetector:
-    def __init__(self, device='cuda' if torch.cuda.is_available() else 'cpu', lt_path='/home/zzx/LanguageTool'):
+    def __init__(self, device='cuda' if torch.cuda.is_available() else 'cpu', lt_path='./LanguageTool'):
         # Load GPT-2 for PPL
         self.tokenizer = GPT2TokenizerFast.from_pretrained("gpt2")
         self.model = GPT2LMHeadModel.from_pretrained("gpt2").to(device)
@@ -71,7 +71,7 @@ class AttackDetector:
         return results
     
 if __name__ == "__main__":
-    lt_path = '/home/zzx/LanguageTool'
+    lt_path = './LanguageTool'
     detector = AttackDetector()
     sample_texts = [
         "CBS broadcast Super Bowl 50 in the U.S., and charged an average of $5 million for a 30-second commercial during the game. The Super Bowl 50 halftime show was headlined by the British rock groupTo⁣ with special guest performers Beyoncé and Errorf Mars, who headlined the Super Bowl XLVII and Super Bowl XLVIII halftime shows, respectively. It was the third-most watched U.S. broadcast ever.",

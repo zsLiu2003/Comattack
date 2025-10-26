@@ -19,14 +19,14 @@ import re
 #     parser.add_argument(
 #         "--model_name",
 #         type=str,
-#         default="/opt/model/Qwen3-32B",
+#         default="models/Qwen3-32B",
 #         help="name of extraction model",
 #     )
 
 #     parser.add_argument(
 #         "--data_path",
 #         type=str,
-#         default="/home/lzs/compressionattack/experiments/src/data/data.json",
+#         default="./src/data/data.json",
 #         help="path of dataset with target"
 #     )
 
@@ -38,7 +38,7 @@ import re
     
 #     # parser.add_argument(
 #     #     "--prompt_path",
-#     #     default="/home/lzs/compressionattack/experiments/src/data/get_keywords_prompt.txt",
+#     #     default="./src/data/get_keywords_prompt.txt",
 #     #     type=str,
 #     #     help="path of the prompt"
 #     # )
@@ -126,12 +126,12 @@ def get_keywords(
 
 if __name__ == "__main__":
 
-    dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
+    dataset = load_dataset("json", data_files="src/data/data.json", split="train")
     dataset = get_common_compression_dataset(dataset=dataset)
     dataset = dataset.select(range(50))
     get_keywords(
-        model_path="/opt/model/Qwen3-32B",
+        model_path="models/Qwen3-32B",
         dataset=dataset,
-        output_path="/home/lzs/Comattack/src/data/revised_keywords_with_Qwen3_1.json",
+        output_path="src/data/revised_keywords_with_Qwen3_1.json",
         device="auto",
     )

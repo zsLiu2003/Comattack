@@ -1,29 +1,3 @@
-# # this code is a easy try to the attack
-
-# from transformers import AutoModelForCausalLM 
-# from datasets import load_dataset
-# # dataset_path = "/opt/lzs/dataset/llmbar_train_1.csv"
-
-# # dataset = load_dataset("csv",data_files=dataset_path, split="train")
-# # # print(type(dataset[0]))
-# # for i, item in enumerate(dataset[0]):
-# #     print(i)
-# #     print()
-# # print(type(dataset))
-# # print(dataset[0])
-
-
-
-
-# # # model = AutoModelForCausalLM.from_pretrained("lgaalves/gpt2-dolly")
-
-# # prompt = ""
-# from src.data.data_process import CompressionDataset
-
-# dataset_path = "/home/lzs/compressionattack/experiments/src/data/data.json"
-# dataset = load_dataset("json", data_files=dataset_path, split="train")
-# dataset = CompressionDataset(dataset=dataset)
-# print(dataset[1])
 
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
@@ -86,11 +60,11 @@ def get_compressed_text(model_name=None, dataset=None, device="cpu"):
     return dataset
 
 
-dataset = load_dataset("json", data_files="/home/lzs/Comattack/src/data/data.json", split="train")
+dataset = load_dataset("json", data_files="src/data/data.json", split="train")
 dataset = get_common_compression_dataset(dataset=dataset)
 
 get_compressed_text(
-    model_name="/opt/model/models/gpt2-dolly",
+    model_name="models/gpt2-dolly",
     dataset=dataset,
     device="cuda:7"
 )

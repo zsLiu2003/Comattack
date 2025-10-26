@@ -89,11 +89,11 @@ def get_tool_selection_keywords(
 
 if __name__ == "__main__":
 
-    model_name = "/opt/model/Qwen3-32B"
-    # dataset_path = "/home/zzx/Comattack_dataset/squad/validation-00000-of-00001.parquet"
-    output_path = "/home/lzs/Comattack/src/data"
+    model_name = "models/Qwen3-32B"
+    # dataset_path = "./data/squad/validation-00000-of-00001.parquet"
+    output_path = "src/data"
 
-    dataset_path = "/home/lzs/Comattack/src/data/Feature_Extraction_tool_short.json"
+    dataset_path = "src/data/Feature_Extraction_tool_short.json"
     dataset = process_tool_selection_dataset(
         dataset_path=dataset_path
     )

@@ -44,10 +44,10 @@ def load_tool_names_from_json(file_path: str) -> list:
         raise ValueError(f"Invalid JSON format in {file_path}")
 
 # Load tools
-tools = load_tools_from_json('/home/zzx/Comattack_dataset/Feature_Extraction_tool_short.json')
-tool_names = load_tool_names_from_json('/home/zzx/Comattack_dataset/Feature_Extraction_tool_short.json')
+tools = load_tools_from_json('./data/Feature_Extraction_tool_short.json')
+tool_names = load_tool_names_from_json('./data/Feature_Extraction_tool_short.json')
 print(f"Loaded {len(tools)} tools: {tool_names}")
-# tools = load_tools_from_json('/home/zzx/Comattack_dataset/Text-to-Image_tool.json')
+# tools = load_tools_from_json('./data/Text-to-Image_tool.json')
 
 # Define ReAct Agent prompt template
 
