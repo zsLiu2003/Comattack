@@ -6,7 +6,7 @@ from langchain_core.tools import Tool
 from langchain_core.prompts import PromptTemplate
 
 # Configure Ollama model
-llm = ChatOllama(model="Qwen3-32B-q8:latest", base_url="http://localhost:11435", temperature=0)
+llm = ChatOllama(model="Qwen3-32B-q8:latest", base_url="", temperature=0)
 
 # Simulated model API call (replace with actual API calls in production)
 def call_model_api(api_name: str, input_data: str) -> str:
