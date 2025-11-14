@@ -12,7 +12,7 @@
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/CompressionAttack.git
+git clone https://github.com/zsLiu2003/Comattack.git
 cd CompressionAttack
 ```
 
