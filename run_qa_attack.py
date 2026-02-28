@@ -9,6 +9,7 @@ Pipeline:
 
 Supports both HardCom (extractive compressors) and SoftCom (abstractive).
 
+BASE_MODEL="NousResearch/Llama-2-7b-hf"
 Usage:
   python run_qa_attack.py \
     --data /path/to/squad_qa_filtered_llmlingua1_max900.json \
