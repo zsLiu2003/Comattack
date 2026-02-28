@@ -9,6 +9,7 @@ Pipeline:
 
 Supports both HardCom (extractive compressors) and SoftCom (abstractive).
 
+BASE_MODEL="NousResearch/Llama-2-7b-hf"
 Usage:
   python run_guardrail_attack.py \
     --data /path/to/guardrail_dataset.json \
