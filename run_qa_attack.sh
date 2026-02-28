@@ -8,6 +8,7 @@ cd "$(dirname "$0")"
 
 DATA_DIR="/hdd2/zesen/Comattack/src/data"
 RESULT_DIR="results/qa"
+BASE_MODEL="NousResearch/Llama-2-7b-hf"
 
 # ── Shared parameters ────────────────────────────────────────────────
 NUM_STEPS=200
