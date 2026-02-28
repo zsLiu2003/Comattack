@@ -1,0 +1,9 @@
+{
+  "n_samples": 695,
+  "avg_summary_tokens": 50.0,
+  "avg_hidden_size": 4096.0,
+  "avg_mean_norm": 76.62839118902632,
+  "avg_self_similarity": 0.3878231090607403,
+  "avg_info_density": 43.144831306198355,
+  "std_info_density": 13.005602674634455
+}

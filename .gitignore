@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Data (constructed by scripts/data_construction/)
+data/
+comattack/data/*.json
+comattack/data/*.jsonl
+
+# Results & models
+results/
+models/
+*.pt
+*.bin
+*.safetensors
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+direct_instruction_logs/
