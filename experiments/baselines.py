@@ -7,6 +7,7 @@ Strong baselines to rule out confounds:
 - "Any editing hurts"
 
 Baselines:
+BASE_MODEL="NousResearch/Llama-2-7b-hf"
 1. Original (no compression)
 2. Truncate-to-budget (first N tokens) - VERY IMPORTANT
 3. Truncate-last (last N tokens)
