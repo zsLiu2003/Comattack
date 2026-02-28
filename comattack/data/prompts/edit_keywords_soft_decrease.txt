@@ -6,7 +6,7 @@ Looks natural and plausible
 Retains some of the original product features and numbers
 But becomes less likely to be recommended by another language model that selects this product based on specific keywords
 
-The uesr input format will be:
+The input format will be:
 
 "Question + Requirements": "..."
 "Keywords": "..."
