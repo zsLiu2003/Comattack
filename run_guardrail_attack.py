@@ -87,7 +87,7 @@ def run_hardcom_guardrail(args, dataset):
     results = run_context_edit_attack(
         attacker=attacker,
         dataset=aug_dataset,
-        task="guardrail",
+        task="spc",
         edit_radius=args.edit_radius,
         num_steps=args.num_steps,
         output_path=output_path,
