@@ -504,7 +504,8 @@ def run_context_edit_attack(
         dataset:     list of dicts.  Required keys depend on task:
                      - "qa": context, target_context, removed_span, span_start
                      - "pref": original_context, target_context, deleted_words, ...
-        task:        "qa" or "pref"
+                     - "spc"/"guardrail": system_prompt, removed_phrases, ...
+        task:        "qa", "pref", "spc", or "guardrail"
         edit_radius: token radius around target (-1 = all tokens editable)
         num_steps:   override config.num_steps
         output_path: if given, save incremental results as JSONL
@@ -534,6 +535,18 @@ def run_context_edit_attack(
             # find span_start of the first deleted word in context
             span_start = context.find(removed_span) if removed_span else -1
             if not removed_span or span_start < 0:
+                results.append({**entry, "attacked_context": context, "best_loss": None, "skip": True})
+                continue
+        elif task in ("spc", "guardrail"):
+            context = entry.get("system_prompt", "")
+            removed_phrases = entry.get("removed_phrases", [])
+            if not removed_phrases:
+                results.append({**entry, "attacked_context": context, "best_loss": None, "skip": True})
+                continue
+            # use the first removed phrase as the target span
+            removed_span = removed_phrases[0]
+            span_start = context.find(removed_span)
+            if span_start < 0:
                 results.append({**entry, "attacked_context": context, "best_loss": None, "skip": True})
                 continue
         else:
