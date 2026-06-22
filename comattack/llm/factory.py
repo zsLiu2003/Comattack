@@ -1,14 +1,4 @@
-"""
-LLM Factory - Create LLM instances based on configuration
 
-Two modes:
-- Server: Use existing utils/llm_provider.py (closed-source API or vLLM server)
-- Offline: Use vLLM to load HuggingFace models directly
-
-Auto-detection:
-- Closed-source (gpt-5.2, gemini) -> Server mode
-- Open-source (Qwen, Llama) -> Offline mode (or Server if vLLM server running)
-"""
 
 import logging
 from dataclasses import dataclass, field
@@ -146,8 +136,8 @@ def create_llm(config: LLMConfig) -> BaseLLM:
     
     Providers:
     - "server": vLLM OpenAI-compatible API
-        - Closed-source: connects to remote API (base_url from config.yaml)
-        - Open-source: connects to local vLLM server (need to start: vllm serve xxx)
+    - Closed-source: connects to remote API (base_url from config)
+    - Open-source: connects to local vLLM server (start with: vllm serve MODEL)
     - "offline": vLLM directly loads HuggingFace model (open-source only)
     - "auto": Auto-detect:
         - Closed-source -> server (remote API)
@@ -232,7 +222,7 @@ def create_llm_from_config(
     llm_config = LLMConfig(
         model_name=model_name,
         api_key=api_config.get("api_keys", {}).get("openai", ""),
-        base_url=api_config.get("base_url", "https://api2.aigcbest.top/v1"),
+        base_url=api_config.get("base_url", "http://localhost:8000/v1"),
         device=config_dict.get("gpu", {}).get("default_device", "cuda")
     )
     

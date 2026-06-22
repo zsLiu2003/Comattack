@@ -1,10 +1,3 @@
-"""
-Stage I target selection for QA (Task 2).
-
-Removes the ground-truth answer span from the context passage to produce
-the proxy target x_tgt. The compressor should ideally reproduce this
-answer-free version after compression.
-"""
 
 import json
 import re

@@ -146,7 +146,7 @@ def format_metrics_report(stats: Dict[str, Any]) -> str:
     lines.append("=" * 60)
     
     # By method
-    lines.append("\n📈 Results by Method:")
+    lines.append("\nResults by Method:")
     for method, data in stats.get("by_method", {}).items():
         lines.append(f"\n  {method}:")
         lines.append(f"    Compliance Rate: {data['compliance_rate']:.1%}")
@@ -155,14 +155,14 @@ def format_metrics_report(stats: Dict[str, Any]) -> str:
     
     # Compliance drop
     if stats.get("overall"):
-        lines.append("\n📉 Compliance Drop (vs Original):")
+        lines.append("\nCompliance Drop (vs Original):")
         for key, value in stats["overall"].items():
             if "drop" in key:
                 method = key.replace("_compliance_drop", "")
                 lines.append(f"  {method}: {value:+.1%}")
     
     # By high-level category
-    lines.append("\n📂 By High-Level Category:")
+    lines.append("\nBy High-Level Category:")
     for high_level, method_data in stats.get("by_high_level_category", {}).items():
         lines.append(f"\n  {high_level}:")
         for method, data in method_data.items():

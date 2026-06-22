@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-"""
-Extract guardrails from system prompt files in System_Prompt_Lib.
-Output: one JSON file with format:
-  [{ "system_prompt": "...", "guardrail_list": [ {"keyword": "...", "sentence": "..."}, ... ] }, ...]
-
-Extraction strategy (v2 — tighter):
-  1. Split text into sentence-level chunks.
-  2. For each chunk, check if a prohibitive/obligatory keyword appears in
-     a *command position* (near the start, not inside a conditional clause).
-  3. Filter out false positives: quoted example responses, section headers,
-     conditional descriptions, tool-behavior descriptions.
-  4. Cap guardrails per entry to avoid over-extraction.
-"""
-
 import json
 import re
 from pathlib import Path

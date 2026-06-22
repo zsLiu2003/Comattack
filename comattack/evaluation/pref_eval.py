@@ -2,12 +2,12 @@ from datasets import load_dataset
 import re
 
 def extract_number(value):
-    # 如果是字典，提取 content
+    # If it's a dict, extract content
     if isinstance(value, dict):
         value = value.get("content", "")
-    # 提取字符串中的数字
+    # Extract number from string
     match = re.search(r'\d+', str(value))
-    return match.group() if match else None  # 返回数字字符串，如 '5'
+    return match.group() if match else None
 
 
 def get_results(dataset_path):

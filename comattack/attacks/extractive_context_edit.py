@@ -1,19 +1,4 @@
-"""
-HardCom Stage II – context-editing attack for extractive compressors.
 
-Given original context x_ctx and target x̃_tgt (= x_ctx with important words W
-removed), find a perturbation of x_ctx so the surrogate compressor drops W.
-
-Two surrogate types:
-  - LLMLingua1 (PPL-based): minimise cross-entropy at W positions → W becomes
-    predictable → low PPL → compressor drops W under budget.
-  - LLMLingua2 (token classification): push classifier to predict "drop"
-    (label=0) at W positions.
-
-Attack levels:
-  - token-level: edit individual tokens in x_ctx
-  - word-level:  edit whole words in x_ctx
-"""
 
 import math
 import copy
@@ -26,7 +11,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForTokenClassification
 
-from .gcg_utils import (
+from .coma_utils import (
     AttackConfig,
     get_embedding_matrix,
     get_token_embeddings,
@@ -114,7 +99,7 @@ def find_control_and_target_slices(
 
 class ContextEditAttackLLMLingua1:
     """
-    HardCom context-editing attack using an LLMLingua1 (PPL-based) surrogate.
+    Context-editing attack for extractive compressors using an LLMLingua1 (PPL-based) surrogate.
 
     The surrogate scores each token by its cross-entropy (surprise).  Tokens
     with LOW cross-entropy (predictable) are dropped first.  To make the
@@ -204,7 +189,7 @@ class ContextEditAttackLLMLingua1:
     # ── single step ───────────────────────────────────────────────────
     def attack_step(self, full_ids, control_slice, target_slice):
         """
-        One GCG step: compute gradients → sample candidates → evaluate → pick best.
+        One COMA step: compute gradients → sample candidates → evaluate → pick best.
         Returns (best_loss, best_control_ids_list).
         """
         device = self.device
@@ -316,7 +301,7 @@ class ContextEditAttackLLMLingua1:
 
 class ContextEditAttackLLMLingua2:
     """
-    HardCom context-editing attack using an LLMLingua2 (token classification)
+    Context-editing attack for extractive compressors using an LLMLingua2 (token classification)
     surrogate.
 
     The surrogate predicts keep(1)/drop(0) per token.  To make it drop W,

@@ -187,9 +187,9 @@ def generate_all_queries(
         output_path.parent.mkdir(parents=True, exist_ok=True)
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(output, f, indent=2, ensure_ascii=False)
-        logger.info(f"💾 Checkpoint: {len(results)} queries")
+        logger.info(f"Checkpoint: {len(results)} queries")
     
-    logger.info(f"✅ Generated {len(results)} queries, ❌ Failed: {len(failed)}")
+    logger.info(f"Generated {len(results)} queries, Failed: {len(failed)}")
 
 
 if __name__ == "__main__":

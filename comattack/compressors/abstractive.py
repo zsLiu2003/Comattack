@@ -4,7 +4,7 @@ Abstractive compressor wrapper.
 Wraps a small instruction-following LLM (Qwen3-4B, Llama-3.2-3B, Gemma-3-4B)
 as a prompt compressor by asking it to summarise the input into a target
 number of tokens.  This matches the compression mechanism assumed by the
-SoftCom attack in the COMA framework.
+abstractive compressor attack in the COMA framework.
 """
 
 import logging

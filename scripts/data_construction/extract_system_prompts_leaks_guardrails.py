@@ -5,9 +5,6 @@ Source: https://github.com/asgeirtj/system_prompts_leaks
 
 Note: This repository contains leaked system prompts. No explicit license is provided.
 Use for research/analysis purposes only.
-
-Author: Automated extraction script
-Date: 2025-12-20
 """
 
 import os
@@ -445,8 +442,8 @@ if __name__ == "__main__":
     print(f"\nLicense: {REPO_INFO['license']}")
     print(f"Source: {REPO_INFO['source_url']}\n")
 
-    base_repo_path = "/home/lsz/SystemCom/System_Prompt_Lib/system_prompts_leaks"
-    output_base_dir = "/home/lsz/SystemCom/data/system_prompts_leaks_guardrails"
+    base_repo_path = os.environ.get("SYSTEM_PROMPTS_REPO", "data/system_prompts_leaks")
+    output_base_dir = os.environ.get("OUTPUT_DIR", "data/system_prompts_leaks_guardrails")
 
     print("[1/3] Extracting guardrails from repository...")
     extracted_data, total_files = process_directory(base_repo_path)
@@ -466,6 +463,6 @@ if __name__ == "__main__":
     print("  - by_provider/ (organized by AI provider)")
     print("  - by_category/ (organized by guardrail type)")
     print("  - extraction_report.md (summary report)")
-    print(f"\n⚠️  Note: {REPO_INFO['note']}")
+    print(f"\nNote: {REPO_INFO['note']}")
 
 

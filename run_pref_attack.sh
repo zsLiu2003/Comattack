@@ -1,29 +1,24 @@
-#!/bin/bash
-# ── Preference Manipulation Attack (Task ①) ──────────────────────────
-# Run COMA attacks on the preference manipulation task.
-# Usage: bash run_pref_attack.sh
-
 set -e
 cd "$(dirname "$0")"
 
-DATA_DIR="/hdd2/zesen/Comattack/src/data"
+DATA_DIR="data/ats"
 RESULT_DIR="results/pref"
 
 # ── Shared parameters ────────────────────────────────────────────────
-NUM_STEPS=200
+NUM_STEPS=500
 BATCH_SIZE=256
 TOPK=64
 EVAL_BATCH=128
-TEST_STEPS=10
+TEST_STEPS=20
 SEED=42
 MAX_ENTRIES=-1
 
 # =====================================================================
-# HardCom: extractive compressors
+# Extractive-based: extractive compressors
 # =====================================================================
 
 # --- LLMLingua1 ---
-echo "=== Pref | HardCom | LLMLingua1 ==="
+echo "=== Pref | Extractive | LLMLingua1 ==="
 python run_pref_attack.py \
     --data "${DATA_DIR}/pref_manipulation_filtered_llmlingua1_max900.json" \
     --compressor llmlingua1 \
@@ -35,10 +30,10 @@ python run_pref_attack.py \
     --test-steps ${TEST_STEPS} \
     --seed ${SEED} \
     --max-entries ${MAX_ENTRIES} \
-    --output "${RESULT_DIR}/hardcom_llmlingua1"
+    --output "${RESULT_DIR}/extractive_llmlingua1"
 
 # --- LLMLingua2 ---
-echo "=== Pref | HardCom | LLMLingua2 ==="
+echo "=== Pref | Extractive | LLMLingua2 ==="
 python run_pref_attack.py \
     --data "${DATA_DIR}/pref_manipulation_filtered_llmlingua2_max460.json" \
     --compressor llmlingua2 \
@@ -50,15 +45,15 @@ python run_pref_attack.py \
     --test-steps ${TEST_STEPS} \
     --seed ${SEED} \
     --max-entries ${MAX_ENTRIES} \
-    --output "${RESULT_DIR}/hardcom_llmlingua2"
+    --output "${RESULT_DIR}/extractive_llmlingua2"
 
 # =====================================================================
-# SoftCom: abstractive compressors
+# Summarize-based: abstractive compressors
 # =====================================================================
 COMP_TOKENS=200
 
 # --- Qwen3-4B ---
-echo "=== Pref | SoftCom | Qwen3-4B ==="
+echo "=== Pref | Summarize | Qwen3-4B ==="
 python run_pref_attack.py \
     --data "${DATA_DIR}/pref_manipulation_filtered_llmlingua1_max900.json" \
     --compressor qwen3-4b \
@@ -71,10 +66,10 @@ python run_pref_attack.py \
     --seed ${SEED} \
     --max-entries ${MAX_ENTRIES} \
     --compression-target-tokens ${COMP_TOKENS} \
-    --output "${RESULT_DIR}/softcom_qwen3_4b"
+    --output "${RESULT_DIR}/summarize_based_qwen3_4b"
 
 # --- Llama-3.2-3B ---
-echo "=== Pref | SoftCom | Llama-3.2-3B ==="
+echo "=== Pref | Summarize | Llama-3.2-3B ==="
 python run_pref_attack.py \
     --data "${DATA_DIR}/pref_manipulation_filtered_llmlingua1_max900.json" \
     --compressor llama-3.2-3b \
@@ -87,10 +82,10 @@ python run_pref_attack.py \
     --seed ${SEED} \
     --max-entries ${MAX_ENTRIES} \
     --compression-target-tokens ${COMP_TOKENS} \
-    --output "${RESULT_DIR}/softcom_llama3_3b"
+    --output "${RESULT_DIR}/summarize_based_llama3_3b"
 
 # --- Gemma-3-4B ---
-echo "=== Pref | SoftCom | Gemma-3-4B ==="
+echo "=== Pref | Summarize | Gemma-3-4B ==="
 python run_pref_attack.py \
     --data "${DATA_DIR}/pref_manipulation_filtered_llmlingua1_max900.json" \
     --compressor gemma-3-4b \
@@ -103,6 +98,6 @@ python run_pref_attack.py \
     --seed ${SEED} \
     --max-entries ${MAX_ENTRIES} \
     --compression-target-tokens ${COMP_TOKENS} \
-    --output "${RESULT_DIR}/softcom_gemma3_4b"
+    --output "${RESULT_DIR}/summarize_based_gemma3_4b"
 
 echo "=== All Preference Manipulation attacks completed ==="

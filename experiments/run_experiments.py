@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-"""
-
-Experiments:
-1. Compression baseline comparison (P0.5)
-2. Span-level preservation analysis (P0.2, P0.3)
-3. Catastrophic edit detection (P1.3)
-4. Behavioral evaluation (P0.4)
-5. Mitigation effectiveness (P1.6)
-
-Output:
-- Results tables in markdown format
-- Figures for paper
-- Raw data in JSON format
-"""
-
 import os
 import sys
 import json

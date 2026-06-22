@@ -1,11 +1,3 @@
-"""
-ICML Metrics Module (P0.2)
-==========================
-
-Unified metric definitions with explicit formulas.
-All metrics report both macro and micro versions.
-"""
-
 import numpy as np
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
@@ -83,8 +75,8 @@ class SpanPreservationCalculator:
     """
     Calculate span-level preservation metrics.
     
-    Hard compression: Literal substring matching (with fuzzy option)
-    Soft compression: Semantic entailment (separate module)
+    Extractive compression: Literal substring matching (with fuzzy option)
+    Abstractive compression: Semantic entailment (separate module)
     
     Reports both macro and micro versions:
     - Macro: Average preservation rate per prompt
@@ -440,12 +432,12 @@ class CatastrophicEditDetector:
 
 
 # =============================================================================
-# P1.2: Constraint Entailment Score (for Soft Compression)
+# P1.2: Constraint Entailment Score (for Abstractive Compression)
 # =============================================================================
 
 class ConstraintEntailmentScorer:
     """
-    Calculate Constraint Entailment Score (CES) for soft compression.
+    Calculate Constraint Entailment Score (CES) for abstractive compression.
     
     For each original guardrail span g and compressed output S',
     judge whether S' entails g, is neutral, or contradicts it.

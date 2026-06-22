@@ -1,24 +1,3 @@
-"""
-End-to-end runner for the QA attack (Task ②).
-
-Pipeline:
-  1. Load filtered QA dataset (from Comattack)
-  2. For each entry, compute x̃_tgt: remove ground-truth answer from context
-  3. Run Stage II preimage search to find x_atk
-  4. Save results (attacked contexts + metadata)
-
-Supports both HardCom (extractive compressors) and SoftCom (abstractive).
-
-BASE_MODEL="NousResearch/Llama-2-7b-hf"
-Usage:
-  python run_qa_attack.py \
-    --data /path/to/squad_qa_filtered_llmlingua1_max900.json \
-    --compressor llmlingua1 \
-    --surrogate-model NousResearch/Llama-2-7b-hf \
-    --num-steps 200 \
-    --output results/qa_llmlingua1/
-"""
-
 import os
 import sys
 import json
@@ -63,11 +42,11 @@ def compute_qa_target(entry: dict) -> dict:
     return {"target_context": target_context, "removed_span": answer, "span_start": start}
 
 
-# ── HardCom attack (extractive compressors) ──────────────────────────────
+# ── Extractive attack ──────────────────────────────────────────────────
 
-def run_hardcom_qa(args, dataset):
-    from comattack.attacks.gcg_utils import AttackConfig
-    from comattack.attacks.hardcom_context_edit import (
+def run_extractive_qa(args, dataset):
+    from comattack.attacks.coma_utils import AttackConfig
+    from comattack.attacks.extractive_context_edit import (
         ContextEditAttackLLMLingua1,
         ContextEditAttackLLMLingua2,
         run_context_edit_attack,
@@ -97,10 +76,10 @@ def run_hardcom_qa(args, dataset):
     elif args.compressor == "llmlingua2":
         attacker = ContextEditAttackLLMLingua2(config=config)
     else:
-        raise ValueError(f"Unknown compressor for HardCom: {args.compressor}")
+        raise ValueError(f"Unknown extractive compressor: {args.compressor}")
 
     os.makedirs(args.output, exist_ok=True)
-    output_path = os.path.join(args.output, "qa_hardcom_results.jsonl")
+    output_path = os.path.join(args.output, "qa_extractive_results.jsonl")
 
     results = run_context_edit_attack(
         attacker=attacker,
@@ -115,27 +94,27 @@ def run_hardcom_qa(args, dataset):
     n_success = sum(1 for r in results if r.get("best_loss") is not None and not r.get("skip"))
     summary = {
         "task": "qa",
-        "method": "hardcom",
+        "method": "extractive",
         "compressor": args.compressor,
         "surrogate_model": args.surrogate_model,
         "num_entries": len(dataset),
         "num_attacked": n_success,
         "num_steps": args.num_steps,
     }
-    summary_path = os.path.join(args.output, "qa_hardcom_summary.json")
+    summary_path = os.path.join(args.output, "qa_extractive_summary.json")
     with open(summary_path, "w") as f:
         json.dump(summary, f, indent=2)
 
-    log.info("HardCom QA attack finished. %d entries processed.", n_success)
+    log.info("Extractive QA attack finished. %d entries processed.", n_success)
     return results
 
 
-# ── SoftCom attack (abstractive compressors / small LLMs) ────────────────
+# ── Abstractive attack ────────────────────────────────────────────────────
 
-def run_softcom_qa(args, dataset):
-    from comattack.attacks.gcg_utils import AttackConfig
-    from comattack.attacks.softcom import AttackforSmallLM
-    from comattack.attacks.orchestration import run_gcg_attack_smalllm
+def run_abstractive_qa(args, dataset):
+    from comattack.attacks.coma_utils import AttackConfig
+    from comattack.attacks.summarize_based import AttackforSmallLM
+    from comattack.attacks.orchestration import run_coma_attack_smalllm
 
     config = AttackConfig(
         model_name=args.surrogate_model,
@@ -172,7 +151,7 @@ def run_softcom_qa(args, dataset):
 
         log.info("Entry %d/%d: answer=%r", idx + 1, len(dataset), target_info["removed_span"])
 
-        result = run_gcg_attack_smalllm(
+        result = run_coma_attack_smalllm(
             attacker=attacker,
             prompts=[context],
             target_outputs=[target_context],
@@ -202,7 +181,7 @@ def run_softcom_qa(args, dataset):
         all_results.append(out)
 
         # incremental save
-        results_path = os.path.join(args.output, "qa_softcom_results.jsonl")
+        results_path = os.path.join(args.output, "qa_abstractive_results.jsonl")
         with open(results_path, "a") as f:
             f.write(json.dumps(out, ensure_ascii=False) + "\n")
 
@@ -211,7 +190,7 @@ def run_softcom_qa(args, dataset):
     n_converged = sum(1 for r in all_results if r.get("converged"))
     summary = {
         "task": "qa",
-        "method": "softcom",
+        "method": "abstractive",
         "compressor": args.compressor,
         "surrogate_model": args.surrogate_model,
         "num_entries": len(dataset),
@@ -220,11 +199,11 @@ def run_softcom_qa(args, dataset):
         "num_steps": args.num_steps,
         "compression_target_tokens": args.compression_target_tokens,
     }
-    summary_path = os.path.join(args.output, "qa_softcom_summary.json")
+    summary_path = os.path.join(args.output, "qa_abstractive_summary.json")
     with open(summary_path, "w") as f:
         json.dump(summary, f, indent=2)
 
-    log.info("SoftCom QA attack finished. %d/%d entries converged.", n_converged, n_attacked)
+    log.info("Abstractive QA attack finished. %d/%d entries converged.", n_converged, n_attacked)
     return all_results
 
 
@@ -254,13 +233,13 @@ def parse_args():
     p.add_argument("--test-steps", type=int, default=10)
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--edit-radius", type=int, default=-1,
-                   help="Token radius around target for HardCom (-1 = all)")
+                   help="Token radius for extractive attack (-1 = all)")
     p.add_argument("--suffix-length", type=int, default=20,
-                   help="Suffix length for SoftCom / GCG-2")
+                   help="Suffix length for abstractive attack")
     p.add_argument("--compression-target-tokens", type=int, default=200,
-                   help="Target token count for SoftCom compression instruction")
+                   help="Target token count for abstractive compression")
     p.add_argument("--success-threshold", type=float, default=0.5,
-                   help="Loss threshold for SoftCom convergence")
+                   help="Loss threshold for abstractive convergence")
 
     return p.parse_args()
 
@@ -281,9 +260,9 @@ def main():
     abstractive = {"qwen3-4b", "llama-3.2-3b", "gemma-3-4b"}
 
     if args.compressor in extractive:
-        run_hardcom_qa(args, dataset)
+        run_extractive_qa(args, dataset)
     elif args.compressor in abstractive:
-        run_softcom_qa(args, dataset)
+        run_abstractive_qa(args, dataset)
     else:
         raise ValueError(f"Unknown compressor: {args.compressor}")
 

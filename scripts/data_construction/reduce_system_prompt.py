@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""
-Reduce system prompts to: role opening + guardrail sentences.
-Reads extracted_guardrails.json, outputs extracted_guardrails_reduced_filtered.json
-directly in the format expected by generate_adversarial_queries_v2.py.
-
-IMPORTANT: each guardrail sentence must appear verbatim in the output system_prompt
-so that attack_manager.py's keyword_char_span_in_fulltext() can locate it.
-"""
-
 import json
 from pathlib import Path
 

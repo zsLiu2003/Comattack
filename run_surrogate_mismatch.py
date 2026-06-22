@@ -1,27 +1,3 @@
-"""
-RQ3 -- Surrogate Mismatch Study (Table 5).
-
-For each (target compressor, surrogate model) pair, this script:
-  1. Samples 100 instances per task (seeded)
-  2. Generates Stage I targets
-  3. Runs Stage II preimage search using the specified surrogate
-  4. Evaluates end-to-end ASR on the true target compressor + backend LLM
-  5. Saves per-instance results and aggregate ASR
-
-Usage (single config):
-  python run_rq3_surrogate_mismatch.py \
-    --target-compressor selective_context \
-    --surrogate-model NousResearch/Llama-2-7b-hf \
-    --task qa \
-    --data-pref data/pref_manipulation_filtered.json \
-    --data-qa data/squad_qa_filtered.json \
-    --data-spc data/guardrail_dataset.json \
-    --output results/rq3_mismatch/
-
-Usage (aggregate results into Table 5):
-  python run_rq3_surrogate_mismatch.py --aggregate --output results/rq3_mismatch/
-"""
-
 import os
 import sys
 import csv
@@ -100,8 +76,8 @@ def generate_targets(dataset, task):
 
 def run_attack_extractive_ppl(dataset, task, surrogate_model, args):
     """PPL-based surrogate (for SelectiveContext and LLMLingua1)."""
-    from comattack.attacks.gcg_utils import AttackConfig
-    from comattack.attacks.hardcom_context_edit import (
+    from comattack.attacks.coma_utils import AttackConfig
+    from comattack.attacks.extractive_context_edit import (
         ContextEditAttackLLMLingua1,
         run_context_edit_attack,
     )
@@ -124,8 +100,8 @@ def run_attack_extractive_ppl(dataset, task, surrogate_model, args):
 
 def run_attack_extractive_cls(dataset, task, surrogate_model, args):
     """Token-classification surrogate (for LLMLingua2)."""
-    from comattack.attacks.gcg_utils import AttackConfig
-    from comattack.attacks.hardcom_context_edit import (
+    from comattack.attacks.coma_utils import AttackConfig
+    from comattack.attacks.extractive_context_edit import (
         ContextEditAttackLLMLingua2,
         run_context_edit_attack,
     )
@@ -147,10 +123,10 @@ def run_attack_extractive_cls(dataset, task, surrogate_model, args):
 
 
 def run_attack_abstractive(dataset, task, surrogate_model, args):
-    """Abstractive surrogate (SoftCom GCG-1)."""
-    from comattack.attacks.gcg_utils import AttackConfig
-    from comattack.attacks.softcom import AttackforSmallLM
-    from comattack.attacks.orchestration import run_gcg_attack_smalllm
+    """Abstractive surrogate (COMA-based optimization)."""
+    from comattack.attacks.coma_utils import AttackConfig
+    from comattack.attacks.summarize_based import AttackforSmallLM
+    from comattack.attacks.orchestration import run_coma_attack_smalllm
 
     hf_name = ABSTRACTIVE_HF_NAMES.get(surrogate_model, surrogate_model)
     config = AttackConfig(
@@ -170,7 +146,7 @@ def run_attack_abstractive(dataset, task, surrogate_model, args):
 
     results = []
     for idx, entry in enumerate(dataset):
-        prompt, target_output = _get_softcom_io(entry, task)
+        prompt, target_output = _get_abstractive_io(entry, task)
         if prompt is None:
             results.append({**entry, "skip": True})
             continue
@@ -178,7 +154,7 @@ def run_attack_abstractive(dataset, task, surrogate_model, args):
         attacker.best_loss = float("inf")
         attacker.best_candidates = None
 
-        r = run_gcg_attack_smalllm(
+        r = run_coma_attack_smalllm(
             attacker=attacker,
             prompts=[prompt],
             target_outputs=[target_output],
@@ -203,7 +179,7 @@ def run_attack_abstractive(dataset, task, surrogate_model, args):
     return results
 
 
-def _get_softcom_io(entry, task):
+def _get_abstractive_io(entry, task):
     if task in ("prom", "deg"):
         p, t = entry.get("original_context", ""), entry.get("target_context", "")
     elif task == "qa":

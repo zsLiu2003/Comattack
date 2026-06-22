@@ -2,7 +2,7 @@
 AutoCompressor Wrapper
 ======================
 
-Soft compression using princeton-nlp/AutoCompressor.
+Abstractive compression using princeton-nlp/AutoCompressor.
 
 AutoCompressor compresses context into summary vectors (soft prompts)
 that can be used to condition model generation.
@@ -23,7 +23,7 @@ from .base import BaseCompressor, CompressionResult
 
 class AutoCompressorWrapper(BaseCompressor):
     """
-    AutoCompressor wrapper for soft compression.
+    AutoCompressor wrapper for abstractive compression.
     
     Usage:
         compressor = AutoCompressorWrapper()
@@ -66,7 +66,7 @@ class AutoCompressorWrapper(BaseCompressor):
         return "autocompressor"
     
     @property
-    def is_soft(self) -> bool:
+    def is_abstractive(self) -> bool:
         return True
     
     def _load_model(self):
@@ -106,7 +106,7 @@ class AutoCompressorWrapper(BaseCompressor):
         
         Args:
             text: Input text
-            rate: Ignored for soft compression (fixed 50 summary tokens)
+            rate: Ignored for abstractive compression (fixed 50 summary tokens)
             
         Returns:
             CompressionResult with embeddings
@@ -152,7 +152,7 @@ class AutoCompressorWrapper(BaseCompressor):
         return CompressionResult(
             original_text=text,
             original_tokens=original_tokens,
-            compressed_text="",  # No text for soft compression
+            compressed_text="",  # No text for abstractive compression
             compressed_tokens=self.num_summary_tokens,
             embeddings=embeddings,
             compression_ratio=self.num_summary_tokens / original_tokens if original_tokens > 0 else 0.0,

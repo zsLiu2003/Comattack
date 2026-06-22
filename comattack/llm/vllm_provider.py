@@ -16,9 +16,9 @@ All models driven by vLLM:
 Usage:
     # Server mode - closed-source (remote API)
     llm = VLLMServerLLM(
-        model_name="gpt-5.2",
-        base_url="https://api2.aigcbest.top/v1",
-        api_key="sk-xxx"
+        model_name="gpt-4o-mini",
+        base_url="https://api.openai.com/v1",
+        api_key=os.environ["OPENAI_API_KEY"]
     )
     
     # Server mode - open-source (local vLLM server)
@@ -57,7 +57,7 @@ class VLLMServerLLM(BaseLLM):
     Server mode - Use vLLM's OpenAI-compatible API client.
     
     Works for:
-    - Closed-source models: base_url = remote API (e.g., https://api2.aigcbest.top/v1)
+    - Closed-source models: base_url = remote API (e.g., https://api.openai.com/v1)
     - Open-source models: base_url = local vLLM server (e.g., http://localhost:8000/v1)
     """
     
@@ -80,7 +80,7 @@ class VLLMServerLLM(BaseLLM):
         
         # Get base_url from config if not provided
         if base_url is None:
-            base_url = api_config.get("base_url", "https://api2.aigcbest.top/v1")
+            base_url = api_config.get("base_url", "http://localhost:8000/v1")
         
         # Get api_key from config if not provided
         if api_key is None:

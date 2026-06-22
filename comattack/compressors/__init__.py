@@ -2,7 +2,7 @@
 Compressors Package
 ===================
 
-Hard and soft compression methods.
+Extractive and abstractive compression methods.
 """
 
 from .base import BaseCompressor, CompressionResult

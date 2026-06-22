@@ -1,6 +1,3 @@
-"""
-Compliance Evaluator - Evaluate guardrail compliance
-"""
 
 import json
 import logging
@@ -22,7 +19,7 @@ class BatchComplianceEvaluator:
     """
     Batch compliance evaluator.
     
-    理由：封装批处理逻辑，将 target 和 judge 的调用分离，代码更清晰
+    Encapsulates batch processing logic, separating target and judge calls.
     """
     
     def __init__(
@@ -38,22 +35,22 @@ class BatchComplianceEvaluator:
     
     def batch_target_inference(self, tasks: List[Dict]) -> Dict[str, str]:
         """
-        批量调用 target LLM。
+        Batch target LLM inference.
         
-        理由：使用 ThreadPoolExecutor 并发调用，提高效率
-        task_id 包含 query_hash 确保每个唯一 query 都有独立的 ID
+        Uses ThreadPoolExecutor for concurrent calls.
+        task_id includes query_hash to ensure unique IDs per query.
         """
         results = {}
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
             futures = {}
             for task in tasks:
-                # 理由：使用 query_hash 确保同一 prompt_id + guardrail_index 的不同 query 不会冲突
+                # Use query_hash to avoid collisions across different queries with same prompt_id + guardrail_index
                 query_hash = hashlib.md5(task["query"].encode()).hexdigest()[:8]
                 task_id = f"{task['prompt_id']}_{task['guardrail_index']}_{query_hash}"
                 
-                # 理由：如果压缩结果已经包含完整 prompt，直接使用；否则分开传递
+                # If compressed result contains the full prompt, use it directly; otherwise pass separately
                 if task.get("full_prompt"):
-                    # 压缩结果已经包含 system prompt + query，直接使用完整文本作为 prompt
+                    # Compressed result already contains system prompt + query; use as-is
                     future = executor.submit(
                         self.target_llm.generate,
                         prompt=task["full_prompt"],
@@ -83,9 +80,9 @@ class BatchComplianceEvaluator:
     
     def batch_judge_inference(self, tasks: List[Dict], target_responses: Dict[str, str]) -> Dict[str, Dict]:
         """
-        批量调用 judge LLM。
+        Batch judge LLM inference.
         
-        理由：在 target 响应完成后，批量判断合规性
+        After target responses are collected, batch-judge compliance.
         """
         results = {}
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
@@ -95,7 +92,7 @@ class BatchComplianceEvaluator:
                 task_id = f"{task['prompt_id']}_{task['guardrail_index']}_{query_hash}"
                 response = target_responses.get(task_id, "")
                 
-                # 理由：如果 target 调用失败，直接标记为错误，不调用 judge
+                # If target call failed, mark as error without calling judge
                 if response.startswith("[ERROR:"):
                     results[task_id] = {
                         "compliant": None,
@@ -150,35 +147,35 @@ def run_compliance_evaluation(
     allow_empty_prompt: bool = False
 ) -> Dict[str, Any]:
     """
-    运行合规性评估：query + system prompt -> target LLM -> judge LLM
+    Run compliance evaluation: query + system prompt -> target LLM -> judge LLM
     
-    理由：核心流程函数，支持多种方法（original + 压缩方法）
+    Core pipeline function supporting multiple methods (original + compression methods).
     """
-    # 理由：加载 queries 数据
+    # Load queries data
     logger.info("Loading queries...")
     with open(queries_path, 'r') as f:
         queries_data = json.load(f)
     queries = queries_data.get("queries", [])
     
-    # 理由：从 filtered_prompts 文件加载 system prompts（格式：{"prompt_ppls": [{"id": "...", "content": "..."}]}）
+    # Load system prompts from filtered_prompts file (format: {"prompt_ppls": [{"id": "...", "content": "..."}]})
     logger.info("Loading prompts...")
     with open(prompts_path, 'r') as f:
         prompts_data = json.load(f)
     original_prompts = {p["id"]: p.get("content", "") for p in prompts_data.get("prompt_ppls", [])}
     
-    # 理由：根据是否有 compression_path 决定处理方法
+    # Determine processing method based on compression_path availability
     compressed_prompts = {}
-    compression_rates = {}  # 存储每个方法的压缩率
+    compression_rates = {}
     all_methods = []
-    is_prompt_only_mode = False  # 理由：存储是否是 prompt-only 模式
+    is_prompt_only_mode = False
     
     if compression_path:
-        # 理由：如果提供了压缩路径，只处理压缩方法
+        # If compression path provided, process compressed methods only
         try:
             with open(compression_path, 'r') as f:
                 compression_data = json.load(f)
             
-            # 理由：检查是否是 prompt-only 模式
+            # Check if prompt-only mode
             is_prompt_only_mode = compression_data.get("metadata", {}).get("prompt_only", False)
             
             for method in ["llmlingua", "llmlingua2"]:
@@ -195,20 +192,19 @@ def run_compliance_evaluation(
                             compressed_prompts[prompt_id] = {}
                         key = f"{method}_{rate}"
                         
-                        # 理由：如果是 prompt-only 模式，从 compressed_text 中提取压缩后的 prompt（去掉 query 部分）
+                        # In prompt-only mode, extract compressed prompt from compressed_text (strip query part)
                         if is_prompt_only_mode:
-                            # compressed_text 格式: "{compressed_prompt}\n\nUser: {query}"
-                            # 提取压缩后的 prompt 部分
+                            # compressed_text format: "{compressed_prompt}\n\nUser: {query}"
                             if "\n\nUser:" in compressed_text:
                                 compressed_prompt = compressed_text.split("\n\nUser:")[0]
                             else:
                                 compressed_prompt = compressed_text
                             compressed_prompts[prompt_id][key] = compressed_prompt
                         else:
-                            # 理由：原始模式，使用完整的 compressed_text（已包含 prompt + query）
+                            # Original mode: use full compressed_text (already contains prompt + query)
                             compressed_prompts[prompt_id][key] = compressed_text
                         
-                        compression_rates[key] = rate  # 存储压缩率
+                        compression_rates[key] = rate
                         if key not in all_methods:
                             all_methods.append(key)
         except Exception as e:
@@ -216,28 +212,28 @@ def run_compliance_evaluation(
         
         all_methods = sorted(all_methods)
     else:
-        # 理由：如果没有压缩路径，只处理 original
+        # No compression path: process original only
         all_methods = ["original"]
     
-    # 理由：如果允许空 prompt，添加 no_system_prompt 方法
+    # If empty prompts allowed, add no_system_prompt method
     if allow_empty_prompt:
         all_methods.append("no_system_prompt")
     
     logger.info(f"Loaded {len(queries)} queries, {len(original_prompts)} prompts")
     logger.info(f"Methods: {all_methods}")
     
-    # 理由：初始化批处理评估器
+    # Initialize batch evaluator
     evaluator = BatchComplianceEvaluator(
         target_llm, judge_llm,
         max_workers=max_workers
     )
     
-    # 理由：存储所有方法的结果，key 为 (prompt_id, guardrail_index, query_hash)
+    # Store results for all methods, keyed by (prompt_id, guardrail_index, query_hash)
     all_evaluations = {}
     
-    # 理由：循环处理每个方法（original + 各种压缩方法）
+    # Process each method (original + compression methods)
     for method in all_methods:
-        # 理由：应用方法过滤
+        # Apply method filter
         if method_filter and method not in ["original", "no_system_prompt"]:
             if not any(f in method for f in method_filter):
                 logger.info(f"Skipping {method} (filtered)")
@@ -245,37 +241,37 @@ def run_compliance_evaluation(
         
         logger.info(f"\nProcessing method: {method}")
         
-        # 理由：为当前方法准备任务
+        # Prepare tasks for current method
         tasks = []
         for query in queries:
             prompt_id = str(query.get("prompt_id", ""))
             
-            # 理由：根据方法类型获取 system prompt
+            # Get system prompt based on method type
             if method == "original":
-                # 理由：original 方法使用原始 system prompt + query
+                # Original method: use original system prompt + query
                 system_prompt = original_prompts.get(prompt_id, "")
                 query_text = query.get("adversarial_query", "")
                 full_prompt = None
             elif method == "no_system_prompt":
-                # 理由：no_system_prompt 方法不使用 system prompt，只有 query
+                # No system prompt method: query only
                 system_prompt = ""
                 query_text = query.get("adversarial_query", "")
                 full_prompt = None
             else:
-                # 理由：压缩方法
+                # Compression method
                 compressed_prompt = compressed_prompts.get(prompt_id, {}).get(method, "")
                 query_text = query.get("adversarial_query", "")
                 
                 if is_prompt_only_mode:
-                    # 理由：prompt-only 模式：使用压缩后的 system prompt + 原始 query
+                    # Prompt-only mode: use compressed system prompt + original query
                     system_prompt = compressed_prompt
                     full_prompt = None
                 else:
-                    # 理由：原始模式：compressed_text 已包含完整的 prompt + query
+                    # Original mode: compressed_text already contains full prompt + query
                     full_prompt = compressed_prompt
                     system_prompt = ""
             
-            # 理由：如果 prompt 为空且不允许空 prompt，跳过（no_system_prompt 除外）
+            # Skip if prompt is empty and empty prompts not allowed (except no_system_prompt)
             if method != "no_system_prompt" and not system_prompt and not full_prompt and not allow_empty_prompt:
                 continue
             
@@ -286,7 +282,7 @@ def run_compliance_evaluation(
                 "guardrail_text": query.get("guardrail_text", ""),
                 "target_violation": query.get("target_violation", ""),
                 "system_prompt": system_prompt,
-                "full_prompt": full_prompt,  # 压缩后的完整 prompt
+                "full_prompt": full_prompt,
             })
         
         if not tasks:
@@ -294,13 +290,13 @@ def run_compliance_evaluation(
         
         logger.info(f"Tasks: {len(tasks)}")
         
-        # 理由：批量调用 target LLM 获取响应
+        # Batch target LLM inference
         target_responses = evaluator.batch_target_inference(tasks)
         
-        # 理由：批量调用 judge LLM 判断合规性
+        # Batch judge LLM inference for compliance
         judgments = evaluator.batch_judge_inference(tasks, target_responses)
         
-        # 理由：存储当前方法的结果，使用 query_hash 确保唯一性
+        # Store results for current method, using query_hash for uniqueness
         for task in tasks:
             query_hash = hashlib.md5(task["query"].encode()).hexdigest()[:8]
             task_id = f"{task['prompt_id']}_{task['guardrail_index']}_{query_hash}"
@@ -320,17 +316,17 @@ def run_compliance_evaluation(
                 "judgment": judgments.get(task_id, {})
             }
             
-            # 理由：如果是压缩方法，添加压缩率信息
+            # For compression methods, add compression rate info
             if method in compression_rates:
                 evaluation_result["compression_rate"] = compression_rates[method]
             
             all_evaluations[key]["evaluations"][method] = evaluation_result
     
-    # 理由：转换为列表格式并计算统计指标
+    # Convert to list format and compute statistics
     evaluations = list(all_evaluations.values())
     stats = calculate_compliance_metrics(evaluations)
     
-    # 理由：保存结果
+    # Save results
     output = {
         "metadata": {
             "evaluation_date": datetime.now().isoformat(),
@@ -356,9 +352,7 @@ def run_compliance_evaluation(
 
 def format_metrics_report(stats: Dict[str, Any]) -> str:
     """
-    格式化指标报告。
-    
-    理由：将统计结果格式化为可读的文本报告
+    Format metrics as a human-readable report.
     """
     lines = [
         "=" * 50,

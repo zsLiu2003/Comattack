@@ -16,17 +16,17 @@ class CompressionResult:
     """
     Result of compression operation.
     
-    For hard compression: compressed_text contains readable text
-    For soft compression: embeddings contains tensor, compressed_text is empty
+    For extractive compression: compressed_text contains readable text
+    For abstractive compression: embeddings contains tensor, compressed_text is empty
     """
     # Original
     original_text: str
     original_tokens: int
     
     # Compressed
-    compressed_text: str  # For hard compression
+    compressed_text: str  # For extractive compression
     compressed_tokens: int
-    embeddings: Optional[torch.Tensor] = None  # For soft compression
+    embeddings: Optional[torch.Tensor] = None  # For abstractive compression
     
     # Metadata
     compression_ratio: float = 0.0
@@ -35,15 +35,15 @@ class CompressionResult:
     compression_time: float = 0.0
     
     @property
-    def is_soft(self) -> bool:
-        """Whether this is a soft compression result."""
+    def is_abstractive(self) -> bool:
+        """Whether this is an abstractive compression result."""
         return self.embeddings is not None
-    
+
     def __repr__(self):
-        if self.is_soft:
-            return f"CompressionResult(soft, ratio={self.compression_ratio:.2f}, shape={self.embeddings.shape})"
+        if self.is_abstractive:
+            return f"CompressionResult(abstractive, ratio={self.compression_ratio:.2f}, shape={self.embeddings.shape})"
         else:
-            return f"CompressionResult(hard, ratio={self.compression_ratio:.2f}, tokens={self.original_tokens}→{self.compressed_tokens})"
+            return f"CompressionResult(extractive, ratio={self.compression_ratio:.2f}, tokens={self.original_tokens}→{self.compressed_tokens})"
 
 
 class BaseCompressor(ABC):
@@ -73,8 +73,8 @@ class BaseCompressor(ABC):
         pass
     
     @property
-    def is_soft(self) -> bool:
-        """Whether this compressor produces soft (embedding) outputs."""
+    def is_abstractive(self) -> bool:
+        """Whether this compressor produces abstractive (embedding) outputs."""
         return False
     
     @abstractmethod

@@ -1,9 +1,3 @@
-#!/bin/bash
-# COMA – System Prompt Corruption (Task 3) attack launcher
-#
-# Usage:
-#   bash scripts/run_guardrail_attack.sh
-
 set -euo pipefail
 
 DATA="data/guardrail_dataset.json"

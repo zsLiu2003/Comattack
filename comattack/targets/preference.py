@@ -1,10 +1,4 @@
-"""
-Stage I target selection for Preference Manipulation (Task 1).
 
-Greedy word deletion with a binary LLM judge: iteratively remove words
-from the currently-preferred candidate until the judge's preference flips
-to the attacker's target candidate.
-"""
 
 import json
 import copy

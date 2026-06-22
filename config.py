@@ -1,32 +1,24 @@
-# Configuration file for CompressionAttack project
-# Modify these paths according to your environment
+# Configuration file for COMA artifact
+# All paths are relative to the artifact root or configurable via environment variables.
 
 import os
 
 # Base paths
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-SRC_DIR = os.path.join(PROJECT_ROOT, "src")
-DATA_DIR = os.path.join(SRC_DIR, "data")
+DATA_DIR = os.path.join(PROJECT_ROOT, "comattack", "data")
 
-# Model paths - Update these to point to your model directories
-MODEL_BASE_PATH = "models"  # Change this to your model directory
-COMPRESSION_MODEL_PATH = os.path.join(MODEL_BASE_PATH, "gpt2-dolly")
-LARGE_MODEL_PATH = os.path.join(MODEL_BASE_PATH, "Qwen3-32B")
-GPT2_LARGE_PATH = os.path.join(MODEL_BASE_PATH, "gpt2-large")
-LLAMA2_PATH = os.path.join(MODEL_BASE_PATH, "Llama-2-7b-chat-hf")
-LLAMA3_PATH = os.path.join(MODEL_BASE_PATH, "Llama-3-8B-Instruct")
-PHI4_PATH = os.path.join(MODEL_BASE_PATH, "phi-4")
-MISTRAL_PATH = os.path.join(MODEL_BASE_PATH, "Mistral-7B-Instruct-v0.2")
-SENTENCE_MODEL_PATH = os.path.join(MODEL_BASE_PATH, "all-mpnet-base-v2")
+# Model paths -- models are downloaded automatically from HuggingFace.
+# Set COMA_MODEL_CACHE to override the default HuggingFace cache location.
+MODEL_BASE_PATH = os.environ.get("COMA_MODEL_CACHE", os.path.join(PROJECT_ROOT, "models"))
 
-# Dataset paths
-DEFAULT_DATASET = os.path.join(DATA_DIR, "data.json")
-KEYWORDS_DATASET = os.path.join(DATA_DIR, "new_keywords_Qwen3.json")
-TARGET_DEMO_DATASET = os.path.join(DATA_DIR, "data_best_Qwen3.json")
-QA_DATASET = os.path.join(DATA_DIR, "QA_keywords_edit.json")
+# Dataset paths (artifact data directory)
+ARTIFACT_DATA_DIR = os.path.join(PROJECT_ROOT, "data")
+QA_DATA_DIR = os.path.join(ARTIFACT_DATA_DIR, "qa")
+ATS_DATA_DIR = os.path.join(ARTIFACT_DATA_DIR, "ats")
+SPC_DATA_DIR = os.path.join(ARTIFACT_DATA_DIR, "system_prompt")
 
 # Output paths
-DEFAULT_OUTPUT_PATH = DATA_DIR
+DEFAULT_OUTPUT_PATH = os.environ.get("COMA_OUTPUT_DIR", os.path.join(PROJECT_ROOT, "results"))
 
 # CUDA settings
-DEFAULT_CUDA_DEVICE = "cuda:0" if os.environ.get('CUDA_VISIBLE_DEVICES') else "cpu"
+DEFAULT_CUDA_DEVICE = os.environ.get("COMA_DEVICE", "cuda:0" if os.environ.get("CUDA_VISIBLE_DEVICES") else "cpu")

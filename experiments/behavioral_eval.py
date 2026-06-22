@@ -1,23 +1,4 @@
-"""
-ICML Behavioral Evaluation Module (P0.4)
-========================================
 
-End-to-end behavioral evaluation showing that constraint drift
-measurably changes model behavior, not just text statistics.
-
-Downstream models: Qwen2.5-Instruct + LLaMA-3.x-Instruct
-Decoding: Deterministic (temperature 0)
-
-Probes:
-- Boundary compliance (in-scope vs out-of-scope)
-- Confidentiality (prompt leakage attempts)
-- Refusal correctness (should refuse vs should comply)
-
-Metrics:
-- Violation Rate (constraint violated when shouldn't)
-- Over-Refusal Rate (refuses when should answer)
-- ΔViolation (compressed − original)
-"""
 
 import json
 import torch

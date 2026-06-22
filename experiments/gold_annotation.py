@@ -1,19 +1,3 @@
-"""
-ICML Gold Annotation Framework (P0.3)
-=====================================
-
-Create a gold annotation set for guardrail spans + types.
-
-Protocol:
-- Sample 250-500 system prompts (stratified by provider/source + length)
-- Two annotators per prompt + adjudication
-- Annotate spans and type labels (multi-label if needed)
-
-Report:
-- Inter-annotator agreement (Krippendorff's α or Cohen's κ)
-- Span-level Precision/Recall/F1 for automatic extractor
-- Error analysis: common false positives/negatives
-"""
 
 import json
 import random

@@ -1,28 +1,3 @@
-"""
-End-to-end runner for the Preference Manipulation attack (Task ①).
-
-Pipeline:
-  1. Load filtered preference manipulation dataset (from Comattack)
-  2. For each entry (product recommendation / tool selection):
-     - Get the `best` (originally preferred candidate) and `target` (attacker's target)
-     - Compute x̃_tgt via greedy word deletion with a binary LLM judge
-       (or use a pre-computed target if available)
-  3. Run Stage II preimage search to find x_atk
-  4. Save results (attacked contexts + metadata)
-
-Supports both HardCom (extractive compressors) and SoftCom (abstractive).
-
-BASE_MODEL="NousResearch/Llama-2-7b-hf"
-Usage:
-  python run_pref_attack.py \
-    --data /path/to/pref_manipulation_filtered_llmlingua1_max900.json \
-    --compressor llmlingua1 \
-    --surrogate-model NousResearch/Llama-2-7b-hf \
-    --judge-model Qwen/Qwen3-235B-A22B-Instruct \
-    --num-steps 200 \
-    --output results/pref_llmlingua1/
-"""
-
 import os
 import sys
 import json
@@ -216,11 +191,11 @@ def compute_pref_target_offline(entry: dict) -> dict:
     }
 
 
-# ── HardCom attack ───────────────────────────────────────────────────────
+# ── Extractive attack ────────────────────────────────────────────────────
 
-def run_hardcom_pref(args, dataset):
-    from comattack.attacks.gcg_utils import AttackConfig
-    from comattack.attacks.hardcom_context_edit import (
+def run_extractive_pref(args, dataset):
+    from comattack.attacks.coma_utils import AttackConfig
+    from comattack.attacks.extractive_context_edit import (
         ContextEditAttackLLMLingua1,
         ContextEditAttackLLMLingua2,
         run_context_edit_attack,
@@ -248,10 +223,10 @@ def run_hardcom_pref(args, dataset):
     elif args.compressor == "llmlingua2":
         attacker = ContextEditAttackLLMLingua2(config=config)
     else:
-        raise ValueError(f"Unknown compressor for HardCom: {args.compressor}")
+        raise ValueError(f"Unknown extractive compressor: {args.compressor}")
 
     os.makedirs(args.output, exist_ok=True)
-    output_path = os.path.join(args.output, "pref_hardcom_results.jsonl")
+    output_path = os.path.join(args.output, "pref_extractive_results.jsonl")
 
     results = run_context_edit_attack(
         attacker=attacker,
@@ -265,27 +240,27 @@ def run_hardcom_pref(args, dataset):
     n_attacked = sum(1 for r in results if not r.get("skip"))
     summary = {
         "task": "preference_manipulation",
-        "method": "hardcom",
+        "method": "extractive",
         "compressor": args.compressor,
         "surrogate_model": args.surrogate_model,
         "num_entries": len(dataset),
         "num_attacked": n_attacked,
         "num_steps": args.num_steps,
     }
-    summary_path = os.path.join(args.output, "pref_hardcom_summary.json")
+    summary_path = os.path.join(args.output, "pref_extractive_summary.json")
     with open(summary_path, "w") as f:
         json.dump(summary, f, indent=2)
 
-    log.info("HardCom pref attack done. %d entries processed.", n_attacked)
+    log.info("Extractive pref attack done. %d entries processed.", n_attacked)
     return results
 
 
-# ── SoftCom attack ───────────────────────────────────────────────────────
+# ── Abstractive attack ────────────────────────────────────────────────────
 
-def run_softcom_pref(args, dataset):
-    from comattack.attacks.gcg_utils import AttackConfig
-    from comattack.attacks.softcom import AttackforSmallLM
-    from comattack.attacks.orchestration import run_gcg_attack_smalllm
+def run_abstractive_pref(args, dataset):
+    from comattack.attacks.coma_utils import AttackConfig
+    from comattack.attacks.summarize_based import AttackforSmallLM
+    from comattack.attacks.orchestration import run_coma_attack_smalllm
 
     config = AttackConfig(
         model_name=args.surrogate_model,
@@ -324,7 +299,7 @@ def run_softcom_pref(args, dataset):
                  entry.get("best"), entry.get("target"),
                  target_info["deleted_words"][:3])
 
-        result = run_gcg_attack_smalllm(
+        result = run_coma_attack_smalllm(
             attacker=attacker,
             prompts=[context],
             target_outputs=[target_context],
@@ -352,7 +327,7 @@ def run_softcom_pref(args, dataset):
         }
         all_results.append(out)
 
-        results_path = os.path.join(args.output, "pref_softcom_results.jsonl")
+        results_path = os.path.join(args.output, "pref_abstractive_results.jsonl")
         with open(results_path, "a") as f:
             f.write(json.dumps(out, ensure_ascii=False) + "\n")
 
@@ -360,7 +335,7 @@ def run_softcom_pref(args, dataset):
     n_converged = sum(1 for r in all_results if r.get("converged"))
     summary = {
         "task": "preference_manipulation",
-        "method": "softcom",
+        "method": "abstractive",
         "compressor": args.compressor,
         "surrogate_model": args.surrogate_model,
         "num_entries": len(dataset),
@@ -369,11 +344,11 @@ def run_softcom_pref(args, dataset):
         "num_steps": args.num_steps,
         "compression_target_tokens": args.compression_target_tokens,
     }
-    summary_path = os.path.join(args.output, "pref_softcom_summary.json")
+    summary_path = os.path.join(args.output, "pref_abstractive_summary.json")
     with open(summary_path, "w") as f:
         json.dump(summary, f, indent=2)
 
-    log.info("SoftCom pref attack done. %d/%d converged.", n_converged, n_attacked)
+    log.info("Abstractive pref attack done. %d/%d converged.", n_converged, n_attacked)
     return all_results
 
 
@@ -421,9 +396,9 @@ def main():
     abstractive = {"qwen3-4b", "llama-3.2-3b", "gemma-3-4b"}
 
     if args.compressor in extractive:
-        run_hardcom_pref(args, dataset)
+        run_extractive_pref(args, dataset)
     elif args.compressor in abstractive:
-        run_softcom_pref(args, dataset)
+        run_abstractive_pref(args, dataset)
     else:
         raise ValueError(f"Unknown compressor: {args.compressor}")
 

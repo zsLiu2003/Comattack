@@ -1,30 +1,30 @@
 """
-GCG-style attacks targeting small LLMs (Qwen3-4B, Llama-3.2-3B, etc.).
+COMA-style attacks targeting small LLMs (Qwen3-4B, Llama-3.2-3B, etc.).
 
 The small LLM acts as a compressor via a summarisation instruction:
     "Please help me to summarize the content above into {N} tokens"
 where N depends on the compression rate / compression budget.
 
 Two modes:
-  GCG-1  – AttackforSmallLM
+  COMA-1  – AttackforSmallLM
            Direct perturbation: replace tokens in the input (system prompt)
            so that the model's summarisation produces the target output.
 
-  GCG-2  – MultiplePromptsAttackforSmallLM
+  COMA-2  – MultiplePromptsAttackforSmallLM
            Universal adversarial suffix: optimise a single suffix that,
            appended to ANY of the provided prompts, causes the model's
            summarisation to produce the corresponding target output.
 
-Prompt structure (GCG-1):
+Prompt structure (COMA-1):
     [prompt_tokens] [instruction_tokens] [target_tokens]
      ^--- control ---^                    ^--- loss ---^
 
-Prompt structure (GCG-2):
+Prompt structure (COMA-2):
     [prompt_tokens] [instruction_tokens] [suffix_tokens] [target_tokens]
                                           ^-- control --^  ^--- loss ---^
 
 Both classes follow the same .step() interface so they plug directly
-into run_gcg_attack_smalllm().
+into run_coma_attack_smalllm().
 """
 
 import math
@@ -36,7 +36,7 @@ import torch
 import torch.nn as nn
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from .gcg_utils import (
+from .coma_utils import (
     AttackConfig,
     get_embedding_matrix,
     get_token_embeddings,
@@ -88,12 +88,12 @@ def _target_output_loss_per_example(logits: torch.Tensor, target_slice: slice,
 
 
 # ======================================================================
-#  GCG-1: Direct perturbation (single-prompt)
+#  COMA-1: Direct perturbation (single-prompt)
 # ======================================================================
 
 class AttackforSmallLM:
     """
-    GCG-1: optimise token replacements **within the input** so that a
+    COMA-1: optimise token replacements **within the input** so that a
     small CausalLM's summarisation produces the desired target output.
 
     Prompt structure:
@@ -218,7 +218,7 @@ class AttackforSmallLM:
 
     def attack(self, prompt: str, target_output: str):
         """
-        Run one GCG optimisation step.
+        Run one COMA optimisation step.
 
         Args:
             prompt: the input text (system prompt) whose tokens will be perturbed.
@@ -281,19 +281,19 @@ class AttackforSmallLM:
 
     def step(self, prompts: List[str], target_outputs: List[str]):
         """
-        Uniform interface for run_gcg_attack_smalllm().
-        GCG-1 is single-prompt, so unwrap the first element.
+        Uniform interface for run_coma_attack_smalllm().
+        COMA-1 is single-prompt, so unwrap the first element.
         """
         return self.attack(prompts[0], target_outputs[0])
 
 
 # ======================================================================
-#  GCG-2: Universal adversarial suffix (multi-prompt)
+#  COMA-2: Universal adversarial suffix (multi-prompt)
 # ======================================================================
 
 class MultiplePromptsAttackforSmallLM(AttackforSmallLM):
     """
-    GCG-2: optimise a single adversarial suffix that, when appended to
+    COMA-2: optimise a single adversarial suffix that, when appended to
     the summarisation instruction (after the system prompt which is not
     accessible), causes the model to produce the corresponding target output.
 
@@ -435,7 +435,7 @@ class MultiplePromptsAttackforSmallLM(AttackforSmallLM):
 
     def build_eval_full_ids(self, full_ids, candidates, suffix_slices,
                             attention_mask, device):
-        from .hardcom_suffix import slice_to_pos
+        from .extractive_suffix import slice_to_pos
 
         full_ids = full_ids.to(device=device, dtype=torch.long)
         candidates = candidates.to(device=device, dtype=torch.long)
@@ -455,7 +455,7 @@ class MultiplePromptsAttackforSmallLM(AttackforSmallLM):
 
     def attack(self, prompts: List[str], target_outputs: List[str]):
         """
-        Run one GCG step: optimise shared suffix across all (prompt, target) pairs.
+        Run one COMA step: optimise shared suffix across all (prompt, target) pairs.
         The suffix is placed right after the instruction, before the target.
 
         When self.prompt_batch_size is set, prompts are processed in
@@ -576,5 +576,5 @@ class MultiplePromptsAttackforSmallLM(AttackforSmallLM):
         return self.best_loss, self.best_candidates.detach().cpu().numpy().tolist()
 
     def step(self, prompts: List[str], target_outputs: List[str]):
-        """Uniform interface for run_gcg_attack_smalllm()."""
+        """Uniform interface for run_coma_attack_smalllm()."""
         return self.attack(prompts, target_outputs)

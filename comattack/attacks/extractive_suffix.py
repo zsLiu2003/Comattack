@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from transformers import (AutoTokenizer, AutoModelForCausalLM, AutoModelForTokenClassification)
 
-from .gcg_utils import (
+from .coma_utils import (
     AttackConfig,
     NPEncoder,
     get_embedding_layer,
@@ -172,7 +172,7 @@ class AttackforLLMLingua1(object):
         return self.best_loss, self.best_candidates.detach().cpu().numpy().tolist()
 
     def step(self, prompts: List[str], guardrail_sentences: List[str], guardrail_keywords: List[str]):
-        """Uniform interface for the GCG orchestrator. Unwraps single prompt."""
+        """Uniform interface for the COMA orchestrator. Unwraps single prompt."""
         return self.attack(prompts[0], guardrail_sentences[0], guardrail_keywords[0])
 
 
@@ -339,7 +339,7 @@ class AttackforLLMLingua2(object):
 
     def attack(self, prompt: str, guardrail_sentence: str, guardrail_keyword: str):
         """
-        Run one GCG step attacking LLMLingua2 on a single prompt.
+        Run one COMA step attacking LLMLingua2 on a single prompt.
         """
         device = self.model.device
         suffix_slice, target_slice = find_slices_from_token(self.tokenizer, prompt, guardrail_sentence, guardrail_keyword, self.config.suffix_length)
@@ -391,7 +391,7 @@ class AttackforLLMLingua2(object):
         return self.best_loss, self.best_candidates.detach().cpu().numpy().tolist()
 
     def step(self, prompts: List[str], guardrail_sentences: List[str], guardrail_keywords: List[str]):
-        """Uniform interface for the GCG orchestrator. Unwraps single prompt."""
+        """Uniform interface for the COMA orchestrator. Unwraps single prompt."""
         return self.attack(prompts[0], guardrail_sentences[0], guardrail_keywords[0])
 
 
@@ -533,7 +533,7 @@ class MultiplePromptsAttackforLLMlingua1(AttackforLLMLingua1):
 
     def attack(self, prompts: List[str], guardrail_sentences: List[str], guardrail_keywords: List[str]):
         """
-        Run one GCG step attacking LLMLingua1 across multiple prompts with shared suffix.
+        Run one COMA step attacking LLMLingua1 across multiple prompts with shared suffix.
         """
         suffix_slices, target_slices = [], []
         for prompt, guardrail_sentence, guardrail_keyword in zip(prompts, guardrail_sentences, guardrail_keywords):
@@ -568,7 +568,7 @@ class MultiplePromptsAttackforLLMlingua1(AttackforLLMLingua1):
         return self.best_loss, self.best_candidates.detach().cpu().numpy().tolist()
 
     def step(self, prompts: List[str], guardrail_sentences: List[str], guardrail_keywords: List[str]):
-        """Uniform interface for the GCG orchestrator. Passes lists directly."""
+        """Uniform interface for the COMA orchestrator. Passes lists directly."""
         return self.attack(prompts, guardrail_sentences, guardrail_keywords)
 
 class MultiplePromptsAttackforLLMlingua2(AttackforLLMLingua2):
@@ -734,7 +734,7 @@ class MultiplePromptsAttackforLLMlingua2(AttackforLLMLingua2):
 
     def attack(self, prompts: List[str], guardrail_sentences: List[str], guardrail_keywords: List[str]):
         """
-        Run one GCG step attacking LLMLingua2 across multiple prompts with shared suffix.
+        Run one COMA step attacking LLMLingua2 across multiple prompts with shared suffix.
         """
         suffix_slices, target_slices = [], []
         for prompt, guardrail_sentence, guardrail_keyword in zip(prompts, guardrail_sentences, guardrail_keywords):
@@ -787,5 +787,5 @@ class MultiplePromptsAttackforLLMlingua2(AttackforLLMLingua2):
         return self.best_loss, self.best_candidates.detach().cpu().numpy().tolist()
 
     def step(self, prompts: List[str], guardrail_sentences: List[str], guardrail_keywords: List[str]):
-        """Uniform interface for the GCG orchestrator. Passes lists directly."""
+        """Uniform interface for the COMA orchestrator. Passes lists directly."""
         return self.attack(prompts, guardrail_sentences, guardrail_keywords)

@@ -2,8 +2,7 @@ import json
 from datasets import load_dataset
 from tqdm import tqdm
 
-# dataset = load_dataset("json", data_files="/home/zliuhi/SystemCom/data/consolidated_guardrails/consolidated_guardrails.json", split="train")
-with open("/home/zliuhi/SystemCom/data/extracted_guardrails_reduced.json", "r") as f:
+with open("data/extracted_guardrails_reduced.json", "r") as f:
     dataset = json.load(f)
 # data = dataset["prompts"]
 new_dataset = []
@@ -29,7 +28,7 @@ for item in tqdm(dataset):
     new_item["guardrail_list"] = guardrail_list
     new_dataset.append(new_item)
 
-with open("/home/zliuhi/SystemCom/data/system_prompt_guardrails_reduced_filtered.json", "w") as f:
+with open("data/system_prompt_guardrails_reduced_filtered.json", "w") as f:
     json.dump(new_dataset, f, indent=4)
 print(f"guardrail_all: {guardrail_all}")
 print(f"guardrail_matched: {guardrail_matched}")

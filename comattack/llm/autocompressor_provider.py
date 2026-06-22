@@ -1,21 +1,4 @@
-"""
-AutoCompressor Provider - For soft compression behavioral evaluation
-====================================================================
 
-Uses the native AutoCompressor model with soft embeddings for evaluation.
-
-Usage:
-    llm = AutoCompressorLLM(model_path="princeton-nlp/AutoCompressor-Llama-2-7b-6k")
-    
-    # Load soft embeddings for a specific prompt
-    soft_embed = soft_embeddings[prompt_idx]  # Shape: [50, 4096]
-    
-    # Generate with soft prompt
-    response = llm.generate_with_soft_prompt(
-        user_query="...",
-        soft_embedding=soft_embed
-    )
-"""
 
 import logging
 import torch

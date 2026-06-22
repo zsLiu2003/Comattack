@@ -1,14 +1,3 @@
-# this script is used to filter out long data entries from the dataset.
-# for llmlingua1, the used model is phi2 and and NousResearch/Llama-2-7b-hf
-# the max_token_length is 2k for phi2 and 4k for NousResearch/Llama-2-7b-hf
-# for llmlingua2, the used model are two bert models, microsoft/llmlingua-2-xlm-roberta-large-meetingbank and a smaller one, microsoft/llmlingua-2-bert-base-multilingual-cased-meetingbank
-# the max_token_length is 
-# In our setting, we set the max_token_length to 2k for llmlingua1 and 512 for llmlingua2, therefore we need to filter out the data entries that have more than 2k tokens for llmlingua1 and more than 512 tokens for llmlingua2.
-
-"""
-The token sequence length of system prompts + query + suffix should be less than the max_token_length
-"""
-
 from datasets import load_dataset
 import json
 from transformers import AutoTokenizer

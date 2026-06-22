@@ -1,9 +1,9 @@
 """
-GCG attack orchestration: run the full optimisation loop.
+COMA attack orchestration: run the full optimisation loop.
 
 Two orchestrators:
-  - run_gcg_attack()          : HardCom attacks (LLMLingua1/2) with ExternalEvaluator
-  - run_gcg_attack_smalllm()  : SoftCom attacks (small LMs) with loss-based convergence
+  - run_coma_attack()          : Extractive compressor attacks (LLMLingua1/2) with ExternalEvaluator
+  - run_coma_attack_smalllm()  : Abstractive compressor attacks (small LMs) with loss-based convergence
 """
 import json
 import os
@@ -13,14 +13,14 @@ from typing import Optional, List, Dict, Any
 from tqdm import tqdm
 
 from .external_evaluator import ExternalEvaluator, EvalResult
-from .gcg_utils import find_slices_from_token
+from .coma_utils import find_slices_from_token
 
 log = logging.getLogger(__name__)
 
 
-# ── HardCom orchestrator ─────────────────────────────────────────────────
+# ── Extractive compressor orchestrator ─────────────────────────────────────
 
-def run_gcg_attack(
+def run_coma_attack(
     attacker,
     evaluator: ExternalEvaluator,
     prompts: List[str],
@@ -31,7 +31,7 @@ def run_gcg_attack(
     verbose: bool = True,
 ) -> Dict[str, Any]:
     """
-    Run the full GCG optimisation loop with periodic external evaluation.
+    Run the full COMA optimisation loop with periodic external evaluation.
 
     Works with ANY attacker that exposes:
         - attacker.step(prompts, sentences, keywords) -> (loss, suffix_ids)
@@ -58,9 +58,9 @@ def run_gcg_attack(
     converged = False
     final_eval = None
 
-    pbar = tqdm(range(1, num_steps + 1), desc="GCG", disable=not verbose)
+    pbar = tqdm(range(1, num_steps + 1), desc="COMA", disable=not verbose)
     for step in pbar:
-        # ---- one GCG optimisation step (uniform interface) ----
+        # ---- one COMA optimisation step (uniform interface) ----
         loss, suffix_ids = attacker.step(
             prompts, guardrail_sentences, guardrail_keywords,
         )
@@ -105,9 +105,9 @@ def run_gcg_attack(
     }
 
 
-# ── SoftCom orchestrator ─────────────────────────────────────────────────
+# ── Abstractive compressor orchestrator ─────────────────────────────────────
 
-def run_gcg_attack_smalllm(
+def run_coma_attack_smalllm(
     attacker,
     prompts: List[str],
     target_outputs: List[str],
@@ -118,11 +118,11 @@ def run_gcg_attack_smalllm(
     verbose: bool = True,
 ) -> Dict[str, Any]:
     """
-    Run the full GCG optimisation loop for small-LM attacks.
+    Run the full COMA optimisation loop for small-LM attacks.
 
     Works with:
-        - AttackforSmallLM                   (GCG-1, single prompt)
-        - MultiplePromptsAttackforSmallLM    (GCG-2, universal suffix)
+        - AttackforSmallLM                   (COMA-1, single prompt)
+        - MultiplePromptsAttackforSmallLM    (COMA-2, universal suffix)
 
     The attacker internally appends the summarisation instruction
     ("Please help me to summarize the content above into N tokens")
@@ -170,9 +170,9 @@ def run_gcg_attack_smalllm(
         with open(results_file, "w") as f:
             f.write(json.dumps(meta) + "\n")
 
-    pbar = tqdm(range(1, num_steps + 1), desc="GCG-SmallLM", disable=not verbose)
+    pbar = tqdm(range(1, num_steps + 1), desc="COMA-SmallLM", disable=not verbose)
     for step in pbar:
-        # one GCG step
+        # one COMA step
         loss, suffix_ids = attacker.step(prompts, target_outputs)
         loss_history.append(loss)
 

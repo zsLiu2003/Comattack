@@ -1,21 +1,3 @@
-#!/usr/bin/env python3
-"""
-Re-extract guardrails from handwritten system prompts using the same
-regex-based extraction logic as extract_guardrails.py (leaked prompts).
-
-This replaces the paraphrased guardrail summaries from the normster/SystemCheck
-dataset with verbatim sentences extracted from the actual system prompt text,
-ensuring keyword_char_span_in_fulltext() can locate them.
-
-Post-processing ensures:
-  1. Every sentence is a verbatim substring of the system prompt.
-  2. Every keyword appears in its sentence (case-insensitive).
-
-Input:  data/handwritten_system_prompt_guardrails.json
-        (or any JSON with [{system_prompt, ...}, ...])
-Output: data/handwritten_system_prompt_extracted_guardrails.json
-        [{system_prompt, guardrail_list: [{keyword, sentence}, ...]}, ...]
-"""
 
 import sys
 import re

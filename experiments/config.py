@@ -1,5 +1,5 @@
 """
-ICML Experiment Configuration
+Experiment Configuration
 =============================
 
 Central configuration for all experiments addressing P0 requirements.
@@ -23,7 +23,7 @@ _SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(_SCRIPT_DIR)
 
 # Or manually set if needed:
-# PROJECT_ROOT = "/path/to/your/SystemCom"
+# PROJECT_ROOT = "/path/to/your/project"
 
 
 # =============================================================================
@@ -50,13 +50,13 @@ class Paths:
     OUTPUT_DIR = os.path.join(PROJECT_ROOT, "output")
     PPL_ANALYSIS = os.path.join(OUTPUT_DIR, "ppl_analysis")
     COMPRESSION_RESULTS = os.path.join(PROJECT_ROOT, "compression_results")
-    COMPRESSION_HARD = os.path.join(COMPRESSION_RESULTS, "hard")
-    COMPRESSION_SOFT = os.path.join(COMPRESSION_RESULTS, "soft")
+    COMPRESSION_EXTRACTIVE = os.path.join(COMPRESSION_RESULTS, "extractive")
+    COMPRESSION_ABSTRACTIVE = os.path.join(COMPRESSION_RESULTS, "abstractive")
     
     # Experiment outputs
     EXPERIMENTS_DIR = os.path.join(PROJECT_ROOT, "experiments")
-    SOFT_ANALYSIS = os.path.join(EXPERIMENTS_DIR, "soft_analysis")
-    ICML_RESULTS = os.path.join(PROJECT_ROOT, "icml_results")
+    ABSTRACTIVE_ANALYSIS = os.path.join(EXPERIMENTS_DIR, "abstractive_analysis")
+    EXPERIMENT_RESULTS = os.path.join(PROJECT_ROOT, "experiment_results")
     
     # Model cache
     MODEL_CACHE = os.path.join(PROJECT_ROOT, ".model_cache")
@@ -72,10 +72,10 @@ class Paths:
             cls.OUTPUT_DIR,
             cls.PPL_ANALYSIS,
             cls.COMPRESSION_RESULTS,
-            cls.COMPRESSION_HARD,
-            cls.COMPRESSION_SOFT,
-            cls.SOFT_ANALYSIS,
-            cls.ICML_RESULTS,
+            cls.COMPRESSION_EXTRACTIVE,
+            cls.COMPRESSION_ABSTRACTIVE,
+            cls.ABSTRACTIVE_ANALYSIS,
+            cls.EXPERIMENT_RESULTS,
         ]
         for d in dirs_to_create:
             os.makedirs(d, exist_ok=True)
@@ -120,11 +120,11 @@ class PreservationType(Enum):
     """
     How preservation is defined for different compressor types.
     
-    Hard compression: Text span is literally retained (substring match)
+    Extractive compression: Text span is literally retained (substring match)
     Soft compression: Semantic entailment (compressed output entails original constraint)
     """
-    HARD_LITERAL = "hard_literal"        # Exact or fuzzy substring match
-    SOFT_ENTAILMENT = "soft_entailment"  # NLI-based entailment check
+    EXTRACTIVE_LITERAL = "extractive_literal"        # Exact or fuzzy substring match
+    ABSTRACTIVE_ENTAILMENT = "abstractive_entailment"  # NLI-based entailment check
 
 
 class DriftType(Enum):
@@ -163,10 +163,10 @@ class MetricConfig:
     # Tokenizer for CR calculation
     tokenizer_name: str = "Qwen/Qwen2.5-7B-Instruct"
     
-    # Span matching threshold for hard compression
+    # Span matching threshold for extractive compression
     fuzzy_match_threshold: float = 0.85  # Levenshtein ratio
-    
-    # Entailment threshold for soft compression
+
+    # Entailment threshold for abstractive compression
     entailment_threshold: float = 0.7  # NLI probability
     
     # Report both macro and micro
@@ -205,7 +205,7 @@ class ExperimentConfig:
     # Project paths (use Paths class)
     project_root: str = field(default_factory=lambda: PROJECT_ROOT)
     data_dir: str = field(default_factory=lambda: Paths.CONSOLIDATED_DIR)
-    output_dir: str = field(default_factory=lambda: Paths.ICML_RESULTS)
+    output_dir: str = field(default_factory=lambda: Paths.EXPERIMENT_RESULTS)
     
     # Compressors (P0.5)
     compressors: List[str] = field(default_factory=lambda: [
@@ -278,8 +278,8 @@ class ConstraintDriftResult:
     """
     original_span: ConstraintSpan
     drift_type: DriftType
-    preserved_text: Optional[str] = None  # For hard compression
-    entailment_score: Optional[float] = None  # For soft compression (P1.2)
+    preserved_text: Optional[str] = None  # For extractive compression
+    entailment_score: Optional[float] = None  # For abstractive compression (P1.2)
     
     # Catastrophic edit detection (P1.3)
     is_negation_flip: bool = False

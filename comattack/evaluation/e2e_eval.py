@@ -1,11 +1,4 @@
-"""
-End-to-end evaluation for COMA attacks.
 
-Compresses attacked inputs with the actual target compressor, feeds the
-result to a backend LLM, and uses a semantic judge to determine attack
-success.  Supports all four tasks (Prom, Deg, QA, SPC) and all six
-compressor families.
-"""
 
 import re
 import logging

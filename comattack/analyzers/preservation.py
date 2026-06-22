@@ -1,15 +1,4 @@
-"""
-Multi-Dimensional Preservation Analyzer (MPA)
 
-Implements the 5-dimensional guardrail preservation analysis:
-1. DOP - Deontic Operator Preservation
-2. SES - Semantic Entailment Score
-3. BTA - BERTScore Token Alignment
-4. NSP - Negation Scope Preservation
-5. CEP - Critical Entity Preservation
-
-Reference: docs/GUARDRAIL_PRESERVATION_TECHNIQUE.md
-"""
 
 import re
 import logging

@@ -8,26 +8,26 @@ def filte_tool_description(prompt: str):
 
     p = prompt
 
-    # 兼容：有些数据里是字面量 "\n" 而不是实际换行
+    # Compatibility: some data contains literal "\n" instead of actual newlines
     if "\\n" in p and "\n" not in p:
         p = p.replace("\\n", "\n")
 
     p = p.replace("\r\n", "\n")
 
-    # 优先策略：从 **Procedure** 后面找第一段 "You are ..."
+    # Primary strategy: find first "You are ..." paragraph after **Procedure**
     proc_idx = p.find("**Procedure**")
     if proc_idx != -1:
         tail = p[proc_idx:]
-        m = re.search(r"\n\s*\n(You are\b[\s\S]*)", tail)  # 找到 Procedure 后第一个以 You are 开头的段落
+        m = re.search(r"\n\s*\n(You are\b[\s\S]*)", tail)
         if m:
             return m.group(1).strip()
 
-    # 兜底策略：保留“最后一次出现的段落级 You are ...”（通常就是最终 persona）
+    # Fallback: keep the last paragraph-level "You are ..." occurrence (typically the final persona)
     matches = list(re.finditer(r"(?:^|\n\s*\n)(You are\b[\s\S]*)", p))
     if matches:
         return matches[-1].group(1).strip()
 
-    # 再兜底：原样返回
+    # Last resort: return as-is
     return p.strip()
     
 

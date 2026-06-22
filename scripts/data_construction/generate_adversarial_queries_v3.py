@@ -1,11 +1,4 @@
-#!/usr/bin/env python3
-"""
-This script is used to generate adversarial queries for hand-written system prompts.
-为每个 guardrail 生成 adversarial query（JSON 格式）。
-输入：extracted_guardrails.json（system_prompt, guardrail_list: [{keyword, sentence}]）
-LLM 输入：完整 system_prompt + guardrail；输出：JSON（adversarial_query, target_violation 等）。
-输出：同结构，每个 guardrail 增加 adversarial_query（字符串）和 adversarial_generation（解析后的 JSON 对象）。
-"""
+
 
 import argparse
 import json
@@ -80,9 +73,9 @@ def generate_one_query(
     max_tokens: int = 4096,
 ) -> tuple[str, dict]:
     """
-    为单个 guardrail 生成 adversarial query（JSON）。
-    输入：完整 entry system_prompt + guardrail sentence。
-    返回：(adversarial_query 字符串, 解析后的完整 JSON 对象；解析失败时 query 为空串，obj 为 {}).
+    Generate an adversarial query (JSON) for a single guardrail.
+    Input: full entry system_prompt + guardrail sentence.
+    Returns: (adversarial_query string, parsed JSON object; empty string and {} on parse failure).
     """
     user_prompt = f"""**Entire system prompt**: {entry_system_prompt[:8000]}{"..." if len(entry_system_prompt) > 8000 else ""}
 
@@ -116,7 +109,7 @@ def run_one(
     guardrail_idx: int,
     guardrail: dict,
 ) -> tuple[int, int, dict]:
-    """单个任务：返回 (entry_idx, guardrail_idx, guardrail + adversarial_query + adversarial_generation)."""
+    """Single task: returns (entry_idx, guardrail_idx, guardrail + adversarial_query + adversarial_generation)."""
     sentence = guardrail.get("sentence", "")
     if not sentence:
         return entry_idx, guardrail_idx, {
@@ -142,15 +135,15 @@ def generate_adversarial_queries(
     sample: Optional[int] = None,
 ) -> list:
     """
-    为 data 中每个 entry 的每个 guardrail 生成 adversarial query，并行执行。
+    Generate adversarial queries for each guardrail in every entry, in parallel.
 
     data: list of {system_prompt, guardrail_list: [{keyword, sentence}], ...}
-    sample: 若指定，只处理前 sample 个 entry（用于测试）
+    sample: if specified, only process first N entries (for testing)
     """
     if sample is not None and sample < len(data):
         data = data[:sample]
 
-    # 展平为 (entry_idx, guardrail_idx, entry, guardrail)；传入完整 entry system_prompt
+    # Flatten to (entry_idx, guardrail_idx, entry, guardrail); pass full entry system_prompt
     tasks = []
     for ei, entry in enumerate(data):
         entry_sys = entry.get("system_prompt") or ""
@@ -178,7 +171,7 @@ def generate_adversarial_queries(
                     "adversarial_generation": {},
                 }
 
-    # 按 entry 重组
+    # Reassemble by entry
     out = []
     for ei, entry in enumerate(data):
         guardrail_list_old = entry.get("guardrail_list") or []
@@ -197,14 +190,14 @@ def generate_adversarial_queries(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="为每个 guardrail 生成 adversarial query")
-    parser.add_argument("--input_path", required=True, help="输入 JSON（extracted_guardrails 格式）")
-    parser.add_argument("--output_path", required=True, help="输出 JSON")
-    parser.add_argument("--model", required=True, help="用于生成 query 的模型名")
-    parser.add_argument("--target-url", default="http://localhost:8000/v1", help="模型 API URL")
-    parser.add_argument("--system-prompt-file", default=None, help="生成 query 的 system prompt 文件（默认: data/adversarial_query_generation_system_prompt.txt）")
-    parser.add_argument("--max-workers", type=int, default=16, help="并行 worker 数")
-    parser.add_argument("--sample", type=int, default=None, help="只处理前 N 个 entry（测试用）")
+    parser = argparse.ArgumentParser(description="Generate adversarial query per guardrail")
+    parser.add_argument("--input_path", required=True, help="Input JSON (extracted_guardrails format)")
+    parser.add_argument("--output_path", required=True, help="Output JSON")
+    parser.add_argument("--model", required=True, help="Model name for query generation")
+    parser.add_argument("--target-url", default="http://localhost:8000/v1", help="Model API URL")
+    parser.add_argument("--system-prompt-file", default=None, help="System prompt file for generation (default: data/adversarial_query_generation_system_prompt.txt)")
+    parser.add_argument("--max-workers", type=int, default=16, help="Number of parallel workers")
+    parser.add_argument("--sample", type=int, default=None, help="Only process first N entries (for testing)")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO)
@@ -213,7 +206,7 @@ def main():
         data = json.load(f)
 
     if not isinstance(data, list):
-        raise SystemExit("input_path 应为 JSON 数组")
+        raise SystemExit("input_path must be a JSON array")
 
     system_prompt_path = Path(args.system_prompt_file) if args.system_prompt_file else None
     system_prompt = load_system_prompt(system_prompt_path)
